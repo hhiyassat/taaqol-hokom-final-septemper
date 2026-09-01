@@ -19,6 +19,7 @@
     "9": 10,
     "10": 1
   },
+  "fragment_mode": false,
   "surface_conflicts": 0,
   "self_checks": {
     "T1_INPUT_ORDER_IS_CANONICAL": true,

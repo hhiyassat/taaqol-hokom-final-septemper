@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from ..checks import CheckSuite, rejects
+from ..errors import owner_alert
 from ..fileio import read_rows, require_file, sha256_of_file, write_csv, write_text
 from ..reporting import Report
 from ..runner import Axis
@@ -108,6 +109,41 @@ class Corpus:
             word.finalize()
         return cls(words, rows_read, columns, path, sha256_of_file(path))
 
+    @classmethod
+    def from_text(cls, path: Path) -> Corpus:
+        """نصٌّ خامّ: سطرٌ لكل آية بصيغة ``سورة|آية|كلماتها``.
+
+        هذه هي صيغةُ ``QURAN_FROM_MASAQ.txt`` نفسها، فالمحور يقرأ ما يكتب.
+        وفائدتُها أن أيّ نصٍّ عثمانيّ يُصاغ بها يمضي في السلسلة كاملةً بلا
+        حاجةٍ إلى جدولٍ صرفيّ — والقواعدُ العثمانية (N8 وN3.Q) لا شواهدَ لها
+        في MASAQ وإنما تعمل هنا.
+
+        والكلمةُ تُعدّ مقطعًا واحدًا: لا تحليلَ صرفيًّا في النصّ الخام، وهذا
+        **إعلانُ نقصٍ لا ادّعاءُ تحليل**.
+        """
+        words: OrderedDict[tuple[int, int, int], Word] = OrderedDict()
+        rows = 0
+        for line_no, raw in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), start=1):
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split("|")
+            if len(parts) < 3:
+                raise owner_alert(
+                    "سطرٌ لا يوافق الصيغة «سورة|آية|كلماتها»",
+                    المسار=path, السطر=line_no, المحتوى=line[:40])
+            from ..fileio import strict_int
+            sura = strict_int(parts[0], field="Sura_No", row_no=line_no)
+            verse = strict_int(parts[1], field="Verse_No", row_no=line_no)
+            for number, surface in enumerate("|".join(parts[2:]).split(), start=1):
+                rows += 1
+                word = Word(sura, verse, number)
+                word.add(1, surface)
+                word.finalize()
+                words[(sura, verse, number)] = word
+        return cls(words, rows, 3, path, sha256_of_file(path))
+
     # -- قراءات ---------------------------------------------------------
     def __len__(self) -> int:
         return len(self.words)
@@ -136,23 +172,41 @@ class Corpus:
 # الفحوص
 # ---------------------------------------------------------------------------
 
-def build_suite(corpus: Corpus) -> CheckSuite:
+def build_suite(corpus: Corpus, fragment: bool = False) -> CheckSuite:
+    """``fragment`` = المدخل مقطعٌ من النصّ لا مصحفٌ كامل.
+
+    فحوصُ الاكتمال (عددُ السور، اتّصالُ الترقيم) تقيس **حالة المدخل** لا التزام
+    المحرّك. فإن كان المدخل مقطعًا صارت عيوبَ مدخلٍ تُسجَّل ولا تُسقط الجولة —
+    وإلا لأخفق المحرّك على نصٍّ سليمٍ لأنه ليس مصحفًا كاملًا، وذاك حكمٌ على
+    غير محلّه.
+    """
     suite = CheckSuite("axis0")
     keys = corpus.keys
 
     suite.check("T1_INPUT_ORDER_IS_CANONICAL", keys == sorted(keys),
-                "ترتيب ورود الكلمات في MASAQ = الترتيب المصحفي")
-    suite.check("T2_SURA_COUNT", len(corpus.suras) == EXPECTED_SURA_COUNT,
-                f"{len(corpus.suras)}/{EXPECTED_SURA_COUNT}")
-    suite.check("T3_SURA_NUMBERING_CONTIGUOUS",
-                corpus.suras == list(range(1, len(corpus.suras) + 1)),
-                "أرقام السور متّصلة من ١")
+                "ترتيب ورود الكلمات = الترتيب المصحفي")
 
     verses: dict[int, set[int]] = {}
     for sura, verse, _ in keys:
         verses.setdefault(sura, set()).add(verse)
     bad = [s for s, vs in verses.items() if sorted(vs) != list(range(1, len(vs) + 1))]
-    suite.check("T4_VERSE_NUMBERING_CONTIGUOUS", not bad, f"سور مخالفة = {bad[:5]}")
+    complete_suras = len(corpus.suras) == EXPECTED_SURA_COUNT
+    contiguous = corpus.suras == list(range(1, len(corpus.suras) + 1))
+
+    if fragment:
+        suite.defect("D0A_SURA_COUNT_NOT_FULL_MUSHAF",
+                     0 if complete_suras else len(corpus.suras),
+                     f"سورٌ في المدخل = {len(corpus.suras)} من {EXPECTED_SURA_COUNT}")
+        suite.defect("D0B_NUMBERING_NOT_CONTIGUOUS",
+                     0 if (contiguous and not bad) else len(bad) + (0 if contiguous else 1),
+                     "ترقيمٌ غير متّصل — متوقَّعٌ في مقطعٍ من النصّ", bad)
+    else:
+        suite.check("T2_SURA_COUNT", complete_suras,
+                    f"{len(corpus.suras)}/{EXPECTED_SURA_COUNT}")
+        suite.check("T3_SURA_NUMBERING_CONTIGUOUS", contiguous,
+                    "أرقام السور متّصلة من ١")
+        suite.check("T4_VERSE_NUMBERING_CONTIGUOUS", not bad,
+                    f"سور مخالفة = {bad[:5]}")
 
     conflicts = [w.key for w in corpus.words.values() if w.surface_conflict]
     suite.check("T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS", not conflicts,
@@ -244,10 +298,19 @@ class Axis0Corpus(Axis):
 
     def arguments(self, parser: argparse.ArgumentParser) -> None:
         parser.add_argument("--masaq", default="data/MASAQ.csv")
+        parser.add_argument("--text", default=None,
+                            help="نصٌّ خامّ بدل MASAQ: سطرٌ لكل آية «سورة|آية|كلماتها»")
+        parser.add_argument("--fragment", action="store_true",
+                            help="المدخل مقطعٌ لا مصحفٌ كامل: فحوصُ الاكتمال "
+                                 "تصير عيوبَ مدخلٍ تُسجَّل ولا تُسقط الجولة")
 
     def execute(self, args, out_dir: Path):
-        path = require_file(Path(args.masaq), what="مدخل MASAQ")
-        corpus = Corpus.from_masaq(path)
+        if args.text:
+            path = require_file(Path(args.text), what="النصّ الخام")
+            corpus = Corpus.from_text(path)
+        else:
+            path = require_file(Path(args.masaq), what="مدخل MASAQ")
+            corpus = Corpus.from_masaq(path)
 
         write_text(out_dir / "QURAN_FROM_MASAQ.txt", "\n".join(
             f"{sura}|{verse}|{' '.join(words)}"
@@ -273,10 +336,11 @@ class Axis0Corpus(Axis):
             "suras_built": len(corpus.suras),
             "segments_per_word": dict(sorted(
                 Counter(w.segment_count for w in corpus.words.values()).items())),
+            "fragment_mode": bool(args.fragment),
             "surface_conflicts": sum(
                 1 for w in corpus.words.values() if w.surface_conflict),
         }
-        return measures, build_suite(corpus)
+        return measures, build_suite(corpus, fragment=args.fragment)
 
     def report(self, m: dict, suite: CheckSuite) -> Report:
         r = Report("تقرير المحور ٠ — بناء ملف القرآن من MASAQ")

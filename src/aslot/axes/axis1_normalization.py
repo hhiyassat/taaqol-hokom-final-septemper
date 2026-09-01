@@ -25,6 +25,7 @@
 from __future__ import annotations
 
 import argparse
+import unicodedata
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -63,6 +64,7 @@ from ..jalalah import JalalahRegistry, default_registry
 from ..policy import OWNER_DECISION_REQUIRED, OwnerPolicy
 from ..reporting import Report
 from ..runner import Axis
+from ..uthmani import ALL_SIGNS, COMBINING_HAMZA, PERFORMANCE, PHONETIC, SIGNS, uncovered_marks
 
 # ---------------------------------------------------------------------------
 # الحالات الخمس ومصائر الخلايا — قائمتان مغلقتان
@@ -122,6 +124,7 @@ RULES = {
     "N10.1": "تعيين كرسيّ الهمزة بحسب ما قبلها",
     "N12": "كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج",
     "N13": "لا تحويل عامّ من الرسم العثماني إلى الإملائي — قرارُ إبقاء",
+    "N3.Q": "علاماتُ التجويد والوقف والثناء: طبقةٌ أدائية تُحذف (سندُها §١ـ١)",
 }
 
 #: الفجوة المقيسة التي تعطّل N7.3: الشرط قائم والوسيلة غائبة.
@@ -333,17 +336,22 @@ class _Normalizer:
         i, n = 0, len(self.token)
         while i < n:
             ch = self.token[i]
-            if ch in MARKS:
+            if ch in MARKS or ch in ALL_SIGNS:
                 raise _Stop(f"HARAKA_WITHOUT_CARRIER@{i}")
             if ch == TATWEEL:
                 raw.append((i, TATWEEL, ""))
                 i += 1
                 continue
             if ch not in CONSONANT_LETTERS:
+                # الضمانة: علامةٌ مركّبة مجهولة **تقف بإنذار** ولا تُصنَّف
+                # «ليست كلمة». الفرق بين الحكمين هو الفرق بين الاعتراف
+                # بالجهل وادّعاء العلم.
+                if unicodedata.category(ch) in ("Mn", "Lm"):
+                    raise _Stop(f"UNKNOWN_MARK@{i}:U+{ord(ch):04X}")
                 raise _Stop(f"NON_LETTER@{i}:{ch!r}", IGNORED)
             j = i + 1
             marks = ""
-            while j < n and self.token[j] in MARKS:
+            while j < n and (self.token[j] in MARKS or self.token[j] in ALL_SIGNS):
                 marks += self.token[j]
                 j += 1
             raw.append((i, ch, marks))
@@ -360,6 +368,7 @@ class _Normalizer:
     # -- التوجيه ---------------------------------------------------------
     #: المعالجات بترتيب الأولوية. الترتيب جزءٌ من الحكم لا تفصيلُ تنفيذ.
     def _process(self, ctx: _Letter) -> None:
+        ctx = self._strip_quranic_signs(ctx)
         for handler in (self._h_tatweel, self._h_rounded_zero):
             if handler(ctx):
                 return
@@ -390,6 +399,34 @@ class _Normalizer:
         self._fate(ctx.index, ctx.letter, DELETED, "N3")
         return True
 
+    def _strip_quranic_signs(self, ctx: _Letter) -> _Letter:
+        """الطبقة الأدائية في الرسم العثمانيّ — ثلاثة أصنافٍ بأحكامٍ مختلفة.
+
+        الأدائيةُ تُحذف بسندٍ نصّيّ (§١ـ١ تعدّها من الطبقة الكتابية). والصوتيةُ
+        والهمزةُ المركّبة **تنتظران حكمًا**: الأولى أختُ الألف الخنجرية في
+        المعنى، والثانية يقرّر النصُّ أنها حرفٌ لا حركة ولا يقرّر كيف تُردّ
+        حرفًا وهي مرسومةٌ علامة.
+        """
+        present = [m for m in ctx.marks if m in SIGNS]
+        if not present:
+            return ctx
+        for mark in present:
+            kind = SIGNS[mark].kind
+            if kind == PERFORMANCE:
+                self._fate(ctx.index, mark, DELETED, "N3.Q")
+                self._use("N3.Q")
+                continue
+            cls = ("U_QURANIC_SMALL_VOWEL_OR_MADD" if kind == PHONETIC
+                   else "U_COMBINING_HAMZA")
+            treat = self._decide(cls, ctx.index,
+                                 f"{SIGNS[mark].unicode_name}")
+            if treat == OWNER_DECISION_REQUIRED:
+                raise _Stop(f"QURANIC_SIGN_OWNER_DECISION@{ctx.index}"
+                            f":U+{ord(mark):04X}")
+            self._fate(ctx.index, mark, DELETED, cls)
+        ctx.marks = "".join(m for m in ctx.marks if m not in SIGNS)
+        return ctx
+
     def _strip_maddah(self, ctx: _Letter) -> _Letter:
         """N1 — المدّة علامةٌ تُحذف ولا تولّد همزة."""
         if MADDAH not in ctx.marks:
@@ -413,7 +450,11 @@ class _Normalizer:
         if DAGGER_ALIF not in ctx.marks:
             return False
 
-        seat = ctx.letter in (WAW, ALIF_MAQSURA)
+        # المقعدُ **مجرّد** بالضرورة: حرفٌ لا يُنطق فلا يحمل حركة.
+        # فإن حملها فهو صامتٌ حقيقيّ والخنجريةُ مدٌّ بعده — وهو ما كشفه
+        # القياس على «ٱلصَّلَوَٰتِ»: الواو فيها منطوقة (صَلَوَات) بخلاف
+        # «ٱلصَّلَوٰةِ» التي حكم فيها المالك بأن الواو مقعدٌ يُستبدل.
+        seat = ctx.letter in (WAW, ALIF_MAQSURA) and not (ctx.haraka or ctx.tanween)
         cls = "U_DAGGER_ALIF_ON_SEAT" if seat else "U_DAGGER_ALIF_OTHER_CARRIER"
         treat = self._decide(cls, ctx.index,
                              f"ألفٌ خنجرية على {ctx.letter!r}")
@@ -421,9 +462,6 @@ class _Normalizer:
             raise _Stop(f"DAGGER_ALIF_OWNER_DECISION@{ctx.index}")
 
         if seat:
-            # مقعدٌ متحرّك لم يرد فيه حكم: يقف ولا يُخمَّن
-            if ctx.haraka or ctx.tanween:
-                raise _Stop(f"DAGGER_ALIF_ON_VOCALIZED_SEAT@{ctx.index}")
             self._emit(ALIF, SUKUN, "N8", ctx.index)
             self._fate(ctx.index, ctx.letter, REPLACED, "N8")
             self._fate(ctx.index, DAGGER_ALIF, EXPANDED, "N8")
@@ -749,6 +787,20 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
                 WAW not in r.normalized and ALIF_MAQSURA not in r.normalized,
                 "المقعد يُستبدل ولا يبقى صامتًا يُعدّ")
 
+    # -- الطبقة الأدائية في الرسم العثمانيّ --------------------------------
+    suite.check("T21_UTHMANI_SIGN_TABLE_SELF_AUDITS", len(SIGNS) >= 40,
+                f"{len(SIGNS)} علامة، كلٌّ منها طوبق اسمُها بيونيكود عند التحميل")
+    gaps = uncovered_marks(MARKS)
+    suite.check("T22_NO_MARK_IS_EVER_SILENTLY_SWALLOWED", not gaps,
+                "لا علامةَ مركّبة في النطاقات المغطّاة خارج الجرد"
+                if not gaps else f"ثغرات = {gaps[:3]}")
+
+    waqf = next(c for c, sg in SIGNS.items() if sg.kind == PERFORMANCE)
+    plain, marked = norm("قُلْ"), norm("قُلْ" + waqf)
+    suite.check("T23_PERFORMANCE_SIGN_LEAVES_NO_TRACE",
+                plain.normalized == marked.normalized,
+                f"{marked.normalized}   (علامةُ الوقف حُذفت ولم تغيّر الطبقة الصوتية)")
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
@@ -766,16 +818,30 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
     marks = "".join(sorted(HARAKAT | TANWEEN | {SUKUN, SHADDA}))
     def strip(x): return "".join(c for c in x if c not in marks)
     lookalikes = {"اللهب", "اللهو", "يضلله", "للهدى"}
-    # مقعدٌ متحرّك لم يرد فيه حكم: يقف ولا يُخمَّن
-    suite.poison("P12_VOCALIZED_DAGGER_SEAT_STOPS",
-                 norm("ع" + FATHA + WAW + FATHA + DAGGER_ALIF).status == STOPPED,
-                 "حكم المالك نصّ على المقعد المجرّد وحده")
+    # واوٌ متحرّكة تحمل خنجرية ليست مقعدًا بل صامتٌ منطوق (صَلَوَات):
+    # تُرحَّل إلى الصنف الذي ينتظر حكمًا، ولا تُعامَل معاملة المقعد
+    r = norm("ع" + FATHA + WAW + FATHA + DAGGER_ALIF)
+    suite.poison("P12_VOCALIZED_WAW_IS_NOT_A_SEAT",
+                 WAW in r.normalized
+                 and "U_DAGGER_ALIF_OTHER_CARRIER" in r.decision_classes,
+                 f"{r.normalized} — الواو بقيت صامتًا ولم تُستبدل")
     # خنجريةٌ على حاملٍ آخر: صنفٌ لم يُصادَق فيُرفع إلى قرار مالك
     r = norm("ه" + FATHA + DAGGER_ALIF + "ذ" + FATHA + ALIF)
     suite.poison("P13_DAGGER_ON_OTHER_CARRIER_IS_UNRATIFIED",
                  r.status == OWNER_DECISION
                  and "U_DAGGER_ALIF_OTHER_CARRIER" in r.decision_classes,
                  f"{r.status} — الحكم نصّ على الواو والمقصورة لا غير")
+    # الضمانة عمليًّا: علامةٌ مجهولة تقف بإنذار ولا تُصنَّف «ليست كلمة»
+    r = norm("بَ" + "\u0300")
+    suite.poison("P14_UNKNOWN_MARK_STOPS_AND_IS_NOT_CALLED_A_NON_WORD",
+                 r.status == STOPPED and r.stop_reason.startswith("UNKNOWN_MARK"),
+                 f"{r.status} / {r.stop_reason}")
+    hamza_sign = next(c for c, sg in SIGNS.items() if sg.kind == COMBINING_HAMZA)
+    r = norm("بَ" + hamza_sign)
+    suite.poison("P15_COMBINING_HAMZA_IS_UNRATIFIED",
+                 r.status == OWNER_DECISION
+                 and "U_COMBINING_HAMZA" in r.decision_classes,
+                 "الهمزة حرفٌ لا حركة — وردُّها حرفًا لم يرد فيه نصّ")
     suite.poison("P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY",
                  not ({strip(e.surface) for e in reg} & lookalikes),
                  f"{sorted(lookalikes)} تشترك في الحروف وليست منه")
