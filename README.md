@@ -1,39 +1,44 @@
-# خمسة أكواد تقرأ `MASAQ.csv`
+# محرّك أسلوط — خمسة محاور تقرأ `MASAQ.csv`
 
-`RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET` · تاريخ الجولة: 2026-09-01
+`aslot 2.0.0` · `RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET`
 `INPUT_SHA256 = 76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e`
 
-كلُّ رقمٍ في هذا الملف **مقيسٌ من جولة تشغيل فعلية**، لا مفترضًا ولا منقولًا عن
-الوثائق النظرية. حيث اختلف المقيسُ عن المذكور في `T1..T4` صُرِّح بالفرق.
+كلُّ رقمٍ هنا **مقيسٌ من جولة تشغيل فعلية**، لا مفترضًا ولا منقولًا عن الوثائق
+النظرية. وحيث اختلف المقيسُ عن المذكور في `T1..T4` صُرِّح بالفرق.
 
 ---
 
-## ١ ـ الملفات
-
-| # | الملف | المحور | ماذا يفعل |
-|---|---|---|---|
-| ١ | `a0_build_quran_from_masaq.py` | ٠ | يطوي صفوف MASAQ إلى كلماتٍ ثم آيات ثم سور، من الحقول الخمسة وحدها |
-| ٢ | `a1_normalize.py` | ١ | التطبيع بقواعد المالك المسمّاة `N0.F … N13` |
-| ٣ | `a2_classify_mabniyat_and_operators.py` | ٢ | حصر العوامل والمبنيات، وبرهان الانغلاق بأربع قيم |
-| ٤ | `a3_syllabify.py` | ٣ | التقطيع إلى ستة أنماط مغلقة، وعدّ الصوامت، وحدود القطع |
-| ٥ | `a4_peel_to_stem.py` | ٤ | التقشير بترخيصٍ مسمّى حتى **جذعٍ غير قابل للقشر** |
-
-ملفّان مساندان: `data/axis_1_owner_policy.json` (سياسة أصنافٍ تنتظر حكمك)،
-و`run_all.sh` (تشغيل السلسلة بالترتيب).
-
-**السلسلة**: كل محورٍ يقرأ **مخرجَ ما قبله** لا المدخل الخام. والمحور الرابع
-لا يفتح `MASAQ.csv` قطّ إلا لبناء جرد المحور الثاني.
+## ١ ـ التشغيل
 
 ```bash
-./run_all.sh                      # الخمسة بالترتيب
-python3 a4_peel_to_stem.py --emit-masaq-like   # جدول MASAQ-like وحده
+pip install -e ".[dev]"     # أو:  export PYTHONPATH=src
+
+aslot all                   # السلسلة الخماسية كاملةً
+aslot normalize --help      # محورٌ واحد
+make test                   # pytest
+make lint                   # ruff
 ```
+
+بلا تثبيت: `python3 -m aslot all`. والغلاف القديم `scripts/run_all.sh` يعمل كما كان.
 
 ---
 
-## ٢ ـ الحكمان اللذان بنيتُ عليهما
+## ٢ ـ المحاور
 
-سألتُ فأجبتَ، وهذا أثرُ جوابك في الكود:
+| # | الأمر | ماذا يفعل |
+|---|---|---|
+| ٠ | `aslot corpus` | يطوي صفوف MASAQ إلى كلماتٍ فآياتٍ فسور، من الحقول الخمسة وحدها |
+| ١ | `aslot normalize` | التطبيع بقواعد المالك المسمّاة `N0.F … N13` |
+| ٢ | `aslot registry` | حصر العوامل والمبنيات، وبرهان الانغلاق بأربع قيم |
+| ٣ | `aslot syllabify` | ستة أنماط مقطعية مغلقة، وعدّ الصوامت، وحدود القطع |
+| ٤ | `aslot peel` | التقشير بترخيصٍ مسمّى حتى **جذعٍ غير قابل للقشر** |
+
+كلُّ محورٍ يقرأ **مخرجَ ما قبله** لا المدخل الخام. البنية في
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+---
+
+## ٣ ـ الحكمان اللذان بُني عليهما
 
 ```
 AXIS_2_REGISTRY_SOURCE = DERIVED_WITNESS_FROM_MASAQ
@@ -50,9 +55,9 @@ AXIS_4_ROOT_WORK = NONE
 
 ---
 
-## ٣ ـ القياس على كامل النصّ
+## ٤ ـ القياس على كامل النصّ
 
-### ٣ـ١ بناء ملف القرآن
+### ٤ـ١ بناء ملف القرآن
 
 ```
 ROWS_READ    = 157,676        WORDS_BUILT = 77,411
@@ -68,7 +73,7 @@ D2A_SEGMENT_NUMBER_DUPLICATED      = 386   تكرار Segment_No («يا» ال�
 D3_MULTIWORD_SURFACE_IN_ONE_CELL   =   9   خليّة Word فيها كلمتان
 ```
 
-### ٣ـ٢ التطبيع
+### ٤ـ٢ التطبيع
 
 ```
 NORMALIZED                          = 55,075
@@ -78,7 +83,7 @@ EXCLUDED_FAWATIH_AL_SUWAR           =     30      ← يوافق T1 §١ـ٥ ت�
 SELF_CHECKS = 10/10        POISONS = 8/8
 ```
 
-### ٣ـ٣ العوامل والمبنيات
+### ٤ـ٣ العوامل والمبنيات
 
 ```
 مدخلات الجرد = 134     فهرس المطابقة = 97 سطحًا     فهرس الدليل = 110
@@ -86,7 +91,7 @@ PROVEN = 8,972    UNRESOLVED = 3,753    VERBAL_OPERATOR = 61    NOT_MATCHED = 64
 SELF_CHECKS = 11/11        POISONS = 6/6
 ```
 
-### ٣ـ٤ المقاطع الصوتية
+### ٤ـ٤ المقاطع الصوتية
 
 ```
 CV = 109,900   CVC = 65,037   CVV = 47,619   CVCC = 5,403   CVVC = 1,029   CVVCC = 5
@@ -94,7 +99,7 @@ ACCEPT = 77,365      BLOCK = 7
 SELF_CHECKS = 10/10        POISONS = 7/7
 ```
 
-### ٣ـ٥ التقشير
+### ٤ـ٥ التقشير
 
 ```
 WORDS = 77,372     ACTUAL_PEELS = 17,286     STEMS_EMITTED = 53,901
@@ -107,22 +112,22 @@ MASAQ_LIKE_ROWS = 88,770
 SELF_CHECKS = 11/11        POISONS = 8/8
 ```
 
-**المجموع: 77/77 فحصًا ذاتيًّا و36/36 سمًّا.**
+**المجموع: 77/77 فحصًا ذاتيًّا و36/36 سمًّا، و42 اختبار pytest.**
 
 ---
 
-## ٤ ـ فروقٌ عن الوثائق النظرية — مصرَّحٌ بها
+## ٥ ـ فروقٌ عن الوثائق النظرية — مصرَّحٌ بها
 
 | الموضع | T1..T4 | المقيس هنا | السبب |
 |---|---|---|---|
-| نمط `CVVCC` | `0` (مرخَّص غير مشهود) | **5** | `آللَّهُ` ، `آلذَّكَرَيْنِ` ، `إِلْيَاسيْنَ`. حدثٌ يستحق التسجيل لا التصحيح (T3 §٣ـ١٠) |
+| نمط `CVVCC` | `0` (مرخَّص غير مشهود) | **5** | `آللَّهُ` ، `آلذَّكَرَيْنِ` ، `إِلْيَاسيْنَ`. حدثٌ يستحق التسجيل لا التصحيح |
 | كلمات أوقفها المحور ٢ | 14,299 | 8,972 + 3,753 مؤجَّلة | الجرد هنا شاهدٌ مشتقّ (134 مدخلة) لا سجلُّ مالك (725 مدخلة) |
 | صفوف MASAQ-like | 86,922 | 88,770 | اختلاف قاعدة توليد الصفوف مع إغلاق مسار الجذر |
 | مرفوضات المحور ٣ | 204 | 7 | مدخلٌ مختلف: هذا الرسم إملائيّ لا عثمانيّ |
 
 ---
 
-## ٥ ـ ما لم يُفعل — بالتصريح نفسه
+## ٦ ـ ما لم يُفعل — بالتصريح نفسه
 
 * **مسار الجذر مغلق بالكامل** بحكمك: لا `Root`، ولا وسم «مرشّح جذر»، ولا حدّ ثلاثة صوامت.
 * **اللواحق مغلقة**: `SUFFIX_OUTPUT = 0`.
@@ -139,18 +144,19 @@ KNOWN_COST_OF_N7_1_APPLIED_LITERALLY = 1,174
 AL_WITH_ELIDED_ALIF_NOT_DETECTED = 343
     «لِلْـ» — أُسقطت ألفُ «ال» رسمًا فلا يراها المحرّك. أكبر فجوةٍ مفردة.
 
-KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا
+KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا (T3_KNOWN_LIMIT_KAFARU_IS_WRONGLY_PEELED)
     الكاف في «كَفَرُوا» أصلٌ ونحن نقشّرها. شرط البوابة C يشترط نمط CVV·CV·CV
-    و«فَرُوْ» ليس منه. حدٌّ معروف لا نقضٌ للمانع (T4 §٤ـ٨).
+    و«فَرُوْ» ليس منه. حدٌّ معروف لا نقضٌ للمانع.
 ```
 
 ---
 
-## ٦ ـ ما ينتظر حكمك — `data/axis_1_owner_policy.json`
+## ٧ ـ ما ينتظر حكمك — `data/axis_1_owner_policy.json`
 
 سبعة أصنافٍ ظهرت في MASAQ ولا سند نصّيّ لها في `T1`. كلٌّ منها له معالجةٌ
 مؤقّتة تُمضي القياس، و`ratified: false` يرفع حالة الكلمة إلى
-`NORMALIZED_OWNER_DECISION_REQUIRED`. تصديقُ صنفٍ = تغيير `false` إلى `true`.
+`NORMALIZED_OWNER_DECISION_REQUIRED`. **تصديقُ صنفٍ = تغيير `false` إلى `true`
+في JSON، لا تعديلُ سطرٍ في محرّك.**
 
 | الصنف | كلمات | المعالجة المؤقّتة |
 |---|---:|---|
@@ -164,31 +170,23 @@ KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا
 
 تصديقُ الأربعة الأولى وحدها يخفض `OWNER_DECISION_REQUIRED` من 22,297 إلى ما دون 4,000.
 
----
-
-## ٧ ـ المخرجات
-
-```
-reports/axis_0_quran_build/QURAN_FROM_MASAQ.txt      نصّ: سطر لكل آية
-reports/axis_0_quran_build/QURAN_WORDS.csv           77,411 كلمة
-reports/axis_1_normalization/AXIS_1_NORMALIZATION.csv
-reports/axis_2_mabniyat_operators/AXIS_2_REGISTRY.csv  +  AXIS_2_TOKENS.csv
-reports/axis_3_syllables/AXIS_3_SYLLABLES.csv
-reports/axis_4_peel_to_stem/AXIS_4_PEEL_TO_STEM.csv
-reports/axis_4_peel_to_stem/MASAQ_LIKE_OUTPUT.csv    88,770 صفًّا
-```
-
-ومع كل محورٍ `*_REPORT.txt` بكتلة `key=value` و`*_MEASURES.json` للقياس الآليّ.
+**وسؤالٌ ثامنٌ مفتوح** (`OPEN_QUESTION_N2_2`): وسمُ الشدّة بعد «ال» يُقاس بعد
+بثّ الشطر الساكن، فتُوسم «الَّذِينَ» بـ `N2.2` و«اللَّهِ» بـ `N2` مع أن
+الشدّة فيهما بعد «ال». الموضع معلَّمٌ في الكود وينتظر حكمك.
 
 ---
 
-## ٨ ـ بصمات هذه الجولة
+## ٨ ـ المخرجات
 
 ```
-a0_build_quran_from_masaq.py            db2c73702e71e923…
-a1_normalize.py                         f8a1b2b79be2f3ac…
-a2_classify_mabniyat_and_operators.py   f60a97518c5f3a52…
-a3_syllabify.py                         cf564721915b8103…
-a4_peel_to_stem.py                      51a8ee19a11b1120…
-data/axis_1_owner_policy.json           fca7f471b43f5a3a…
+reports/axis_0_quran_build/   QURAN_FROM_MASAQ.txt · QURAN_WORDS.csv
+reports/axis_1_normalization/ AXIS_1_NORMALIZATION.csv
+reports/axis_2_mabniyat_operators/ AXIS_2_REGISTRY.csv · AXIS_2_TOKENS.csv
+reports/axis_3_syllables/     AXIS_3_SYLLABLES.csv
+reports/axis_4_peel_to_stem/  AXIS_4_PEEL_TO_STEM.csv · MASAQ_LIKE_OUTPUT.csv (88,770 صفًّا)
 ```
+
+ومع كل محورٍ `AXIS_n_REPORT.txt` بكتل `key=value` و`AXIS_n_MEASURES.json` للقياس الآليّ.
+
+`reports/*.csv` و`data/MASAQ.csv` مستبعدة من git بسياسة U1 — المدخل يُعرَّف
+ببصمته لا بنسخه.

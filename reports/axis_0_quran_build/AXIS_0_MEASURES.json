@@ -1,10 +1,25 @@
 {
-  "module": "a0_build_quran_from_masaq.py",
+  "module": "aslot.axes.axis0_corpus",
+  "axis": 0,
+  "input": "data/MASAQ.csv",
   "input_sha256": "76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e",
   "rows_read": 157676,
   "words_built": 77411,
   "verses_built": 6236,
   "suras_built": 114,
+  "segments_per_word": {
+    "1": 22786,
+    "2": 36006,
+    "3": 13654,
+    "4": 3593,
+    "5": 819,
+    "6": 451,
+    "7": 85,
+    "8": 6,
+    "9": 10,
+    "10": 1
+  },
+  "surface_conflicts": 0,
   "self_checks": {
     "T1_INPUT_ORDER_IS_CANONICAL": true,
     "T2_SURA_COUNT": true,
@@ -17,11 +32,11 @@
   "poisons": {
     "P1_REJECT_NON_ASCII_DIGIT": true,
     "P2_REJECT_EMPTY_NUMERIC": true,
+    "P6_REJECT_ARABIC_INDIC_DIGITS": true,
+    "P7_REJECT_SPACED_NUMBER": true,
     "P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED": true,
     "P4_SEGMENTS_SORTED_NOT_TRUSTED": true,
-    "P5_SEGMENT_GAP_DETECTED": true,
-    "P6_REJECT_ARABIC_INDIC_DIGITS": true,
-    "P7_REJECT_SPACED_NUMBER": true
+    "P5_SEGMENT_GAP_DETECTED": true
   },
   "input_defects": {
     "D1_WORD_NUMBER_GAPS_IN_VERSE": 9,

@@ -1,4 +1,6 @@
 {
+  "module": "aslot.axes.axis4_peeling",
+  "axis": 4,
   "words": 77372,
   "verdicts": {
     "BLOCK": 5541,
@@ -34,5 +36,29 @@
   "witness_set_size": 11647,
   "root_proven": 0,
   "wazn_execution": 0,
-  "suffix_output": 0
+  "suffix_output": 0,
+  "self_checks": {
+    "T1_BISMI_NOT_PEELED_BOUNDARY_CROSSED": true,
+    "T2_BIMAA_PEELED_THEN_STOPPED_BY_AXIS_2": true,
+    "T3_KNOWN_LIMIT_KAFARU_IS_WRONGLY_PEELED": true,
+    "T4_KABAIR_GATE_DEFERS": true,
+    "T5_MAA_IS_CLOSED_NOT_A_STEM": true,
+    "T6_NO_LICENSED_PREFIX_YIELDS_STEM": true,
+    "T7_ROOT_PATH_IS_CLOSED": true,
+    "T8_STEM_IS_NOT_A_PROOF": true,
+    "T9_LICENSE_SET_IS_CLOSED_AND_VOCALIZED": true,
+    "T10_INTERROGATIVE_HAMZA_IS_DEFERRED_NOT_LICENSED": true,
+    "T11_DEFERRED_CANDIDATE_DOES_NOT_BLOCK_THE_WORD": true
+  },
+  "poisons": {
+    "P1_UNVOCALIZED_PREFIX_IS_NOT_LICENSED": true,
+    "P2_FAMOUS_OPERATOR_OUTSIDE_THE_SET_IS_NOT_PEELED": true,
+    "P3_NO_ROOT_EVER": true,
+    "P4_NO_SUFFIX_OUTPUT": true,
+    "P5_THREE_CONSONANT_GATE_NOT_APPLIED": true,
+    "P6_GATE_EFFECT_IS_DEFER_NOT_BLOCK": true,
+    "P7_MISSING_WITNESS_IS_NOT_A_PREVENTER": true,
+    "P8_BOUNDARY_CROSSING_ALWAYS_BLOCKED": true
+  },
+  "input_defects": {}
 }
