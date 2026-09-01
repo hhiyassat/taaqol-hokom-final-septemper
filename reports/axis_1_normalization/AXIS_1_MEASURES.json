@@ -3,29 +3,30 @@
   "axis": 1,
   "words": 77411,
   "status": {
-    "NORMALIZED": 56939,
+    "NORMALIZED": 57150,
     "EXCLUDED_LAFZ_AL_JALALAH": 2704,
-    "NORMALIZED_OWNER_DECISION_REQUIRED": 17729,
+    "NORMALIZED_OWNER_DECISION_REQUIRED": 17518,
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },
   "rules": {
-    "N12": 64385,
+    "N12": 64380,
     "N0.J": 2704,
     "N7.1": 7842,
     "N10": 23646,
-    "N9": 2578,
+    "N9": 2706,
     "N2": 14677,
     "N7": 774,
     "N7.3:INOPERATIVE": 774,
     "N2.2": 1135,
     "N7.2": 1616,
-    "N0.F": 30
+    "N0.F": 30,
+    "N7.4": 325
   },
   "fates": {
-    "PRESERVED": 335050,
+    "PRESERVED": 335247,
     "REPLACED": 11114,
-    "DELETED_BY_OWNER_RULE": 7755,
+    "DELETED_BY_OWNER_RULE": 7883,
     "EXPANDED": 26606
   },
   "owner_decision_classes": {
@@ -34,7 +35,7 @@
     "U_ALEF_MADDA": 1509,
     "U_ALIF_MAQSURA": 2498,
     "U_ALIF_FARIQA": 3561,
-    "U_UNVOCALIZED_CARRIER": 301,
+    "U_UNVOCALIZED_CARRIER": 62,
     "U_MULTIWORD_CELL": 9
   },
   "stop_reasons": {
@@ -57,10 +58,10 @@
     "U_MULTIWORD_CELL"
   ],
   "masaq_cross_check": {
-    "BOTH": 8045,
+    "BOTH": 8370,
     "NEITHER": 64923,
     "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1404,
-    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 335,
+    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 10,
     "EXCLUDED_BY_OWNER_RULE": 2704
   },
   "_cross_samples": {
@@ -123,57 +124,57 @@
     "reference_only": [
       [
         [
-          2,
-          2,
+          6,
+          143,
+          10
+        ],
+        "آلذَّكَرَيْنِ",
+        "ءَاْلْذْذَكَرَيْنِ"
+      ],
+      [
+        [
+          6,
+          144,
+          8
+        ],
+        "آلذَّكَرَيْنِ",
+        "ءَاْلْذْذَكَرَيْنِ"
+      ],
+      [
+        [
+          9,
+          103,
+          11
+        ],
+        "صَلَاتَكَ",
+        "صَلَاْتَكَ"
+      ],
+      [
+        [
+          10,
+          16,
+          14
+        ],
+        "عُمُرَاً",
+        "عُمُرَاَنْ"
+      ],
+      [
+        [
+          10,
+          51,
           7
         ],
-        "لِلْمُتَّقِينَ",
-        "لِلْمُتْتَقِيْنَ"
+        "آلْآنَ",
+        "ءَاْلْءَاْنَ"
       ],
       [
         [
-          2,
-          24,
-          13
+          10,
+          91,
+          1
         ],
-        "لِلْكَافِرِينَ",
-        "لِلْكَاْفِرِيْنَ"
-      ],
-      [
-        [
-          2,
-          30,
-          4
-        ],
-        "لِلْمَلَائِكَةِ",
-        "لِلْمَلَاْئِكَةِ"
-      ],
-      [
-        [
-          2,
-          34,
-          3
-        ],
-        "لِلْمَلَائِكَةِ",
-        "لِلْمَلَاْئِكَةِ"
-      ],
-      [
-        [
-          2,
-          66,
-          9
-        ],
-        "لِلْمُتَّقِينَ",
-        "لِلْمُتْتَقِيْنَ"
-      ],
-      [
-        [
-          2,
-          83,
-          17
-        ],
-        "لِلنَّاسِ",
-        "لِلْنْنَاْسِ"
+        "آلْآنَ",
+        "ءَاْلْءَاْنَ"
       ]
     ]
   },
@@ -203,7 +204,10 @@
     "T24_SUN_LAM_IS_DELETED": true,
     "T25_MOON_LAM_STAYS": true,
     "T26_LAM_IS_NOT_A_SUN_LETTER": true,
-    "T27_SUN_LAM_ALSO_AFTER_A_PREFIX": true
+    "T27_SUN_LAM_ALSO_AFTER_A_PREFIX": true,
+    "T28_ELIDED_ARTICLE_THEN_SUN_LETTER": true,
+    "T29_ELIDED_ARTICLE_THEN_MOON_LETTER": true,
+    "T30_TWO_LAMS_WITH_SHADDA_IS_NOT_ELIDED_ARTICLE": true
   },
   "poisons": {
     "P1_HARAKA_WITHOUT_CARRIER_STOPS": true,
@@ -221,6 +225,8 @@
     "P14_UNKNOWN_MARK_STOPS_AND_IS_NOT_CALLED_A_NON_WORD": true,
     "P15_COMBINING_HAMZA_IS_UNRATIFIED": true,
     "P16_A_ROOT_LAM_IS_NEVER_DELETED": true,
+    "P17_NOT_EVERY_INITIAL_LAM_IS_A_PREFIX:لِسَانٍ": true,
+    "P17_NOT_EVERY_INITIAL_LAM_IS_A_PREFIX:لَيَالِيَ": true,
     "P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY": true
   },
   "input_defects": {}

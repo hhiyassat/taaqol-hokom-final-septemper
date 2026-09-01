@@ -8,8 +8,8 @@
     "DEFER": 5575
   },
   "terminations": {
-    "STEM_NOT_FURTHER_PEELABLE": 51731,
-    "CLOSED_REMAINDER": 12355,
+    "STEM_NOT_FURTHER_PEELABLE": 51722,
+    "CLOSED_REMAINDER": 12364,
     "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": 16,
     "DEFER_UNRESOLVED_CLOSURE": 5443,
     "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 116,
@@ -24,7 +24,7 @@
     "2": 1153,
     "3": 35
   },
-  "stems_emitted": 51731,
+  "stems_emitted": 51722,
   "deferred_candidate_prefixes": {
     "يَ": 4105,
     "نَ": 1031,

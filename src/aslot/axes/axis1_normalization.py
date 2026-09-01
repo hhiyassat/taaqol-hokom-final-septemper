@@ -120,6 +120,7 @@ RULES = {
     "N7.1": "ألفٌ مجرّدة أول الكلمة يتبعها لام وليست من الفواتح: همزةُ «ال» بفتحة",
     "N7.2": "«ال» بعد سابقةٍ داخل الكلمة: لا تُعامَل إلا بمطابقة الوحدة كلها في سجلٍّ معتمد",
     "N7.3": "ألف الوصل في رأس فعلٍ مبرهَن — معطّلة: EXECUTABLE_VERB_RULES = 0",
+    "N7.4": "همزةُ «أل» تسقط رسمًا بعد لامٍ سابقة، واللامُ التالية لامُ التعريف",
     "N8": "الألف الخنجرية على الواو والألف المقصورة: مقعدٌ لا صامت، يُستبدل بألف مدّ",
     "N9": "اللام الشمسية: تُحذف لامُ «أل» ويُكرَّر الحرفُ الشمسيّ ساكنًا فمتحرّكًا",
     "N10": "الهمزة حرف لا حركة، ولا تُخترع من علامة",
@@ -128,6 +129,10 @@ RULES = {
     "N13": "لا تحويل عامّ من الرسم العثماني إلى الإملائي — قرارُ إبقاء",
     "N3.Q": "علاماتُ التجويد والوقف والثناء: طبقةٌ أدائية تُحذف (سندُها §١ـ١)",
 }
+
+#: سوابقُ مفردة قد تتقدّم لامَ الجرّ فلا تمنع سقوطَ همزة «أل» (N7.4).
+#: قائمة مغلقة، مقيسة: 23 موضعًا يوافق المرجعُ عليها كلِّها.
+ELIDING_PREFIXES = frozenset("وف")
 
 #: الفجوة المقيسة التي تعطّل N7.3: الشرط قائم والوسيلة غائبة.
 VERB_RULE_ROWS = 34
@@ -191,6 +196,9 @@ class _Letter:
     is_last: bool
     next_letter: str | None
     next_marks: str
+    ordinal: int = 0
+    prev_letter: str | None = None
+    prev_marks: str = ""
 
     @property
     def haraka(self) -> str | None:
@@ -365,16 +373,21 @@ class _Normalizer:
         total = len(raw)
         for k, (index, letter, marks) in enumerate(raw):
             nxt = raw[k + 1] if k + 1 < total else None
+            prv = raw[k - 1] if k else None
             yield _Letter(index=index, letter=letter, marks=marks,
                           is_first=(k == 0), is_last=(k == total - 1),
                           next_letter=nxt[1] if nxt else None,
-                          next_marks=nxt[2] if nxt else "")
+                          next_marks=nxt[2] if nxt else "",
+                          ordinal=k,
+                          prev_letter=prv[1] if prv else None,
+                          prev_marks=prv[2] if prv else "")
 
     # -- التوجيه ---------------------------------------------------------
     #: المعالجات بترتيب الأولوية. الترتيب جزءٌ من الحكم لا تفصيلُ تنفيذ.
     def _process(self, ctx: _Letter) -> None:
         article_lam = self._article_alif_just_seen
         self._article_alif_just_seen = False       # تُستهلك عند الحرف التالي
+        self._detect_elided_article(ctx)
         ctx = self._strip_quranic_signs(ctx)
         for handler in (self._h_tatweel, self._h_rounded_zero):
             if handler(ctx):
@@ -383,8 +396,11 @@ class _Normalizer:
         if ctx.vowel_mark_count > 1:
             # تعدّد الحركات على حاملٍ واحد: يقف ولا يرجّح
             raise _Stop(f"MULTIPLE_HARAKAT_ON_ONE_CARRIER@{ctx.index}")
-        if article_lam and self._h_sun_lam(ctx):
-            return
+        if article_lam:
+            if self._h_sun_lam(ctx):
+                return
+            if self._h_moon_lam(ctx):
+                return
         for handler in (self._h_dagger_alif, self._h_alef_madda,
                         self._h_bare_alif, self._h_alif_maqsura):
             if handler(ctx):
@@ -445,6 +461,39 @@ class _Normalizer:
         ctx.marks = ctx.marks.replace(MADDAH, "")
         return ctx
 
+    def _detect_elided_article(self, ctx: _Letter) -> None:
+        """N7.4 — «أل» محذوفةُ الهمزة بعد لامٍ سابقة.
+
+        حكم المالك (2026-09-01): «لِلنَّاسِ = لامُ الجرّ + الناس، وهمزةُ الوصل
+        تسقط للوصل مع اللام». فالسطحُ ثلاثةُ أجزاء: لِ + ال + ناس، وألفُ «أل»
+        غائبةٌ عن الرسم لا عن البنية.
+
+        وقياسُ الكشف على النصّ: **302 موضعًا، يوافق المرجعُ عليها كلِّها** —
+        لا موضعَ واحد خاطئ. فالنمط (لامٌ متحرّكة أولَ الكلمة + لامٌ مجرّدة)
+        لا يقع في العربية إلا هنا.
+
+        ولا تُبثّ همزة: الوصلُ يُسقطها نطقًا كما أسقطها الرسم. وإنما تُرفع
+        الرايةُ فتُعامَل اللامُ التالية معاملةَ لام التعريف — تُحذف قبل
+        الشمسيّ (N9) وتبقى ساكنةً قبل القمريّ.
+        """
+        if ctx.letter != LAM or not ctx.haraka or ctx.next_letter != LAM:
+            return
+        # اللامُ أوّلَ الكلمة، أو بعد سابقةٍ مفردةٍ متحرّكة (وَ ، فَ).
+        # والسابقةُ لا تغيّر شيئًا في الحكم: الهمزةُ تسقط للوصل باللام سواءٌ
+        # أكانت اللامُ أوّلَ الكلمة أم بعد واوٍ أو فاء. وقياسُه 23 موضعًا
+        # يوافق المرجعُ عليها كلِّها.
+        after_prefix = (ctx.ordinal == 1 and ctx.prev_letter in ELIDING_PREFIXES
+                        and any(m in HARAKAT for m in ctx.prev_marks))
+        if not (ctx.is_first or after_prefix):
+            return
+        # اللامُ التالية مجرّدة: لا حركةَ عليها ولا شدّة.
+        # والمشدّدةُ التقاءُ لامين (لِلَّذِينَ) لها مسارُها في N2.
+        if SHADDA in ctx.next_marks or any(m in VOWEL_MARKS for m in ctx.next_marks):
+            return
+        self._article_alif_just_seen = True
+        self._fate(ctx.index, ctx.letter, PRESERVED, "N7.4")
+        self._use("N7.4")
+
     def _h_sun_lam(self, ctx: _Letter) -> bool:
         """N9 — لامُ «أل» قبل حرفٍ شمسيّ مشدّد: تُحذف.
 
@@ -468,6 +517,20 @@ class _Normalizer:
             return False
         self._fate(ctx.index, ctx.letter, DELETED, "N9")
         self._use("N9")
+        return True
+
+    def _h_moon_lam(self, ctx: _Letter) -> bool:
+        """لامُ «أل» أمام قمريّ: تبقى ساكنة — وتُوسم بالقاعدة لا بصنفٍ مؤجَّل.
+
+        كانت تُصنَّف `U_UNVOCALIZED_CARRIER` فترفع الكلمةَ إلى «تنتظر حكمًا»،
+        وهي لامٌ مبرهنةٌ بحكمٍ مسمّى لا حاملٌ مجهول. والفرق ليس شكليًّا:
+        الأوّل اعترافٌ بجهل، والثاني حكمٌ قائم.
+        """
+        if ctx.letter != LAM or ctx.haraka or ctx.tanween or ctx.has_shadda:
+            return False
+        self._emit(LAM, SUKUN, "N7.4", ctx.index)
+        self._fate(ctx.index, ctx.letter, PRESERVED, "N7.4")
+        self._use("N12")
         return True
 
     def _h_dagger_alif(self, ctx: _Letter) -> bool:
@@ -863,6 +926,23 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
     suite.check("T27_SUN_LAM_ALSO_AFTER_A_PREFIX",
                 "N9" in r.rules_applied and LAM not in r.normalized, r.normalized)
 
+    # -- القاعدة N7.4: «أل» محذوفةُ الهمزة بعد لام ---------------------------
+    r = norm("لِلنَّاسِ")
+    suite.check("T28_ELIDED_ARTICLE_THEN_SUN_LETTER",
+                "N7.4" in r.rules_applied and "N9" in r.rules_applied
+                and r.normalized.count(LAM) == 1,
+                f"{r.normalized}   (لامُ الجرّ باقية، ولامُ «أل» حُذفت)")
+
+    r = norm("لِلْمُتَّقِينَ")
+    suite.check("T29_ELIDED_ARTICLE_THEN_MOON_LETTER",
+                "N7.4" in r.rules_applied and "N9" not in r.rules_applied
+                and r.normalized.count(LAM) == 2, r.normalized)
+
+    r = norm("لِلَّذِينَ")
+    suite.check("T30_TWO_LAMS_WITH_SHADDA_IS_NOT_ELIDED_ARTICLE",
+                "N7.4" not in r.rules_applied,
+                f"{r.normalized}   (التقاءُ لامين، مسارُه N2)")
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
@@ -908,6 +988,11 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
     r = norm("لَذَّةٍ")
     suite.poison("P16_A_ROOT_LAM_IS_NEVER_DELETED", "N9" not in r.rules_applied,
                  f"{r.normalized} — الراية لا تُرفع إلا بعد همزة «أل»")
+    # لامٌ متحرّكة يتلوها حرفٌ آخر ليست هذا النمط
+    for word in ("لِسَانٍ", "لَيَالِيَ"):
+        suite.poison(f"P17_NOT_EVERY_INITIAL_LAM_IS_A_PREFIX:{word}",
+                     "N7.4" not in norm(word).rules_applied,
+                     "النمطُ لامٌ متحرّكة + لامٌ مجرّدة، لا لامٌ فحسب")
     suite.poison("P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY",
                  not ({strip(e.surface) for e in reg} & lookalikes),
                  f"{sorted(lookalikes)} تشترك في الحروف وليست منه")
@@ -939,7 +1024,7 @@ def cross_check_masaq(path: Path, policy: OwnerPolicy) -> dict:
         if r.status == JALALAH:
             matrix["EXCLUDED_BY_OWNER_RULE"] += 1
             continue
-        engine = ("N7.1" in r.rules_applied) or ("N7.2" in r.rules_applied)
+        engine = any(rule in r.rules_applied for rule in ("N7.1", "N7.2", "N7.4"))
         reference = "DET" in entry["tags"]
         matrix[(reference, engine)] += 1
         if engine and not reference and len(samples["engine_only"]) < 6:

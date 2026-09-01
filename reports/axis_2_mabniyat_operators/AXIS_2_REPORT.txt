@@ -17,7 +17,7 @@ PRESERVE_ALL_MATCHED_ENTRY_IDS = YES
 ## بنية الجرد المقيسة
 ```
 مدخلات السجلّ               = 134
-فهرس المطابقة (ACCEPT وحده) =  97
+فهرس المطابقة (ACCEPT وحده) =  99
 فهرس الدليل (كل المدخلات)   = 110
 تصادمات التطبيع             =   2
 ```
@@ -26,28 +26,28 @@ PRESERVE_ALL_MATCHED_ENTRY_IDS = YES
 
 ## التدرّج الثلاثي بحسب حالة تطبيع سطح السجلّ
 ```
-NORMALIZED → ACCEPT                                          = 120
-NORMALIZED_OWNER_DECISION_REQUIRED → OWNER_DECISION_REQUIRED =  14
+NORMALIZED → ACCEPT                                          = 122
+NORMALIZED_OWNER_DECISION_REQUIRED → OWNER_DECISION_REQUIRED =  12
 NOT_NORMALIZABLE → BLOCK                                     =   0
 ```
 
 ## برهان الانغلاق — أربع قيم لا قيمتان
 ```
-PROVEN                            =  8,972
+PROVEN                            =  8,981
 NOT_A_CLOSED_FORM_VERBAL_OPERATOR =     61
 UNRESOLVED                        =  3,753
-NOT_MATCHED                       = 61,882
+NOT_MATCHED                       = 61,873
 ```
 
 ## المسارات
 ```
 CONTINUE                           = 60,565
-STOP_CLOSED_FORM                   =  8,972
-DEFER_UNRESOLVED_CLOSURE           =  5,070
+STOP_CLOSED_FORM                   =  8,981
+DEFER_UNRESOLVED_CLOSURE           =  5,061
 DEFER_VERBAL_OPERATOR_REGISTRY_TAG =     61
 ```
 
-كلمات أوقفها هذا المحور بوصفها صورةً مغلقة تامّة = 8,972
+كلمات أوقفها هذا المحور بوصفها صورةً مغلقة تامّة = 8,981
 
 ## ما يثبته هذا المحور وما لا يثبته
   يثبت    : هويّةَ السطح، وحالةَ انغلاقه بأربع قيم، وتعارضَ الشهادات حين يقع.
@@ -66,7 +66,7 @@ DEFER_VERBAL_OPERATOR_REGISTRY_TAG =     61
   [PASS] T6_PROOF_HAS_FOUR_VALUES                          PROVEN · NOT_A_CLOSED_FORM_VERBAL_OPERATOR · UNRESOLVED · NOT_MATCHED
   [PASS] T7_NO_CHOOSING_AMONG_ALTERNATIVES                 CHOOSE_AMONG_ALTERNATIVES = NO
   [PASS] T8_ALL_MATCHED_IDS_PRESERVED                      PRESERVE_ALL_MATCHED_ENTRY_IDS = YES
-  [PASS] T9_MATCH_INDEX_SUBSET_OF_EVIDENCE_INDEX           97 ⊆ 110
+  [PASS] T9_MATCH_INDEX_SUBSET_OF_EVIDENCE_INDEX           99 ⊆ 110
   [PASS] T10_REGISTRY_IS_EVIDENCE_NOT_LICENSE              REGISTRY_AUTHORITY = EVIDENCE_ONLY في هذا الوضع
   [PASS] T11_ODR_SURFACE_IS_EVIDENCE_NOT_MATCH             NOT_MATCHED / eligibility=OWNER_DECISION_REQUIRED
 
