@@ -52,6 +52,7 @@ from ..constants import (
     ROUNDED_ZERO,
     SHADDA,
     SUKUN,
+    SUN_LETTERS,
     TANWEEN,
     TANWEEN_TO_HARAKA,
     TATWEEL,
@@ -120,6 +121,7 @@ RULES = {
     "N7.2": "«ال» بعد سابقةٍ داخل الكلمة: لا تُعامَل إلا بمطابقة الوحدة كلها في سجلٍّ معتمد",
     "N7.3": "ألف الوصل في رأس فعلٍ مبرهَن — معطّلة: EXECUTABLE_VERB_RULES = 0",
     "N8": "الألف الخنجرية على الواو والألف المقصورة: مقعدٌ لا صامت، يُستبدل بألف مدّ",
+    "N9": "اللام الشمسية: تُحذف لامُ «أل» ويُكرَّر الحرفُ الشمسيّ ساكنًا فمتحرّكًا",
     "N10": "الهمزة حرف لا حركة، ولا تُخترع من علامة",
     "N10.1": "تعيين كرسيّ الهمزة بحسب ما قبلها",
     "N12": "كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج",
@@ -232,6 +234,9 @@ class _Normalizer:
         self.jalalah = jalalah
         self.res = NormalizationResult(token=token, status=NORMALIZED)
         self.units: list[Unit] = []
+        #: تُرفع حين تُعالَج همزةُ «أل»، وتُستهلك عند الحرف التالي مباشرةً.
+        #: بها يُعرف أن اللام لامُ التعريف لا لامًا أصلية — والفرق حكمٌ لا شكل.
+        self._article_alif_just_seen = False
 
     # -- أدوات التسجيل ---------------------------------------------------
     def _fate(self, index: int, char: str, fate: str, rule: str) -> None:
@@ -368,6 +373,8 @@ class _Normalizer:
     # -- التوجيه ---------------------------------------------------------
     #: المعالجات بترتيب الأولوية. الترتيب جزءٌ من الحكم لا تفصيلُ تنفيذ.
     def _process(self, ctx: _Letter) -> None:
+        article_lam = self._article_alif_just_seen
+        self._article_alif_just_seen = False       # تُستهلك عند الحرف التالي
         ctx = self._strip_quranic_signs(ctx)
         for handler in (self._h_tatweel, self._h_rounded_zero):
             if handler(ctx):
@@ -376,6 +383,8 @@ class _Normalizer:
         if ctx.vowel_mark_count > 1:
             # تعدّد الحركات على حاملٍ واحد: يقف ولا يرجّح
             raise _Stop(f"MULTIPLE_HARAKAT_ON_ONE_CARRIER@{ctx.index}")
+        if article_lam and self._h_sun_lam(ctx):
+            return
         for handler in (self._h_dagger_alif, self._h_alef_madda,
                         self._h_bare_alif, self._h_alif_maqsura):
             if handler(ctx):
@@ -435,6 +444,31 @@ class _Normalizer:
         self._use("N1")
         ctx.marks = ctx.marks.replace(MADDAH, "")
         return ctx
+
+    def _h_sun_lam(self, ctx: _Letter) -> bool:
+        """N9 — لامُ «أل» قبل حرفٍ شمسيّ مشدّد: تُحذف.
+
+        حكم المالك: «اللام الشمسية تُحذف اللام والشدّة، ويُكرَّر الحرفُ
+        الشمسيّ بحرفين: أحدهما الأوّل ساكن، والثاني نفسُ حركة الشدّة».
+
+        وتكريرُ الحرف عملُ N2 نفسه، فلا يزيد هذا المعالج عليه إلا **حذف
+        اللام**. وأثرُه أن يسقط صامتٌ من كل كلمةٍ شمسية:
+            الرَّحْمَنِ   قبل: ءَلْرْرَحْمَنِ   بعد: ءَرْرَحْمَنِ
+
+        واللامُ مستثناةٌ من الحروف الشمسية بحكم المالك: «هذه لا تُدغم وتبقى
+        اللام» — «الَّذِينَ» تبقى ءَلْلَذِيْنَ. والسطحُ لا يتغيّر باستثنائها،
+        لأن المحذوفة والمكرَّر لامان في الحالين؛ لكن التوصيف يتغيّر، وهو
+        المقصود.
+
+        والقمريةُ لا يمسّها شيء: لا شدّة بعدها فلا سبب.
+        """
+        if ctx.letter != LAM or ctx.haraka or ctx.tanween or ctx.has_shadda:
+            return False
+        if ctx.next_letter not in SUN_LETTERS or SHADDA not in ctx.next_marks:
+            return False
+        self._fate(ctx.index, ctx.letter, DELETED, "N9")
+        self._use("N9")
+        return True
 
     def _h_dagger_alif(self, ctx: _Letter) -> bool:
         """الألف الخنجرية — ألفُ مدٍّ حُذفت رسمًا وبقيت علامتُها.
@@ -513,6 +547,7 @@ class _Normalizer:
             self._fate(ctx.index, ctx.letter, REPLACED, "N7.1")
             self._use("N7.1")
             self._use("N10")
+            self._article_alif_just_seen = True
             return True
 
         # N7 العام — رؤوس الأفعال تدخل هنا لأن N7.3 معطّلة
@@ -526,13 +561,21 @@ class _Normalizer:
         # **داخل** الكلمة النصُّ لا ينفي الشروط، والفاصل لازم: لامُ التعريف لا
         # تحمل حركة (مجرّدة/ساكنة/مشدّدة)، ولامٌ متحرّكة بعد ألفٍ مجرّدة تعني
         # أن الألف **مدٌّ** (مَالِكِ ، لَيَالِيَ) لا أداةَ تعريف.
-        if ctx.next_letter == LAM and not any(m in VOWEL_MARKS for m in ctx.next_marks):
+        # لامُ التعريف لا تحمل حركةً **مفردة**: مجرّدةٌ أو ساكنة أو مشدّدة.
+        # والمشدّدةُ منها التقاءُ لام «أل» بلامِ الاسم (بِالَّذِي)، وكانت تسقط
+        # من هذا الشرط فتُقرأ الألفُ مدًّا — عيبٌ في الشرط لا في القاعدة.
+        # ولامٌ **متحرّكة بلا شدّة** بعد ألفٍ مجرّدة تعني أن الألف مدٌّ
+        # (مَالِكِ ، لَيَالِيَ) — وهو الفاصل الذي يحميه هذا الشرط.
+        if ctx.next_letter == LAM and (
+                SHADDA in ctx.next_marks
+                or not any(m in VOWEL_MARKS for m in ctx.next_marks)):
             treat = self._decide("U_N7_2_INTERNAL_AL", ctx.index,
                                  "«ال» داخل الكلمة بعد سابقة — لا سجلّ وحداتٍ معتمد")
             if treat == OWNER_DECISION_REQUIRED:
                 raise _Stop(f"N7_2_NO_APPROVED_REGISTRY@{ctx.index}")
             self._fate(ctx.index, ctx.letter, DELETED, "N7.2")
             self._use("N7.2")
+            self._article_alif_just_seen = True
             return True
 
         if self._prev_mark == FATHA:                       # مدّ
@@ -801,6 +844,25 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
                 plain.normalized == marked.normalized,
                 f"{marked.normalized}   (علامةُ الوقف حُذفت ولم تغيّر الطبقة الصوتية)")
 
+    # -- القاعدة N9: اللام الشمسية ------------------------------------------
+    r = norm("الرَّحْمَنِ")
+    suite.check("T24_SUN_LAM_IS_DELETED",
+                LAM not in r.normalized and "N9" in r.rules_applied,
+                f"{r.normalized}   (سقطت لامُ «أل» وبقي التكرير)")
+
+    r = norm("الْحَمْدُ")
+    suite.check("T25_MOON_LAM_STAYS", LAM in r.normalized and "N9" not in r.rules_applied,
+                f"{r.normalized}   (لا شدّةَ بعدها فلا سبب)")
+
+    r = norm("الَّذِينَ")
+    suite.check("T26_LAM_IS_NOT_A_SUN_LETTER",
+                "N9" not in r.rules_applied and r.normalized.count(LAM) == 2,
+                f"{r.normalized}   (حكم المالك: هذه لا تُدغم وتبقى اللام)")
+
+    r = norm("وَالشَّمْسِ")
+    suite.check("T27_SUN_LAM_ALSO_AFTER_A_PREFIX",
+                "N9" in r.rules_applied and LAM not in r.normalized, r.normalized)
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
@@ -842,6 +904,10 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
                  r.status == OWNER_DECISION
                  and "U_COMBINING_HAMZA" in r.decision_classes,
                  "الهمزة حرفٌ لا حركة — وردُّها حرفًا لم يرد فيه نصّ")
+    # لامٌ أصلية في أول الكلمة ليست لام «أل» ولو تلاها مشدّدٌ شمسيّ
+    r = norm("لَذَّةٍ")
+    suite.poison("P16_A_ROOT_LAM_IS_NEVER_DELETED", "N9" not in r.rules_applied,
+                 f"{r.normalized} — الراية لا تُرفع إلا بعد همزة «أل»")
     suite.poison("P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY",
                  not ({strip(e.surface) for e in reg} & lookalikes),
                  f"{sorted(lookalikes)} تشترك في الحروف وليست منه")
@@ -868,6 +934,11 @@ def cross_check_masaq(path: Path, policy: OwnerPolicy) -> dict:
     samples: dict[str, list] = {"engine_only": [], "reference_only": []}
     for key, entry in words.items():
         r = normalize_token(entry["surface"], key, policy)
+        # الكلماتُ الخارجةُ بحكم مالك ليست إخفاقَ مطابقة: استثناؤها مقصود،
+        # وعدُّها في الفجوة يخلط «لم يُعالَج بأمرك» بـ«لم يره المحرّك».
+        if r.status == JALALAH:
+            matrix["EXCLUDED_BY_OWNER_RULE"] += 1
+            continue
         engine = ("N7.1" in r.rules_applied) or ("N7.2" in r.rules_applied)
         reference = "DET" in entry["tags"]
         matrix[(reference, engine)] += 1
@@ -881,6 +952,7 @@ def cross_check_masaq(path: Path, policy: OwnerPolicy) -> dict:
         "NEITHER": matrix[(False, False)],
         "ENGINE_ONLY_KNOWN_COST_OF_N7_1": matrix[(False, True)],
         "REFERENCE_ONLY_ELIDED_ALIF_GAP": matrix[(True, False)],
+        "EXCLUDED_BY_OWNER_RULE": matrix["EXCLUDED_BY_OWNER_RULE"],
         "samples": samples,
     }
 
@@ -1004,6 +1076,8 @@ class Axis1Normalization(Axis):
                     "كلفةُ تطبيق N7.1 حرفيًّا (الْتَقَى ، اللَّاتِي ، اللَّهُمَّ)",
                 "REFERENCE_ONLY_ELIDED_ALIF_GAP":
                     "«ال» محذوفةُ الألف بعد لامٍ سابقة (لِلْـ) — لا يراها المحرّك",
+                "EXCLUDED_BY_OWNER_RULE":
+                    "خرجت بالقاعدة ن٠-ج — استثناءٌ مقصود لا فجوةُ مطابقة",
             })
             for key, label in (("engine_only", "المحرّك فقط"),
                                ("reference_only", "المرجع فقط")):

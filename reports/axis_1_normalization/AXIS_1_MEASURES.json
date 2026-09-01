@@ -3,37 +3,38 @@
   "axis": 1,
   "words": 77411,
   "status": {
-    "NORMALIZED": 54926,
+    "NORMALIZED": 56939,
     "EXCLUDED_LAFZ_AL_JALALAH": 2704,
-    "NORMALIZED_OWNER_DECISION_REQUIRED": 19742,
+    "NORMALIZED_OWNER_DECISION_REQUIRED": 17729,
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },
   "rules": {
-    "N12": 64584,
+    "N12": 64385,
     "N0.J": 2704,
     "N7.1": 7842,
     "N10": 23646,
+    "N9": 2578,
     "N2": 14677,
     "N7": 774,
     "N7.3:INOPERATIVE": 774,
     "N2.2": 1135,
-    "N0.F": 30,
-    "N7.2": 1371
+    "N7.2": 1616,
+    "N0.F": 30
   },
   "fates": {
-    "PRESERVED": 337873,
+    "PRESERVED": 335050,
     "REPLACED": 11114,
-    "EXPANDED": 26606,
-    "DELETED_BY_OWNER_RULE": 4932
+    "DELETED_BY_OWNER_RULE": 7755,
+    "EXPANDED": 26606
   },
   "owner_decision_classes": {
-    "U_UNVOCALIZED_CARRIER": 2904,
+    "U_N7_2_INTERNAL_AL": 1616,
     "U_TANWEEN": 8894,
-    "U_N7_2_INTERNAL_AL": 1371,
     "U_ALEF_MADDA": 1509,
     "U_ALIF_MAQSURA": 2498,
     "U_ALIF_FARIQA": 3561,
+    "U_UNVOCALIZED_CARRIER": 301,
     "U_MULTIWORD_CELL": 9
   },
   "stop_reasons": {
@@ -57,9 +58,10 @@
   ],
   "masaq_cross_check": {
     "BOTH": 8045,
-    "NEITHER": 65308,
-    "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1168,
-    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 2890
+    "NEITHER": 64923,
+    "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1404,
+    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 335,
+    "EXCLUDED_BY_OWNER_RULE": 2704
   },
   "_cross_samples": {
     "engine_only": [
@@ -84,6 +86,15 @@
       [
         [
           2,
+          4,
+          1
+        ],
+        "وَالَّذِينَ",
+        "وَلْلَذِيْنَ"
+      ],
+      [
+        [
+          2,
           6,
           2
         ],
@@ -93,41 +104,23 @@
       [
         [
           2,
+          9,
+          3
+        ],
+        "وَالَّذِينَ",
+        "وَلْلَذِيْنَ"
+      ],
+      [
+        [
+          2,
           14,
           3
         ],
         "الَّذِينَ",
         "ءَلْلَذِيْنَ"
-      ],
-      [
-        [
-          2,
-          16,
-          2
-        ],
-        "الَّذِينَ",
-        "ءَلْلَذِيْنَ"
-      ],
-      [
-        [
-          2,
-          17,
-          3
-        ],
-        "الَّذِي",
-        "ءَلْلَذِيْ"
       ]
     ],
     "reference_only": [
-      [
-        [
-          1,
-          1,
-          2
-        ],
-        "اللَّهِ",
-        "اللَّهِ"
-      ],
       [
         [
           2,
@@ -140,38 +133,47 @@
       [
         [
           2,
-          7,
-          2
+          24,
+          13
         ],
-        "اللَّهُ",
-        "اللَّهُ"
+        "لِلْكَافِرِينَ",
+        "لِلْكَاْفِرِيْنَ"
       ],
       [
         [
           2,
-          8,
-          6
+          30,
+          4
         ],
-        "بِاللَّهِ",
-        "بِاللَّهِ"
+        "لِلْمَلَائِكَةِ",
+        "لِلْمَلَاْئِكَةِ"
       ],
       [
         [
           2,
-          9,
-          2
+          34,
+          3
         ],
-        "اللَّهَ",
-        "اللَّهَ"
+        "لِلْمَلَائِكَةِ",
+        "لِلْمَلَاْئِكَةِ"
       ],
       [
         [
           2,
-          10,
-          5
+          66,
+          9
         ],
-        "اللَّهُ",
-        "اللَّهُ"
+        "لِلْمُتَّقِينَ",
+        "لِلْمُتْتَقِيْنَ"
+      ],
+      [
+        [
+          2,
+          83,
+          17
+        ],
+        "لِلنَّاسِ",
+        "لِلْنْنَاْسِ"
       ]
     ]
   },
@@ -197,7 +199,11 @@
     "T20_DAGGER_SEAT_IS_REPLACED_NOT_KEPT": true,
     "T21_UTHMANI_SIGN_TABLE_SELF_AUDITS": true,
     "T22_NO_MARK_IS_EVER_SILENTLY_SWALLOWED": true,
-    "T23_PERFORMANCE_SIGN_LEAVES_NO_TRACE": true
+    "T23_PERFORMANCE_SIGN_LEAVES_NO_TRACE": true,
+    "T24_SUN_LAM_IS_DELETED": true,
+    "T25_MOON_LAM_STAYS": true,
+    "T26_LAM_IS_NOT_A_SUN_LETTER": true,
+    "T27_SUN_LAM_ALSO_AFTER_A_PREFIX": true
   },
   "poisons": {
     "P1_HARAKA_WITHOUT_CARRIER_STOPS": true,
@@ -214,6 +220,7 @@
     "P13_DAGGER_ON_OTHER_CARRIER_IS_UNRATIFIED": true,
     "P14_UNKNOWN_MARK_STOPS_AND_IS_NOT_CALLED_A_NON_WORD": true,
     "P15_COMBINING_HAMZA_IS_UNRATIFIED": true,
+    "P16_A_ROOT_LAM_IS_NEVER_DELETED": true,
     "P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY": true
   },
   "input_defects": {}

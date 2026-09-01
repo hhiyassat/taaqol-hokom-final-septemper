@@ -1,6 +1,6 @@
 # محرّك أسلوط — خمسة محاور تقرأ `MASAQ.csv`
 
-`aslot 2.3.0` · `RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET`
+`aslot 2.4.0` · `RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET`
 `INPUT_SHA256 = 76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e`
 
 كلُّ رقمٍ هنا **مقيسٌ من جولة تشغيل فعلية**، لا مفترضًا ولا منقولًا عن الوثائق
@@ -51,6 +51,13 @@ AXIS_4_ROOT_WORK = NONE
     STEM_PROOF  = NOT_CLAIMED
     THREE_CONSONANT_GATE = NOT_APPLIED
     ROOT_PROVEN = 0   WAZN_EXECUTION = 0   SUFFIX_OUTPUT = 0
+
+القاعدة N9 — اللام الشمسية والقمرية  (2026-09-01)
+    «اللام القمرية تبقى. واللام الشمسية: تُحذف اللام والشدّة، ويُكرَّر
+     الحرفُ الشمسيّ بحرفين، أوّلهما ساكن والثاني بحركة الشدّة.»
+    واللامُ نفسُها مستثناة: «هذه لا تُدغم وتبقى اللام» (الَّذِينَ).
+        الرَّحْمَنِ  قبل: ءَلْرْرَحْمَنِ   بعد: ءَرْرَحْمَنِ
+        الْحَمْدُ   لا تتغيّر            الَّذِينَ  لا تتغيّر
 
 القاعدة N8 — الألف الخنجرية  (2026-09-01)
     «الألف الخنجرية على الواو تُعامَل معاملتها على الألف المقصورة.»
@@ -139,12 +146,12 @@ D3_MULTIWORD_SURFACE_IN_ONE_CELL   =   9   خليّة Word فيها كلمتان
 ### ٤ـ٢ التطبيع
 
 ```
-NORMALIZED                          = 54,926
-NORMALIZED_OWNER_DECISION_REQUIRED  = 19,742
+NORMALIZED                          = 56,939
+NORMALIZED_OWNER_DECISION_REQUIRED  = 17,729
 EXCLUDED_LAFZ_AL_JALALAH            =  2,704      ← القاعدة ن٠-ج
 EXCLUDED_FAWATIH_AL_SUWAR           =     30      ← يوافق T1 §١ـ٥ تمامًا
 STOPPED_…_NO_CARRIER_FOR_A_HARAKA   =      9
-SELF_CHECKS = 22/22        POISONS = 15/15
+SELF_CHECKS = 26/26        POISONS = 16/16
 ```
 
 ### ٤ـ٣ العوامل والمبنيات
@@ -158,7 +165,7 @@ SELF_CHECKS = 11/11        POISONS = 6/6
 ### ٤ـ٤ المقاطع الصوتية
 
 ```
-CV = 104,458   CVC = 64,883   CVV = 47,619   CVCC = 2,850   CVVC = 1,029   CVVCC = 3
+CV = 104,458   CVC = 67,461   CVV = 47,619   CVCC = 272   CVVC = 1,029   CVVCC = 3
 ACCEPT = 74,661      BLOCK = 7      (نقصت لخروج ٢٬٧٠٤ كلمة بالقاعدة ن٠-ج)
 SELF_CHECKS = 11/11        POISONS = 7/7
 ```
@@ -172,7 +179,7 @@ MASAQ_LIKE_ROWS = 89,313   (بالترتيب المصحفيّ، والمعرّف
 SELF_CHECKS = 11/11        POISONS = 8/8
 ```
 
-**المجموع: 62/62 فحصًا ذاتيًّا و43/43 سمًّا، و43 اختبار pytest.**
+**المجموع: 66/66 فحصًا ذاتيًّا و44/44 سمًّا، و43 اختبار pytest.**
 
 ---
 
@@ -201,8 +208,9 @@ SELF_CHECKS = 11/11        POISONS = 8/8
 KNOWN_COST_OF_N7_1_APPLIED_LITERALLY = 1,174
     نصّ N7.1 ينفي الشروط صراحةً، فتصدُق على «الْتَقَى» و«اللَّاتِي» وليستا أداةَ تعريف.
 
-AL_WITH_ELIDED_ALIF_NOT_DETECTED = 343
-    «لِلْـ» — أُسقطت ألفُ «ال» رسمًا فلا يراها المحرّك. أكبر فجوةٍ مفردة.
+AL_WITH_ELIDED_ALIF_NOT_DETECTED = 335
+    «لِلْـ» — أُسقطت ألفُ «ال» رسمًا فلا يراها المحرّك، فلا تعمل عليها N9:
+    لِلنَّاسِ → لِلْنْنَاْسِ  والصواب بحكمك  لِنْنَاْسِ. أكبر فجوةٍ مفردة.
 
 KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا (T3_KNOWN_LIMIT_KAFARU_IS_WRONGLY_PEELED)
     الكاف في «كَفَرُوا» أصلٌ ونحن نقشّرها. شرط البوابة C يشترط نمط CVV·CV·CV
@@ -220,11 +228,11 @@ KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا (T3_KNOWN_LIMIT_KAFARU_IS_W
 
 | الصنف | كلمات | المعالجة المؤقّتة |
 |---|---:|---|
-| `U_TANWEEN` | 8,046 | فكٌّ إلى حركة + نونٍ ساكنة — التنوين غير مذكور في T1 بتاتًا |
-| `U_UNVOCALIZED_CARRIER` | 3,214 | سكونٌ صريح |
+| `U_TANWEEN` | 8,894 | فكٌّ إلى حركة + نونٍ ساكنة — التنوين غير مذكور في T1 بتاتًا |
+| `U_UNVOCALIZED_CARRIER` | 301 | سكونٌ صريح — انهار من ٢٬٨٩٤ بعد القاعدة N9 |
 | `U_ALIF_FARIQA` | 3,561 | حذف ألف التفريق بعد واو الجماعة |
 | `U_ALIF_MAQSURA` | 2,498 | ألفُ مدّ |
-| `U_N7_2_INTERNAL_AL` | 1,766 | حذف همزة الوصل — N7.2 قاعدةٌ بلا وسيلة |
+| `U_N7_2_INTERNAL_AL` | 1,616 | حذف همزة الوصل — N7.2 قاعدةٌ بلا وسيلة |
 | `U_ALEF_MADDA` | 1,511 | همزة + فتحة + ألف مدّ — يعارض ظاهرَ N1 |
 | `U_MULTIWORD_CELL` | 9 | وقوفٌ تامّ |
 | `U_DAGGER_ALIF_OTHER_CARRIER` | 0 | خنجريةٌ على حاملٍ منطوق (هٰذا ، صَلَوَٰت) — حكمُك نصّ على المقعد الصامت وحده |

@@ -5,6 +5,9 @@ reports/axis_0_quran_build/QURAN_FROM_MASAQ.txt
 # المدخل الخام: يُعرَّف ببصمته لا بنسخه
 data/MASAQ.csv
 
+# وسيطُ النقل والتنظيف — لا يدخل التاريخ
+_to_delete/
+
 # بايثون
 __pycache__/
 *.py[cod]
