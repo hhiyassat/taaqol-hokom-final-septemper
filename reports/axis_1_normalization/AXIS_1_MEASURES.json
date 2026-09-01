@@ -3,9 +3,9 @@
   "axis": 1,
   "words": 77411,
   "status": {
-    "NORMALIZED": 57150,
+    "NORMALIZED": 57152,
     "EXCLUDED_LAFZ_AL_JALALAH": 2704,
-    "NORMALIZED_OWNER_DECISION_REQUIRED": 17518,
+    "NORMALIZED_OWNER_DECISION_REQUIRED": 17516,
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },
@@ -14,28 +14,29 @@
     "N0.J": 2704,
     "N7.1": 7842,
     "N10": 23646,
-    "N9": 2706,
+    "N9": 2708,
     "N2": 14677,
     "N7": 774,
     "N7.3:INOPERATIVE": 774,
     "N2.2": 1135,
     "N7.2": 1616,
     "N0.F": 30,
-    "N7.4": 325
+    "N7.4": 325,
+    "N10.2": 4
   },
   "fates": {
-    "PRESERVED": 335247,
-    "REPLACED": 11114,
-    "DELETED_BY_OWNER_RULE": 7883,
-    "EXPANDED": 26606
+    "PRESERVED": 335245,
+    "REPLACED": 11118,
+    "DELETED_BY_OWNER_RULE": 7885,
+    "EXPANDED": 26602
   },
   "owner_decision_classes": {
     "U_N7_2_INTERNAL_AL": 1616,
     "U_TANWEEN": 8894,
-    "U_ALEF_MADDA": 1509,
+    "U_ALEF_MADDA": 1505,
     "U_ALIF_MAQSURA": 2498,
     "U_ALIF_FARIQA": 3561,
-    "U_UNVOCALIZED_CARRIER": 62,
+    "U_UNVOCALIZED_CARRIER": 60,
     "U_MULTIWORD_CELL": 9
   },
   "stop_reasons": {
@@ -58,10 +59,10 @@
     "U_MULTIWORD_CELL"
   ],
   "masaq_cross_check": {
-    "BOTH": 8370,
+    "BOTH": 8374,
     "NEITHER": 64923,
     "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1404,
-    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 10,
+    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 6,
     "EXCLUDED_BY_OWNER_RULE": 2704
   },
   "_cross_samples": {
@@ -124,24 +125,6 @@
     "reference_only": [
       [
         [
-          6,
-          143,
-          10
-        ],
-        "آلذَّكَرَيْنِ",
-        "ءَاْلْذْذَكَرَيْنِ"
-      ],
-      [
-        [
-          6,
-          144,
-          8
-        ],
-        "آلذَّكَرَيْنِ",
-        "ءَاْلْذْذَكَرَيْنِ"
-      ],
-      [
-        [
           9,
           103,
           11
@@ -160,21 +143,39 @@
       ],
       [
         [
-          10,
-          51,
-          7
+          11,
+          101,
+          9
         ],
-        "آلْآنَ",
-        "ءَاْلْءَاْنَ"
+        "آلِهَتُهُمُ",
+        "ءَاْلِهَتُهُمُ"
       ],
       [
         [
-          10,
+          37,
           91,
+          3
+        ],
+        "آلِهَتِهِمْ",
+        "ءَاْلِهَتِهِمْ"
+      ],
+      [
+        [
+          37,
+          144,
           1
         ],
-        "آلْآنَ",
-        "ءَاْلْءَاْنَ"
+        "لَلَبِثَ",
+        "لَلَبِثَ"
+      ],
+      [
+        [
+          101,
+          9,
+          2
+        ],
+        "هَاوِيَةٌ",
+        "هَاْوِيَةُنْ"
       ]
     ]
   },
@@ -207,7 +208,9 @@
     "T27_SUN_LAM_ALSO_AFTER_A_PREFIX": true,
     "T28_ELIDED_ARTICLE_THEN_SUN_LETTER": true,
     "T29_ELIDED_ARTICLE_THEN_MOON_LETTER": true,
-    "T30_TWO_LAMS_WITH_SHADDA_IS_NOT_ELIDED_ARTICLE": true
+    "T30_TWO_LAMS_WITH_SHADDA_IS_NOT_ELIDED_ARTICLE": true,
+    "T31_INTERROGATIVE_MADDA_IS_A_HAMZA_THEN_THE_ARTICLE": true,
+    "T32_INTERROGATIVE_MADDA_THEN_MOON_LETTER": true
   },
   "poisons": {
     "P1_HARAKA_WITHOUT_CARRIER_STOPS": true,
@@ -217,6 +220,9 @@
     "P5_MADDAH_NEVER_CREATES_HAMZA": true,
     "P6_FAWATIH_REQUIRES_POSITION": true,
     "P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH": true,
+    "P18_A_VOCALIZED_LAM_IS_NOT_THE_ARTICLE": true,
+    "P19_LEXICAL_MADDA_IS_UNTOUCHED_BY_N10_2:آمَنُوا": true,
+    "P19_LEXICAL_MADDA_IS_UNTOUCHED_BY_N10_2:الْقُرْآنَ": true,
     "P8_UNRATIFIED_CLASS_RAISES_ODR": true,
     "P9_JALALAH_MATCH_IS_EXACT": true,
     "P10_JALALAH_IS_NOT_SUBSTRING_MATCHING": true,

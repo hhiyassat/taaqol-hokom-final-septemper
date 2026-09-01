@@ -125,6 +125,7 @@ RULES = {
     "N9": "اللام الشمسية: تُحذف لامُ «أل» ويُكرَّر الحرفُ الشمسيّ ساكنًا فمتحرّكًا",
     "N10": "الهمزة حرف لا حركة، ولا تُخترع من علامة",
     "N10.1": "تعيين كرسيّ الهمزة بحسب ما قبلها",
+    "N10.2": "آ الداخلة على «أل»: المدّةُ رمزُ أداءٍ تُحذف بلا أثر، والباقي همزةُ استفهام",
     "N12": "كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج",
     "N13": "لا تحويل عامّ من الرسم العثماني إلى الإملائي — قرارُ إبقاء",
     "N3.Q": "علاماتُ التجويد والوقف والثناء: طبقةٌ أدائية تُحذف (سندُها §١ـ١)",
@@ -401,7 +402,8 @@ class _Normalizer:
                 return
             if self._h_moon_lam(ctx):
                 return
-        for handler in (self._h_dagger_alif, self._h_alef_madda,
+        for handler in (self._h_dagger_alif, self._h_interrogative_madda,
+                        self._h_alef_madda,
                         self._h_bare_alif, self._h_alif_maqsura):
             if handler(ctx):
                 return
@@ -531,6 +533,41 @@ class _Normalizer:
         self._emit(LAM, SUKUN, "N7.4", ctx.index)
         self._fate(ctx.index, ctx.letter, PRESERVED, "N7.4")
         self._use("N12")
+        return True
+
+    def _h_interrogative_madda(self, ctx: _Letter) -> bool:
+        """N10.2 — «آ» الداخلة على «أل»: همزةُ استفهامٍ لا مدّ.
+
+        حكم المالك (2026-09-01): «آ تُحذف بدون أيّ أثر لأنها رمزُ أداء وليست
+        جزءًا من الكلام العربيّ، وتتحوّل إلى ء استفهام».
+
+        فالمدّةُ هنا ليست صوتًا في الكلمة، وإنما علامةُ تلاوةٍ تفصل همزةَ
+        الاستفهام عن همزة الوصل حتى لا يلتبس الخبرُ بالسؤال. فإذا حُذفت
+        الأداءُ لم يبقَ إلا الهمزة، ولا يُبثّ بعدها ألفُ مدّ.
+
+        وعلّةُ الحكم منضبطةٌ بموضعها: «آ» يتلوها لامٌ عاطلةٌ من الحركة —
+        أي لامُ «أل» التي ابتُلعت همزتُها في الرمز. وقياسُه على النصّ كلِّه:
+        **٦ مواضع لا سابعَ لها**، وهي أسطحٌ ثلاثة (آلذَّكَرَيْنِ ، آلْآنَ ،
+        آللَّهُ)، وكلُّها استفهام. وما عداها من «آ» يتلوها لامٌ متحرّكة
+        (آلِ ، آلَاءِ ، آلِهَة — ٨٧ موضعًا) لا يمسّه هذا الحكم.
+
+        وتُرفع بعدها رايةُ «أل» فتعمل عليها N9: آلذَّكَرَيْنِ ← ءَذْذَكَرَيْنِ.
+
+        ⚠ الفتحةُ على الهمزة **موروثةٌ من المعالجة القائمة** لصنف
+        `U_ALEF_MADDA` (همزة + فتحة)، لا منصوصةٌ في الحكم. وهي الجزء
+        الوحيد من هذه القاعدة الذي لم يَرِد بنصّه.
+        """
+        if ctx.letter != ALEF_MADDA or not ctx.is_first:
+            return False
+        if ctx.haraka or ctx.tanween:
+            return False
+        if ctx.next_letter != LAM or any(m in VOWEL_MARKS for m in ctx.next_marks):
+            return False
+        self._emit(HAMZA, FATHA, "N10.2", ctx.index)
+        self._fate(ctx.index, ctx.letter, REPLACED, "N10.2")
+        self._article_alif_just_seen = True
+        self._use("N10")
+        self._use("N10.2")
         return True
 
     def _h_dagger_alif(self, ctx: _Letter) -> bool:
@@ -943,6 +980,28 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
                 "N7.4" not in r.rules_applied,
                 f"{r.normalized}   (التقاءُ لامين، مسارُه N2)")
 
+    # -- القاعدة N10.2: «آ» الداخلة على «أل» همزةُ استفهام ------------------
+    r = norm("آلذَّكَرَيْنِ")
+    suite.check("T31_INTERROGATIVE_MADDA_IS_A_HAMZA_THEN_THE_ARTICLE",
+                "N10.2" in r.rules_applied and "N9" in r.rules_applied
+                and ALIF not in r.normalized,
+                f"{r.normalized}   (المدّةُ حُذفت بلا أثر، والرايةُ رُفعت لـN9)")
+
+    r = norm("آلْآنَ")
+    suite.check("T32_INTERROGATIVE_MADDA_THEN_MOON_LETTER",
+                "N10.2" in r.rules_applied and r.normalized.count(LAM) == 1,
+                f"{r.normalized}   (والـ«آ» الثانيةُ معجميّةٌ لا أداءٌ فتبقى في صنفها)")
+
+    r = norm("آلَاءِ")
+    suite.poison("P18_A_VOCALIZED_LAM_IS_NOT_THE_ARTICLE",
+                 "N10.2" not in r.rules_applied,
+                 f"{r.normalized}   (آلاء ، آلِ ، آلهة — لامٌ متحرّكة لا لامُ تعريف)")
+
+    for word in ("آمَنُوا", "الْقُرْآنَ"):
+        suite.poison(f"P19_LEXICAL_MADDA_IS_UNTOUCHED_BY_N10_2:{word}",
+                     "N10.2" not in norm(word).rules_applied,
+                     "الحكم مقصورٌ على «آ» أوّلَ الكلمة يتلوها لامُ «أل»")
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
@@ -1024,7 +1083,8 @@ def cross_check_masaq(path: Path, policy: OwnerPolicy) -> dict:
         if r.status == JALALAH:
             matrix["EXCLUDED_BY_OWNER_RULE"] += 1
             continue
-        engine = any(rule in r.rules_applied for rule in ("N7.1", "N7.2", "N7.4"))
+        engine = any(rule in r.rules_applied
+                     for rule in ("N7.1", "N7.2", "N7.4", "N10.2"))
         reference = "DET" in entry["tags"]
         matrix[(reference, engine)] += 1
         if engine and not reference and len(samples["engine_only"]) < 6:

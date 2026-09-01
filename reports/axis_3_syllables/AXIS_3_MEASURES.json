@@ -8,11 +8,11 @@
   },
   "pattern_histogram": {
     "CV": 104458,
-    "CVC": 67834,
+    "CVC": 67838,
     "CVV": 47619,
-    "CVVC": 809,
+    "CVVC": 807,
     "CVCC": 119,
-    "CVVCC": 3
+    "CVVCC": 1
   },
   "block_reasons": {
     "SYLLABLE_WITHOUT_ONSET": 5,
