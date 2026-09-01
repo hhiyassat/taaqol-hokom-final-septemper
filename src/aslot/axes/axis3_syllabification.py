@@ -239,6 +239,16 @@ def build_suite() -> CheckSuite:
                 a.ok and a.layn_status == "PROVEN" and "CVC" in a.pattern_sequence,
                 f"{a.pattern_sequence} / layn={a.layn_status}")
 
+    # مقعدُ الألف الخنجرية بعد تطبيعه: ألفُ مدٍّ لا صامت (القاعدة N8)
+    from ..constants import ALIF
+    from ..constants import FATHA as _F
+    from ..constants import SUKUN as _S
+    a = analyze_normalized_surface("ع" + _F + "ل" + _F + ALIF + _S)
+    suite.check("T11_DAGGER_SEAT_IS_NOT_A_CONSONANT",
+                a.ok and a.consonant_count == 2 and a.pattern_sequence == ["CV", "CVV"],
+                f"{a.pattern_sequence} / C={a.consonant_count}"
+                "   (لو بقيت الواو صامتًا لصارت ٣)")
+
     suite.check("T10_CLOSED_SIX_IS_PRIOR_TO_DATA", len(ALLOWED_PATTERNS) == 6,
                 "القائمة سابقةٌ على البيانات لا مشتقّةٌ منها")
 

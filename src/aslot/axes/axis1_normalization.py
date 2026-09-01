@@ -36,6 +36,7 @@ from ..constants import (
     ALIF_MAQSURA,
     ALIF_WASLA,
     CONSONANT_LETTERS,
+    DAGGER_ALIF,
     FATHA,
     HAMZA,
     HAMZA_SEATS,
@@ -116,6 +117,7 @@ RULES = {
     "N7.1": "ألفٌ مجرّدة أول الكلمة يتبعها لام وليست من الفواتح: همزةُ «ال» بفتحة",
     "N7.2": "«ال» بعد سابقةٍ داخل الكلمة: لا تُعامَل إلا بمطابقة الوحدة كلها في سجلٍّ معتمد",
     "N7.3": "ألف الوصل في رأس فعلٍ مبرهَن — معطّلة: EXECUTABLE_VERB_RULES = 0",
+    "N8": "الألف الخنجرية على الواو والألف المقصورة: مقعدٌ لا صامت، يُستبدل بألف مدّ",
     "N10": "الهمزة حرف لا حركة، ولا تُخترع من علامة",
     "N10.1": "تعيين كرسيّ الهمزة بحسب ما قبلها",
     "N12": "كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج",
@@ -365,7 +367,8 @@ class _Normalizer:
         if ctx.vowel_mark_count > 1:
             # تعدّد الحركات على حاملٍ واحد: يقف ولا يرجّح
             raise _Stop(f"MULTIPLE_HARAKAT_ON_ONE_CARRIER@{ctx.index}")
-        for handler in (self._h_alef_madda, self._h_bare_alif, self._h_alif_maqsura):
+        for handler in (self._h_dagger_alif, self._h_alef_madda,
+                        self._h_bare_alif, self._h_alif_maqsura):
             if handler(ctx):
                 return
         self._h_general(ctx)
@@ -395,6 +398,49 @@ class _Normalizer:
         self._use("N1")
         ctx.marks = ctx.marks.replace(MADDAH, "")
         return ctx
+
+    def _h_dagger_alif(self, ctx: _Letter) -> bool:
+        """الألف الخنجرية — ألفُ مدٍّ حُذفت رسمًا وبقيت علامتُها.
+
+        وحكم المالك (2026-09-01): على **الواو** كحكمها على **الألف المقصورة**.
+        وعلّتُه أن الحرفين هناك **مقعدٌ لا صامت**: لا يُنطقان، وإنما يحملان
+        الألف المحذوفة. فيُستبدلان بها ولا يُعدّان في الصوامت.
+        فـ«الصلوٰة» ← «الصلاة» ، و«علىٰ» ← «علا».
+
+        ويقع هذا المعالج **قبل** معالج الألف المقصورة عمدًا: «ىٰ» يحكمها هذا
+        الحكم لا حكمُ المقصورة المجرّدة، والترتيب هنا جزءٌ من الحكم.
+        """
+        if DAGGER_ALIF not in ctx.marks:
+            return False
+
+        seat = ctx.letter in (WAW, ALIF_MAQSURA)
+        cls = "U_DAGGER_ALIF_ON_SEAT" if seat else "U_DAGGER_ALIF_OTHER_CARRIER"
+        treat = self._decide(cls, ctx.index,
+                             f"ألفٌ خنجرية على {ctx.letter!r}")
+        if treat == OWNER_DECISION_REQUIRED:
+            raise _Stop(f"DAGGER_ALIF_OWNER_DECISION@{ctx.index}")
+
+        if seat:
+            # مقعدٌ متحرّك لم يرد فيه حكم: يقف ولا يُخمَّن
+            if ctx.haraka or ctx.tanween:
+                raise _Stop(f"DAGGER_ALIF_ON_VOCALIZED_SEAT@{ctx.index}")
+            self._emit(ALIF, SUKUN, "N8", ctx.index)
+            self._fate(ctx.index, ctx.letter, REPLACED, "N8")
+            self._fate(ctx.index, DAGGER_ALIF, EXPANDED, "N8")
+            self._use("N8")
+            self._use("N12")
+            return True
+
+        # حاملٌ غير مقعد: صامتٌ بحركته، ثم ألفُ المدّ بعده
+        if ctx.haraka is None:
+            raise _Stop(f"DAGGER_ALIF_ON_UNVOCALIZED_CARRIER@{ctx.index}")
+        letter = self._seat(ctx)
+        self._emit(letter, ctx.haraka, "SOURCE", ctx.index)
+        self._fate(ctx.index, ctx.haraka, PRESERVED, "N12")
+        self._emit(ALIF, SUKUN, "U_DAGGER_ALIF_OTHER_CARRIER", ctx.index)
+        self._fate(ctx.index, DAGGER_ALIF, EXPANDED, "U_DAGGER_ALIF_OTHER_CARRIER")
+        self._use("N12")
+        return True
 
     def _h_alef_madda(self, ctx: _Letter) -> bool:
         """آ — رمزٌ واحد = ألف + مدّة، فحذفُ المدّة يُسقط المدَّ نفسه."""
@@ -684,6 +730,25 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
                 all(norm(e.surface).status == JALALAH for e in reg),
                 f"{len(reg)}/{len(reg)} سطحًا خرجت من كل المحاور")
 
+    # -- القاعدة N8: الألف الخنجرية ---------------------------------------
+    # لا شاهدَ لها في هذا المدخل (صفرُ خنجرية)، فتُبنى العيّنة من **الثوابت
+    # المسمّاة** لا من كتابةٍ يدوية: لا مصدرَ في النصّ يُنقل منه.
+    on_waw = "ع" + FATHA + "ل" + FATHA + WAW + DAGGER_ALIF
+    on_maqsura = "ع" + FATHA + "ل" + FATHA + ALIF_MAQSURA + DAGGER_ALIF
+    expected = "ع" + FATHA + "ل" + FATHA + ALIF + SUKUN
+
+    r = norm(on_waw)
+    suite.check("T18_DAGGER_ALIF_ON_WAW_BECOMES_MADD_ALIF",
+                r.normalized == expected and r.status == NORMALIZED
+                and "N8" in r.rules_applied,
+                f"{r.normalized} / {r.status}")
+    suite.check("T19_DAGGER_ALIF_ON_WAW_EQUALS_ON_ALIF_MAQSURA",
+                norm(on_waw).normalized == norm(on_maqsura).normalized,
+                "حكمُ المالك: الواو كالألف المقصورة — المقعدُ لا يُنطق")
+    suite.check("T20_DAGGER_SEAT_IS_REPLACED_NOT_KEPT",
+                WAW not in r.normalized and ALIF_MAQSURA not in r.normalized,
+                "المقعد يُستبدل ولا يبقى صامتًا يُعدّ")
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
@@ -701,6 +766,16 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
     marks = "".join(sorted(HARAKAT | TANWEEN | {SUKUN, SHADDA}))
     def strip(x): return "".join(c for c in x if c not in marks)
     lookalikes = {"اللهب", "اللهو", "يضلله", "للهدى"}
+    # مقعدٌ متحرّك لم يرد فيه حكم: يقف ولا يُخمَّن
+    suite.poison("P12_VOCALIZED_DAGGER_SEAT_STOPS",
+                 norm("ع" + FATHA + WAW + FATHA + DAGGER_ALIF).status == STOPPED,
+                 "حكم المالك نصّ على المقعد المجرّد وحده")
+    # خنجريةٌ على حاملٍ آخر: صنفٌ لم يُصادَق فيُرفع إلى قرار مالك
+    r = norm("ه" + FATHA + DAGGER_ALIF + "ذ" + FATHA + ALIF)
+    suite.poison("P13_DAGGER_ON_OTHER_CARRIER_IS_UNRATIFIED",
+                 r.status == OWNER_DECISION
+                 and "U_DAGGER_ALIF_OTHER_CARRIER" in r.decision_classes,
+                 f"{r.status} — الحكم نصّ على الواو والمقصورة لا غير")
     suite.poison("P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY",
                  not ({strip(e.surface) for e in reg} & lookalikes),
                  f"{sorted(lookalikes)} تشترك في الحروف وليست منه")

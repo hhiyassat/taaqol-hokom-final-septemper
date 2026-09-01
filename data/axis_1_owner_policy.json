@@ -7,61 +7,98 @@
     "rule_text_source": "من أين جاء نصّ الحكم. NOT_IN_ATTACHED_DOCS = لا سند نصّيّ بعد."
   },
   "_default_posture": "كل صنفٍ لا سند نصّيّ له يبدأ ratified=false. المحرّك يُنتج سطحًا مؤقّتًا كي يمضي القياس، ويعلن أن الكلمة تنتظر حكمًا.",
-
   "U_HAMZA_SEAT": {
     "treatment": "PRESERVE_AS_WRITTEN",
     "ratified": true,
     "rule_text_source": "T1 §١ـ١ لا يعدّ كرسيّ الهمزة من الطبقة الكتابية ⇒ عدم التغيير لا يحتاج قاعدة",
-    "alternatives": ["UNIFY_TO_BARE_HAMZA"],
+    "alternatives": [
+      "UNIFY_TO_BARE_HAMZA"
+    ],
     "note": "أثره المعلن: همزةُ الوصل المولَّدة تُكتب ء بينما تبقى المكتوبة أ/إ/ؤ/ئ. توحيدُ السطح غير مطبَّق."
   },
   "U_ALEF_MADDA": {
     "treatment": "HAMZA_FATHA_PLUS_MADD_ALIF",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["MADDA_DELETED_ALIF_REMAINS", "OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "MADDA_DELETED_ALIF_REMAINS",
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "N1 تقول: المدّة تُحذف ولا تولّد همزة. لكن آ رمزٌ واحد = ألف+مدّة، وحذفُ المدّة يُسقط المدَّ نفسه. الحكم معلّق."
   },
   "U_ALIF_MAQSURA": {
     "treatment": "MADD_ALIF",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["KEEP_AS_YAA_CONSONANT", "OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "KEEP_AS_YAA_CONSONANT",
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "T1 §١ـ١ تعدّ الألف المقصورة من الطبقة الكتابية، ولم يرد لها معرّف قاعدة."
+  },
+  "U_DAGGER_ALIF_ON_SEAT": {
+    "treatment": "MADD_ALIF_REPLACES_SEAT",
+    "ratified": true,
+    "rule_text_source": "حكم المالك 2026-09-01: الألف الخنجرية على الواو تُعامَل معاملتها على الألف المقصورة",
+    "alternatives": [
+      "OWNER_DECISION_REQUIRED"
+    ],
+    "note": "الواو والألف المقصورة هنا **مقعدٌ لا صامت**: تحملان ألفًا محذوفةً رسمًا. فتُستبدلان بألف مدّ ولا تُعدّان في الصوامت. مثاله: الصلوٰة ← الصلاة ، علىٰ ← علا."
+  },
+  "U_DAGGER_ALIF_OTHER_CARRIER": {
+    "treatment": "MADD_ALIF_AFTER_CARRIER",
+    "ratified": false,
+    "rule_text_source": "NOT_IN_ATTACHED_DOCS",
+    "alternatives": [
+      "OWNER_DECISION_REQUIRED"
+    ],
+    "note": "خنجريةٌ على حاملٍ غير الواو والألف المقصورة (هٰذا ، الرحمٰن). حكم المالك نصّ على المقعدين وحدهما، فهذا الصنف ينتظر حكمًا: الحاملُ صامتٌ بحركته والخنجريةُ ألفُ مدٍّ بعده."
   },
   "U_ALIF_FARIQA": {
     "treatment": "DELETE",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["KEEP_AS_MADD", "OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "KEEP_AS_MADD",
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "ألف التفريق بعد واو الجماعة (كَفَرُوا). لا تُنطق."
   },
   "U_TANWEEN": {
     "treatment": "EXPAND_TO_NOON_SAKIN",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["TREAT_AS_BARE_HARAKA", "OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "TREAT_AS_BARE_HARAKA",
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "التنوين غير مذكور في T1 بتاتًا. الفكّ يغيّر عددَ الصوامت في المحور الثالث، فأثره ليس تجميليًّا."
   },
   "U_N7_2_INTERNAL_AL": {
     "treatment": "ELIDE_WASL_HAMZA",
     "ratified": false,
     "rule_text_source": "T1 §١ـ٣(ج) N7.2 — القاعدة موجودة والوسيلة غائبة (سجلّ الوحدات المعتمد غير متاح)",
-    "alternatives": ["OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "N7.2 تشترط مطابقة الوحدة كلها في سجلٍّ معتمد. السجلّ غير مرفق ⇒ الشرط غير محقَّق."
   },
   "U_UNVOCALIZED_CARRIER": {
     "treatment": "EXPLICIT_SUKUN",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["OWNER_DECISION_REQUIRED"],
+    "alternatives": [
+      "OWNER_DECISION_REQUIRED"
+    ],
     "note": "حاملٌ بلا حركةٍ ولا وجهٍ مدّيّ. N12 تصرّح بالسكون لمن حُكم بسكونه، ولم يُحكم هنا."
   },
   "U_MULTIWORD_CELL": {
     "treatment": "OWNER_DECISION_REQUIRED",
     "ratified": false,
     "rule_text_source": "NOT_IN_ATTACHED_DOCS",
-    "alternatives": ["SPLIT_ON_SPACE"],
+    "alternatives": [
+      "SPLIT_ON_SPACE"
+    ],
     "note": "خليّة Word فيها كلمتان (٩ مواضع). شقُّها قرارُ مالك لأنه يغيّر ترقيم الكلمات."
   }
 }

@@ -1,6 +1,6 @@
 # محرّك أسلوط — خمسة محاور تقرأ `MASAQ.csv`
 
-`aslot 2.1.0` · `RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET`
+`aslot 2.2.0` · `RULE_OWNER = DR_HUSSEIN` · `MEASURED_NOT_PRESET`
 `INPUT_SHA256 = 76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e`
 
 كلُّ رقمٍ هنا **مقيسٌ من جولة تشغيل فعلية**، لا مفترضًا ولا منقولًا عن الوثائق
@@ -51,6 +51,14 @@ AXIS_4_ROOT_WORK = NONE
     STEM_PROOF  = NOT_CLAIMED
     THREE_CONSONANT_GATE = NOT_APPLIED
     ROOT_PROVEN = 0   WAZN_EXECUTION = 0   SUFFIX_OUTPUT = 0
+
+القاعدة N8 — الألف الخنجرية  (2026-09-01)
+    «الألف الخنجرية على الواو تُعامَل معاملتها على الألف المقصورة.»
+    مثاله: الصلوٰة ← الصلاة ، علىٰ ← علا.
+    والعلّة: الواو والمقصورة هناك **مقعدٌ لا صامت**، فتُستبدلان بألف المدّ
+    ولا تُعدّان في الصوامت.
+    ⚠ لا شاهدَ لها في هذا المدخل: صفرُ ألفٍ خنجرية في MASAQ.csv — تعمل على
+      الرسم العثمانيّ (quran-simple-enhanced.txt).
 
 القاعدة ن٠-ج — لفظ الجلالة  (2026-09-01)
     «يُمنع تصريفه وتحويله إلى مقاطع صوتية ولا أيّ إجراء. هو وحده واحد،
@@ -110,7 +118,7 @@ NORMALIZED_OWNER_DECISION_REQUIRED  = 19,742
 EXCLUDED_LAFZ_AL_JALALAH            =  2,704      ← القاعدة ن٠-ج
 EXCLUDED_FAWATIH_AL_SUWAR           =     30      ← يوافق T1 §١ـ٥ تمامًا
 STOPPED_…_NO_CARRIER_FOR_A_HARAKA   =      9
-SELF_CHECKS = 16/16        POISONS = 11/11
+SELF_CHECKS = 19/19        POISONS = 13/13
 ```
 
 ### ٤ـ٣ العوامل والمبنيات
@@ -126,7 +134,7 @@ SELF_CHECKS = 11/11        POISONS = 6/6
 ```
 CV = 104,458   CVC = 64,883   CVV = 47,619   CVCC = 2,850   CVVC = 1,029   CVVCC = 3
 ACCEPT = 74,661      BLOCK = 7      (نقصت لخروج ٢٬٧٠٤ كلمة بالقاعدة ن٠-ج)
-SELF_CHECKS = 10/10        POISONS = 7/7
+SELF_CHECKS = 11/11        POISONS = 7/7
 ```
 
 ### ٤ـ٥ التقشير
@@ -138,7 +146,7 @@ MASAQ_LIKE_ROWS = 89,313   (بالترتيب المصحفيّ، والمعرّف
 SELF_CHECKS = 11/11        POISONS = 8/8
 ```
 
-**المجموع: 55/55 فحصًا ذاتيًّا و39/39 سمًّا، و42 اختبار pytest.**
+**المجموع: 59/59 فحصًا ذاتيًّا و42/42 سمًّا، و42 اختبار pytest.**
 
 ---
 
@@ -193,6 +201,9 @@ KNOWN_LIMIT_KAFARU = مثبَّتٌ اختبارًا (T3_KNOWN_LIMIT_KAFARU_IS_W
 | `U_N7_2_INTERNAL_AL` | 1,766 | حذف همزة الوصل — N7.2 قاعدةٌ بلا وسيلة |
 | `U_ALEF_MADDA` | 1,511 | همزة + فتحة + ألف مدّ — يعارض ظاهرَ N1 |
 | `U_MULTIWORD_CELL` | 9 | وقوفٌ تامّ |
+| `U_DAGGER_ALIF_OTHER_CARRIER` | 0 | خنجريةٌ على حاملٍ غير الواو والمقصورة (هٰذا) — الحكم نصّ على المقعدين وحدهما |
+
+وصنفٌ **مصادَقٌ** بحكمك لا ينتظر شيئًا: `U_DAGGER_ALIF_ON_SEAT` (`ratified: true`).
 
 تصديقُ الأربعة الأولى وحدها يخفض `OWNER_DECISION_REQUIRED` إلى ما دون 4,000.
 

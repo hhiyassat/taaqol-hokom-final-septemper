@@ -33,6 +33,7 @@
     "T9_RECONSTRUCTION_VERIFIED": true,
     "T7_ALHAMDU": true,
     "T8_LAYN_IS_A_CONSONANT": true,
+    "T11_DAGGER_SEAT_IS_NOT_A_CONSONANT": true,
     "T10_CLOSED_SIX_IS_PRIOR_TO_DATA": true
   },
   "poisons": {

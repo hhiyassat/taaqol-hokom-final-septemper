@@ -8,7 +8,7 @@ AXIS                   = 1
 OWNER_RULE_SOVEREIGNTY = ABSOLUTE
 CREATE_NON_OWNER_RULE  = NO
 INFER_LINGUISTIC_RULE  = NO
-NAMED_RULES            = 15
+NAMED_RULES            = 16
 VERB_RULE_ROWS         = 34
 EXECUTABLE_VERB_RULES  = 0   ⇒ N7.3 لا تنطبق عمليًّا
 WORDS                  = 77,411
@@ -98,7 +98,7 @@ REFERENCE_ONLY_ELIDED_ALIF_GAP =  2,890   «ال» محذوفةُ الألف ب�
   لا يثبت : أن الشكل المطبّع هو النطق الصحيح — هو تمثيلٌ متّسق للمطابقة والتقطيع.
   جبر     : NORMALIZED_SURFACE_PRODUCED ≠ NORMALIZED_SURFACE_OWNER_AUTHORIZED
 
-## الفحوص الذاتية (التزام المحرّك): 16/16
+## الفحوص الذاتية (التزام المحرّك): 19/19
   [PASS] T1_ALLAH_SHADDA_UNFOLDS                         ءَلْلْلَهِ  (النصّ: ءَلْ + لْ + لَهِ)
   [PASS] T2_MADD_ALIF_GETS_EXPLICIT_SUKUN                مَاْ
   [PASS] T3_FAWATIH_EXCLUDED_AT_OPENING                  EXCLUDED_FAWATIH_AL_SUWAR
@@ -115,16 +115,21 @@ REFERENCE_ONLY_ELIDED_ALIF_GAP =  2,890   «ال» محذوفةُ الألف ب�
   [PASS] T15_JALALAH_PREFIX_SPLIT_BY_REGISTRY            وَاللَّهُ = وَ + اللَّهُ
   [PASS] T16_EVERY_JALALAH_ENTRY_REBUILDS_ITS_SURFACE    السابقة + البقيّة = السطح، في كل مدخلة
   [PASS] T17_NO_JALALAH_SURFACE_IS_EVER_NORMALIZED       16/16 سطحًا خرجت من كل المحاور
+  [PASS] T18_DAGGER_ALIF_ON_WAW_BECOMES_MADD_ALIF        عَلَاْ / NORMALIZED
+  [PASS] T19_DAGGER_ALIF_ON_WAW_EQUALS_ON_ALIF_MAQSURA   حكمُ المالك: الواو كالألف المقصورة — المقعدُ لا يُنطق
+  [PASS] T20_DAGGER_SEAT_IS_REPLACED_NOT_KEPT            المقعد يُستبدل ولا يبقى صامتًا يُعدّ
 
-## السموم (مدخلاتٌ يجب أن تُرفض): 11/11
-  [PASS] P1_HARAKA_WITHOUT_CARRIER_STOPS           HARAKA_WITHOUT_CARRIER@0
-  [PASS] P2_TWO_HARAKAT_ON_ONE_CARRIER_STOPS       MULTIPLE_HARAKAT_ON_ONE_CARRIER@0
-  [PASS] P3_NON_WORD_IGNORED                       IGNORED_NON_WORD_TOKEN
-  [PASS] P4_EMPTY_IGNORED                          IGNORED_NON_WORD_TOKEN
-  [PASS] P5_MADDAH_NEVER_CREATES_HAMZA             بَ
-  [PASS] P6_FAWATIH_REQUIRES_POSITION              NORMALIZED_OWNER_DECISION_REQUIRED
-  [PASS] P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH  NORMALIZED
-  [PASS] P8_UNRATIFIED_CLASS_RAISES_ODR            NORMALIZED_OWNER_DECISION_REQUIRED / هُدَاْ
-  [PASS] P9_JALALAH_MATCH_IS_EXACT                 حذفُ علامةٍ واحدة يُخرج السطحَ من القائمة
-  [PASS] P10_JALALAH_IS_NOT_SUBSTRING_MATCHING     لا يُبنى الحكم على احتواء الرسم
-  [PASS] P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY    ['اللهب', 'اللهو', 'للهدى', 'يضلله'] تشترك في الحروف وليست منه
+## السموم (مدخلاتٌ يجب أن تُرفض): 13/13
+  [PASS] P1_HARAKA_WITHOUT_CARRIER_STOPS            HARAKA_WITHOUT_CARRIER@0
+  [PASS] P2_TWO_HARAKAT_ON_ONE_CARRIER_STOPS        MULTIPLE_HARAKAT_ON_ONE_CARRIER@0
+  [PASS] P3_NON_WORD_IGNORED                        IGNORED_NON_WORD_TOKEN
+  [PASS] P4_EMPTY_IGNORED                           IGNORED_NON_WORD_TOKEN
+  [PASS] P5_MADDAH_NEVER_CREATES_HAMZA              بَ
+  [PASS] P6_FAWATIH_REQUIRES_POSITION               NORMALIZED_OWNER_DECISION_REQUIRED
+  [PASS] P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH   NORMALIZED
+  [PASS] P8_UNRATIFIED_CLASS_RAISES_ODR             NORMALIZED_OWNER_DECISION_REQUIRED / هُدَاْ
+  [PASS] P9_JALALAH_MATCH_IS_EXACT                  حذفُ علامةٍ واحدة يُخرج السطحَ من القائمة
+  [PASS] P10_JALALAH_IS_NOT_SUBSTRING_MATCHING      لا يُبنى الحكم على احتواء الرسم
+  [PASS] P12_VOCALIZED_DAGGER_SEAT_STOPS            حكم المالك نصّ على المقعد المجرّد وحده
+  [PASS] P13_DAGGER_ON_OTHER_CARRIER_IS_UNRATIFIED  NORMALIZED_OWNER_DECISION_REQUIRED — الحكم نصّ على الواو والمقصورة لا غير
+  [PASS] P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY     ['اللهب', 'اللهو', 'للهدى', 'يضلله'] تشترك في الحروف وليست منه
