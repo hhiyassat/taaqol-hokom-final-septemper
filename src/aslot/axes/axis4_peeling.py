@@ -412,6 +412,11 @@ class Axis4Peeling(Axis):
         rows, masaq_like = [], []
         total_peels = row_id = 0
 
+        jalalah_rows = jalalah_words = 0
+        if args.emit_masaq_like:
+            row_id, jalalah_rows, jalalah_words = _emit_jalalah(
+                masaq_like, axis1, row_id)
+
         for row in iter_usable(axis1):
             r = peel_to_stem(row["Normalized_Word"], registry, witness)
             terminations[r.termination] += 1
@@ -441,6 +446,13 @@ class Axis4Peeling(Axis):
                    "Root_Work", "Root_Proven", "Stem_Proof", "Note"], rows)
 
         if args.emit_masaq_like:
+            # صفوفُ لفظ الجلالة تُبثّ في دفعةٍ مستقلّة قبل الحلقة، فتُعاد
+            # الترتيبَ المصحفيّ هنا ويُعاد ترقيمُها. والترتيب ليس تجميلًا:
+            # المحور صفر يثبت أن ترتيب الورود هو الترتيب المصحفيّ، فلا يجوز
+            # لمخرجٍ لاحقٍ أن ينقضه.
+            masaq_like.sort(key=lambda r: (int(r[1]), int(r[2]), int(r[3]), int(r[4])))
+            for new_id, row in enumerate(masaq_like, start=1):
+                row[0] = new_id
             write_csv(out_dir / "MASAQ_LIKE_OUTPUT.csv",
                       ["ID", "Sura_No", "Verse_No", "Word_No", "Segment_No",
                        "Word", "Normalized_Word", "Segment_Surface",
@@ -457,6 +469,8 @@ class Axis4Peeling(Axis):
             "stems_emitted": sum(1 for r in rows if r[10]),
             "deferred_candidate_prefixes": dict(candidates),
             "masaq_like_rows": len(masaq_like),
+            "jalalah_words_passed_through": jalalah_words,
+            "jalalah_rows_emitted": jalalah_rows,
             "witness_set_size": len(witness) if witness else 0,
             "root_proven": 0,
             "wazn_execution": 0,
@@ -504,6 +518,12 @@ class Axis4Peeling(Axis):
         r.counts(sorted(m["deferred_candidate_prefixes"].items(),
                         key=lambda kv: -kv[1]),
                  note=dict.fromkeys(m["deferred_candidate_prefixes"], no_license))
+        r.heading("لفظ الجلالة — خارج كل إجراء (القاعدة ن٠-ج)")
+        r.counts({
+            "كلماتٌ لم تدخل التقشير": m["jalalah_words_passed_through"],
+            "صفوفٌ بُثّت من نصّ القائمة": m["jalalah_rows_emitted"],
+        })
+        r.text("لم تُقشَّر بترخيصٍ من هذا المحور؛ سابقتُها معلنةٌ في القائمة نفسها.")
         r.heading("توزيع عدد القشور")
         r.counts([(f"{k} قشرة", v) for k, v in m["peel_count_histogram"].items()])
         r.proves(
@@ -517,6 +537,38 @@ class Axis4Peeling(Axis):
                "    نمطًا واحدًا والصنف أوسع. حدٌّ معروف لا نقضٌ للمانع.",
                "  - همزة الاستفهام: مؤجّلة.  «ال»: غير مفتوحة.  اللواحق: مغلقة.")
         return r
+
+
+def _emit_jalalah(sink: list, axis1_csv: Path, row_id: int) -> tuple[int, int, int]:
+    """يبثّ صفوف لفظ الجلالة في جدول MASAQ-like **من نصّ القائمة**.
+
+    هذه الكلمات خرجت من كل المحاور بحكم القاعدة ن٠-ج، فلا تمرّ بالتقشير ولا
+    بالتقطيع. ومع ذلك يجب أن تظهر في الجدول كي لا يكون الاستثناءُ حذفًا: فرقٌ
+    بين «لم يُعالَج» و«ليس موجودًا».
+
+    والسابقة تُقشَّر بحكم المالك، لكن قشرَها هنا **إعلانٌ من القائمة** لا نتيجةُ
+    ترخيصٍ من هذا المحور. ولذلك يُترك عمود الترخيص فارغًا ويُسمّى الدورُ باسمه.
+    """
+    from .axis1_normalization import JALALAH
+
+    words = rows = 0
+    for row in read_rows(axis1_csv):
+        if row["Normalization_Status"] != JALALAH:
+            continue
+        words += 1
+        base = [row["Sura_No"], row["Verse_No"], row["Word_No"]]
+        segment = 0
+        for surface, role in ((row.get("Jalalah_Prefix"), "PREFIX"),
+                              (row.get("Jalalah_Preserved"), "LAFZ_AL_JALALAH")):
+            if not surface:
+                continue
+            segment += 1
+            row_id += 1
+            rows += 1
+            sink.append([row_id, *base, segment, row["Word"], row["Word"],
+                         surface, role, "", "", "", "", "EXCLUDED",
+                         JALALAH, "", ""])
+    return row_id, rows, words
 
 
 def _load_axis3(path: Path) -> dict:

@@ -512,15 +512,15 @@ def load_registry(args, policy: OwnerPolicy) -> Registry:
 def iter_usable(axis1_csv: Path, skipped: Counter | None = None):
     """صفوفُ المحور الأول التي تمضي إلى ما بعده.
 
-    الفواتح والمُهمَل والموقوف لا تدخل المحاور التالية — وكانت هذه الشروط
+    الفواتحُ ولفظُ الجلالة والمُهمَلُ والموقوف لا تدخل المحاور التالية — وكانت هذه الشروط
     مكرّرة نصًّا في المحاور ٢ و٣ و٤، فأيّ تعديلٍ فيها كان ثلاثةَ تعديلات.
     ``skipped`` عدّادٌ اختياريّ يسجّل **ما لم يدخل** وبأيّ حالةٍ استُبعد،
     كي يبقى المستبعَد معلومًا لا مسكوتًا عنه.
     """
-    from .axis1_normalization import FAWATIH, IGNORED
+    from .axis1_normalization import FAWATIH, IGNORED, JALALAH
     for row in read_rows(axis1_csv):
         status = row["Normalization_Status"]
-        if status in (FAWATIH, IGNORED) or status.startswith("STOPPED_"):
+        if status in (FAWATIH, IGNORED, JALALAH) or status.startswith("STOPPED_"):
             if skipped is not None:
                 skipped[status] += 1
             continue

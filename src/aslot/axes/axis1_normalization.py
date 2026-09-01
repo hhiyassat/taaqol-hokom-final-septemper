@@ -58,6 +58,7 @@ from ..constants import (
     YAA,
 )
 from ..fileio import read_rows, require_file, write_csv
+from ..jalalah import JalalahRegistry, default_registry
 from ..policy import OWNER_DECISION_REQUIRED, OwnerPolicy
 from ..reporting import Report
 from ..runner import Axis
@@ -72,7 +73,12 @@ STOPPED = "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA"
 IGNORED = "IGNORED_NON_WORD_TOKEN"
 FAWATIH = "EXCLUDED_FAWATIH_AL_SUWAR"
 
-STATUSES = (NORMALIZED, OWNER_DECISION, STOPPED, IGNORED, FAWATIH)
+#: الحالة السادسة — أضافها المالك بحكمه في 2026-09-01 (القاعدة ن٠-ج).
+#: كانت القائمة خمسًا، وصارت ستًّا بنصٍّ لا باستنباط. وما بقي مغلقًا كما كان:
+#: لا حالةَ سابعة تُولَد من حاجةٍ وقت التشغيل.
+JALALAH = "EXCLUDED_LAFZ_AL_JALALAH"
+
+STATUSES = (NORMALIZED, OWNER_DECISION, STOPPED, IGNORED, FAWATIH, JALALAH)
 
 PRESERVED = "PRESERVED"
 REPLACED = "REPLACED"
@@ -100,6 +106,7 @@ FAWATIH_EXTRA_POSITIONS = frozenset({(42, 2, 1)})
 
 RULES = {
     "N0.F": "فاتحة سورة في موضع الافتتاح — تُحفظ كما كُتبت وتخرج من كل المحاور",
+    "N0.J": "لفظ الجلالة — يُمنع تصريفه وتقطيعه وكلُّ إجراء، وتُقشَّر سابقتُه بالجرد",
     "N1": "المدّة تُحذف ولا تولّد همزةً في أي موضع",
     "N2": "كل شدّة تُفكّ داخل كلمتها إلى ساكنٍ ومتحرّك",
     "N2.1": "شدّة على أول الكلمة بلا «ال» قبلها: علامةُ أداءٍ تُحذف ولا تُضاعف الحرف",
@@ -148,11 +155,18 @@ class NormalizationResult:
     rules_applied: list = field(default_factory=list)
     owner_decisions: list = field(default_factory=list)
     stop_reason: str = ""
+    #: تُملأ من قائمة لفظ الجلالة وحدها — بالجرد لا بالتحليل.
+    jalalah_prefix: str = ""
+    jalalah_preserved: str = ""
 
     @property
     def is_usable(self) -> bool:
         """هل يمضي هذا السطح إلى المحورين ٣ و٤؟"""
         return self.status in (NORMALIZED, OWNER_DECISION)
+
+    @property
+    def is_jalalah(self) -> bool:
+        return self.status == JALALAH
 
     @property
     def decision_classes(self) -> list[str]:
@@ -205,10 +219,12 @@ class _Stop(Exception):
 # ---------------------------------------------------------------------------
 
 class _Normalizer:
-    def __init__(self, token: str, position: tuple | None, policy: OwnerPolicy):
+    def __init__(self, token: str, position: tuple | None, policy: OwnerPolicy,
+                 jalalah: JalalahRegistry):
         self.token = token
         self.position = position
         self.policy = policy
+        self.jalalah = jalalah
         self.res = NormalizationResult(token=token, status=NORMALIZED)
         self.units: list[Unit] = []
 
@@ -244,6 +260,8 @@ class _Normalizer:
     def run(self) -> NormalizationResult:
         try:
             self._reject_non_word()
+            # ن٠-ج قبل كل شيء: لفظ الجلالة لا يُطبَّع ولو خطوةً واحدة.
+            self._maybe_jalalah()
             self._maybe_fawatih()
             self._maybe_multiword()
             for ctx in self._letters():
@@ -266,6 +284,24 @@ class _Normalizer:
         if not stripped or not any(ch in CONSONANT_LETTERS for ch in stripped):
             raise _Stop("", IGNORED)
         self.token = stripped
+
+    def _maybe_jalalah(self) -> None:
+        """ن٠-ج — مطابقةٌ تامّة بالسطح المشكول، لا تشابهَ ولا احتواء.
+
+        ويقع الفحص **قبل** أيّ خطوةٍ من خطوات التطبيع: لا فكَّ شدّةٍ، ولا
+        همزةَ وصل، ولا تصريحَ بسكون. فما بعد هذه الدالّة لا يمسّ اللفظ.
+        """
+        entry = self.jalalah.get(self.token)
+        if entry is None:
+            return
+        self.res.status = JALALAH
+        self.res.normalized = self.token          # يُحفظ كما كُتب
+        self.res.jalalah_prefix = entry.prefix
+        self.res.jalalah_preserved = entry.preserved
+        self._use("N0.J")
+        for i, ch in enumerate(self.token):
+            self._fate(i, ch, PRESERVED, "N0.J")
+        raise _Stop("", JALALAH)
 
     def _maybe_fawatih(self) -> None:
         """N0.F — الشرطان معًا: السطح في القائمة **و** موضعه افتتاحيّ."""
@@ -549,9 +585,11 @@ def default_policy() -> OwnerPolicy:
 
 
 def normalize_token(token: str, position: tuple | None = None,
-                    policy: OwnerPolicy | None = None) -> NormalizationResult:
+                    policy: OwnerPolicy | None = None,
+                    jalalah: JalalahRegistry | None = None) -> NormalizationResult:
     """يطبّع كلمةً واحدة. ``position`` = (سورة، آية، كلمة) لأجل N0.F وحدها."""
-    return _Normalizer(token, position, policy or default_policy()).run()
+    return _Normalizer(token, position, policy or default_policy(),
+                       jalalah or default_registry()).run()
 
 
 # ---------------------------------------------------------------------------
@@ -613,10 +651,59 @@ def build_suite(policy: OwnerPolicy) -> CheckSuite:
     r = norm("قُلْ", (112, 1, 1))
     suite.poison("P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH", r.status != FAWATIH,
                  r.status)
+    # -- القاعدة ن٠-ج: لفظ الجلالة ---------------------------------------
+    # العيّنة تُؤخذ **من الجرد نفسه** لا تُكتب باليد. وسببُه واقعةٌ مقيسة:
+    # النصّ يكتب الشدّة قبل الحركة، واليدُ تعكسهما، فيسقط السطحُ من المطابقة
+    # وهو حاضر. فأيُّ سطحٍ مشكولٍ مكتوبٍ في ملفّ اختبار غيرُ موثوق بطبعه.
+    reg = default_registry()
+    bare_only = [e for e in reg if not e.has_prefix]
+    with_prefix = reg.with_prefix
+    suite.check("T12_JALALAH_REGISTRY_IS_LOADED",
+                bool(bare_only) and bool(with_prefix),
+                f"{len(reg)} سطحًا ، منها {len(with_prefix)} بسابقة")
+
+    entry = bare_only[0]
+    r = norm(entry.surface)
+    suite.check("T13_JALALAH_LEAVES_ALL_AXES",
+                r.status == JALALAH and r.normalized == entry.surface,
+                f"{entry.surface} → {r.status}")
+    suite.check("T14_JALALAH_IS_NOT_TOUCHED",
+                r.rules_applied == ["N0.J"],
+                f"القواعد المطبَّقة = {r.rules_applied}  (لا فكَّ شدّةٍ ولا همزةَ وصل ولا سكون)")
+
+    entry = with_prefix[0]
+    r = norm(entry.surface)
+    suite.check("T15_JALALAH_PREFIX_SPLIT_BY_REGISTRY",
+                r.jalalah_prefix == entry.prefix
+                and r.jalalah_preserved == entry.preserved,
+                f"{entry.surface} = {entry.prefix} + {entry.preserved}")
+    suite.check("T16_EVERY_JALALAH_ENTRY_REBUILDS_ITS_SURFACE",
+                all(e.prefix + e.preserved == e.surface for e in reg),
+                "السابقة + البقيّة = السطح، في كل مدخلة")
+    suite.check("T17_NO_JALALAH_SURFACE_IS_EVER_NORMALIZED",
+                all(norm(e.surface).status == JALALAH for e in reg),
+                f"{len(reg)}/{len(reg)} سطحًا خرجت من كل المحاور")
+
     r = norm("هُدَى")
     suite.poison("P8_UNRATIFIED_CLASS_RAISES_ODR",
                  r.status == OWNER_DECISION and "U_ALIF_MAQSURA" in r.decision_classes,
                  f"{r.status} / {r.normalized}")
+
+    # المطابقةُ تامّة: سطحٌ نقص منه محرفٌ واحد ليس هو
+    suite.poison("P9_JALALAH_MATCH_IS_EXACT",
+                 all(norm(e.surface[:-1]).status != JALALAH for e in reg),
+                 "حذفُ علامةٍ واحدة يُخرج السطحَ من القائمة")
+    # ولا احتواء: سطحٌ زِيد عليه ليس منها
+    suite.poison("P10_JALALAH_IS_NOT_SUBSTRING_MATCHING",
+                 all(norm(e.surface + "ب").status != JALALAH for e in reg),
+                 "لا يُبنى الحكم على احتواء الرسم")
+    # وما يشبهه رسمًا مجرّدًا ليس منه — والمقارنة هنا بلا شكلٍ فلا يدَ فيها
+    marks = "".join(sorted(HARAKAT | TANWEEN | {SUKUN, SHADDA}))
+    def strip(x): return "".join(c for c in x if c not in marks)
+    lookalikes = {"اللهب", "اللهو", "يضلله", "للهدى"}
+    suite.poison("P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY",
+                 not ({strip(e.surface) for e in reg} & lookalikes),
+                 f"{sorted(lookalikes)} تشترك في الحروف وليست منه")
     return suite
 
 
@@ -701,12 +788,13 @@ class Axis1Normalization(Axis):
                 stops[r.stop_reason.split("@")[0]] += 1
             rows.append([*position, row["Word"], r.normalized, r.status,
                          "|".join(r.decision_classes), "|".join(r.rules_applied),
-                         r.stop_reason])
+                         r.stop_reason, r.jalalah_prefix, r.jalalah_preserved])
 
         write_csv(out_dir / "AXIS_1_NORMALIZATION.csv",
                   ["Sura_No", "Verse_No", "Word_No", "Word", "Normalized_Word",
                    "Normalization_Status", "Owner_Decision_Classes",
-                   "Rules_Applied", "Stop_Reason"], rows)
+                   "Rules_Applied", "Stop_Reason",
+                   "Jalalah_Prefix", "Jalalah_Preserved"], rows)
 
         measures = {
             "words": len(rows),
@@ -715,6 +803,9 @@ class Axis1Normalization(Axis):
             "fates": dict(fates),
             "owner_decision_classes": dict(classes),
             "stop_reasons": dict(stops),
+            "jalalah_words": statuses.get(JALALAH, 0),
+            "jalalah_with_prefix": sum(1 for r in rows if r[9]),
+            "jalalah_registry_size": len(default_registry()),
             "policy_source": str(policy.source),
             "unratified_classes": [e.name for e in policy.unratified],
         }
@@ -739,8 +830,15 @@ class Axis1Normalization(Axis):
             "EXECUTABLE_VERB_RULES": f"{EXECUTABLE_VERB_RULES}   ⇒ N7.3 لا تنطبق عمليًّا",
             "WORDS": m["words"],
         })
-        r.heading("الحالات الخمس — قائمة مغلقة")
+        r.heading("الحالات الستّ — قائمة مغلقة (الخامسة أضافها المالك بالقاعدة ن٠-ج)")
         r.counts([(s, m["status"].get(s, 0)) for s in STATUSES])
+        r.heading("لفظ الجلالة — القاعدة ن٠-ج")
+        r.counts({
+            "أسطحُ القائمة المغلقة": m["jalalah_registry_size"],
+            "كلماتٌ خرجت من كل المحاور": m["jalalah_words"],
+            "منها ما قُشّرت سابقتُه بالجرد": m["jalalah_with_prefix"],
+        })
+        r.text("لم يُطبَّع اللفظ ولم يُقطَّع ولم يُقَس؛ والفصلُ من نصّ القائمة لا من تحليل.")
         r.heading("مصير الخلايا — قائمة مغلقة")
         r.counts([(f, m["fates"].get(f, 0)) for f in FATES])
         r.heading("القواعد المسمّاة المطبَّقة")

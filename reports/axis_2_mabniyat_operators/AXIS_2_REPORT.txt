@@ -36,12 +36,12 @@ NOT_NORMALIZABLE → BLOCK                                     =   0
 PROVEN                            =  8,972
 NOT_A_CLOSED_FORM_VERBAL_OPERATOR =     61
 UNRESOLVED                        =  3,753
-NOT_MATCHED                       = 64,586
+NOT_MATCHED                       = 61,882
 ```
 
 ## المسارات
 ```
-CONTINUE                           = 63,269
+CONTINUE                           = 60,565
 STOP_CLOSED_FORM                   =  8,972
 DEFER_UNRESOLVED_CLOSURE           =  5,070
 DEFER_VERBAL_OPERATOR_REGISTRY_TAG =     61

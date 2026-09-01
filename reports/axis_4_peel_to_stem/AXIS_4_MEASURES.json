@@ -1,38 +1,40 @@
 {
   "module": "aslot.axes.axis4_peeling",
   "axis": 4,
-  "words": 77372,
+  "words": 74668,
   "verdicts": {
-    "BLOCK": 5541,
-    "ACCEPT": 66256,
+    "BLOCK": 5007,
+    "ACCEPT": 64086,
     "DEFER": 5575
   },
   "terminations": {
-    "STEM_NOT_FURTHER_PEELABLE": 53901,
+    "STEM_NOT_FURTHER_PEELABLE": 51731,
     "CLOSED_REMAINDER": 12355,
     "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": 16,
     "DEFER_UNRESOLVED_CLOSURE": 5443,
     "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 116,
-    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 5454,
+    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 4920,
     "BLOCK_AXIS_3_REJECTED": 7,
     "BLOCK_EMPTY_REMAINDER": 80
   },
-  "actual_peels": 17286,
+  "actual_peels": 17252,
   "peel_count_histogram": {
-    "0": 61309,
-    "1": 14875,
+    "0": 58639,
+    "1": 14841,
     "2": 1153,
     "3": 35
   },
-  "stems_emitted": 53901,
+  "stems_emitted": 51731,
   "deferred_candidate_prefixes": {
     "يَ": 4105,
     "نَ": 1031,
-    "أَ": 4811,
+    "أَ": 4810,
     "سَ": 897,
-    "تَ": 2280
+    "تَ": 2271
   },
-  "masaq_like_rows": 88770,
+  "masaq_like_rows": 89313,
+  "jalalah_words_passed_through": 2704,
+  "jalalah_rows_emitted": 3248,
   "witness_set_size": 11647,
   "root_proven": 0,
   "wazn_execution": 0,

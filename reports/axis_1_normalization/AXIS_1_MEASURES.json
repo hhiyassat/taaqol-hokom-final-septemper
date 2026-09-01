@@ -3,33 +3,35 @@
   "axis": 1,
   "words": 77411,
   "status": {
-    "NORMALIZED": 55075,
-    "NORMALIZED_OWNER_DECISION_REQUIRED": 22297,
+    "NORMALIZED": 54926,
+    "EXCLUDED_LAFZ_AL_JALALAH": 2704,
+    "NORMALIZED_OWNER_DECISION_REQUIRED": 19742,
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },
   "rules": {
-    "N12": 67139,
-    "N7.1": 10000,
-    "N10": 25807,
-    "N2": 17380,
+    "N12": 64584,
+    "N0.J": 2704,
+    "N7.1": 7842,
+    "N10": 23646,
+    "N2": 14677,
     "N7": 774,
     "N7.3:INOPERATIVE": 774,
     "N2.2": 1135,
     "N0.F": 30,
-    "N7.2": 1766
+    "N7.2": 1371
   },
   "fates": {
-    "PRESERVED": 326620,
-    "REPLACED": 13272,
-    "EXPANDED": 29316,
-    "DELETED_BY_OWNER_RULE": 5327
+    "PRESERVED": 337873,
+    "REPLACED": 11114,
+    "EXPANDED": 26606,
+    "DELETED_BY_OWNER_RULE": 4932
   },
   "owner_decision_classes": {
-    "U_UNVOCALIZED_CARRIER": 5460,
+    "U_UNVOCALIZED_CARRIER": 2904,
     "U_TANWEEN": 8894,
-    "U_N7_2_INTERNAL_AL": 1766,
-    "U_ALEF_MADDA": 1511,
+    "U_N7_2_INTERNAL_AL": 1371,
+    "U_ALEF_MADDA": 1509,
     "U_ALIF_MAQSURA": 2498,
     "U_ALIF_FARIQA": 3561,
     "U_MULTIWORD_CELL": 9
@@ -37,6 +39,9 @@
   "stop_reasons": {
     "MULTIWORD_SURFACE_IN_ONE_CELL": 9
   },
+  "jalalah_words": 2704,
+  "jalalah_with_prefix": 544,
+  "jalalah_registry_size": 16,
   "policy_source": "/sessions/rcw-01t966hfgcenbyf88mfumasu/mnt/final-september/data/axis_1_owner_policy.json",
   "unratified_classes": [
     "U_ALEF_MADDA",
@@ -48,10 +53,10 @@
     "U_MULTIWORD_CELL"
   ],
   "masaq_cross_check": {
-    "BOTH": 10592,
-    "NEITHER": 65302,
-    "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1174,
-    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 343
+    "BOTH": 8045,
+    "NEITHER": 65308,
+    "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1168,
+    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 2890
   },
   "_cross_samples": {
     "engine_only": [
@@ -113,6 +118,15 @@
     "reference_only": [
       [
         [
+          1,
+          1,
+          2
+        ],
+        "اللَّهِ",
+        "اللَّهِ"
+      ],
+      [
+        [
           2,
           2,
           7
@@ -123,47 +137,38 @@
       [
         [
           2,
-          24,
-          13
+          7,
+          2
         ],
-        "لِلْكَافِرِينَ",
-        "لِلْكَاْفِرِيْنَ"
+        "اللَّهُ",
+        "اللَّهُ"
       ],
       [
         [
           2,
-          30,
-          4
+          8,
+          6
         ],
-        "لِلْمَلَائِكَةِ",
-        "لِلْمَلَاْئِكَةِ"
+        "بِاللَّهِ",
+        "بِاللَّهِ"
       ],
       [
         [
           2,
-          34,
-          3
+          9,
+          2
         ],
-        "لِلْمَلَائِكَةِ",
-        "لِلْمَلَاْئِكَةِ"
+        "اللَّهَ",
+        "اللَّهَ"
       ],
       [
         [
           2,
-          66,
-          9
+          10,
+          5
         ],
-        "لِلْمُتَّقِينَ",
-        "لِلْمُتْتَقِيْنَ"
-      ],
-      [
-        [
-          2,
-          83,
-          17
-        ],
-        "لِلنَّاسِ",
-        "لِلْنْنَاْسِ"
+        "اللَّهُ",
+        "اللَّهُ"
       ]
     ]
   },
@@ -177,7 +182,13 @@
     "T7_QALA_MADD": true,
     "T8_ALIF_FARIQA_DROPPED": true,
     "T9_EVERY_UNIT_IS_C_PLUS_ONE_MARK": true,
-    "T10_NO_BARE_LETTER_IN_OUTPUT": true
+    "T10_NO_BARE_LETTER_IN_OUTPUT": true,
+    "T12_JALALAH_REGISTRY_IS_LOADED": true,
+    "T13_JALALAH_LEAVES_ALL_AXES": true,
+    "T14_JALALAH_IS_NOT_TOUCHED": true,
+    "T15_JALALAH_PREFIX_SPLIT_BY_REGISTRY": true,
+    "T16_EVERY_JALALAH_ENTRY_REBUILDS_ITS_SURFACE": true,
+    "T17_NO_JALALAH_SURFACE_IS_EVER_NORMALIZED": true
   },
   "poisons": {
     "P1_HARAKA_WITHOUT_CARRIER_STOPS": true,
@@ -187,7 +198,10 @@
     "P5_MADDAH_NEVER_CREATES_HAMZA": true,
     "P6_FAWATIH_REQUIRES_POSITION": true,
     "P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH": true,
-    "P8_UNRATIFIED_CLASS_RAISES_ODR": true
+    "P8_UNRATIFIED_CLASS_RAISES_ODR": true,
+    "P9_JALALAH_MATCH_IS_EXACT": true,
+    "P10_JALALAH_IS_NOT_SUBSTRING_MATCHING": true,
+    "P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY": true
   },
   "input_defects": {}
 }

@@ -32,11 +32,11 @@ PREFIX_SURFACE_MATCH_ALONE_IS_NOT_LICENSE
 
 ## القياس على كامل النصّ
 ```
-WORDS            = 77,372
-ACTUAL_PEELS     = 17,286
-STEMS_EMITTED    = 53,901
+WORDS            = 74,668
+ACTUAL_PEELS     = 17,252
+STEMS_EMITTED    = 51,731
 WITNESS_SET_SIZE = 11,647
-MASAQ_LIKE_ROWS  = 88,770
+MASAQ_LIKE_ROWS  = 89,313
 ROOT_PROVEN      =      0
 WAZN_EXECUTION   =      0
 SUFFIX_OUTPUT    =      0
@@ -44,36 +44,43 @@ SUFFIX_OUTPUT    =      0
 
 ## الأحكام الثلاثة
 ```
-ACCEPT = 66,256
+ACCEPT = 64,086
 DEFER  =  5,575
-BLOCK  =  5,541
+BLOCK  =  5,007
 ```
 
 ## مخارج الوقوف — قائمة مغلقة
 ```
-STEM_NOT_FURTHER_PEELABLE           = 53,901
+STEM_NOT_FURTHER_PEELABLE           = 51,731
 CLOSED_REMAINDER                    = 12,355
 DEFER_INITIAL_LETTER_MAY_BE_RADICAL =     16
 DEFER_UNRESOLVED_CLOSURE            =  5,443
 DEFER_VERBAL_OPERATOR_REGISTRY_TAG  =    116
-BLOCK_SYLLABLE_BOUNDARY_CROSSED     =  5,454
+BLOCK_SYLLABLE_BOUNDARY_CROSSED     =  4,920
 BLOCK_AXIS_3_REJECTED               =      7
 BLOCK_EMPTY_REMAINDER               =     80
 ```
 
 ## مرشّحاتٌ مؤجّلة — وُلِّدت وقُيِّمت ولم تُقشَّر
 ```
-أَ = 4,811   (لا ترخيص — الكلمة مضت إلى جذعها)
+أَ = 4,810   (لا ترخيص — الكلمة مضت إلى جذعها)
 يَ = 4,105   (لا ترخيص — الكلمة مضت إلى جذعها)
-تَ = 2,280   (لا ترخيص — الكلمة مضت إلى جذعها)
+تَ = 2,271   (لا ترخيص — الكلمة مضت إلى جذعها)
 نَ = 1,031   (لا ترخيص — الكلمة مضت إلى جذعها)
 سَ =   897   (لا ترخيص — الكلمة مضت إلى جذعها)
 ```
 
+## لفظ الجلالة — خارج كل إجراء (القاعدة ن٠-ج)
+```
+كلماتٌ لم تدخل التقشير     = 2,704
+صفوفٌ بُثّت من نصّ القائمة = 3,248
+```
+لم تُقشَّر بترخيصٍ من هذا المحور؛ سابقتُها معلنةٌ في القائمة نفسها.
+
 ## توزيع عدد القشور
 ```
-0 قشرة = 61,309
-1 قشرة = 14,875
+0 قشرة = 58,639
+1 قشرة = 14,841
 2 قشرة =  1,153
 3 قشرة =     35
 ```

@@ -9,24 +9,24 @@ ALLOWED_PATTERNS       = CV · CVC · CVV · CVVC · CVCC · CVVCC
 CONSONANT_COUNT_SOURCE = AXIS_3_CV_PATTERN
 MADD                   = V        (madd ≠ C)
 IMPLEMENT_WAZN         = NO
-ANALYZED               = 77,372
+ANALYZED               = 74,668
 ```
 
 ## القياس على كامل النصّ
 ```
-CV    = 109,900
-CVC   =  65,037
+CV    = 104,458
+CVC   =  64,883
 CVV   =  47,619
 CVVC  =   1,029
-CVCC  =   5,403
-CVVCC =       5
+CVCC  =   2,850
+CVVCC =       3
 ```
 القائمة لم تُبنَ على ما ظهر، فبقي فيها ما لم يظهر —
 وهذا شرط كونها اختبارًا لا وصفًا.
 
 ## الأحكام
 ```
-ACCEPT = 77,365
+ACCEPT = 74,661
 BLOCK  =      7
 ```
 
@@ -38,8 +38,9 @@ PATTERN_OUTSIDE_CLOSED_SIX = 2
 
 ## لم تدخل هذا المحور أصلًا (بحكم المحور الأول)
 ```
-EXCLUDED_FAWATIH_AL_SUWAR                               = 30
-STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA =  9
+EXCLUDED_LAFZ_AL_JALALAH                                = 2,704
+EXCLUDED_FAWATIH_AL_SUWAR                               =    30
+STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA =     9
 ```
 
 ## ما يثبته هذا المحور وما لا يثبته

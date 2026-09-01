@@ -8,37 +8,47 @@ AXIS                   = 1
 OWNER_RULE_SOVEREIGNTY = ABSOLUTE
 CREATE_NON_OWNER_RULE  = NO
 INFER_LINGUISTIC_RULE  = NO
-NAMED_RULES            = 14
+NAMED_RULES            = 15
 VERB_RULE_ROWS         = 34
 EXECUTABLE_VERB_RULES  = 0   ⇒ N7.3 لا تنطبق عمليًّا
 WORDS                  = 77,411
 ```
 
-## الحالات الخمس — قائمة مغلقة
+## الحالات الستّ — قائمة مغلقة (الخامسة أضافها المالك بالقاعدة ن٠-ج)
 ```
-NORMALIZED                                              = 55,075
-NORMALIZED_OWNER_DECISION_REQUIRED                      = 22,297
+NORMALIZED                                              = 54,926
+NORMALIZED_OWNER_DECISION_REQUIRED                      = 19,742
 STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA =      9
 IGNORED_NON_WORD_TOKEN                                  =      0
 EXCLUDED_FAWATIH_AL_SUWAR                               =     30
+EXCLUDED_LAFZ_AL_JALALAH                                =  2,704
 ```
+
+## لفظ الجلالة — القاعدة ن٠-ج
+```
+أسطحُ القائمة المغلقة         =    16
+كلماتٌ خرجت من كل المحاور     = 2,704
+منها ما قُشّرت سابقتُه بالجرد =   544
+```
+لم يُطبَّع اللفظ ولم يُقطَّع ولم يُقَس؛ والفصلُ من نصّ القائمة لا من تحليل.
 
 ## مصير الخلايا — قائمة مغلقة
 ```
-PRESERVED             = 326,620
-REPLACED              =  13,272
-EXPANDED              =  29,316
+PRESERVED             = 337,873
+REPLACED              =  11,114
+EXPANDED              =  26,606
 IGNORED               =       0
-DELETED_BY_OWNER_RULE =   5,327
+DELETED_BY_OWNER_RULE =   4,932
 ```
 
 ## القواعد المسمّاة المطبَّقة
 ```
-N12              = 67,139   كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج
-N10              = 25,807   الهمزة حرف لا حركة، ولا تُخترع من علامة
-N2               = 17,380   كل شدّة تُفكّ داخل كلمتها إلى ساكنٍ ومتحرّك
-N7.1             = 10,000   ألفٌ مجرّدة أول الكلمة يتبعها لام وليست من الفواتح: همزةُ «ال» بفتحة
-N7.2             =  1,766   «ال» بعد سابقةٍ داخل الكلمة: لا تُعامَل إلا بمطابقة الوحدة كلها في سجلٍّ معتمد
+N12              = 64,584   كل حرفٍ حُكم بسكونه يحمل السكون صراحةً في المخرج
+N10              = 23,646   الهمزة حرف لا حركة، ولا تُخترع من علامة
+N2               = 14,677   كل شدّة تُفكّ داخل كلمتها إلى ساكنٍ ومتحرّك
+N7.1             =  7,842   ألفٌ مجرّدة أول الكلمة يتبعها لام وليست من الفواتح: همزةُ «ال» بفتحة
+N0.J             =  2,704   لفظ الجلالة — يُمنع تصريفه وتقطيعه وكلُّ إجراء، وتُقشَّر سابقتُه بالجرد
+N7.2             =  1,371   «ال» بعد سابقةٍ داخل الكلمة: لا تُعامَل إلا بمطابقة الوحدة كلها في سجلٍّ معتمد
 N2.2             =  1,135   شدّة بعد «ال»: تعود إلى الفكّ العادي
 N7               =    774   ألف الوصل همزةٌ مع حركة، والأصل الفتح عند غياب الحركة المكتوبة
 N7.3:INOPERATIVE =    774
@@ -48,11 +58,11 @@ N0.F             =     30   فاتحة سورة في موضع الافتتاح �
 ## أصنافٌ تنتظر حكم مالك (لا سند نصّيّ في وثيقة التطبيع)
 ```
 U_TANWEEN             = 8,894   treatment=EXPAND_TO_NOON_SAKIN  ratified=False
-U_UNVOCALIZED_CARRIER = 5,460   treatment=EXPLICIT_SUKUN  ratified=False
 U_ALIF_FARIQA         = 3,561   treatment=DELETE  ratified=False
+U_UNVOCALIZED_CARRIER = 2,904   treatment=EXPLICIT_SUKUN  ratified=False
 U_ALIF_MAQSURA        = 2,498   treatment=MADD_ALIF  ratified=False
-U_N7_2_INTERNAL_AL    = 1,766   treatment=ELIDE_WASL_HAMZA  ratified=False
-U_ALEF_MADDA          = 1,511   treatment=HAMZA_FATHA_PLUS_MADD_ALIF  ratified=False
+U_ALEF_MADDA          = 1,509   treatment=HAMZA_FATHA_PLUS_MADD_ALIF  ratified=False
+U_N7_2_INTERNAL_AL    = 1,371   treatment=ELIDE_WASL_HAMZA  ratified=False
 U_MULTIWORD_CELL      =     9   treatment=OWNER_DECISION_REQUIRED  ratified=False
 ```
 
@@ -63,10 +73,10 @@ MULTIWORD_SURFACE_IN_ONE_CELL = 9
 
 ## قياسٌ مقابل المرجع MASAQ — للمقارنة لا للحكم
 ```
-BOTH                           = 10,592
-NEITHER                        = 65,302
-ENGINE_ONLY_KNOWN_COST_OF_N7_1 =  1,174   كلفةُ تطبيق N7.1 حرفيًّا (الْتَقَى ، اللَّاتِي ، اللَّهُمَّ)
-REFERENCE_ONLY_ELIDED_ALIF_GAP =    343   «ال» محذوفةُ الألف بعد لامٍ سابقة (لِلْـ) — لا يراها المحرّك
+BOTH                           =  8,045
+NEITHER                        = 65,308
+ENGINE_ONLY_KNOWN_COST_OF_N7_1 =  1,168   كلفةُ تطبيق N7.1 حرفيًّا (الْتَقَى ، اللَّاتِي ، اللَّهُمَّ)
+REFERENCE_ONLY_ELIDED_ALIF_GAP =  2,890   «ال» محذوفةُ الألف بعد لامٍ سابقة (لِلْـ) — لا يراها المحرّك
 ```
   نماذج المحرّك فقط:
     (1, 7, 2)  الَّذِينَ  →  ءَلْلَذِيْنَ
@@ -76,19 +86,19 @@ REFERENCE_ONLY_ELIDED_ALIF_GAP =    343   «ال» محذوفةُ الألف ب�
     (2, 16, 2)  الَّذِينَ  →  ءَلْلَذِيْنَ
     (2, 17, 3)  الَّذِي  →  ءَلْلَذِيْ
   نماذج المرجع فقط:
+    (1, 1, 2)  اللَّهِ  →  اللَّهِ
     (2, 2, 7)  لِلْمُتَّقِينَ  →  لِلْمُتْتَقِيْنَ
-    (2, 24, 13)  لِلْكَافِرِينَ  →  لِلْكَاْفِرِيْنَ
-    (2, 30, 4)  لِلْمَلَائِكَةِ  →  لِلْمَلَاْئِكَةِ
-    (2, 34, 3)  لِلْمَلَائِكَةِ  →  لِلْمَلَاْئِكَةِ
-    (2, 66, 9)  لِلْمُتَّقِينَ  →  لِلْمُتْتَقِيْنَ
-    (2, 83, 17)  لِلنَّاسِ  →  لِلْنْنَاْسِ
+    (2, 7, 2)  اللَّهُ  →  اللَّهُ
+    (2, 8, 6)  بِاللَّهِ  →  بِاللَّهِ
+    (2, 9, 2)  اللَّهَ  →  اللَّهَ
+    (2, 10, 5)  اللَّهُ  →  اللَّهُ
 
 ## ما يثبته هذا المحور وما لا يثبته
   يثبت    : أن كل تغيير مأذون، ومسجَّل، وقابل لإعادة البناء إلى الأصل.
   لا يثبت : أن الشكل المطبّع هو النطق الصحيح — هو تمثيلٌ متّسق للمطابقة والتقطيع.
   جبر     : NORMALIZED_SURFACE_PRODUCED ≠ NORMALIZED_SURFACE_OWNER_AUTHORIZED
 
-## الفحوص الذاتية (التزام المحرّك): 10/10
+## الفحوص الذاتية (التزام المحرّك): 16/16
   [PASS] T1_ALLAH_SHADDA_UNFOLDS                         ءَلْلْلَهِ  (النصّ: ءَلْ + لْ + لَهِ)
   [PASS] T2_MADD_ALIF_GETS_EXPLICIT_SUKUN                مَاْ
   [PASS] T3_FAWATIH_EXCLUDED_AT_OPENING                  EXCLUDED_FAWATIH_AL_SUWAR
@@ -99,8 +109,14 @@ REFERENCE_ONLY_ELIDED_ALIF_GAP =    343   «ال» محذوفةُ الألف ب�
   [PASS] T8_ALIF_FARIQA_DROPPED                          كَفَرُوْ / NORMALIZED_OWNER_DECISION_REQUIRED
   [PASS] T9_EVERY_UNIT_IS_C_PLUS_ONE_MARK                ءَلْحَمْدُ
   [PASS] T10_NO_BARE_LETTER_IN_OUTPUT                    ءَلْحَمْدُ
+  [PASS] T12_JALALAH_REGISTRY_IS_LOADED                  16 سطحًا ، منها 10 بسابقة
+  [PASS] T13_JALALAH_LEAVES_ALL_AXES                     اللَّهِ → EXCLUDED_LAFZ_AL_JALALAH
+  [PASS] T14_JALALAH_IS_NOT_TOUCHED                      القواعد المطبَّقة = ['N0.J']  (لا فكَّ شدّةٍ ولا همزةَ وصل ولا سكون)
+  [PASS] T15_JALALAH_PREFIX_SPLIT_BY_REGISTRY            وَاللَّهُ = وَ + اللَّهُ
+  [PASS] T16_EVERY_JALALAH_ENTRY_REBUILDS_ITS_SURFACE    السابقة + البقيّة = السطح، في كل مدخلة
+  [PASS] T17_NO_JALALAH_SURFACE_IS_EVER_NORMALIZED       16/16 سطحًا خرجت من كل المحاور
 
-## السموم (مدخلاتٌ يجب أن تُرفض): 8/8
+## السموم (مدخلاتٌ يجب أن تُرفض): 11/11
   [PASS] P1_HARAKA_WITHOUT_CARRIER_STOPS           HARAKA_WITHOUT_CARRIER@0
   [PASS] P2_TWO_HARAKAT_ON_ONE_CARRIER_STOPS       MULTIPLE_HARAKAT_ON_ONE_CARRIER@0
   [PASS] P3_NON_WORD_IGNORED                       IGNORED_NON_WORD_TOKEN
@@ -109,3 +125,6 @@ REFERENCE_ONLY_ELIDED_ALIF_GAP =    343   «ال» محذوفةُ الألف ب�
   [PASS] P6_FAWATIH_REQUIRES_POSITION              NORMALIZED_OWNER_DECISION_REQUIRED
   [PASS] P7_OPENING_POSITION_ALONE_IS_NOT_FAWATIH  NORMALIZED
   [PASS] P8_UNRATIFIED_CLASS_RAISES_ODR            NORMALIZED_OWNER_DECISION_REQUIRED / هُدَاْ
+  [PASS] P9_JALALAH_MATCH_IS_EXACT                 حذفُ علامةٍ واحدة يُخرج السطحَ من القائمة
+  [PASS] P10_JALALAH_IS_NOT_SUBSTRING_MATCHING     لا يُبنى الحكم على احتواء الرسم
+  [PASS] P11_LOOKALIKES_ARE_NOT_IN_THE_REGISTRY    ['اللهب', 'اللهو', 'للهدى', 'يضلله'] تشترك في الحروف وليست منه

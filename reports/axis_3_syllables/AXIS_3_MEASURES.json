@@ -1,24 +1,25 @@
 {
   "module": "aslot.axes.axis3_syllabification",
   "axis": 3,
-  "analyzed": 77372,
+  "analyzed": 74668,
   "verdicts": {
-    "ACCEPT": 77365,
+    "ACCEPT": 74661,
     "BLOCK": 7
   },
   "pattern_histogram": {
-    "CV": 109900,
-    "CVC": 65037,
+    "CV": 104458,
+    "CVC": 64883,
     "CVV": 47619,
     "CVVC": 1029,
-    "CVCC": 5403,
-    "CVVCC": 5
+    "CVCC": 2850,
+    "CVVCC": 3
   },
   "block_reasons": {
     "SYLLABLE_WITHOUT_ONSET": 5,
     "PATTERN_OUTSIDE_CLOSED_SIX": 2
   },
   "skipped_by_axis_1_status": {
+    "EXCLUDED_LAFZ_AL_JALALAH": 2704,
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },

@@ -9,13 +9,13 @@
     "collisions": 2
   },
   "closed_form_proof": {
-    "NOT_MATCHED": 64586,
+    "NOT_MATCHED": 61882,
     "PROVEN": 8972,
     "UNRESOLVED": 3753,
     "NOT_A_CLOSED_FORM_VERBAL_OPERATOR": 61
   },
   "next_route": {
-    "CONTINUE": 63269,
+    "CONTINUE": 60565,
     "STOP_CLOSED_FORM": 8972,
     "DEFER_UNRESOLVED_CLOSURE": 5070,
     "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 61
