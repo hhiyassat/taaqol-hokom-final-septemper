@@ -1,0 +1,44 @@
+{
+  "words": 77411,
+  "status": {
+    "NORMALIZED": 55075,
+    "NORMALIZED_OWNER_DECISION_REQUIRED": 22297,
+    "EXCLUDED_FAWATIH_AL_SUWAR": 30,
+    "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
+  },
+  "rules": {
+    "N12": 67139,
+    "N7.1": 10000,
+    "N10": 25807,
+    "N2": 17380,
+    "N7": 774,
+    "N7.3:INOPERATIVE": 774,
+    "N2.2": 1135,
+    "N0.F": 30,
+    "N7.2": 1766
+  },
+  "fates": {
+    "PRESERVED": 326620,
+    "REPLACED": 13272,
+    "EXPANDED": 29316,
+    "DELETED_BY_OWNER_RULE": 5327
+  },
+  "owner_decision_classes": {
+    "U_UNVOCALIZED_CARRIER": 5460,
+    "U_TANWEEN": 8894,
+    "U_N7_2_INTERNAL_AL": 1766,
+    "U_ALEF_MADDA": 1511,
+    "U_ALIF_MAQSURA": 2498,
+    "U_ALIF_FARIQA": 3561,
+    "U_MULTIWORD_CELL": 9
+  },
+  "stop_reasons": {
+    "MULTIWORD_SURFACE_IN_ONE_CELL": 9
+  },
+  "masaq_cross_check": {
+    "BOTH": 10592,
+    "NEITHER": 65302,
+    "ENGINE_ONLY_KNOWN_COST_OF_N7_1": 1174,
+    "REFERENCE_ONLY_ELIDED_ALIF_GAP": 343
+  }
+}

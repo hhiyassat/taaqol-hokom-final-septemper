@@ -1,0 +1,83 @@
+========================================================================
+تقرير الكود ٣ — المحور الثاني: العوامل والمبنيات
+========================================================================
+
+```
+MODULE                 = a2_classify_mabniyat_and_operators.py
+AXIS                   = 2
+REGISTRY_SOURCE        = DERIVED_WITNESS_FROM_MASAQ
+REGISTRY_AUTHORITY     = EVIDENCE_ONLY      LICENSE_GRANTED = NO
+OWNER_RATIFIED         = NO
+MODIFY_REGISTRIES      = NO
+ADD_A_SURFACE_BY_HAND  = NO
+REGISTRY_PRESENCE      = EVIDENCE   ≠ LICENSE
+CHOOSE_AMONG_ALTERNATIVES     = NO
+PRESERVE_ALL_MATCHED_ENTRY_IDS = YES
+```
+
+## بنية الجرد المقيسة
+```
+مدخلات السجلّ                 =    134
+فهرس المطابقة (ACCEPT وحده)   =     97 سطحًا
+فهرس الدليل (كل المدخلات)     =    110 سطحًا
+تصادمات التطبيع               =      2
+```
+الفصل بين فهرس المطابقة وفهرس الدليل هو العمود الفقري: السجلّ الواحد قد
+يبقى في الجرد شاهدًا ولا يُسمح له بالمطابقة.
+
+## التدرّج الثلاثي بحسب حالة تطبيع سطح السجلّ (T2 §٢ـ٦)
+```
+NORMALIZED                           → ACCEPT                   =    120
+NORMALIZED_OWNER_DECISION_REQUIRED   → OWNER_DECISION_REQUIRED  =     14
+NOT_NORMALIZABLE                     → BLOCK                    =      0
+```
+
+## برهان الانغلاق — أربع قيم لا قيمتان (T2 §٢ـ٥)
+```
+PROVEN                               =   8,972
+NOT_A_CLOSED_FORM_VERBAL_OPERATOR    =      61
+UNRESOLVED                           =   3,753
+NOT_MATCHED                          =  64,586
+```
+
+## المسارات
+```
+CONTINUE                         =  63,269
+STOP_CLOSED_FORM                 =   8,972
+DEFER_UNRESOLVED_CLOSURE         =   5,070
+DEFER_VERBAL_OPERATOR_REGISTRY_TAG =      61
+```
+كلمات أوقفها المحور الثاني بوصفها صورةً مغلقة تامّة = 8,972
+
+## الفحوص الذاتية: 11/11
+  [PASS] T1_MAA_CONFLICTING_WITNESSES_ARE_NOT_ADJUDICATED UNRESOLVED / DEFER_UNRESOLVED_CLOSURE   (يوقف تقشير بِمَا بلا ترجيح)
+  [PASS] T2_HADHA_IS_A_PROVEN_CLOSED_FORM                 PROVEN / مبنيّ
+  [PASS] T3_LAYSA_IS_VERBAL_OPERATOR_NOT_HARF             NOT_A_CLOSED_FORM_VERBAL_OPERATOR / فعل   (OWNER_RULING_1)
+  [PASS] T4_VERBAL_OPERATOR_DOES_NOT_STOP_PEELING         يُرحَّل إلى DEFER لا BLOCK
+  [PASS] T5_OPEN_CLASS_NOT_MATCHED                        NOT_MATCHED
+  [PASS] T6_PROOF_HAS_FOUR_VALUES                         PROVEN · NOT_A_CLOSED_FORM_VERBAL_OPERATOR · UNRESOLVED · NOT_MATCHED
+  [PASS] T7_NO_CHOOSING_AMONG_ALTERNATIVES                CHOOSE_AMONG_ALTERNATIVES = NO
+  [PASS] T8_ALL_MATCHED_IDS_PRESERVED                     PRESERVE_ALL_MATCHED_ENTRY_IDS = YES
+  [PASS] T9_MATCH_INDEX_SUBSET_OF_EVIDENCE_INDEX          97 ⊆ 110
+  [PASS] T10_REGISTRY_IS_EVIDENCE_NOT_LICENSE             REGISTRY_AUTHORITY = EVIDENCE_ONLY في هذا الوضع
+  [PASS] T11_ODR_SURFACE_IS_EVIDENCE_NOT_MATCH            NOT_MATCHED / eligibility=OWNER_DECISION_REQUIRED   (التدرّج الثلاثي عاملٌ فعلًا)
+
+## السموم: 6/6
+  [PASS] P1_UNNORMALIZED_SURFACE_DOES_NOT_MATCH           OWNER_RULING_2: لا مطابقة إلا بتطبيعٍ متطابق للطرفين
+  [PASS] P2_EMPTY_DOES_NOT_MATCH                          NOT_MATCHED
+  [PASS] P3_VERBAL_OPERATOR_NOT_TAGGED_HARF               فعل
+  [PASS] P4_WHOLE_WORD_WITH_PREFIX_IS_NOT_ITSELF_CLOSED   بِمَا ليست صورةً مغلقة — المغلقةُ هي البقيةُ بعد القشر
+  [PASS] P5_LOOKUP_NEVER_MUTATES_REGISTRY                 ADD_A_SURFACE_BY_HAND = NO
+  [PASS] P6_OPERATOR_PROVEN_IS_NOT_ATTACHABLE_PREFIX_PROVEN هذا المحور لا يمنح ترخيص قشر أصلًا — الترخيص في المحور الرابع
+
+## ما يثبته المحور الثاني وما لا يثبته (T2 §٢ـ٨)
+  يثبت   : هويّةَ السطح، وحالةَ انغلاقه بأربع قيم، وتعارضَ الشهادات حين يقع.
+  لا يثبت: أن السطح في هذه الجملة بعينها يؤدّي دور العامل — الدور سياقيّ،
+           وهذا المحور لا يقرأ سياقًا.
+  لا يثبت: أن الجرد كامل. هو حصرُ ما في السجلات، لا حصرُ العربية.
+
+## ما يبقى مفتوحًا في هذه النسخة
+  - السجلّان الحقيقيان غير مرفقين؛ الجرد هنا شاهدٌ مشتقّ لا سجلُّ مالك.
+  - مقاطعُ الكلمات المركّبة لم تدخل الجرد: Segmented_Word غير مشكول،
+    ومطابقةُ غير المشكول بالمشكول ممنوعة بـ OWNER_RULING_2.
+  - مرّر --operators و--mabniyat لتحويل الوضع إلى OWNER_REGISTRY.

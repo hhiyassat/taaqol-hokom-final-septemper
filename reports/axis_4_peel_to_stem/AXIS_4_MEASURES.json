@@ -1,0 +1,38 @@
+{
+  "words": 77372,
+  "verdicts": {
+    "BLOCK": 5541,
+    "ACCEPT": 66256,
+    "DEFER": 5575
+  },
+  "terminations": {
+    "STEM_NOT_FURTHER_PEELABLE": 53901,
+    "CLOSED_REMAINDER": 12355,
+    "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": 16,
+    "DEFER_UNRESOLVED_CLOSURE": 5443,
+    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 116,
+    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 5454,
+    "BLOCK_AXIS_3_REJECTED": 7,
+    "BLOCK_EMPTY_REMAINDER": 80
+  },
+  "actual_peels": 17286,
+  "peel_count_histogram": {
+    "0": 61309,
+    "1": 14875,
+    "2": 1153,
+    "3": 35
+  },
+  "stems_emitted": 53901,
+  "deferred_candidate_prefixes": {
+    "يَ": 4105,
+    "نَ": 1031,
+    "أَ": 4811,
+    "سَ": 897,
+    "تَ": 2280
+  },
+  "masaq_like_rows": 88770,
+  "witness_set_size": 11647,
+  "root_proven": 0,
+  "wazn_execution": 0,
+  "suffix_output": 0
+}

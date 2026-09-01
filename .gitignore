@@ -1,0 +1,14 @@
+# سياسة U1 (T3 §٣ـ٣): مجلدات الجولات مستبعدة من git
+reports/**/*.csv
+reports/**/*.txt.bak
+
+# المدخل الخام: يُعرَّف ببصمته لا بنسخه
+data/MASAQ.csv
+
+# نصّ القرآن المبنيّ — مشتقٌّ من المدخل، يُعاد توليده بـ run_all.sh
+reports/axis_0_quran_build/QURAN_FROM_MASAQ.txt
+
+# وسيط
+_to_delete/
+__pycache__/
+*.pyc

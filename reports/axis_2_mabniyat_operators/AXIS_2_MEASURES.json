@@ -1,0 +1,26 @@
+{
+  "source_mode": "DERIVED_WITNESS_FROM_MASAQ",
+  "registry": {
+    "entries": 134,
+    "match_index": 97,
+    "evidence_index": 110,
+    "collisions": 2
+  },
+  "closed_form_proof": {
+    "NOT_MATCHED": 64586,
+    "PROVEN": 8972,
+    "UNRESOLVED": 3753,
+    "NOT_A_CLOSED_FORM_VERBAL_OPERATOR": 61
+  },
+  "next_route": {
+    "CONTINUE": 63269,
+    "STOP_CLOSED_FORM": 8972,
+    "DEFER_UNRESOLVED_CLOSURE": 5070,
+    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 61
+  },
+  "words_stopped_as_closed_form": 8972,
+  "eligibility_tiers": {
+    "ACCEPT": 120,
+    "OWNER_DECISION_REQUIRED": 14
+  }
+}

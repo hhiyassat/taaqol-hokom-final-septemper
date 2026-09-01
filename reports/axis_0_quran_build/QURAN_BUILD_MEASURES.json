@@ -1,0 +1,32 @@
+{
+  "module": "a0_build_quran_from_masaq.py",
+  "input_sha256": "76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e",
+  "rows_read": 157676,
+  "words_built": 77411,
+  "verses_built": 6236,
+  "suras_built": 114,
+  "self_checks": {
+    "T1_INPUT_ORDER_IS_CANONICAL": true,
+    "T2_SURA_COUNT": true,
+    "T3_SURA_NUMBERING_CONTIGUOUS": true,
+    "T4_VERSE_NUMBERING_CONTIGUOUS": true,
+    "T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS": true,
+    "T6_NO_EMPTY_SURFACE": true,
+    "T7_FOLD_IS_LOSSLESS": true
+  },
+  "poisons": {
+    "P1_REJECT_NON_ASCII_DIGIT": true,
+    "P2_REJECT_EMPTY_NUMERIC": true,
+    "P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED": true,
+    "P4_SEGMENTS_SORTED_NOT_TRUSTED": true,
+    "P5_SEGMENT_GAP_DETECTED": true,
+    "P6_REJECT_ARABIC_INDIC_DIGITS": true,
+    "P7_REJECT_SPACED_NUMBER": true
+  },
+  "input_defects": {
+    "D1_WORD_NUMBER_GAPS_IN_VERSE": 9,
+    "D2A_SEGMENT_NUMBER_DUPLICATED": 386,
+    "D2B_SEGMENT_NUMBER_GAP": 0,
+    "D3_MULTIWORD_SURFACE_IN_ONE_CELL": 9
+  }
+}

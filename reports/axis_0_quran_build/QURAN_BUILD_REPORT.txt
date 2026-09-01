@@ -1,0 +1,70 @@
+========================================================================
+تقرير الكود ١ — بناء ملف القرآن من MASAQ
+========================================================================
+
+```
+MODULE                = a0_build_quran_from_masaq.py
+AXIS                  = 0
+INPUT                 = data/MASAQ.csv
+INPUT_SHA256          = 76f3cc26dd64f2a33ff31e656c3c91dcd8190fe72879749e9129a72ab477620e
+CONSUMED_FIELDS       = Sura_No, Verse_No, Word_No, Segment_No, Word
+INPUT_COLUMNS         = 19
+REFERENCE_ONLY_FIELDS = 14  (لا تدخل المحرّك)
+
+ROWS_READ             = 157,676
+WORDS_BUILT           = 77,411
+VERSES_BUILT          = 6,236
+SURAS_BUILT           = 114
+ROW_COUNT_MINUS_WORDS = 80,265  (الفرق = مقاطع زائدة عن كلمة)
+
+SEGMENTS_PER_WORD_HISTOGRAM
+  1_SEGMENTS          = 22,786
+  2_SEGMENTS          = 36,006
+  3_SEGMENTS          = 13,654
+  4_SEGMENTS          = 3,593
+  5_SEGMENTS          = 819
+  6_SEGMENTS          = 451
+  7_SEGMENTS          = 85
+  8_SEGMENTS          = 6
+  9_SEGMENTS          = 10
+  10_SEGMENTS          = 1
+
+SURFACE_CONFLICTS     = 0
+
+SELF_CHECKS           = 7/7
+POISONS               = 7/7
+INPUT_DEFECTS         = 3 صنفًا  (الحكم = DEFER + OWNER_ALERT ، لا يُرقَّع منها شيء)
+```
+
+## الفحوص الذاتية (التزام المحرّك)
+  [PASS] T1_INPUT_ORDER_IS_CANONICAL                ترتيب ورود الكلمات في MASAQ = الترتيب المصحفي
+  [PASS] T2_SURA_COUNT                              114/114
+  [PASS] T3_SURA_NUMBERING_CONTIGUOUS               أرقام السور متّصلة من ١
+  [PASS] T4_VERSE_NUMBERING_CONTIGUOUS              سور مخالفة = []
+  [PASS] T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS     تعارضات = 0
+  [PASS] T6_NO_EMPTY_SURFACE                        فارغة = 0
+  [PASS] T7_FOLD_IS_LOSSLESS                        157,676 مقطعًا = 157,676 صفًّا
+
+## السموم (مدخلاتٌ يجب أن تُرفض)
+  [PASS] P1_REJECT_NON_ASCII_DIGIT                  رُفض كما يجب
+  [PASS] P2_REJECT_EMPTY_NUMERIC                    رُفض كما يجب
+  [PASS] P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED التعارض يُسجَّل ولا يُختار أحد الطرفين
+  [PASS] P4_SEGMENTS_SORTED_NOT_TRUSTED             تُرتَّب المقاطع ولا يُعتمد ترتيب الورود
+  [PASS] P5_SEGMENT_GAP_DETECTED                    الفجوة تُكشف
+  [PASS] P6_REJECT_ARABIC_INDIC_DIGITS              رُفض كما يجب
+  [PASS] P7_REJECT_SPACED_NUMBER                    رُفض كما يجب
+
+## عيوب المدخل المقيسة — حالة MASAQ لا حالة المحرّك
+  الحكم في جميعها DEFER: تُسجَّل ولا تُعالَج، ولا يُخترع رقمٌ ولا تُدرَج كلمة.
+  [DEFER] D1_WORD_NUMBER_GAPS_IN_VERSE         =      9   أرقام كلماتٍ مفقودة داخل آيات — لا تُردَم
+          نماذج: [(2, 144), (2, 148), (2, 150), (4, 91), (15, 7), (19, 31), (20, 94), (26, 92)]
+  [DEFER] D2A_SEGMENT_NUMBER_DUPLICATED        =    386   تكرار Segment_No داخل الكلمة (أشهره «يا» الموصولة بما بعدها)
+          نماذج: [(2, 21, 1), (2, 33, 2), (2, 35, 2), (2, 40, 1), (2, 47, 1), (2, 54, 5), (2, 55, 3), (2, 61, 3)]
+  [CLEAR] D2B_SEGMENT_NUMBER_GAP               =      0   ثغرة في ترقيم المقاطع
+  [DEFER] D3_MULTIWORD_SURFACE_IN_ONE_CELL     =      9   خليّة Word فيها أكثر من كلمة
+          نماذج: [(3, 75, 19), (5, 13, 17), (5, 24, 7), (5, 96, 13), (5, 117, 16), (11, 107, 3), (16, 109, 1), (19, 31, 9)]
+
+## ما لا يثبته هذا الكود
+  - لا يثبت صحّة رسم MASAQ ؛ ينقله كما هو.
+  - لا يثبت تطبيعًا ولا تقطيعًا ولا تقشيرًا — تلك محاور تالية.
+  - لا يستعمل Segmented_Word ولا Morph_Tag ؛ هما مرجعٌ للمقارنة لا مدخل.
