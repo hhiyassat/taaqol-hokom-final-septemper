@@ -3,37 +3,36 @@
   "axis": 4,
   "words": 74668,
   "verdicts": {
-    "BLOCK": 3104,
-    "ACCEPT": 63937,
-    "DEFER": 7627
+    "BLOCK": 2397,
+    "ACCEPT": 58479,
+    "DEFER": 13792
   },
   "terminations": {
-    "STEM_NOT_FURTHER_PEELABLE": 51573,
-    "CLOSED_REMAINDER": 12364,
+    "STEM_NOT_FURTHER_PEELABLE": 46344,
+    "CLOSED_REMAINDER": 12135,
     "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": 183,
-    "DEFER_UNRESOLVED_CLOSURE": 5443,
-    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 116,
+    "DEFER_UNRESOLVED_CLOSURE": 5424,
+    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 70,
     "DEFER_ELIDED_LETTER_NOT_RESTORABLE": 1885,
-    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 3017,
+    "DEFER_REMAINDER_STANDING_UNPROVEN": 6230,
+    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 2390,
     "BLOCK_AXIS_3_REJECTED": 7,
-    "BLOCK_EMPTY_REMAINDER": 80
+    "BLOCK_EMPTY_REMAINDER": 0
   },
-  "actual_peels": 17039,
+  "actual_peels": 9630,
   "peel_count_histogram": {
-    "0": 58808,
-    "1": 14716,
-    "2": 1109,
-    "3": 35
+    "0": 65038,
+    "1": 9630
   },
-  "stems_emitted": 51573,
+  "stems_emitted": 46344,
   "deferred_candidate_prefixes": {
-    "يَ": 4088,
-    "نَ": 1017,
-    "أَ": 4781,
-    "سَ": 895,
-    "تَ": 2261
+    "يَ": 3847,
+    "نَ": 888,
+    "أَ": 4349,
+    "سَ": 755,
+    "تَ": 2038
   },
-  "masaq_like_rows": 89120,
+  "masaq_like_rows": 82712,
   "jalalah_words_passed_through": 2704,
   "jalalah_rows_emitted": 3248,
   "witness_set_size": 11646,
@@ -47,7 +46,7 @@
     "T3_GENERAL_GATE_COVERS_THE_CLASS:كَبَائِرَ": true,
     "T3_GENERAL_GATE_COVERS_THE_CLASS:كَتَبَ": true,
     "T4_A_WITNESSED_REMAINDER_IS_NOT_DEFERRED": true,
-    "T4B_DERIVED_REGISTRY_DOES_NOT_LET_THE_GATE_CLAIM": true,
+    "T4B_IGNORANCE_LICENSES_NEITHER_BLOCK_NOR_ACCEPT": true,
     "T5_MAA_IS_CLOSED_NOT_A_STEM": true,
     "T6_NO_LICENSED_PREFIX_YIELDS_STEM": true,
     "T7_ROOT_PATH_IS_CLOSED": true,

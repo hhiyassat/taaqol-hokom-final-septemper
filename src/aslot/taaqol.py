@@ -106,14 +106,19 @@ MIN_PYTHON = (3, 11)
 def _stub_packages() -> None:
     """يسجّل حزمةَ تعقُّل **بلا تنفيذ `__init__`** قبل استيراد الحوامل.
 
-    وهذا ليس التفافًا على حدٍّ بل **التزامٌ به**: ``__init__`` الحزمة يستورد
-    ``adapters`` فـ``audit`` فـ``ModelClient``. فاستيرادُ حاملٍ بسيطٍ يجرّ
-    معه **محوِّلَ النموذج** — وهو أوّلُ سطرٍ في السطح الممنوع كلّيًّا
-    (``NO_MODEL_ADAPTER``)، وتعقُّل يمنعه على نفسه.
+    **الحجّة مقيسة، وقد صُحّح تعليلُها.** كان التعليلُ الأوّل «استيرادُ حاملٍ
+    يجرّ محوِّلَ نموذج، وهو أوّلُ سطرٍ في السطح الممنوع» — وهو **باطل**:
+    ``ModelClient`` بروتوكولٌ مجرَّد لا محوِّلُ نموذجٍ حقيقيّ، والحدُّ لا
+    يُخرق باستيراد اسمٍ. وتعليلٌ باطلٌ يُبقي البابَ مفتوحًا لخطأٍ مشابهٍ في
+    موضعٍ آخر، فيُستبدل بالمقيس:
 
-    فتُسجَّل حزمتان فارغتان لهما ``__path__`` الصحيح، فيُنفَّذ من المستودع
-    ستّةُ ملفّاتٍ لا سابعَ لها — وهي المثبَّتةُ ببصماتها أعلاه. ولو استوردنا
-    الحزمةَ كما هي لَما كان لتثبيت ستّ بصماتٍ معنى: المُنفَّذُ عندئذٍ عشرات.
+        استيرادُ الحزمة من أعلى  ينفّذ  ٨١ وحدة
+        المثبَّتُ ببصمته          ٦ وحدات
+
+    فتثبيتُ ستٍّ وتنفيذُ إحدى وثمانين **يُبطل معنى التثبيت نفسَه**: خمسٌ
+    وسبعون وحدةً تتغيّر بلا أن يقف شيء. فتُسجَّل حزمتان فارغتان لهما
+    ``__path__`` الصحيح، فيُنفَّذ ما ثُبِّتت بصمتُه لا غير — والعددان
+    ``6`` و``81`` مقيسان في تقرير الامتثال لا منقولان.
     """
     import types
     root = _SRC / "taaqqul_slot_geometry"
@@ -163,8 +168,35 @@ def _import_carriers():
             ResidualPolicy, TraceEntryCandidate, TraceLedger, TransitionState)
 
 
-(ClosureState, FailureCode, Rank, RankLattice, Residual, ResidualKind,
- ResidualPolicy, TraceEntryCandidate, TraceLedger, TransitionState) = _import_carriers()
+#: الحواملُ تُستورَد **عند أوّل طلب** لا عند استيراد الوحدة.
+#:
+#: كان الاستيرادُ يقع في زمن الاستيراد، فصار مجرّدُ `import aslot.cli` يوقف
+#: المحرّكَ كلَّه على بايثون ٣٫١٠ — لأن `cli` يستورد محورَ الامتثال، وهو
+#: يستورد هذه الوحدة. فادّعاءُ «القيدُ على الجسر وحده» كان **باطلًا في
+#: التنفيذ** وإن صحّ في القصد: خمسةُ محاورَ لا شأن لها بتعقُّل كانت تسقط.
+#:
+#: والكسلُ هنا ليس تحسينَ أداء بل **تصحيحُ حدّ**: من لم يطلب الحاملَ لا
+#: يُطالَب بشرطه. وفشلُ الطلب يبقى مغلقًا كما كان.
+_CARRIERS: dict[str, object] = {}
+
+
+def carriers() -> dict[str, object]:
+    """الحواملُ المستوردة، مرّةً واحدة. فشلُ الاستيراد **مغلق**."""
+    if not _CARRIERS:
+        names = ("ClosureState", "FailureCode", "Rank", "RankLattice", "Residual",
+                 "ResidualKind", "ResidualPolicy", "TraceEntryCandidate",
+                 "TraceLedger", "TransitionState")
+        _CARRIERS.update(dict(zip(names, _import_carriers(), strict=True)))
+    return _CARRIERS
+
+
+def __getattr__(name: str):
+    """يجعل `from .taaqol import Rank` يعمل، ويؤجّل الاستيرادَ إلى طلبه."""
+    if name in ("ClosureState", "FailureCode", "Rank", "RankLattice", "Residual",
+                "ResidualKind", "ResidualPolicy", "TraceEntryCandidate",
+                "TraceLedger", "TransitionState"):
+        return carriers()[name]
+    raise AttributeError(name)
 
 
 # ---------------------------------------------------------------------------
@@ -208,6 +240,7 @@ ASLOT_REFUSALS: dict[str, tuple[str, str | None]] = {
     "CLOSED_REMAINDER": ("axis4.termination", None),
     "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": ("axis4.termination", None),
     "DEFER_ELIDED_LETTER_NOT_RESTORABLE": ("axis4.termination", None),
+    "DEFER_REMAINDER_STANDING_UNPROVEN": ("axis4.termination", None),
     "BLOCK_SYLLABLE_BOUNDARY_CROSSED": ("axis4.termination", "UNLICENSED_OPENING"),
     "BLOCK_AXIS_3_REJECTED": ("axis4.termination", "REQUIRED_SLOT_EMPTY"),
     "BLOCK_EMPTY_REMAINDER": ("axis4.termination", "REQUIRED_SLOT_EMPTY"),
@@ -222,7 +255,7 @@ def unmapped_refusals() -> list[str]:
 def mapped_refusals() -> dict[str, str]:
     """ما له مقابلٌ **موجودٌ فعلًا** في `FailureCode` — يُتحقَّق منه لا يُدَّعى."""
     out: dict[str, str] = {}
-    names = {member.value for member in FailureCode}
+    names = {member.value for member in carriers()['FailureCode']}
     for key, (_, code) in ASLOT_REFUSALS.items():
         if code is None:
             continue
@@ -258,17 +291,10 @@ __all__ = [
     "VENDOR_COMMIT",
     "VENDOR_LICENSE",
     "VENDOR_ROOT",
-    "ClosureState",
-    "FailureCode",
-    "Rank",
-    "RankLattice",
-    "Residual",
-    "ResidualKind",
-    "ResidualPolicy",
-    "TraceEntryCandidate",
-    "TraceLedger",
-    "TransitionState",
+    # الحواملُ تُنشر عبر `carriers()` و`__getattr__` لا هنا: إدراجُها في
+    # `__all__` يجعل `import *` يستوردها فيسقط الكسلُ الذي هو الحدّ نفسُه.
     "anchor",
+    "carriers",
     "mapped_refusals",
     "parent_anchor",
     "unmapped_refusals",

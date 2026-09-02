@@ -6,6 +6,10 @@
 
 from __future__ import annotations
 
+import subprocess
+import sys
+from pathlib import Path
+
 import pytest
 
 from aslot.checks import CheckSuite, rejects
@@ -14,6 +18,8 @@ from aslot.fileio import strict_int
 from aslot.policy import OWNER_DECISION_REQUIRED
 from aslot.reporting import Report
 from aslot.verdicts import ACCEPT, BLOCK, DEFER, Ruling, decide
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class TestOwnerAlert:
@@ -94,3 +100,24 @@ class TestReport:
 
     def test_counts_use_thousands_separator(self):
         assert "1,234" in Report("t").counts({"K": 1234}).render()
+
+
+def test_importing_the_cli_does_not_load_taaqol() -> None:
+    """المحرّكُ لا يسقط لغياب تعقُّل — والادّعاءُ يُثبَت لا يُقال.
+
+    كان `taaqol` يستورد الحواملَ في زمن استيراده، و`cli` يستورد محورَ
+    الامتثال، فصار `import aslot.cli` يوقف **المحاورَ الخمسة كلَّها** على
+    بايثون ٣٫١٠. وكانت الوثيقةُ تقول «القيدُ على الجسر وحده» — قولٌ صحيحٌ
+    في القصد باطلٌ في التنفيذ.
+
+    ويُشغَّل في عمليّةٍ نظيفة: القياسُ في العملية الحالية يخدعه ما استُورد
+    قبله.
+    """
+    code = (
+        "import sys, aslot.cli;"
+        "print(any(m.startswith('taaqqul') for m in sys.modules))"
+    )
+    result = subprocess.run([sys.executable, "-c", code], capture_output=True,
+                            text=True, cwd=str(ROOT))
+    assert result.returncode == 0, result.stderr
+    assert result.stdout.strip() == "False", "استيرادُ cli جرّ حواملَ تعقُّل"

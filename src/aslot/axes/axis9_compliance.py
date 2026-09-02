@@ -22,6 +22,8 @@ import json
 import sys
 from pathlib import Path
 
+from ..axes.axis1_normalization import STATUSES as A1_STATUSES
+from ..axes.axis4_peeling import TERMINATIONS as A4_TERMINATIONS
 from ..checks import CheckSuite
 from ..constants import ALIF, FATHATAN
 from ..fileio import read_rows, require_file
@@ -32,13 +34,8 @@ from ..taaqol import (
     OWNER_DECISIONS_PENDING,
     VENDOR_COMMIT,
     VENDOR_LICENSE,
-    ClosureState,
-    FailureCode,
-    Rank,
-    RankLattice,
-    ResidualKind,
-    ResidualPolicy,
     anchor,
+    carriers,
     mapped_refusals,
     parent_anchor,
     unmapped_refusals,
@@ -66,6 +63,10 @@ VERDICT_COLUMNS = (
 )
 
 UNMEASURED = "UNMEASURED"
+
+#: كم وحدةً تُنفَّذ لو استُورد المستودعُ من أعلى — **مقيسٌ** لا مقدَّر، وهو
+#: الحجّةُ على العزل: تثبيتُ ٦ وتنفيذُ ٨١ يُبطل معنى التثبيت.
+TOP_LEVEL_IMPORT_EXECUTES = 81
 
 
 def _observed_refusals(root: Path) -> set[str]:
@@ -196,7 +197,10 @@ class Axis9Compliance(Axis):
         require_file(root / AXIS_OUTPUTS[0][1], what="مخرج المحور صفر",
                      remedy="شغّل  aslot all  أولًا")
 
-        carriers = verify_carriers()          # فشلٌ مغلق: الانحرافُ يقف
+        fingerprints = verify_carriers()      # فشلٌ مغلق: الانحرافُ يقف
+        C = carriers()                        # وهنا وحدَه يُطلب حاملُ تعقُّل
+        ClosureState, FailureCode = C["ClosureState"], C["FailureCode"]
+        Rank, RankLattice = C["Rank"], C["RankLattice"]
         laws = _laws(root)
         anchors = _anchor_audit(root)
         observed = _observed_refusals(root)
@@ -219,8 +223,8 @@ class Axis9Compliance(Axis):
                     anchors["parent_anchors_resolved_in_previous_axis"] > 0,
                     "كلُّ أبٍ يُحلّ في المحور السابق")
         suite.check("C5_CARRIERS_ARE_TAAQOL_S_OWN",
-                    len(carriers) == 6 and len(list(FailureCode)) > 0,
-                    f"{len(carriers)} حواملَ مثبَّتةً بالبصمة من {VENDOR_COMMIT[:12]}")
+                    len(fingerprints) == 6 and len(list(FailureCode)) > 0,
+                    f"{len(fingerprints)} حواملَ مثبَّتةً بالبصمة من {VENDOR_COMMIT[:12]}")
         suite.check("C6_RANK_LATTICE_MEET_NEVER_RAISES",
                     RankLattice.meet(Rank.CERTIFICATE, Rank.CANDIDATE)
                     == Rank.CANDIDATE,
@@ -230,9 +234,16 @@ class Axis9Compliance(Axis):
                     f"{hidden:,} كلمة — تنوينُ فتحٍ على ألفٍ صامتة يمرّ بلا شكوى")
 
         # سمومٌ: مدخلاتٌ يجب أن تُرفض
-        suite.poison("P1_NO_REFUSAL_CODE_WITHOUT_A_WITNESS",
-                     declared <= observed | {"DEFER"},
-                     "رمزٌ لا شاهدَ له في مخرجٍ فعليّ لا يدخل الجرد")
+        # الجردُ يُقاس بمقياسين لا بواحد، والخلطُ بينهما أفسد أوّلَ صياغة:
+        #  (أ) اسمٌ مُدَّعًى لا تعرفه المحاور  ← اختراعٌ يُرفض (سُمّ).
+        #  (ب) اسمٌ تعرفه المحاور ولم يشهد له **هذا المدخل** ← يُعلَن ولا يُحذف،
+        #      كحال N8: قاعدةٌ منفَّذةٌ بلا شاهدٍ في رسمٍ إملائيّ.
+        # ولمّا حُذف BLOCK_EMPTY_REMAINDER من شواهد هذه الجولة أسقط السمُّ
+        # الجولةَ — وكان محقًّا في التنبيه، خاطئًا في التكييف.
+        engine_names = set(A4_TERMINATIONS) | set(A1_STATUSES) | observed
+        suite.poison("P1_NO_INVENTED_REFUSAL_NAME",
+                     declared <= engine_names,
+                     f"{sorted(declared - engine_names)} — كلُّ اسمٍ تعرفه المحاور")
         suite.poison("P2_NO_INVENTED_TAAQOL_FAILURE_CODE",
                      set(mapped_refusals().values())
                      <= {m.value for m in FailureCode},
@@ -244,12 +255,15 @@ class Axis9Compliance(Axis):
                      all(k not in _ASSIGNED for k in classes),
                      "تصنيفُ البقايا حكمُ المالك (T-4) — لم يُسنَد صنفٌ واحد")
         loaded = sorted(m for m in sys.modules if m.startswith("taaqqul"))
-        suite.poison("P5_NO_MODEL_ADAPTER_IS_EVER_LOADED",
-                     not any("adapter" in m or "audit" in m for m in loaded),
-                     f"{len(loaded)} وحدةً من تعقُّل، ولا محوِّلَ نموذجٍ فيها")
-        suite.poison("P6_ONLY_THE_PINNED_CARRIERS_EXECUTE",
-                     len([m for m in loaded if m.count(".") == 2]) == len(carriers),
-                     "ما نُفِّذ من المستودع = ما ثُبِّتت بصمتُه، لا أكثر")
+        suite.poison("P5_EXECUTION_NEVER_EXCEEDS_THE_PINNING",
+                     len([m for m in loaded if m.count(".") == 2]) == len(fingerprints),
+                     f"نُفِّذ {len([m for m in loaded if m.count('.') == 2])} "
+                     f"وثُبِّت {len(fingerprints)} — والاستيرادُ من أعلى ينفّذ "
+                     f"{TOP_LEVEL_IMPORT_EXECUTES}")
+        suite.poison("P6_NO_JUDGEMENT_TOOL_IS_IMPORTED",
+                     not any(m.endswith((".gamma", ".transition_gate",
+                                         ".forbidden_lines")) for m in loaded),
+                     "Γ والبوّابةُ والخطوطُ الممنوعة أدواتُ حكمٍ — موقوفة")
         suite.poison("P7_STAGES_ABOVE_T3_ARE_NOT_CLAIMED",
                      set(STAGES_IMPLEMENTED).isdisjoint(STAGES_PENDING_OWNER),
                      " · ".join(STAGES_PENDING_OWNER) + " غيرُ منفَّذة")
@@ -258,11 +272,13 @@ class Axis9Compliance(Axis):
             "stages_implemented": list(STAGES_IMPLEMENTED),
             "stages_pending_owner": list(STAGES_PENDING_OWNER),
             "vendor": {"commit": VENDOR_COMMIT, "license": VENDOR_LICENSE,
-                       "carriers": {k: v[:12] for k, v in carriers.items()}},
+                       "carriers": {k: v[:12] for k, v in fingerprints.items()}},
             "laws": laws,
             "anchors": anchors,
             "refusal_inventory": {
                 "declared": len(declared),
+                "declared_without_witness_in_this_run":
+                    sorted(declared - observed),
                 "observed_in_outputs": len(observed),
                 "mapped_to_taaqol": len(mapped_refusals()),
                 "unmapped_declared": len(unmapped_refusals()),
@@ -322,6 +338,4 @@ class Axis9Compliance(Axis):
 
 
 #: أصنافُ البقايا التي أُسنِد لها صنفٌ — فارغةٌ عمدًا، والإسنادُ حكمُ المالك.
-_ASSIGNED: dict[str, ResidualKind] = {}
-
-_ = ResidualPolicy  # الحاملُ مستوردٌ ومُثبَتُ البصمة، ولا يُشغَّل قبل T-4
+_ASSIGNED: dict[str, str] = {}

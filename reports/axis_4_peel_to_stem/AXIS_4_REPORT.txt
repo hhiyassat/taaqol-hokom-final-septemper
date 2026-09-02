@@ -33,10 +33,10 @@ PREFIX_SURFACE_MATCH_ALONE_IS_NOT_LICENSE
 ## القياس على كامل النصّ
 ```
 WORDS            = 74,668
-ACTUAL_PEELS     = 17,039
-STEMS_EMITTED    = 51,573
+ACTUAL_PEELS     =  9,630
+STEMS_EMITTED    = 46,344
 WITNESS_SET_SIZE = 11,646
-MASAQ_LIKE_ROWS  = 89,120
+MASAQ_LIKE_ROWS  = 82,712
 ROOT_PROVEN      =      0
 WAZN_EXECUTION   =      0
 SUFFIX_OUTPUT    =      0
@@ -44,31 +44,32 @@ SUFFIX_OUTPUT    =      0
 
 ## الأحكام الثلاثة
 ```
-ACCEPT = 63,937
-DEFER  =  7,627
-BLOCK  =  3,104
+ACCEPT = 58,479
+DEFER  = 13,792
+BLOCK  =  2,397
 ```
 
 ## مخارج الوقوف — قائمة مغلقة
 ```
-STEM_NOT_FURTHER_PEELABLE           = 51,573
-CLOSED_REMAINDER                    = 12,364
+STEM_NOT_FURTHER_PEELABLE           = 46,344
+CLOSED_REMAINDER                    = 12,135
 DEFER_INITIAL_LETTER_MAY_BE_RADICAL =    183
-DEFER_UNRESOLVED_CLOSURE            =  5,443
-DEFER_VERBAL_OPERATOR_REGISTRY_TAG  =    116
+DEFER_UNRESOLVED_CLOSURE            =  5,424
+DEFER_VERBAL_OPERATOR_REGISTRY_TAG  =     70
 DEFER_ELIDED_LETTER_NOT_RESTORABLE  =  1,885
-BLOCK_SYLLABLE_BOUNDARY_CROSSED     =  3,017
+DEFER_REMAINDER_STANDING_UNPROVEN   =  6,230
+BLOCK_SYLLABLE_BOUNDARY_CROSSED     =  2,390
 BLOCK_AXIS_3_REJECTED               =      7
-BLOCK_EMPTY_REMAINDER               =     80
+BLOCK_EMPTY_REMAINDER               =      0
 ```
 
 ## مرشّحاتٌ مؤجّلة — وُلِّدت وقُيِّمت ولم تُقشَّر
 ```
-أَ = 4,781   (لا ترخيص — الكلمة مضت إلى جذعها)
-يَ = 4,088   (لا ترخيص — الكلمة مضت إلى جذعها)
-تَ = 2,261   (لا ترخيص — الكلمة مضت إلى جذعها)
-نَ = 1,017   (لا ترخيص — الكلمة مضت إلى جذعها)
-سَ =   895   (لا ترخيص — الكلمة مضت إلى جذعها)
+أَ = 4,349   (لا ترخيص — الكلمة مضت إلى جذعها)
+يَ = 3,847   (لا ترخيص — الكلمة مضت إلى جذعها)
+تَ = 2,038   (لا ترخيص — الكلمة مضت إلى جذعها)
+نَ =   888   (لا ترخيص — الكلمة مضت إلى جذعها)
+سَ =   755   (لا ترخيص — الكلمة مضت إلى جذعها)
 ```
 
 ## لفظ الجلالة — خارج كل إجراء (القاعدة ن٠-ج)
@@ -80,10 +81,8 @@ BLOCK_EMPTY_REMAINDER               =     80
 
 ## توزيع عدد القشور
 ```
-0 قشرة = 58,808
-1 قشرة = 14,716
-2 قشرة =  1,109
-3 قشرة =     35
+0 قشرة = 65,038
+1 قشرة =  9,630
 ```
 
 ## ما يثبته هذا المحور وما لا يثبته
@@ -109,7 +108,7 @@ BLOCK_EMPTY_REMAINDER               =     80
   [PASS] T3_GENERAL_GATE_COVERS_THE_CLASS:كَبَائِرَ        بقيّةٌ لا تقوم بنفسها ⟵ تأجيل — والنمطُ لا يُسأل عنه
   [PASS] T3_GENERAL_GATE_COVERS_THE_CLASS:كَتَبَ           بقيّةٌ لا تقوم بنفسها ⟵ تأجيل — والنمطُ لا يُسأل عنه
   [PASS] T4_A_WITNESSED_REMAINDER_IS_NOT_DEFERRED          الشاهدُ المستقلّ يرفع المانع
-  [PASS] T4B_DERIVED_REGISTRY_DOES_NOT_LET_THE_GATE_CLAIM  قشور=2 جذع=رُوْ  ← غيابُ السجلّ ليس مانعًا (P7): الكلفةُ معلنةٌ لا مرقَّعة
+  [PASS] T4B_IGNORANCE_LICENSES_NEITHER_BLOCK_NOR_ACCEPT   DEFER / DEFER_REMAINDER_STANDING_UNPROVEN  ← القبولُ دعوى كالمنع سواء
   [PASS] T5_MAA_IS_CLOSED_NOT_A_STEM                       DEFER_UNRESOLVED_CLOSURE
   [PASS] T6_NO_LICENSED_PREFIX_YIELDS_STEM                 كِتَاْبُنْ
   [PASS] T7_ROOT_PATH_IS_CLOSED                            ROOT_WORK = NONE ، ROOT_PROVEN = NO

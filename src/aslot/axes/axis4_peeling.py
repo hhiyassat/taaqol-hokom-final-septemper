@@ -110,8 +110,16 @@ PEELING_ALGEBRA = (
 T_STEM = "STEM_NOT_FURTHER_PEELABLE"
 T_CLOSED = "CLOSED_REMAINDER"
 T_DEFER_GATE = "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+#: قيمةٌ مفردةٌ تميّز «لا جوابَ لديّ» عن «عندي جوابٌ مانع» — والفرقُ حكمٌ.
+STANDING_UNPROVEN = "STANDING_UNPROVEN"
+STANDING_NOTE = ("قيامُ البقيّة «{remainder}» بنفسها غيرُ معلوم: لا شاهدَ "
+                 "مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة "
+                 "{prefix} جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.")
 #: قُطع عند موضعِ غيابٍ مسمّى، فلم تقم البقيةُ بنفسها لغياب بدء مقطعها.
 T_DEFER_ELISION = "DEFER_ELIDED_LETTER_NOT_RESTORABLE"
+#: قيامُ البقيّة بنفسها **غيرُ معلوم**: لا شاهدَ مستقلّ، والسجلُّ شاهدٌ مشتقّ
+#: فلا يُسأل عن الإغلاق. والقبولُ هنا دعوى كالمنع سواء.
+T_DEFER_STANDING = "DEFER_REMAINDER_STANDING_UNPROVEN"
 T_DEFER_UNRESOLVED = "DEFER_UNRESOLVED_CLOSURE"
 T_DEFER_VERBAL = "DEFER_VERBAL_OPERATOR_REGISTRY_TAG"
 T_BLOCK_BOUNDARY = "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
@@ -119,7 +127,7 @@ T_BLOCK_AXIS3 = "BLOCK_AXIS_3_REJECTED"
 T_BLOCK_EMPTY = "BLOCK_EMPTY_REMAINDER"
 
 TERMINATIONS = (T_STEM, T_CLOSED, T_DEFER_GATE, T_DEFER_UNRESOLVED,
-                T_DEFER_VERBAL, T_DEFER_ELISION,
+                T_DEFER_VERBAL, T_DEFER_ELISION, T_DEFER_STANDING,
                 T_BLOCK_BOUNDARY, T_BLOCK_AXIS3, T_BLOCK_EMPTY)
 
 
@@ -238,8 +246,10 @@ def peel_to_stem(surface: str, registry: Registry, witness: set | None = None,
                      registry, max(map(len, registry.match_index), default=0))
         if gate:
             result.verdict = DEFER
-            result.termination = T_DEFER_GATE
-            result.note = gate
+            result.termination = (T_DEFER_STANDING if gate is STANDING_UNPROVEN
+                                  else T_DEFER_GATE)
+            result.note = (STANDING_NOTE.format(prefix=prefix, remainder=remainder)
+                           if gate is STANDING_UNPROVEN else gate)
             result.stem_surface = ""
             return result
 
@@ -326,16 +336,16 @@ def _gate(prefix: str, remainder: str, analysis, witness: set | None,
     owners = registry is not None and registry.source_mode == "OWNER_REGISTRY"
     if registry is not None and registry.recheck(remainder).closed_form_proof == PROVEN:
         return ""                                  # مبرهنةٌ صورةً مغلقة
-    if owners:
-        return ("البقيةُ غيرُ مشهودةٍ مستقلّةً ولا مبرهنةٍ صورةً مغلقة — "
-                f"INITIAL_LETTER_MAY_BE_RADICAL (السابقة {prefix})")
-    # الجردُ شاهدٌ مشتقّ: «غيرُ مبرهنة» جهلٌ لا دليل (P7). فلا تعمل البوابة
-    # إلا حيث لا يغيّر السجلُّ شيئًا — بقيّةٌ يستحيل أن تكون صورةً مغلقة.
-    if max_closed_len and len(remainder) > max_closed_len:
-        return ("البقيةُ غيرُ مشهودة، وأطولُ من كلّ صورةٍ مغلقة في الجرد "
-                f"({max_closed_len} محرفًا، مقيسًا لا مقدَّرًا) فلا يغيّرها السجلّ — "
-                f"INITIAL_LETTER_MAY_BE_RADICAL (السابقة {prefix})")
-    return ""
+    if owners or (max_closed_len and len(remainder) > max_closed_len):
+        extra = ("" if owners else
+                 f" (أطولُ من كلّ صورةٍ مغلقة في الجرد: {max_closed_len} محرفًا)")
+        return ("البقيةُ غيرُ مشهودةٍ مستقلّةً ولا مبرهنةٍ صورةً مغلقة"
+                f"{extra} — INITIAL_LETTER_MAY_BE_RADICAL (السابقة {prefix})")
+    # الجردُ شاهدٌ مشتقّ، فالشقُّ الثاني من السؤال **لا جوابَ له**. و`P7`
+    # يمنع أن يكون هذا الجهلُ **مانعًا**؛ ولا يجعله **مُرخِّصًا**. فالقبولُ
+    # دعوى كالمنع سواء، وكلاهما يطلب دليلًا. والحكمُ الموافقُ للجهل: تأجيلٌ
+    # ببقيّةٍ ظاهرة، لا قبولٌ صامت.
+    return STANDING_UNPROVEN
 
 
 def _terminal_stem(result: PeelResult, current: str, analysis) -> PeelResult:
@@ -417,12 +427,12 @@ def build_suite(registry: Registry, witness: set | None,
                 not _gate("وَ", "كِتَاْبُنْ", None, {"كِتَاْبُنْ"}, _OwnerMode()),
                 "الشاهدُ المستقلّ يرفع المانع")
 
-    # وتحت الجرد المشتقّ لا تعمل البوابة إلا حيث لا يغيّر السجلُّ شيئًا (P7).
+    # وتحت الجرد المشتقّ: `P7` يمنع أن يكون الجهلُ **مانعًا**، ولا يجعله
+    # **مُرخِّصًا**. فلا حجبَ ولا قبول — بل تأجيلٌ ببقيّةٍ ظاهرة.
     r = run("كَفَرُوا")
-    suite.check("T4B_DERIVED_REGISTRY_DOES_NOT_LET_THE_GATE_CLAIM",
-                len(r.peels) >= 1 and r.termination != T_DEFER_GATE,
-                f"قشور={len(r.peels)} جذع={r.stem_surface}  ← "
-                "غيابُ السجلّ ليس مانعًا (P7): الكلفةُ معلنةٌ لا مرقَّعة")
+    suite.check("T4B_IGNORANCE_LICENSES_NEITHER_BLOCK_NOR_ACCEPT",
+                r.verdict == DEFER and r.termination == T_DEFER_STANDING,
+                f"{r.verdict} / {r.termination}  ← القبولُ دعوى كالمنع سواء")
 
     r = run("مَا")
     suite.check("T5_MAA_IS_CLOSED_NOT_A_STEM",
