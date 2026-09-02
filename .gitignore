@@ -25,3 +25,4 @@ vendor/Taaqol-GPT/
 # وسيطُ فكّ الحزمة — لا يدخل التاريخ
 _stage/
 inspection/runs/
+.venv-taaqol/

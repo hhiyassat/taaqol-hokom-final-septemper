@@ -1,0 +1,6179 @@
+{
+ "run_id": "native:nazila",
+ "corpus_id": "nazila",
+ "token_results": [
+  {
+   "token_id": "t000",
+   "surface": "مَاتَ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": "t000:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t000",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t000:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t000"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t000"
+     ],
+     "trace_entry_id": "trace:t000:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t001",
+   "surface": "مَلِكٌ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": "t001:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t001",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t001:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t001"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t001"
+     ],
+     "trace_entry_id": "trace:t001:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t002",
+   "surface": "عَنْ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": "t002:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t002",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t002:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t002"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t002"
+     ],
+     "trace_entry_id": "trace:t002:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t003",
+   "surface": "أُخْتٍ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": "t003:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t003",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t003:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t003"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t003"
+     ],
+     "trace_entry_id": "trace:t003:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t004",
+   "surface": "سَاكِنَةٍ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": "t004:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t004",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t004:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t004"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t004"
+     ],
+     "trace_entry_id": "trace:t004:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t005",
+   "surface": "مَعَهُ،",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": "t005:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t005",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t005:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t005"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t005"
+     ],
+     "trace_entry_id": "trace:t005:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t006",
+   "surface": "فَأَرَادَ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": "t006:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t006",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t006:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t006"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t006"
+     ],
+     "trace_entry_id": "trace:t006:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t007",
+   "surface": "وَارِثُهُ",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": "t007:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t007",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t007:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t007"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t007"
+     ],
+     "trace_entry_id": "trace:t007:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t008",
+   "surface": "طَرْدَهَا،",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": "t008:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t008",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t008:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t008"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t008"
+     ],
+     "trace_entry_id": "trace:t008:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  },
+  {
+   "token_id": "t009",
+   "surface": "فَتَحَاكَمَا.",
+   "paths": [
+    {
+     "path_id": "RootStemPath",
+     "evidence": [
+      "default lexical-content fallback"
+     ],
+     "confidence": 0.55
+    }
+   ],
+   "records": [
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "PATH_CLASSIFICATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": "t009:PATH_CLASSIFICATION:out",
+     "applicability": "APPLICABLE",
+     "transition_state": "EXECUTED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:PATH_CLASSIFICATION",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "PRE_WEIGHT_CAPACITY_AUDIT",
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "PRE_WEIGHT_CAPACITY_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DECLARED_NOT_IMPLEMENTED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:PRE_WEIGHT_CAPACITY_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "runtime_implementation_missing"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_ONLY",
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "DAL_ONLY",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:DAL_ONLY",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "VERBAL_MADLUL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "VERBAL_MADLUL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:VERBAL_MADLUL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "DAL_MADLUL_BINDING"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "DAL_MADLUL_BINDING",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:DAL_MADLUL_BINDING",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "CONTRACTABLE_UNIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "CONTRACTABLE_UNIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:CONTRACTABLE_UNIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "RELATION",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:RELATION",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "FORMAL_SHAPE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "DEFERRED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:FORMAL_SHAPE",
+     "failure_code": null,
+     "remediation_hints": [
+      "missing_context:FORMAL_ONLY"
+     ],
+     "next_admissible_stage_ids": [
+      "MUFRAD_DALALAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "MUFRAD_DALALAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:MUFRAD_DALALAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "RELATION_CLOSURE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "RELATION_CLOSURE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:RELATION_CLOSURE",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "IFADAH"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "IFADAH",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:IFADAH",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "HUKM"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "HUKM",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:HUKM",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "MANAT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "MANAT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:MANAT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "TANZIL"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "TANZIL",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:TANZIL",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [
+      "ANSWER_AUDIT"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "ANSWER_AUDIT",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "APPLICABLE",
+     "transition_state": "NOT_OPENED",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:ANSWER_AUDIT",
+     "failure_code": null,
+     "remediation_hints": [
+      "previous_gate_not_proven"
+     ],
+     "next_admissible_stage_ids": [],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    },
+    {
+     "run_id": "native:nazila",
+     "corpus_id": "nazila",
+     "token_id": "t009",
+     "span_id": null,
+     "stage_id": "NON_CONTENT_FORMAL_ROUTE",
+     "path_id": "RootStemPath",
+     "input_carrier_id": "t009:in",
+     "output_carrier_id": null,
+     "applicability": "NOT_APPLICABLE",
+     "transition_state": "NOT_APPLICABLE",
+     "evidence_refs": [
+      "token:t009"
+     ],
+     "rank_before": 0,
+     "rank_after": 0,
+     "residuals_before": [],
+     "residuals_after": [
+      "RUNTIME_CONTEXT_PENDING"
+     ],
+     "identity_invariants_checked": [
+      "token_surface_identity_preserved"
+     ],
+     "trace_parent_ids": [
+      "trace:t009"
+     ],
+     "trace_entry_id": "trace:t009:NON_CONTENT_FORMAL_ROUTE",
+     "failure_code": null,
+     "remediation_hints": [],
+     "next_admissible_stage_ids": [
+      "FORMAL_SHAPE"
+     ],
+     "source_commit_sha": "UNKNOWN_COMMIT_SHA",
+     "registry_version": "native-registry-v1",
+     "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5"
+    }
+   ]
+  }
+ ],
+ "registry_version": "native-registry-v1",
+ "registry_hash": "5e88b7067293970bbd4c3472613b853e35a2c3077963e7a46edaa2ccb770dab5",
+ "source_commit_sha": "UNKNOWN_COMMIT_SHA"
+}

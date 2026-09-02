@@ -1,0 +1,87 @@
+{
+ "identity": {
+  "source_file": "inspection/case.txt",
+  "sha256_stripped_text": "1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2",
+  "sha256_file_bytes": "99874325af21a1e1f834be953352165edea94627070ff53147231647af14b6da",
+  "how_to_reproduce": {
+   "sha256_stripped_text": "python -c \"import hashlib,sys;print(hashlib.sha256(open(sys.argv[1],encoding='utf-8').read().strip().encode()).hexdigest())\" <file>",
+   "sha256_file_bytes": "shasum -a 256 <file>"
+  },
+  "tokens": 10,
+  "corpus_id": "nazila",
+  "run_id": "native:nazila",
+  "python": "3.11.15",
+  "platform": "Linux x86_64",
+  "taaqol_commit": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+  "taaqol_modules_executed": 89,
+  "measured_by": "REVIEW_CONTAINER_CLOUD",
+  "aslot_isolation": "لم يُستورد في أيّ محور، ولم يدخل مخرجُه أيَّ حكم"
+ },
+ "records_total": 160,
+ "stage_transition_states": {
+  "DECLARED_NOT_IMPLEMENTED": 10,
+  "DEFERRED": 10,
+  "EXECUTED": 10,
+  "NOT_APPLICABLE": 10,
+  "NOT_OPENED": 120
+ },
+ "hints": {
+  "missing_context:FORMAL_ONLY": 10,
+  "previous_gate_not_proven": 120,
+  "runtime_implementation_missing": 10
+ },
+ "residuals_after": {
+  "RUNTIME_CONTEXT_PENDING": 150
+ },
+ "ranks": {
+  "0->0": 160
+ },
+ "stage_ids": {
+  "ANSWER_AUDIT": 10,
+  "CONTRACTABLE_UNIT": 10,
+  "DAL_MADLUL_BINDING": 10,
+  "DAL_ONLY": 10,
+  "FORMAL_SHAPE": 10,
+  "HUKM": 10,
+  "IFADAH": 10,
+  "MANAT": 10,
+  "MUFRAD_DALALAH": 10,
+  "NON_CONTENT_FORMAL_ROUTE": 10,
+  "PATH_CLASSIFICATION": 10,
+  "PRE_WEIGHT_CAPACITY_AUDIT": 10,
+  "RELATION": 10,
+  "RELATION_CLOSURE": 10,
+  "TANZIL": 10,
+  "VERBAL_MADLUL": 10
+ },
+ "path_ids": {
+  "RootStemPath": 160
+ },
+ "record_fields": [
+  "applicability",
+  "corpus_id",
+  "evidence_refs",
+  "failure_code",
+  "identity_invariants_checked",
+  "input_carrier_id",
+  "next_admissible_stage_ids",
+  "output_carrier_id",
+  "path_id",
+  "rank_after",
+  "rank_before",
+  "registry_hash",
+  "registry_version",
+  "remediation_hints",
+  "residuals_after",
+  "residuals_before",
+  "run_id",
+  "source_commit_sha",
+  "span_id",
+  "stage_id",
+  "token_id",
+  "trace_entry_id",
+  "trace_parent_ids",
+  "transition_state"
+ ],
+ "record_field_count": 24
+}
