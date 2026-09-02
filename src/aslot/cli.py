@@ -20,10 +20,11 @@ from .axes.axis1_normalization import Axis1Normalization
 from .axes.axis2_registry import Axis2Registry
 from .axes.axis3_syllabification import Axis3Syllabification
 from .axes.axis4_peeling import Axis4Peeling
+from .axes.axis9_compliance import Axis9Compliance
 from .runner import AxisRunner
 
 AXES = (Axis0Corpus(), Axis1Normalization(), Axis2Registry(),
-        Axis3Syllabification(), Axis4Peeling())
+        Axis3Syllabification(), Axis4Peeling(), Axis9Compliance())
 BY_SLUG = {axis.slug: axis for axis in AXES}
 
 #: وسائط السلسلة الكاملة: المحور الأول يقيس كلفته مقابل المرجع،
@@ -34,6 +35,7 @@ PIPELINE = (
     ("registry", []),
     ("syllabify", []),
     ("peel", ["--emit-masaq-like"]),
+    ("compliance", []),
 )
 
 USAGE = """الاستعمال:

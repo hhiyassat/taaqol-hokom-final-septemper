@@ -32,7 +32,14 @@ from ..fileio import read_json, read_rows, require_file, write_csv
 from ..policy import OwnerPolicy
 from ..reporting import Report
 from ..runner import Axis
+from ..trace import anchor, parent_anchor
 from .axis1_normalization import NORMALIZED, OWNER_DECISION, normalize_token
+
+
+def _pos(row) -> tuple[int, int, int]:
+    """موضعُ الصفّ — الوسيطُ الوحيد الذي تُبنى منه المرساة."""
+    return (int(row["Sura_No"]), int(row["Verse_No"]), int(row["Word_No"]))
+
 
 # ---------------------------------------------------------------------------
 # القوائم المغلقة — لا تُوسَّع وقت التشغيل
@@ -423,12 +430,14 @@ class Axis2Registry(Axis):
                          row["Word"], row["Normalized_Word"],
                          v.closed_form_proof, v.eligibility,
                          "YES" if v.operator_role else "NO", v.word_class,
-                         v.next_route, "|".join(v.matched_entry_ids), v.note])
+                         v.next_route, "|".join(v.matched_entry_ids), v.note,
+                         anchor(2, *_pos(row)), parent_anchor(2, *_pos(row))])
 
         write_csv(out_dir / "AXIS_2_TOKENS.csv",
                   ["Sura_No", "Verse_No", "Word_No", "Word", "Normalized_Word",
                    "Closed_Form_Proof", "Eligibility", "Operator_Role",
-                   "Word_Class", "Next_Route", "Matched_Entry_Ids", "Note"], rows)
+                   "Word_Class", "Next_Route", "Matched_Entry_Ids", "Note",
+                   "Trace_Anchor", "Parent_Anchor"], rows)
 
         write_csv(out_dir / "AXIS_2_REGISTRY.csv",
                   ["Entry_Id", "Raw_Surfaces", "Normalized_Surface",

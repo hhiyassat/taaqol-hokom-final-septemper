@@ -1,0 +1,51 @@
+{
+  "manifest_id": "ASLOT_OWNER_LAWS_T0_V1",
+  "stage": "T-0",
+  "law_only": true,
+  "note": "لا سطرَ كودٍ في هذه المرحلة. النصوصُ منقولةٌ حرفيًّا عن رسائل المالك.",
+  "laws": [
+    {
+      "file": "L01_JALALAH.md",
+      "title": "ن٠-ج — لفظ الجلالة",
+      "sha256": "8ecc4c5dfb87baa4965734ccc676421594d1818be5c8f75e560f07579df941f2",
+      "bytes": 714
+    },
+    {
+      "file": "L02_DAGGER_ALIF.md",
+      "title": "N8 — الألف الخنجرية على الواو",
+      "sha256": "e4fbd4c5f170f353203c387a77144526c9360838956ca681351435be3690f957",
+      "bytes": 753
+    },
+    {
+      "file": "L03_SUN_MOON_LAM.md",
+      "title": "N9 — اللام الشمسية والقمرية",
+      "sha256": "1c158cc3d91f969c138b2069550d9dc5e5c699b878d012f1ce9be49b3fb51c0e",
+      "bytes": 685
+    },
+    {
+      "file": "L04_ELIDED_ARTICLE.md",
+      "title": "N7.4 — «أل» التي سقطت ألفُها",
+      "sha256": "39c096805b7c2d49ae786338a077ad0415f6fc545b89ec56978c85011d33f087",
+      "bytes": 635
+    },
+    {
+      "file": "L05_INTERROGATIVE_MADDA.md",
+      "title": "N10.2 — «آ» الداخلة على «أل»",
+      "sha256": "39c6fef9d63b764483627e23b0de431bb2735febdce2fee7daf0fcbe09934739",
+      "bytes": 639
+    },
+    {
+      "file": "L06_CL16_RANK.md",
+      "title": "CL-16 — التعضيدُ لا يرفع رتبة",
+      "sha256": "b36b35b0f2102477a8d1ed4786ca61d8a4eb0160d828740e2e0b75e018c356b0",
+      "bytes": 471
+    },
+    {
+      "file": "L07_CL16_SKELETON.md",
+      "title": "CL-16 — الهيكلُ ليس برهانَ جذر",
+      "sha256": "26566ce5370de1d895628ad903eb39e0d9087b13e145a8ec09c2ed469a565fc0",
+      "bytes": 448
+    }
+  ],
+  "law_files": 7
+}

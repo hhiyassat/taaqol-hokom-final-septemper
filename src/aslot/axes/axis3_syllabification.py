@@ -37,8 +37,15 @@ from ..constants import (
 from ..fileio import require_file, write_csv
 from ..reporting import Report
 from ..runner import Axis
+from ..trace import anchor, parent_anchor
 from ..verdicts import ACCEPT, BLOCK
 from .axis2_registry import iter_usable
+
+
+def _pos(row) -> tuple[int, int, int]:
+    """موضعُ الصفّ — الوسيطُ الوحيد الذي تُبنى منه المرساة."""
+    return (int(row["Sura_No"]), int(row["Verse_No"]), int(row["Word_No"]))
+
 
 ALLOWED_PATTERNS = ("CV", "CVC", "CVV", "CVVC", "CVCC", "CVVCC")
 ALLOWED_PATTERN_SET = frozenset(ALLOWED_PATTERNS)
@@ -311,13 +318,15 @@ class Axis3Syllabification(Axis):
                          "·".join(a.pattern_sequence), a.consonant_count,
                          a.madd_status, a.layn_status,
                          "YES" if a.reconstruction_verified else "NO",
-                         "|".join(map(str, a.boundaries)), a.block_reason])
+                         "|".join(map(str, a.boundaries)), a.block_reason,
+                         anchor(3, *_pos(row)), parent_anchor(3, *_pos(row))])
 
         write_csv(out_dir / "AXIS_3_SYLLABLES.csv",
                   ["Sura_No", "Verse_No", "Word_No", "Word", "Normalized_Word",
                    "Verdict", "Syllable_Pattern", "Consonant_Count",
                    "Madd_Status", "Layn_Status", "Reconstruction_Verified",
-                   "Boundaries", "Block_Reason"], rows)
+                   "Boundaries", "Block_Reason",
+                   "Trace_Anchor", "Parent_Anchor"], rows)
 
         measures = {
             "analyzed": sum(verdicts.values()),

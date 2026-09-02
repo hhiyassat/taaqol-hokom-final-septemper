@@ -37,6 +37,7 @@ from ..fileio import read_rows, require_file, write_csv
 from ..policy import OwnerPolicy
 from ..reporting import Report
 from ..runner import Axis
+from ..trace import anchor, parent_anchor
 from ..verdicts import ACCEPT, BLOCK, DEFER
 from .axis1_normalization import normalize_token
 from .axis2_registry import (
@@ -48,6 +49,12 @@ from .axis2_registry import (
     load_registry,
 )
 from .axis3_syllabification import analyze_normalized_surface
+
+
+def _pos(row) -> tuple[int, int, int]:
+    """موضعُ الصفّ — الوسيطُ الوحيد الذي تُبنى منه المرساة."""
+    return (int(row["Sura_No"]), int(row["Verse_No"]), int(row["Word_No"]))
+
 
 # ---------------------------------------------------------------------------
 # الترخيص: قائمة مغلقة ، مشكولة ، ولا تسمية
@@ -536,7 +543,8 @@ class Axis4Peeling(Axis):
                          "+".join(p.license_id for p in r.peels),
                          r.stem_surface, r.stem_pattern, r.stem_consonants,
                          r.closed_form_proof, r.deferred_candidate,
-                         r.root_work, r.root_proven, r.stem_proof, r.note])
+                         r.root_work, r.root_proven, r.stem_proof, r.note,
+                         anchor(4, *_pos(row)), parent_anchor(4, *_pos(row))])
 
             if args.emit_masaq_like:
                 row_id = _emit_masaq_like(masaq_like, row, r, syllables, row_id)
@@ -546,7 +554,8 @@ class Axis4Peeling(Axis):
                    "Verdict", "Termination", "Peel_Count", "Peeled_Prefixes",
                    "Licenses", "Stem_Surface", "Stem_Pattern", "Stem_Consonants",
                    "Closed_Form_Proof", "Deferred_Candidate_Prefix",
-                   "Root_Work", "Root_Proven", "Stem_Proof", "Note"], rows)
+                   "Root_Work", "Root_Proven", "Stem_Proof", "Note",
+                   "Trace_Anchor", "Parent_Anchor"], rows)
 
         if args.emit_masaq_like:
             # صفوفُ لفظ الجلالة تُبثّ في دفعةٍ مستقلّة قبل الحلقة، فتُعاد

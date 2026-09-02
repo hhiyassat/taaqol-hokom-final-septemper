@@ -66,6 +66,7 @@ from ..jalalah import JalalahRegistry, default_registry
 from ..policy import OWNER_DECISION_REQUIRED, OwnerPolicy
 from ..reporting import Report
 from ..runner import Axis
+from ..trace import anchor, parent_anchor
 from ..uthmani import ALL_SIGNS, COMBINING_HAMZA, PERFORMANCE, PHONETIC, SIGNS, uncovered_marks
 
 # ---------------------------------------------------------------------------
@@ -1202,14 +1203,15 @@ class Axis1Normalization(Axis):
             rows.append([*position, row["Word"], r.normalized, r.status,
                          "|".join(r.decision_classes), "|".join(r.rules_applied),
                          r.stop_reason, r.jalalah_prefix, r.jalalah_preserved,
-                         "|".join(str(i) for i in r.elision_points)])
+                         "|".join(str(i) for i in r.elision_points),
+                         anchor(1, *position), parent_anchor(1, *position)])
 
         write_csv(out_dir / "AXIS_1_NORMALIZATION.csv",
                   ["Sura_No", "Verse_No", "Word_No", "Word", "Normalized_Word",
                    "Normalization_Status", "Owner_Decision_Classes",
                    "Rules_Applied", "Stop_Reason",
                    "Jalalah_Prefix", "Jalalah_Preserved",
-                   "Elision_Points"], rows)
+                   "Elision_Points", "Trace_Anchor", "Parent_Anchor"], rows)
 
         measures = {
             "words": len(rows),

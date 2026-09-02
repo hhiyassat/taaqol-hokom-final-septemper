@@ -23,6 +23,7 @@ from ..errors import owner_alert
 from ..fileio import read_rows, require_file, sha256_of_file, write_csv, write_text
 from ..reporting import Report
 from ..runner import Axis
+from ..trace import anchor, parent_anchor
 
 #: الحقول الخمسة التي أذن بها المالك لهذا المحور — قائمة مغلقة.
 CONSUMED_FIELDS = ("Sura_No", "Verse_No", "Word_No", "Segment_No", "Word")
@@ -320,12 +321,15 @@ class Axis0Corpus(Axis):
         write_csv(
             out_dir / "QURAN_WORDS.csv",
             ["Sura_No", "Verse_No", "Word_No", "Word", "Segment_Count",
-             "Segment_Numbers", "Surface_Conflict", "Segment_Numbering_Gap"],
+             "Segment_Numbers", "Surface_Conflict", "Segment_Numbering_Gap",
+             "Trace_Anchor", "Parent_Anchor"],
             ([w.sura, w.verse, w.number, w.surface, w.segment_count,
               "|".join(map(str, w.segment_numbers)),
               "YES" if w.surface_conflict else "NO",
               "YES" if w.segment_numbers != list(range(1, w.segment_count + 1))
-              else "NO"]
+              else "NO",
+              anchor(0, w.sura, w.verse, w.number),
+              parent_anchor(0, w.sura, w.verse, w.number)]
              for w in corpus.words.values()))
 
         measures = {
