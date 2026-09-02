@@ -34,7 +34,7 @@
   "RUNTIME_CONTEXT_PENDING": 150
  },
  "ranks": {
-  "0->0": 160
+  "ZERO->ZERO": 160
  },
  "stage_ids": {
   "ANSWER_AUDIT": 10,

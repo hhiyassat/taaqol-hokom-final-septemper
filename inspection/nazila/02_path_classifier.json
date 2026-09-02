@@ -1,0 +1,51 @@
+{
+ "registry_keys": 11,
+ "registry_keys_vocalized": 0,
+ "distinct_paths_on_bare_keys": [
+  "BuiltNounPath",
+  "ConditionalOperatorPath",
+  "NegationOperatorPath",
+  "ParticleOperatorPath",
+  "PronounPath",
+  "RelativeReferencePath"
+ ],
+ "confidence_range_on_bare_keys": [
+  0.74,
+  0.96
+ ],
+ "distinct_paths_on_nazila": [
+  "RootStemPath"
+ ],
+ "nazila_tokens_vocalized": 10,
+ "same_word_two_answers": [
+  {
+   "bare": "الذين",
+   "vocalized": "الَّذِينَ",
+   "path_bare": "RelativeReferencePath",
+   "path_vocalized": "JamidPath"
+  },
+  {
+   "bare": "الذي",
+   "vocalized": "الَّذِي",
+   "path_bare": "RelativeReferencePath",
+   "path_vocalized": "JamidPath"
+  },
+  {
+   "bare": "يا",
+   "vocalized": "يَا",
+   "path_bare": "ParticleOperatorPath",
+   "path_vocalized": "RootStemPath"
+  },
+  {
+   "bare": "إذا",
+   "vocalized": "إِذَا",
+   "path_bare": "ConditionalOperatorPath",
+   "path_vocalized": "RootStemPath"
+  }
+ ],
+ "fallback_rules_in_source": [
+  "exact match on the bare surface — 11 keys",
+  "startswith('ال') → JamidPath 0.62",
+  "otherwise → RootStemPath 0.55"
+ ]
+}

@@ -17,11 +17,23 @@
 
 والمخرجُ سجلٌّ لكلّ (توكن × مرحلة) بكلّ حقوله — ليكون التدقيقُ ممكنًا،
 لا التصديقُ مطلوبًا.
+
+**دعوى مسحوبة، تُسجَّل ولا تُمحى.** قلتُ بعد أوّل تشغيل: «`classify_token_paths`
+لا تميّز أصلًا، لا ضعيفًا». وذلك **مبالغةٌ سُحبت**: بنيتُها على أربعة نصوصٍ
+كلُّها مشكولةٌ بالكامل (والإنجليزيّةُ لا مفتاحَ لها أصلًا)، فعمّمتُ نفيًا من
+شاهدٍ ضيّق. والمقيسُ الآن:
+
+    الجردُ المغلق          ١١ مفتاحًا · **لا مشكولَ فيها**
+    على السطح المجرَّد     سبعةُ مساراتٍ بثقةٍ ٠٫٥١–٠٫٩٦ ← **يميّز**
+    على السطح المشكول     `RootStemPath 0.55` لكلّ توكن  ← لا يميّز
+
+فالعلّةُ في مفاتيح الجرد لا في المصنِّف. والتصحيحُ للمالك، وقد أصاب.
 """
 from __future__ import annotations
 
 import argparse
 import dataclasses
+import enum
 import hashlib
 import json
 import platform
@@ -34,16 +46,30 @@ sys.path.insert(0, str(ROOT / "vendor" / "Taaqol-GPT" / "src"))
 
 
 def to_plain(value):
-    """يفرّغ السجلَّ إلى JSON بلا تأويل: التعداداتُ بقيمها، والبنى بحقولها."""
+    """يفرّغ السجلَّ إلى JSON بلا تأويل: البنى بحقولها، والتعداداتُ بهويّتها.
+
+    **وهويّةُ التعداد ليست قيمتَه دائمًا.** كان هذا يأخذ `.value` لكلّ تعداد،
+    فخرجت الرتبةُ `0->0` لأنّ `Rank` عددٌ مرتَّب — والرتبةُ اسمٌ لا رقم،
+    والوثيقةُ تسمّيها `ZERO`. فاختلف تقريران في تسمية حقيقةٍ واحدة، وذلك
+    عيبٌ في المُفرِّغ لا في أحد التقريرين.
+
+    والقاعدةُ العامّة، لا ترقيعُ الرتبة وحدَها:
+
+        تعدادٌ قيمتُه عدد    ← العددُ ترتيبٌ لا اسم، فتُؤخذ `.name`
+        تعدادٌ قيمتُه نصّ    ← القيمةُ اسمٌ صالح، فتُؤخذ `.value`
+
+    فـ`Rank.ZERO` تخرج `ZERO`، و`PathId.ROOT_STEM_PATH` تبقى `RootStemPath`
+    كما تسمّيها تعقُّل، ولا يُبدَّل اسمٌ اصطلح عليه المصدر.
+    """
     if dataclasses.is_dataclass(value) and not isinstance(value, type):
         return {f.name: to_plain(getattr(value, f.name))
                 for f in dataclasses.fields(value)}
+    if isinstance(value, enum.Enum):
+        return value.name if isinstance(value.value, int) else value.value
     if isinstance(value, dict):
         return {str(k): to_plain(v) for k, v in value.items()}
     if isinstance(value, (list, tuple, set, frozenset)):
         return [to_plain(v) for v in value]
-    if hasattr(value, "value") and hasattr(value, "name"):
-        return value.value
     if isinstance(value, (str, int, float, bool)) or value is None:
         return value
     return str(value)
