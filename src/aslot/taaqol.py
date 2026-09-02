@@ -219,6 +219,13 @@ ASLOT_REFUSALS: dict[str, tuple[str, str | None]] = {
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA":
         ("axis1.status", "IDENTITY_BROKEN"),
     "MULTIWORD_SURFACE_IN_ONE_CELL": ("axis1.stop", "IDENTITY_BROKEN"),
+    # الاسمان التاليان **كانا يخرجان ولا يُعلَنان**، ولم يظهرا في جرد النصّ
+    # القرآنيّ لأنّه بلا ترقيم. وكشفهما مثبَّتُ النثر الحديث (F3): ٢٨ شاهدًا
+    # لكلٍّ منهما في مخرجٍ فعليّ. فالإعلانُ هنا **تصحيحُ جردٍ ناقص** لا
+    # اختراعُ اسم — والاسمُ من المحرّك لا من يدي، ومقابلُه في تعقُّل يُترك
+    # ``None`` صراحةً كما تقتضي القاعدة أعلاه.
+    "IGNORED_NON_WORD_TOKEN": ("axis1.status", None),
+    "NON_LETTER": ("axis1.stop", None),
     # ── المحور ٢ — الحصر ────────────────────────────────────────────────
     "PROVEN": ("axis2.proof", None),
     "NOT_MATCHED": ("axis2.proof", None),

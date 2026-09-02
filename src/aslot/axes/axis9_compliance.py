@@ -23,6 +23,7 @@ import sys
 from pathlib import Path
 
 from ..axes.axis1_normalization import STATUSES as A1_STATUSES
+from ..axes.axis1_normalization import STOP_REASON_FAMILIES as A1_STOPS
 from ..axes.axis4_peeling import TERMINATIONS as A4_TERMINATIONS
 from ..checks import CheckSuite
 from ..constants import ALIF, FATHATAN
@@ -240,7 +241,8 @@ class Axis9Compliance(Axis):
         #      كحال N8: قاعدةٌ منفَّذةٌ بلا شاهدٍ في رسمٍ إملائيّ.
         # ولمّا حُذف BLOCK_EMPTY_REMAINDER من شواهد هذه الجولة أسقط السمُّ
         # الجولةَ — وكان محقًّا في التنبيه، خاطئًا في التكييف.
-        engine_names = set(A4_TERMINATIONS) | set(A1_STATUSES) | observed
+        engine_names = (set(A4_TERMINATIONS) | set(A1_STATUSES)
+                        | set(A1_STOPS) | observed)
         suite.poison("P1_NO_INVENTED_REFUSAL_NAME",
                      declared <= engine_names,
                      f"{sorted(declared - engine_names)} — كلُّ اسمٍ تعرفه المحاور")

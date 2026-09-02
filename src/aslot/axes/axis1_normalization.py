@@ -86,6 +86,39 @@ JALALAH = "EXCLUDED_LAFZ_AL_JALALAH"
 
 STATUSES = (NORMALIZED, OWNER_DECISION, STOPPED, IGNORED, FAWATIH, JALALAH)
 
+#: أُسَرُ أسبابِ التوقّف — الجزءُ الثابتُ قبل ``@`` في كلّ ``Stop_Reason``.
+#:
+#: **ولمَ جردٌ مغلق.** كانت هذه الأسماءُ حروفًا داخل نصوصٍ منسَّقة، فخرج
+#: ``NON_LETTER`` في مخرجٍ فعليّ ولم يكن اسمًا يعرفه أحد: لا حالةٌ ولا مخرجٌ
+#: ولا معلَنٌ في التاكسونومية. وكشفه نثرٌ حديثٌ فيه ترقيم، إذ لا ترقيمَ في
+#: النصّ القرآنيّ فلم يشهد له جردُ الجولة الكاملة.
+#:
+#: والعلاجُ عامّ لا محلّيّ: تُعلَن الأسرةُ كلُّها هنا مرّةً واحدة، ويُثبت فحصٌ
+#: أنّ كلَّ سببٍ خرج فعلًا أسرتُه في هذه القائمة — فلا يُولد اسمٌ صامتٌ ثانية.
+STOP_REASON_FAMILIES = (
+    "ALEF_MADDA_OWNER_DECISION",
+    "ALIF_FARIQA_OWNER_DECISION",
+    "ALIF_MAQSURA_OWNER_DECISION",
+    "DAGGER_ALIF_ON_UNVOCALIZED_CARRIER",
+    "DAGGER_ALIF_OWNER_DECISION",
+    "HARAKA_WITHOUT_CARRIER",
+    "MULTIPLE_HARAKAT_ON_ONE_CARRIER",
+    "MULTIWORD_SURFACE_IN_ONE_CELL",
+    "N7_2_NO_APPROVED_REGISTRY",
+    "NON_LETTER",
+    "QURANIC_SIGN_OWNER_DECISION",
+    "TANWEEN_OWNER_DECISION",
+    "TATWEEL_CARRIES_MARKS_OWNER_DECISION",
+    "UNKNOWN_MARK",
+    "UNVOCALIZED_ALIF",
+    "UNVOCALIZED_CARRIER",
+)
+
+
+def stop_reason_family(reason: str) -> str:
+    """يقتطع الأسرةَ من سببٍ كامل: ``NON_LETTER@8:'،'`` ← ``NON_LETTER``."""
+    return reason.split("@")[0].strip()
+
 PRESERVED = "PRESERVED"
 REPLACED = "REPLACED"
 EXPANDED = "EXPANDED"
@@ -1199,7 +1232,7 @@ class Axis1Normalization(Axis):
             fates.update(fate for _, _, fate, _ in r.fates)
             classes.update(cls for cls, _, _ in r.owner_decisions)
             if r.stop_reason:
-                stops[r.stop_reason.split("@")[0]] += 1
+                stops[stop_reason_family(r.stop_reason)] += 1
             rows.append([*position, row["Word"], r.normalized, r.status,
                          "|".join(r.decision_classes), "|".join(r.rules_applied),
                          r.stop_reason, r.jalalah_prefix, r.jalalah_preserved,
@@ -1213,9 +1246,19 @@ class Axis1Normalization(Axis):
                    "Jalalah_Prefix", "Jalalah_Preserved",
                    "Elision_Points", "Trace_Anchor", "Parent_Anchor"], rows)
 
+        # لا اسمَ يخرج من هذا المحور خارجَ الجرد المُعلَن. والفحصُ على
+        # **ما خرج فعلًا** لا على مدخلٍ منتقًى، فيسدّ الصنفَ كلَّه: أيُّ أسرةٍ
+        # تُضاف في الكود ولا تُعلَن أعلاه تُسقط الجولةَ في أوّل تشغيل.
+        undeclared = sorted(set(stops) - set(STOP_REASON_FAMILIES))
+        suite.check("T_EVERY_STOP_REASON_FAMILY_IS_DECLARED",
+                    not undeclared,
+                    f"{len(stops)} أسرةً شهدها المدخل، كلُّها مُعلَنة"
+                    if not undeclared else f"غيرُ مُعلَن: {undeclared}")
+
         measures = {
             "words": len(rows),
             "status": dict(statuses),
+            "stop_reason_families_declared": list(STOP_REASON_FAMILIES),
             "rules": dict(rules),
             "fates": dict(fates),
             "owner_decision_classes": dict(classes),
