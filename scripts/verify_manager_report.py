@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """يقابل تقريرَ المدير بمصادره — **بلا استيرادٍ للمولِّد**.
 
-    python3 scripts/verify_manager_report.py [تقرير.html] [مجلّد المثبَّتات]
+    python3 scripts/verify_manager_report.py \
+        [تقرير.html] [مجلّد المثبَّتات] [المثبَّت الرئيس]
 
 **العلّة.** مدقِّقٌ يستورد المولِّد يعيد استعمال حسابه، فيوافقه ولو أخطأ
 كلاهما بالخطأ نفسِه. فهذا الملفّ **لا يستورد شيئًا من المولّد**: يقرأ الـHTML
@@ -50,32 +51,37 @@ def main(argv: list[str]) -> int:
     def affirm(name: str, ok: bool, detail: str) -> None:
         checks.append((name, ok, detail))
 
+    # المثبَّتاتُ **تُكتشف من القرص** لا تُسمّى في المدقّق: مدقِّقٌ يعرف
+    # ثلاثةً باسمها يسكت عن الرابع، والسكوتُ هو العيبُ الذي يفحص عنه.
+    names = sorted(d.name for d in runs.iterdir()
+                   if (d / "axis4/AXIS_4_PEEL_TO_STEM.csv").is_file())
+
     # ── الموجَب: الصفوفُ موجودةٌ فعلًا ──────────────────────────────────
-    a4 = {f: read(runs / f / "axis4/AXIS_4_PEEL_TO_STEM.csv")
-          for f in ("f1", "f2", "f3")}
-    a1 = {f: read(runs / f / "axis1/AXIS_1_NORMALIZATION.csv")
-          for f in ("f1", "f2", "f3")}
+    a4 = {f: read(runs / f / "axis4/AXIS_4_PEEL_TO_STEM.csv") for f in names}
+    a1 = {f: read(runs / f / "axis1/AXIS_1_NORMALIZATION.csv") for f in names}
     affirm("V0_SOURCE_CSVS_ARE_NON_EMPTY",
-           all(a4.values()) and all(a1.values()),
+           bool(names) and all(a4.values()) and all(a1.values()),
            " · ".join(f"{f}:{len(r)}" for f, r in a4.items()))
 
-    # ── جدولُ الصفوف: كلُّ كلمةٍ من الآية لها صفٌّ في الـHTML ───────────
-    words = [r["Word"] for r in a1["f1"]]
+    # ── جدولُ الصفوف: كلُّ كلمةٍ في كلّ مثبَّتٍ لها أثرٌ في الـHTML ──────
+    main = argv[3] if len(argv) > 3 else "f1"
+    words = [r["Word"] for r in a1[main]]
     missing = [w for w in words if w not in doc]
-    affirm("V1_EVERY_WORD_OF_THE_VERSE_APPEARS",
-           not missing, f"{len(words) - len(missing)}/{len(words)} كلمة"
+    affirm("V1_EVERY_WORD_OF_THE_MAIN_FIXTURE_APPEARS",
+           bool(words) and not missing,
+           f"{main}: {len(words) - len(missing)}/{len(words)} كلمة"
            + (f"   غائب: {missing[:4]}" if missing else ""))
 
     # ── اللوحة: الأعداد الأربعة مقروءةٌ من الـCSV لا من المولّد ─────────
-    counts = Counter(bucket(r["Termination"]) for r in a4["f1"])
-    counts["not_carried"] = len(a1["f1"]) - len(a4["f1"])
+    counts = Counter(bucket(r["Termination"]) for r in a4[main])
+    counts["not_carried"] = len(a1[main]) - len(a4[main])
     ok = all(str(v) in text for v in counts.values())
     affirm("V2_HEADLINE_NUMBERS_MATCH_THE_CSV", ok,
            " · ".join(f"{k}={v}" for k, v in sorted(counts.items())))
 
-    affirm("V3_HEADLINE_CLOSES_ON_THE_VERSE",
-           sum(counts.values()) == len(a1["f1"]),
-           f"{sum(counts.values())} = {len(a1['f1'])} كلمة")
+    affirm("V3_HEADLINE_CLOSES_ON_THE_MAIN_FIXTURE",
+           sum(counts.values()) == len(a1[main]),
+           f"{sum(counts.values())} = {len(a1[main])} كلمة")
 
     # ── لا عددَ محقون: كلُّ اسمٍ يحمل عددًا موجبًا في التقرير له شاهدٌ
     # في مخرجٍ خام. والاسمُ المطبوع بعددٍ صفرٍ وحالٍ «مُعلَنٌ بلا شاهدٍ هنا»
@@ -84,7 +90,7 @@ def main(argv: list[str]) -> int:
     # اختيارُ الأعمدة هنا يجعل المدقِّقَ يشكو من صحيحٍ لأنّه لم ينظر حيث
     # يقع الشاهد — وهو إخفاقٌ لعلّةٍ خاطئة، أخو النجاح لعلّةٍ خاطئة.
     emitted: set[str] = set()
-    for f in ("f1", "f2", "f3"):
+    for f in names:
         for path in sorted((runs / f).glob("axis*/*.csv")):
             for row in read(path):
                 for value in row.values():
@@ -109,7 +115,7 @@ def main(argv: list[str]) -> int:
            + (f"   بلا شاهد: {invented}" if invented else ""))
 
     # ── الأثر: العددُ المطبوع = العدُّ الخام ────────────────────────────
-    total = sum(len(read(p)) for f in ("f1", "f2", "f3")
+    total = sum(len(read(p)) for f in names
                 for p in sorted((runs / f).glob("axis*/*.csv"))
                 if p.name != "AXIS_2_REGISTRY.csv")
     affirm("V5_TRACE_TOTAL_MATCHES_RAW_ROW_COUNT",

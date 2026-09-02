@@ -3,8 +3,8 @@
 
     python3 scripts/build_manager_report.py \\
         --out inspection/manager_report.html \\
-        --f1-dir inspection/runs/f1 --f2-dir inspection/runs/f2 \\
-        --f3-dir inspection/runs/f3 \\
+        --fixture 'F4:جملةُ الواقعة:نثر:OWNER_MESSAGE:runs/f4:case.txt' \\
+        --main F4 \\
         --operators-csv <ملف> --git-facts inspection/GIT_FACTS.json \\
         --mark-order-cmd 'python3 -m aslot.tools.mark_order --check'
 
@@ -118,11 +118,33 @@ NOT_CLAIMED = [
     ("ترخيصُ السجلّات", "LICENSE_GRANTED", "NO", "حتى تعتمدها أنت"),
 ]
 
-FIXTURES = [
-    ("F1", "أطولُ آيةٍ في المصحف — البقرة ٢٨٢", "نصٌّ قرآنيّ · من MASAQ"),
-    ("F2", "شواهدُ جدول العوامل", "مشتقٌّ من عمود Example_Vocalized"),
-    ("F3", "قصّةٌ نثريّةٌ حديثة", "خارجُ النصّ القرآنيّ"),
+#: المثبَّتاتُ تُعرَّف على سطر الأمر لا في الشيفرة: إضافةُ نصٍّ رابعٍ لا تحتاج
+#: تعديلَ مولّد، وتعديلُه لكلّ نصٍّ جديد إصلاحٌ محلّيٌّ يتكرّر بلا نهاية.
+#:
+#: والحقلُ الرابع `provenance` ليس زينة: **مصدرُ السطح جزءٌ من الحجّة**. فنصٌّ
+#: من `MASAQ` له أصلٌ يُقابَل به، ونصٌّ كتبه المالكُ في رسالةٍ لا أصلَ له —
+#: فيُعلَن `OWNER_MESSAGE` ويبقى سطحًا مدَّعًى ولو مرّ على بوّابة الترتيب.
+#: وبوّابةُ الترتيب تُثبت الشكلَ القانونيّ، لا أنّ الكلمة وردت هكذا في مصدر.
+FIXTURE_FIELDS = ("id", "name", "kind", "provenance", "dir", "text")
+FIXTURE_SPEC_HELP = "ID:الاسم:النوع:المصدر:المجلّد:النصّ"
+
+#: المثبَّتاتُ الافتراضيّة — تُستبدل كلُّها إن مُرّر `--fixture` ولو مرّةً.
+DEFAULT_FIXTURES = [
+    ("F1", "أطولُ آيةٍ في المصحف — البقرة ٢٨٢", "نصٌّ قرآنيّ",
+     "CORPUS_MASAQ", "inspection/runs/f1", "inspection/ayat.txt"),
+    ("F2", "شواهدُ جدول العوامل", "شواهدُ مشكولة",
+     "DERIVED_FROM_OWNER_CSV", "inspection/runs/f2",
+     "inspection/runs/f2/input.txt"),
+    ("F3", "قصّةٌ نثريّةٌ حديثة", "نثرٌ خارجَ المصحف",
+     "OWNER_MESSAGE", "inspection/runs/f3", "inspection/story.txt"),
 ]
+
+PROVENANCE = {
+    "CORPUS_MASAQ": ("مقابَلٌ بأصله في MASAQ", "cert"),
+    "DERIVED_FROM_OWNER_CSV": ("مشتقٌّ آليًّا من جدول المالك — لا مكتوبٌ بيد",
+                               "cert"),
+    "OWNER_MESSAGE": ("سطحٌ من رسالة المالك — لا أصلَ يُقابَل به", "defer"),
+}
 
 
 # ── قياسٌ إضافيّ: الصفّ الواحد ────────────────────────────────────────────
@@ -165,6 +187,41 @@ def word_rows(run: dict) -> list[dict]:
             "root_proven": a4.get("Root_Proven", ""),
             "carried": bool(a4),
         })
+    return out
+
+
+#: علاماتُ الترقيم التي تلصق بالكلمة في النثر. والجردُ **وصفٌ لما يقع في
+#: النصّ**، لا حكمٌ بأنّها فواصل — والحكمُ للمالك.
+EDGE_PUNCTUATION = "،؛؟.:!«»()[]…\u2013\u2014\"'"
+
+
+def punctuation_loss(fixtures: list[dict]) -> dict:
+    """يقيس ما يسقط بوصفه «ليس كلمة» وسببُه ترقيمٌ طرفيٌّ وحدَه.
+
+    **ولا يُصلَح هنا.** جرُّ الترقيم تغييرُ سطحٍ لا يملكه المحرّك: أهو فاصلٌ
+    يُقطع فتدخل الكلمة، أم حرفٌ يُبقيها خارج الجرد؟ ذاك حكمُ المالك، وقد
+    رُفع باسم ``OPEN:EDGE_PUNCTUATION_SEPARATOR_OR_LETTER``. والمقياسُ هنا
+    يُظهر ثقلَ القرار لا يسبقه.
+    """
+    out = {"per_fixture": [], "rows": 0, "lost": 0, "edge_only": 0,
+           "samples": []}
+    for f in fixtures:
+        rows = f["run"]["axes"][1]["_rows"] or []
+        lost = [r for r in rows
+                if (r.get("Normalization_Status") or "") == "IGNORED_NON_WORD_TOKEN"]
+        edge = []
+        for r in lost:
+            bare = (r.get("Word") or "").strip(EDGE_PUNCTUATION)
+            if bare and not any(ch in EDGE_PUNCTUATION for ch in bare):
+                edge.append((r["Word"], bare))
+        out["per_fixture"].append({
+            "id": f["id"], "rows": len(rows), "lost": len(lost),
+            "edge_only": len(edge),
+        })
+        out["rows"] += len(rows)
+        out["lost"] += len(lost)
+        out["edge_only"] += len(edge)
+        out["samples"] += edge[:2]
     return out
 
 
@@ -266,7 +323,7 @@ def status_class(row: dict) -> str:
 
 def render(c: dict) -> str:
     P: list[str] = []
-    f1 = c["fixtures"][0]
+    f1 = c["main"]
     tr, mo, git = c["trace"], c["mark_order"], c["git"]
 
     P.append("<h1>تقريرُ المدير — سلسلةُ أسلوط، كلمةً كلمة</h1>")
@@ -297,22 +354,36 @@ def render(c: dict) -> str:
         f'فلا كلمةَ خرجت من اللوحة بلا خانة.</div></div>')
 
     # ── المقامات، مُعلَنةً ───────────────────────────────────────────────
-    rows = "".join(
-        f'<tr><td class="mono">{E(f["id"])}</td><td>{E(f["name"])}</td>'
-        f'<td class="mono">{f["stats"].get("tokens", "—")}</td>'
-        f'<td class="mono">{len(f["rows"])}</td>'
-        f'<td class="mono cert">{f["terms"]["accept"]}</td>'
-        f'<td class="mono defer">{f["terms"]["defer"]}</td>'
-        f'<td class="mono bad">{f["terms"]["block"]}</td>'
-        f'<td class="mono k">{f["terms"]["not_carried"]}</td></tr>'
-        for f in c["fixtures"])
-    P.append('<div class="card"><h3>المقامات — مُعلَنةٌ لا مُجمَعة</h3>'
-             '<p class="k">كلُّ نسبةٍ في هذا التقرير مقامُها مثبَّتٌ واحد، '
-             'ولا يُجمع مقامان. واللوحةُ أعلاه مقامُها <b>F1</b> وحدَه.</p>'
-             '<table><thead><tr><th>#</th><th>المثبَّت</th><th>توكنات</th>'
-             '<th>صفوف</th><th>قُشِّرت</th><th>أُجِّلت</th><th>حُجبت</th>'
-             f'<th>لم تُحمل</th></tr></thead><tbody>{rows}</tbody></table>'
-             '</div>')
+    rows = ""
+    for f in c["fixtures"]:
+        prov_ar, prov_cls = PROVENANCE.get(
+            f["provenance"], (f["provenance"], "defer"))
+        star = " ★" if f is f1 else ""
+        rows += (
+            f'<tr><td class="mono">{E(f["id"])}{star}</td><td>{E(f["name"])}'
+            f'<div class="k tiny">{E(f["kind"])}</div></td>'
+            f'<td class="{prov_cls}">{E(prov_ar)}'
+            f'<div class="mono tiny">{E(f["provenance"])}</div></td>'
+            f'<td class="mono">{f["stats"].get("tokens", "—")}</td>'
+            f'<td class="mono">{len(f["rows"])}</td>'
+            f'<td class="mono cert">{f["terms"]["accept"]}</td>'
+            f'<td class="mono defer">{f["terms"]["defer"]}</td>'
+            f'<td class="mono bad">{f["terms"]["block"]}</td>'
+            f'<td class="mono k">{f["terms"]["not_carried"]}</td></tr>')
+    P.append('<div class="card"><h3>المقاماتُ والمصادر — مُعلَنةٌ لا مُجمَعة'
+             '</h3>'
+             '<p class="k">كلُّ نسبةٍ في هذا التقرير مقامُها مثبَّتٌ واحد، ولا '
+             f'يُجمع مقامان. واللوحةُ أعلاه مقامُها <b>{E(f1["id"])}</b> '
+             'وحدَه (★).</p>'
+             '<p class="k"><b>ومصدرُ السطح جزءٌ من الحجّة.</b> نصٌّ من '
+             '<span class="mono">MASAQ</span> له أصلٌ يُقابَل به؛ ونصٌّ كُتب '
+             'في رسالةٍ لا أصلَ له — فبوّابةُ ترتيب العلامات تُثبت أنّ شكلَه '
+             'قانونيّ، <b>لا أنّه ورد هكذا في مصدر</b>. والفرقُ مُعلَنٌ في '
+             'العمود الثالث.</p>'
+             '<table><thead><tr><th>#</th><th>المثبَّت</th><th>مصدرُ السطح</th>'
+             '<th>توكنات</th><th>صفوف</th><th>قُشِّرت</th><th>أُجِّلت</th>'
+             f'<th>حُجبت</th><th>لم تُحمل</th></tr></thead><tbody>{rows}'
+             '</tbody></table></div>')
 
     # ── الهويّة ──────────────────────────────────────────────────────────
     if git["status"] == "READ":
@@ -599,6 +670,41 @@ def render(c: dict) -> str:
              f'<th>الأعمدة</th><th>عدد</th></tr></thead>'
              f'<tbody>{rows}</tbody></table></div>')
 
+    # ── ما يسقط بوصفه «ليس كلمة» ────────────────────────────────────────
+    pl = c["punctuation"]
+    rows = "".join(
+        f'<tr><td class="mono">{E(x["id"])}</td>'
+        f'<td class="mono">{x["rows"]}</td>'
+        f'<td class="mono {"bad" if x["lost"] else "cert"}">{x["lost"]}</td>'
+        f'<td class="mono">{x["lost"] / x["rows"]:.1%}</td>'
+        f'<td class="mono">{x["edge_only"]}</td></tr>'
+        for x in pl["per_fixture"] if x["rows"])
+    samples = " · ".join(
+        f'<span class="ar">{E(w)}</span> ← <span class="arn">{E(b)}</span>'
+        for w, b in pl["samples"][:6])
+    all_edge = pl["lost"] and pl["edge_only"] == pl["lost"]
+    P.append('<h2>ما يسقط بوصفه «ليس كلمة» — وثقلُ قرارٍ لك</h2>'
+             '<div class="card"><p class="k">المحورُ الأوّل يرفض التوكنَ الذي '
+             'فيه حرفٌ غيرُ عربيّ، ويسمّي السبب '
+             '<span class="mono">NON_LETTER</span>. والرفضُ مُعلَنٌ لا صامت — '
+             'لكنّ <b>الكلمةَ كلَّها</b> تخرج، لا العلامةُ وحدَها.</p>'
+             f'<table><thead><tr><th>المثبَّت</th><th>كلمات</th>'
+             f'<th>مُسقَطة</th><th>النسبة</th><th>سببُها ترقيمٌ طرفيٌّ وحدَه</th>'
+             f'</tr></thead><tbody>{rows}</tbody></table>'
+             + (f'<div class="{"fail" if all_edge else "warn"}" '
+                f'style="margin-top:8px"><b>{pl["edge_only"]} من '
+                f'{pl["lost"]}</b> — أي <b>كلُّها بلا استثناء</b> — كلماتٌ '
+                f'سليمةٌ لصق بها ترقيمٌ طرفيّ:<br>{samples}</div>'
+                if all_edge else
+                f'<div class="warn" style="margin-top:8px">'
+                f'{pl["edge_only"]} من {pl["lost"]} سببُها ترقيمٌ طرفيّ.</div>')
+             + '<div class="new" style="margin-top:8px"><b>ولم يُصلَح هنا '
+               'عمدًا.</b> جرُّ الترقيم تغييرُ سطحٍ لا يملكه المحرّك: أهو '
+               'فاصلٌ يُقطع فتدخل الكلمة، أم حرفٌ يُبقيها خارج الجرد؟ '
+               'والفرقُ في الأثر كبير — صفرٌ في المصحف، وخُمسُ جملةٍ من النثر. '
+               'رُفع باسم <span class="mono">'
+               'OPEN:EDGE_PUNCTUATION_SEPARATOR_OR_LETTER</span>.</div></div>')
+
     # ── ما لا يُدَّعى ────────────────────────────────────────────────────
     rows = "".join(
         f'<tr><td>{E(ar)}</td><td class="mono">{E(k)}</td>'
@@ -642,18 +748,22 @@ def wrap(body: str, uid: str, payload_sha: str) -> str:
 
 
 def build(args: argparse.Namespace) -> dict:
-    dirs = {"F1": args.f1_dir, "F2": args.f2_dir, "F3": args.f3_dir}
-    texts = {"F1": args.f1_text, "F2": args.f2_text, "F3": args.f3_text}
+    specs = [tuple(spec.split(":", 5)) for spec in (args.fixture or [])] \
+        or DEFAULT_FIXTURES
 
     fixtures = []
-    for fid, name, kind in FIXTURES:
-        run_dir = Path(dirs[fid]) if dirs[fid] else None
+    for spec in specs:
+        if len(spec) != len(FIXTURE_FIELDS):
+            raise SystemExit(f"OWNER_ALERT: --fixture يحتاج {FIXTURE_SPEC_HELP}")
+        fid, name, kind, prov, run_dir_s, text_s = spec
+        run_dir = Path(run_dir_s) if run_dir_s else None
         run = load_run(run_dir)
-        src = Path(texts[fid]) if texts[fid] else None
+        src = Path(text_s) if text_s else None
         stats = (text_stats(src.read_text(encoding="utf-8"))
                  if src and src.is_file() else {})
         fixtures.append({
-            "id": fid, "name": name, "kind": kind, "run": run, "stats": stats,
+            "id": fid, "name": name, "kind": kind, "provenance": prov,
+            "text": text_s, "run": run, "stats": stats,
             "rows": word_rows(run),
             "checks": positive_assertions(run, stats.get("tokens", UNMEASURED)),
             "ledger": carry_ledger(run),
@@ -663,9 +773,14 @@ def build(args: argparse.Namespace) -> dict:
     runs = [f["run"] for f in fixtures]
     operators = load_operators(Path(args.operators_csv)
                                if args.operators_csv else None)
-    f2 = next(f for f in fixtures if f["id"] == "F2")
-    coverage = operator_coverage(operators, f2["run"],
-                                 Path(args.f2_text) if args.f2_text else None)
+    # التغطيةُ تُقاس على المثبَّت المشتقّ من جدول المالك — يُعرَف بمصدره لا
+    # باسمه، فلو أُعيدت تسميتُه بقي القياسُ واقعًا في موضعه.
+    derived = next((f for f in fixtures
+                    if f["provenance"] == "DERIVED_FROM_OWNER_CSV"), None)
+    coverage = (operator_coverage(operators, derived["run"],
+                                  Path(derived["text"]) if derived["text"]
+                                  else None)
+                if derived else {"status": UNMEASURED})
 
     terms: Counter = Counter()
     for f in fixtures:
@@ -684,27 +799,32 @@ def build(args: argparse.Namespace) -> dict:
                       for k in ("accept", "defer", "block", "not_carried")}
         terms.update(own)
 
+    main = next((f for f in fixtures if f["id"] == args.main),
+                fixtures[0]) if fixtures else None
     return {
         "fixtures": fixtures,
+        "main": main,
         "trace": trace_totals(runs),
         "failure_inventory": failure_inventory(runs),
         "owner_classes": residual_totals(fixtures),
         "operators": operators,
         "coverage": coverage,
         "unshown": unshown_columns(runs),
+        "punctuation": punctuation_loss(fixtures),
         "term_counts": terms,
         "git": load_git_facts(Path(args.git_facts) if args.git_facts else None),
         "taaqol_commit": args.taaqol_commit or UNMEASURED,
         "python": ".".join(map(str, sys.version_info[:3])),
         "mark_order": mark_order_gate(
             args.mark_order_cmd,
-            [Path(p) for p in (args.f1_text, args.f2_text, args.f3_text) if p]),
+            [Path(f["text"]) for f in fixtures if f["text"]]),
         "owner_pending": [
             ("T-4 · صنفُ البقيّة للأصناف السبعة", "سقوفَ الرتب كلَّها"),
             ("T-4 · عيبُ التنوين: حاجبٌ أم مؤجَّلٌ ظاهر", "فحصَ البقيّة المخفيّة"),
             ("T-5 · Γ يغيّر الأحكام", "أحكامَ الغلق الستّة"),
             ("T-6 · الخطوطُ تُنزل تقشيرَ «كَتَبَ»", "المنعَ في زمن التشغيل"),
             ("T-7 · بوّاباتُ الانتقال بين المحاور", "حكمَ الحركة"),
+            ("الترقيمُ الطرفيّ: فاصلٌ أم حرف", "٣٠ كلمةً من ٧٥٣ في هذه المثبَّتات"),
             ("اعتمادُ السجلّين", "رفعَ LICENSE_GRANTED"),
             ("آ خارجَ «أل»", "توسيعَ N10.2 أو حصرَها"),
         ],
@@ -714,12 +834,11 @@ def build(args: argparse.Namespace) -> dict:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="تقريرُ المدير")
     p.add_argument("--out", default="inspection/manager_report.html")
-    for fixture in ("f1", "f2", "f3"):
-        p.add_argument(f"--{fixture}-dir")
-    p.add_argument("--f1-text", default="inspection/ayat.txt")
-    p.add_argument("--f2-text", default="inspection/runs/f2/input.txt")
-    p.add_argument("--f3-text", default="inspection/story.txt")
+    p.add_argument("--fixture", action="append", metavar=FIXTURE_SPEC_HELP,
+                   help="يُكرَّر لكلّ مثبَّت؛ ومتى مُرّر مرّةً استبدل الافتراضيّة")
     p.add_argument("--operators-csv")
+    p.add_argument("--main", default="F1",
+                   help="المثبَّتُ الذي يُفصَّل في الجدول الرئيس")
     p.add_argument("--git-facts")
     p.add_argument("--taaqol-commit")
     p.add_argument("--mark-order-cmd")
@@ -738,9 +857,13 @@ def main(argv: list[str] | None = None) -> int:
     print(f"GIT = {context['git'].get('status')} "
           f"{context['git'].get('head', '')[:12]} "
           f"({context['git'].get('branch', '')})")
-    print(f"ROWS  F1 {len(context['fixtures'][0]['rows'])} · "
-          f"F2 {len(context['fixtures'][1]['rows'])} · "
-          f"F3 {len(context['fixtures'][2]['rows'])}")
+    print("ROWS  " + " · ".join(f"{f['id']} {len(f['rows'])}"
+                                for f in context["fixtures"]))
+    print(f"MAIN  {context['main']['id']}  "
+          f"({context['main']['provenance']})")
+    pl = context["punctuation"]
+    print(f"PUNCT_LOSS  {pl['lost']}/{pl['rows']} مُسقَطة · "
+          f"{pl['edge_only']} سببُها ترقيمٌ طرفيّ")
     print(f"TERMINATIONS  {dict(context['term_counts'])}")
     print(f"REFUSALS  مُعلَن {fi['declared']} · بشاهد {len(fi['witnessed'])} · "
           f"بلا شاهد {len(fi['unwitnessed'])} · "

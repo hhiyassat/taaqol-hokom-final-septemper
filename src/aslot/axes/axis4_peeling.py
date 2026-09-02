@@ -384,12 +384,35 @@ def _block(result: PeelResult, termination: str, note: str) -> PeelResult:
 # الفحوص
 # ---------------------------------------------------------------------------
 
-def build_suite(registry: Registry, witness: set | None,
-                policy: OwnerPolicy) -> CheckSuite:
+#: شاهدُ الفحوص — **مُعلَنٌ لا مأخوذٌ من المدخل**.
+#:
+#: **العلّة، وهي واقعةٌ مسجَّلة.** كان `build_suite` يأخذ شاهدَ الجولة نفسِه،
+#: أي ما شهدته كلماتُ المدخل. فحين شُغِّلت السلسلةُ على جملةٍ من عشر كلمات
+#: سقط `T2_BIMAA_PEELED_THEN_STOPPED_BY_AXIS_2` — لا لأنّ القاعدة انكسرت،
+#: بل لأنّ «مَاْ» لم يشهد لها ذلك المدخلُ الصغير.
+#:
+#: وفحصٌ نتيجتُه تتبع المدخلَ ليس فحصَ قاعدةٍ بل قياسًا متنكّرًا في زيّ فحص.
+#: وكان يمرّ على المصحف كلِّه **لعلّةٍ لم يُعلنها**: أنّ النصّ كبيرٌ فيه كلُّ
+#: ما يحتاج. وهذا هو صنفُ «يمرّ لعلّةٍ خاطئة» بعينه، في موضعٍ ثالث.
+#:
+#: والعلاجُ بنيويٌّ لا اختباريّ: الفحوصُ **لا ترى شاهدَ الجولة أصلًا** —
+#: حُذف الوسيط. فاستقلالُها عن المدخل صار مضمونًا بالبناء لا مرجوًّا بفحص.
+#: وأثرُ الشاهد الحقيقيّ في المدخل يبقى مقيسًا في المخرجات، حيث موضعُه.
+SUITE_WITNESS: frozenset[str] = frozenset({
+    "مَاْ",        # T2 — بقيّةُ «بِمَا» بعد قشر الباء
+    "كِتَاْبُنْ",  # T4 — بقيّةٌ مشهودةٌ مستقلّةً ترفع المانع
+})
+
+
+def build_suite(registry: Registry, policy: OwnerPolicy) -> CheckSuite:
+    """يبني فحوصَ المحور الرابع على شاهدٍ **مُعلَن**، لا على شاهد الجولة.
+
+    ولا يقبل ``witness``: منعُ الوصول أقوى من الاتّفاق على عدم الاستعمال.
+    """
     suite = CheckSuite("axis4")
 
     def run(word, wit=...):
-        wit = witness if wit is ... else wit
+        wit = SUITE_WITNESS if wit is ... else wit
         return peel_to_stem(normalize_token(word, None, policy).normalized,
                             registry, wit)
 
@@ -461,7 +484,7 @@ def build_suite(registry: Registry, witness: set | None,
                 f"{r.termination} / مرشّح={r.deferred_candidate}")
 
     # -- السموم ---------------------------------------------------------
-    r = peel_to_stem("بْسْمِ", registry, witness)
+    r = peel_to_stem("بْسْمِ", registry, SUITE_WITNESS)
     suite.poison("P1_UNVOCALIZED_PREFIX_IS_NOT_LICENSED", not r.peels,
                  "العضو سطحٌ بحروفه وحركاته معًا")
     r = run("مِنْهُمْ")
@@ -520,7 +543,7 @@ class Axis4Peeling(Axis):
                              remedy="هذا المحور لا يفتح MASAQ.csv إلا لبناء جرد المحور ٢")
         registry = load_registry(args, policy)
         witness = None if args.no_witness else build_internal_corpus_witness_set(axis1)
-        suite = build_suite(registry, witness, policy)
+        suite = build_suite(registry, policy)
 
         syllables = _load_axis3(Path(args.axis3_csv))
         terminations: Counter = Counter()

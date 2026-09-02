@@ -57,5 +57,5 @@ def test_axis2_suite_all_pass(registry, policy):
 
 
 def test_axis4_suite_all_pass(registry, policy, witness):
-    suite = axis4_peeling.build_suite(registry, witness, policy)
+    suite = axis4_peeling.build_suite(registry, policy)
     assert suite.ok, [f"{c.name}: {c.detail}" for c in suite.failures]

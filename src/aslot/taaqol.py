@@ -287,6 +287,11 @@ OWNER_DECISIONS_PENDING: tuple[str, ...] = (
     "T-6:FORBIDDEN_LINES_DEMOTE_KATABA_PEEL",
     "T-7:TRANSITION_GATES_BETWEEN_AXES",
     "T-8:DELETE_DUPLICATED_FROZEN_SOURCE_IN_HOKOM",
+    # كشفته جملةُ الواقعة: ٣٠ توكنًا من ٧٥٣ تسقط بوصفها «ليست كلمة»، و**كلُّها
+    # بلا استثناء** كلماتٌ سليمةٌ لصق بها ترقيمٌ طرفيّ (، ؛ : ؟ .). والنسبةُ
+    # صفرٌ في المصحف و١٥٪ في النثر الحديث. وجرُّ الترقيم تغييرُ سطحٍ لا يملكه
+    # المحرّك: أهو فاصلٌ يُقطع، أم حرفٌ يُبقي الكلمةَ خارج الجرد؟ حكمُ المالك.
+    "OPEN:EDGE_PUNCTUATION_SEPARATOR_OR_LETTER",
     "OPEN:ALEF_MADDA_OUTSIDE_AL",
     "OPEN:N2_2_SHADDA_AFTER_AL",
     "OPEN:LAKUM_DEMOTION_IN_CL16",
