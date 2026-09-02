@@ -11,6 +11,9 @@
 وتُثبت خاصّيّتين لا تُثبتهما الفروق:
 
     LEDGER_CLOSES        مجموعُ الخانات = عددُ الصفوف المشتركة، ولا صفَّ مفقود
+    PEEL_LEDGER_CLOSES   فرقُ القشور مفسَّرٌ كلُّه بحركات الصفوف — وهو دفترٌ
+                         **ثانٍ**: صفٌّ واحد قد يحمل ثلاث قشور، فإقفالُ
+                         الصفوف لا يُقفل الإنتاج
     NO_PROMOTION         لا صفَّ انتقل من تأجيلٍ أو حجبٍ إلى **قبول**
 
 والثانيةُ هي الحكم: التغييرُ الذي يرفع صفًّا إلى القبول يحتاج دليلًا جديدًا،
@@ -38,9 +41,11 @@ SHORT = {
 }
 
 
-def load(path: Path) -> dict[str, str]:
+def load(path: Path) -> dict[str, tuple[str, int]]:
+    """لكلّ صفٍّ: مخرجُه وعددُ قشوره. والثاني يُغلق دفترًا ثانيًا."""
     with open(path, encoding="utf-8", newline="") as fh:
-        return {f'{r["Sura_No"]}:{r["Verse_No"]}:{r["Word_No"]}': r["Termination"]
+        return {f'{r["Sura_No"]}:{r["Verse_No"]}:{r["Word_No"]}':
+                (r["Termination"], int(r.get("Peel_Count") or 0))
                 for r in csv.DictReader(fh)}
 
 
@@ -50,7 +55,7 @@ def main(argv: list[str]) -> int:
         return 2
     before, after = load(Path(argv[1])), load(Path(argv[2]))
     shared = set(before) & set(after)
-    matrix = collections.Counter((before[k], after[k]) for k in shared)
+    matrix = collections.Counter((before[k][0], after[k][0]) for k in shared)
     total = sum(matrix.values())
 
     froms = sorted({a for a, _ in matrix})
@@ -71,13 +76,34 @@ def main(argv: list[str]) -> int:
     same = sum(v for (a, b), v in matrix.items() if a == b)
     print(f"\nثابت = {same:,} ({same / total:.1%})   متحرّك = {total - same:,}")
 
+    # ── الدفترُ الثاني: القشور ──────────────────────────────────────────
+    # دفترُ الصفوف يقفل ولا يقفل به دفترُ القشور: صفٌّ واحد قد يحمل ثلاثًا.
+    # فالفرقُ في الإنتاج لا يُقاس بعدد الصفوف المتحرّكة، ويُقفل هنا صراحةً.
+    peels_before = sum(v[1] for v in before.values())
+    peels_after = sum(v[1] for v in after.values())
+    delta_rows = collections.Counter()
+    for k in shared:
+        gap = before[k][1] - after[k][1]
+        if gap:
+            delta_rows[(before[k][0], after[k][0])] += gap
+    accounted = sum(delta_rows.values())
+    print(f"\nدفترُ القشور   قبل {peels_before:,} · بعد {peels_after:,} · "
+          f"الفرق {peels_before - peels_after:,}")
+    print(f"  مفسَّرٌ بحركات الصفوف = {accounted:,}"
+          f"   البقيّة = {peels_before - peels_after - accounted:,}")
+    for (a, b), v in sorted(delta_rows.items(), key=lambda kv: -kv[1])[:6]:
+        print(f"    {v:>6,}  قشرةً فقدها  {SHORT.get(a, a)} → {SHORT.get(b, b)}")
+
     promotions = {(a, b): v for (a, b), v in matrix.items()
                   if a != b and b in ACCEPTING and a not in ACCEPTING}
     closes = (total == len(shared) and not (set(before) ^ set(after)))
+    peels_close = (peels_before - peels_after) == accounted
     print("\nما تثبته هذه المصفوفة")
     print(f"  LEDGER_CLOSES = {'YES' if closes else 'NO'}"
           f"   ({len(before):,} قديمًا · {len(after):,} جديدًا · "
           f"{total:,} خانةً، بلا بقيّة)")
+    print(f"  PEEL_LEDGER_CLOSES = {'YES' if peels_close else 'NO'}"
+          f"   ({peels_before:,} − {peels_after:,} = {accounted:,} مفسَّرةً بالحركات)")
     print(f"  NO_PROMOTION  = {'YES' if not promotions else 'NO'}"
           "   لا صفَّ انتقل من تأجيلٍ أو حجبٍ إلى قبول")
     for (a, b), v in sorted(promotions.items(), key=lambda kv: -kv[1]):
@@ -86,7 +112,7 @@ def main(argv: list[str]) -> int:
     for (a, b), v in sorted(matrix.items(), key=lambda kv: -kv[1]):
         if a != b:
             print(f"  {v:>6,}  {SHORT.get(a, a)} → {SHORT.get(b, b)}")
-    return 0 if (closes and not promotions) else 1
+    return 0 if (closes and peels_close and not promotions) else 1
 
 
 if __name__ == "__main__":

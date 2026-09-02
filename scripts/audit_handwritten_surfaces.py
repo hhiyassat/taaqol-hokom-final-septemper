@@ -76,6 +76,8 @@ def literals(path: Path):
 
 def main(argv: list[str]) -> int:
     root = Path(argv[1]) if len(argv) > 1 else Path(__file__).resolve().parents[1]
+    import hashlib
+    digest = hashlib.sha256()
     audited = 0
     reordered: list[tuple[str, int, str]] = []
     derived: list[tuple[str, int, str]] = []
@@ -91,6 +93,8 @@ def main(argv: list[str]) -> int:
                 continue
             if str(path.relative_to(root)) in SOURCE_CORPORA:
                 continue
+            digest.update(str(path.relative_to(root)).encode())
+            digest.update(path.read_bytes())
             seen = False
             for line, text in literals(path):
                 audited += 1
@@ -101,11 +105,17 @@ def main(argv: list[str]) -> int:
                         (rel, line, text))
             files += 1 if seen else 0
 
+    fingerprint = digest.hexdigest()
     print("# جردُ الأسطح المشكولة المكتوبة باليد\n")
     print(f"النطاق: {' · '.join(SCANNED)}"
           f"   — مستثنًى: {' · '.join(sorted(SOURCE_CORPORA))} (نصٌّ مصدر لا مكتوبٌ بيد)\n")
+    # المقامُ **دالّةٌ في الشجرة لا ثابت**: أوّلُ نشرٍ قال ٨٢١ وثانٍ ٨٢٧،
+    # والفرقُ ستّةُ نصوصٍ عربية في سكربتين أُضيفا بين الجولتين. فرقمٌ بلا
+    # حالةِ الشجرة التي قِيس عليها **لا يقفل**، فتُنشر معه بصمتُها.
+    print(f"TREE_FINGERPRINT                       = {fingerprint[:16]}"
+          f"   ({files} ملفًّا مفحوصًا)")
     print(f"HANDWRITTEN_VOCALIZED_SURFACES_AUDITED = {audited:,}"
-          f"   (في {files} ملفًّا)")
+          "   ← دالّةٌ في الشجرة أعلاه، لا ثابتٌ للمشروع")
     print(f"HANDWRITTEN_REORDERED                  = {len(reordered):,}"
           "   ← هذا هو الرقمُ الذي كان مجهولًا")
     print(f"CORPUS_DERIVED_REORDERED               = {len(derived):,}"
