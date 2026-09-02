@@ -18,7 +18,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from ..checks import CheckSuite, rejects
-from ..constants import canonical_mark_order
+from ..constants import (
+    OWNER_SEPARATORS,
+    UNRULED_SEPARATORS,
+    canonical_mark_order,
+    strip_owner_separators,
+)
 from ..errors import owner_alert
 from ..fileio import read_rows, require_file, sha256_of_file, write_csv, write_text
 from ..reporting import Report
@@ -49,6 +54,9 @@ class Word:
     surface: str | None = None
     segments: list = field(default_factory=list)      # [(Segment_No, Word)]
     surface_conflict: bool = False
+    #: ما قُطع من طرفَي السطح بحكم المالك في الفاصلة والنقطة — يُسجَّل ولا
+    #: يُحذف بلا أثر. فارغٌ لأكثر التوكنات، وغيرُ فارغٍ حيث لصق فاصل.
+    separators: str = ""
 
     def add(self, segment_no: int, surface: str) -> None:
         if self.surface is None:
@@ -105,7 +113,10 @@ class Corpus:
             word = words.get(key)
             if word is None:
                 word = words[key] = Word(*key)
-            word.add(segment_no, canonical_mark_order(row["Word"]))
+            bare, cut = strip_owner_separators(
+                canonical_mark_order(row["Word"]))
+            word.separators += cut
+            word.add(segment_no, bare)
 
         for word in words.values():
             word.finalize()
@@ -140,8 +151,11 @@ class Corpus:
             verse = strict_int(parts[1], field="Verse_No", row_no=line_no)
             for number, surface in enumerate("|".join(parts[2:]).split(), start=1):
                 rows += 1
+                bare, cut = strip_owner_separators(
+                    canonical_mark_order(surface))
                 word = Word(sura, verse, number)
-                word.add(1, canonical_mark_order(surface))
+                word.separators = cut
+                word.add(1, bare)
                 word.finalize()
                 words[(sura, verse, number)] = word
         return cls(words, rows, 3, path, sha256_of_file(path))
@@ -187,6 +201,23 @@ def build_suite(corpus: Corpus, fragment: bool = False) -> CheckSuite:
 
     suite.check("T1_INPUT_ORDER_IS_CANONICAL", keys == sorted(keys),
                 "ترتيب ورود الكلمات = الترتيب المصحفي")
+
+    # حدُّ حكم المالك يُحرَس بفحصين لا بنيّة: أن يُقطع ما حكم فيه، وألّا
+    # يُقطع ما لم يحكم فيه. والثاني هو الحارسُ الحقيقيّ — فمدُّ حكمٍ إلى
+    # ما لم يشمله هو الخرقُ الذي لا يشتكي منه أحد.
+    surviving = "".join(w.surface or "" for w in corpus.words.values())
+    suite.check("T_OWNER_SEPARATORS_ARE_CUT",
+                not any(ch in OWNER_SEPARATORS for ch in surviving),
+                f"لا فاصلةَ ولا نقطةَ بقيت في سطحٍ "
+                f"({sum(1 for w in corpus.words.values() if w.separators)} كلمةً قُطع منها)")
+    unruled = sum(1 for w in corpus.words.values()
+                  if any(ch in UNRULED_SEPARATORS for ch in (w.surface or "")))
+    suite.check("T_UNRULED_SEPARATORS_ARE_NOT_CUT",
+                all(ch not in OWNER_SEPARATORS for w in corpus.words.values()
+                    for ch in w.separators if ch not in OWNER_SEPARATORS)
+                and not any(ch in UNRULED_SEPARATORS
+                            for w in corpus.words.values() for ch in w.separators),
+                f"{unruled} توكنًا يحمل علامةً لم يُحكم فيها — باقيةٌ كما هي")
 
     verses: dict[int, set[int]] = {}
     for sura, verse, _ in keys:
@@ -322,12 +353,13 @@ class Axis0Corpus(Axis):
             out_dir / "QURAN_WORDS.csv",
             ["Sura_No", "Verse_No", "Word_No", "Word", "Segment_Count",
              "Segment_Numbers", "Surface_Conflict", "Segment_Numbering_Gap",
-             "Trace_Anchor", "Parent_Anchor"],
+             "Cut_Separators", "Trace_Anchor", "Parent_Anchor"],
             ([w.sura, w.verse, w.number, w.surface, w.segment_count,
               "|".join(map(str, w.segment_numbers)),
               "YES" if w.surface_conflict else "NO",
               "YES" if w.segment_numbers != list(range(1, w.segment_count + 1))
               else "NO",
+              w.separators,
               anchor(0, w.sura, w.verse, w.number),
               parent_anchor(0, w.sura, w.verse, w.number)]
              for w in corpus.words.values()))
@@ -344,6 +376,16 @@ class Axis0Corpus(Axis):
             "fragment_mode": bool(args.fragment),
             "surface_conflicts": sum(
                 1 for w in corpus.words.values() if w.surface_conflict),
+            # أثرُ حكم المالك في الفاصلة والنقطة، مقيسًا في كلّ جولة.
+            # وصفرُه على المصحف ليس مصادفة: لا ترقيمَ في رسمه.
+            "words_with_cut_separators": sum(
+                1 for w in corpus.words.values() if w.separators),
+            "cut_separators": dict(sorted(Counter(
+                ch for w in corpus.words.values() for ch in w.separators).items())),
+            # ما لم يشمله الحكم، مقيسًا كذلك — فالفجوةُ تُعدّ لا تُوصف.
+            "unruled_separator_tokens": sum(
+                1 for w in corpus.words.values()
+                if any(ch in UNRULED_SEPARATORS for ch in (w.surface or ""))),
         }
         return measures, build_suite(corpus, fragment=args.fragment)
 

@@ -144,6 +144,8 @@ PROVENANCE = {
     "DERIVED_FROM_OWNER_CSV": ("مشتقٌّ آليًّا من جدول المالك — لا مكتوبٌ بيد",
                                "cert"),
     "OWNER_MESSAGE": ("سطحٌ من رسالة المالك — لا أصلَ يُقابَل به", "defer"),
+    "MATRIX_DOCUMENT": ("مستخرَجٌ آليًّا من INPUT_TEXT في وثيقة المصفوفة — "
+                        "وبصمتُه تطابق INPUT_SHA256 فيها", "cert"),
 }
 
 
@@ -204,9 +206,12 @@ def punctuation_loss(fixtures: list[dict]) -> dict:
     يُظهر ثقلَ القرار لا يسبقه.
     """
     out = {"per_fixture": [], "rows": 0, "lost": 0, "edge_only": 0,
-           "samples": []}
+           "samples": [], "cut_tokens": 0}
     for f in fixtures:
         rows = f["run"]["axes"][1]["_rows"] or []
+        out["cut_tokens"] += sum(
+            1 for r in (f["run"]["axes"][0]["_rows"] or [])
+            if (r.get("Cut_Separators") or "").strip())
         lost = [r for r in rows
                 if (r.get("Normalization_Status") or "") == "IGNORED_NON_WORD_TOKEN"]
         edge = []
@@ -683,6 +688,7 @@ def render(c: dict) -> str:
         f'<span class="ar">{E(w)}</span> ← <span class="arn">{E(b)}</span>'
         for w, b in pl["samples"][:6])
     all_edge = pl["lost"] and pl["edge_only"] == pl["lost"]
+    cut = pl.get("cut_tokens", 0)
     P.append('<h2>ما يسقط بوصفه «ليس كلمة» — وثقلُ قرارٍ لك</h2>'
              '<div class="card"><p class="k">المحورُ الأوّل يرفض التوكنَ الذي '
              'فيه حرفٌ غيرُ عربيّ، ويسمّي السبب '
@@ -698,12 +704,22 @@ def render(c: dict) -> str:
                 if all_edge else
                 f'<div class="warn" style="margin-top:8px">'
                 f'{pl["edge_only"]} من {pl["lost"]} سببُها ترقيمٌ طرفيّ.</div>')
-             + '<div class="new" style="margin-top:8px"><b>ولم يُصلَح هنا '
-               'عمدًا.</b> جرُّ الترقيم تغييرُ سطحٍ لا يملكه المحرّك: أهو '
-               'فاصلٌ يُقطع فتدخل الكلمة، أم حرفٌ يُبقيها خارج الجرد؟ '
-               'والفرقُ في الأثر كبير — صفرٌ في المصحف، وخُمسُ جملةٍ من النثر. '
-               'رُفع باسم <span class="mono">'
-               'OPEN:EDGE_PUNCTUATION_SEPARATOR_OR_LETTER</span>.</div></div>')
+             + f'<div class="ok" style="margin-top:8px"><b>حكمُ المالك: '
+               f'«عالج الفاصلة والنقطة».</b> فصارت <span class="ar">،</span> '
+               f'و<span class="ar">.</span> فاصلتين تُقطعان من طرفَي التوكن، '
+               f'وما قُطع يُسجَّل في عمود '
+               f'<span class="mono">Cut_Separators</span> فلا يُحذف بلا أثر. '
+               f'وأثرُه مقيس: <b>{cut}</b> توكنًا قُطع منه في هذه المثبَّتات، '
+               f'و<b>صفرٌ</b> تغيّر في المصحف — ومخرجُ المحور الرابع على النصّ '
+               f'الكامل مطابقٌ بايتيًّا لما قبل الحكم.</div>'
+             + '<div class="new" style="margin-top:8px"><b>وما لم يُحكم فيه '
+               'يبقى ساقطًا ولا يُقاس عليه.</b> '
+               '<span class="ar">؟</span> و<span class="ar">؛</span> و'
+               '<span class="ar">:</span> ما زالت تُخرج التوكنَ كلَّه. ومدُّ '
+               'الحكم إلى «كلّ ترقيم» استنباطُ قاعدةٍ لم تُقَل — وهو الخرقُ '
+               'الذي لا يشتكي منه أحد. رُفع باسم <span class="mono">'
+               'OPEN:QUESTION_SEMICOLON_COLON_SEPARATOR_OR_LETTER</span>.'
+               '</div></div>')
 
     # ── ما لا يُدَّعى ────────────────────────────────────────────────────
     rows = "".join(
@@ -824,7 +840,7 @@ def build(args: argparse.Namespace) -> dict:
             ("T-5 · Γ يغيّر الأحكام", "أحكامَ الغلق الستّة"),
             ("T-6 · الخطوطُ تُنزل تقشيرَ «كَتَبَ»", "المنعَ في زمن التشغيل"),
             ("T-7 · بوّاباتُ الانتقال بين المحاور", "حكمَ الحركة"),
-            ("الترقيمُ الطرفيّ: فاصلٌ أم حرف", "٣٠ كلمةً من ٧٥٣ في هذه المثبَّتات"),
+            ("؟ و؛ و: — فاصلٌ أم حرف", "٧ توكناتٍ باقية بعد حكمك في الفاصلة والنقطة"),
             ("اعتمادُ السجلّين", "رفعَ LICENSE_GRANTED"),
             ("آ خارجَ «أل»", "توسيعَ N10.2 أو حصرَها"),
         ],

@@ -72,7 +72,7 @@ def parse_matrix(path: Path) -> dict:
                            doc.split("## 13.")[1].split("## 14.")[0], re.M)
     verdict = re.findall(r"^  ([A-Z_]+)$", doc.split("VERDICT =")[1], re.M)
     return {
-        "path": str(path), "sha256": sha(doc), "kv": kv,
+        "path": str(path), "sha256": sha(doc), "kv": kv, "_doc": doc,
         "input_text": kv.get("INPUT_TEXT", "").strip(),
         "declared_input_sha": kv.get("INPUT_SHA256", ""),
         "stages": [(int(n), s, st, rk) for n, s, st, rk in stages],
@@ -150,18 +150,32 @@ def audit_matrix(m: dict) -> list[dict]:
             "ok": a + b == m["forbidden_lines"],
             "detail": f"{a} + {b} = {a + b} ⟵ {m['forbidden_lines']}"})
 
+    # الدعوى تُقسم بعد حكم المالك في الفاصلة والنقطة، لأنّ الخلطَ بينهما
+    # يظلم الوثيقة: صارت **مصيبةً في النتيجة**، وتبقى ساكتةً عن الفعل.
+    # وهما شيئان، والحكمُ عليهما بحكمٍ واحد خلطٌ لا دقّة فيه.
+    ruled = "\u060C\u002E"
     stripped = [t for t in tokens
-                if t not in m["words_listed"] and t.strip(PUNCT) in m["words_listed"]]
+                if t not in m["words_listed"] and t.strip(ruled) in m["words_listed"]]
+    others = [t for t in tokens
+              if t not in m["words_listed"] and t.strip(ruled) not in m["words_listed"]]
     out.append({
-        "claim": "ألفاظُ §8 هي توكناتُ INPUT_TEXT حرفًا بحرف",
-        "ok": not stripped,
-        "detail": ("مطابقة" if not stripped else
-                   f"{len(stripped)} توكنًا جُرِّد ترقيمُه: {' · '.join(stripped)}")})
+        "claim": "ألفاظُ §8 تطابق التوكنات بعد قطع فواصل المالك (، و.)",
+        "ok": not others,
+        "detail": ("مطابقةٌ تامّة — وهي النتيجةُ نفسُها التي بلغها أسلوط "
+                   "بحكم المالك" if not others else f"يبقى مختلفًا: {others}")})
+    declared = bool(re.search(r"فاصل|ترقيم|تجريد|strip|punct", m["_doc"], re.I))
+    out.append({
+        "claim": "الوثيقةُ تُعلن أنّها قطعت الترقيم قبل التحليل",
+        "ok": declared,
+        "detail": ("مُعلَن" if declared else
+                   f"لا ذكرَ له في الوثيقة، وقد وقع على "
+                   f"{len(stripped)} توكنًا: {' · '.join(stripped)}")})
     return out
 
 
 # ── ما قاسه أسلوط ────────────────────────────────────────────────────────
 def aslot_rows(run: Path) -> list[dict]:
+    a0 = {r["Word_No"]: r for r in read_rows(run / "axis0/QURAN_WORDS.csv")}
     a1 = read_rows(run / "axis1/AXIS_1_NORMALIZATION.csv")
     a2 = {r["Word_No"]: r for r in read_rows(run / "axis2/AXIS_2_TOKENS.csv")}
     a3 = {r["Word_No"]: r for r in read_rows(run / "axis3/AXIS_3_SYLLABLES.csv")}
@@ -180,6 +194,7 @@ def aslot_rows(run: Path) -> list[dict]:
             "proof": a2.get(k, {}).get("Closed_Form_Proof", ""),
             "pattern": a3.get(k, {}).get("Syllable_Pattern", ""),
             "termination": p.get("Termination", ""),
+            "cut": a0.get(k, {}).get("Cut_Separators", ""),
             "reached": bool(p),
         })
     return out
@@ -325,34 +340,36 @@ def render(c: dict) -> str:
 
     # ── الترقيم ─────────────────────────────────────────────────────────
     p = c["punct"]
-    prows = "".join(
-        f'<tr><td class="ar">{E(t)}</td>'
-        f'<td class="a bad">أُخرجت كاملةً — <span class="mono">'
-        f'IGNORED_NON_WORD_TOKEN</span></td>'
-        f'<td class="b defer">حُلِّلت بعد تجريد «{E(t[len(t.strip(PUNCT)):])}» '
-        f'بلا إعلان</td></tr>' for t in p["stripped"])
-    P.append('<h2>٥ · أخطرُ اختلاف: الفاصلةُ واللاصقُ بها</h2>'
+    P.append('<h2>٥ · الفاصلةُ والنقطة — بعد حكمك</h2>'
              '<div class="card">'
-             f'<div class="fail"><b>{len(p["stripped"])} توكناتٍ من '
-             f'{p["tokens"]}</b> عاملها النظامان معاملتين متناقضتين — وكلاهما '
-             f'على <b>البصمة نفسِها</b>.</div>'
-             '<table style="margin-top:8px"><thead><tr><th>التوكن</th>'
-             '<th class="a">أسلوط</th><th class="b">مصفوفة تعقُّل</th>'
-             f'</tr></thead><tbody>{prows}</tbody></table>'
-             '<div class="new" style="margin-top:8px"><b>وليس أحدُهما مصيبًا '
-             'والآخرُ مخطئًا — بعد.</b> جرُّ الترقيم قرارٌ في السطح، وهو حكمُ '
-             'المالك: أهو فاصلٌ يُقطع فتدخل الكلمة، أم حرفٌ يُبقيها خارج '
-             'الجرد؟ والفرقُ بين النظامين ليس في الجواب، بل في أنّ أحدَهما '
-             '<b>أعلن أنّه لم يُجب</b> ورفعه باسم '
-             '<span class="mono">OPEN:EDGE_PUNCTUATION_SEPARATOR_OR_LETTER</span>، '
-             'والآخرَ <b>أجاب في السكوت</b>: جرَّد الترقيم في §8 ولم يذكر أنّه '
-             'فعل. والسكوتُ عن قرارٍ في السطح هو بعينه ما يمنعه دستورُ '
-             'المشروع.</div>'
-             f'<div class="warn" style="margin-top:8px">وأثرُه مقيس: على نصّ '
-             f'الوثيقة يبلغ المحورَ الرابع <b>{p["reached"]}</b> توكنًا من '
-             f'<b>{p["tokens"]}</b>. فدعوى «١٠ توكنات مقيسة» ودعوى '
-             f'«{p["reached"]} كلماتٍ عربيّة» <b>لا تصفان التوكنةَ نفسَها</b>.'
-             f'</div></div>')
+             f'<div class="ok"><b>حكمُ المالك: «عالج الفاصلة والنقطة».</b> '
+             f'فصارتا فاصلتين تُقطعان من طرفَي التوكن، وما قُطع يُسجَّل في '
+             f'عمود <span class="mono">Cut_Separators</span> فلا يُحذف بلا '
+             f'أثر. والأساسُ موحَّدٌ الآن: <b>{p["reached"]} من '
+             f'{p["tokens"]}</b> توكناتٍ تبلغ المحورَ الرابع، وهي العشرةُ '
+             f'نفسُها التي تعدّها الوثيقة.</div>'
+             + ('<table style="margin-top:8px"><thead><tr><th>التوكن</th>'
+                '<th>ما قُطع</th><th>السطحُ الداخل</th><th>المخرج</th>'
+                '</tr></thead><tbody>' + "".join(
+                    f'<tr><td class="ar">{E(r["word"])}{E(r["cut"])}</td>'
+                    f'<td class="ar">{E(r["cut"])}</td>'
+                    f'<td class="arn">{E(r["normalized"])}</td>'
+                    f'<td class="cert">{E(r["termination"])}</td></tr>'
+                    for r in rows if r["cut"]) + '</tbody></table>'
+                if any(r["cut"] for r in rows) else "")
+             + '<div class="new" style="margin-top:8px"><b>وما لم يُحكم فيه '
+               'لم يُقَس عليه.</b> <span class="ar">؟</span> و'
+               '<span class="ar">؛</span> و<span class="ar">:</span> ما زالت '
+               'تُخرج التوكنَ كلَّه — سبعةُ توكناتٍ في المثبَّتات الأخرى. ومدُّ '
+               'الحكم إلى «كلّ ترقيم» استنباطُ قاعدةٍ لم تُقَل، وهو الخرقُ '
+               'الذي لا يشتكي منه أحد. رُفع باسم <span class="mono">'
+               'OPEN:QUESTION_SEMICOLON_COLON_SEPARATOR_OR_LETTER</span>.'
+               '</div>'
+             + '<div class="warn" style="margin-top:8px">والمصحفُ لم يتغيّر '
+               'منه حرف: مخرجُ المحور الرابع على النصّ الكامل '
+               '<span class="mono">6c54d6f52ab9aca2</span> قبل الحكم وبعده — '
+               'مطابقٌ بايتيًّا. فالحكمُ عمل حيث له أثر، وسكت حيث لا أثرَ له.'
+               '</div></div>')
 
     # ── اتّفاقٌ واختلاف ─────────────────────────────────────────────────
     rows_ = "".join(f'<tr><td>{E(a)}</td><td class="cert">{E(b)}</td>'
@@ -406,10 +423,10 @@ def render(c: dict) -> str:
     P.append('<h2>١٠ · الحكم</h2><div class="card">'
              '<div class="kv mono" style="background:#f6f8fa;border:1px solid '
              '#d0d7de;border-radius:6px;padding:10px">'
-             'COMPARABLE_SURFACE = NO — ثلاثةُ نصوصٍ ببصماتٍ ثلاث<br>'
+             'COMPARABLE_SURFACE = YES — نصٌّ واحد، sha256 1a7f8b76…<br>'
              'COMPARABLE_LAYER = NO — محاورُ السطح ≠ مراحلُ ما بعد التصنيف<br>'
              'COMPARABLE_METHOD = YES — والاتّفاقُ فيه لا في الأرقام<br>'
-             'CONTRADICTION_FOUND = 1 — معاملةُ الترقيم على البصمة نفسِها<br>'
+             'CONTRADICTION_RESOLVED = 1 — الترقيمُ بحكم المالك<br>CONTRADICTION_OPEN = 0<br>'
              'NEITHER_PRODUCES = HUKM · TANZIL · ROOT · IFADAH</div>'
              '<p class="k" style="margin-top:10px">ولا يصحّ أن يُقال إنّ '
              'أحدَهما «يؤكّد» الآخر: ما تحقّق منه أسلوط لم تلمسه المصفوفة، '
@@ -430,9 +447,9 @@ def build(args: argparse.Namespace) -> dict:
              re.findall(r"^\| `([^`]+)` \| (.+?) \| (.+?) \|$", sec8, re.M)}
 
     surfaces = []
-    for label, path in (("نصُّ الوثيقة (§INPUT_TEXT)", args.matrix_text),
-                        ("نصُّ رسالتك", args.chat_text),
-                        ("ما شُغِّل أوّلَ مرّة", args.first_text)):
+    for label, path in (("نصُّ الوثيقة (§INPUT_TEXT) — وهو الأساسُ الموحَّد",
+                         args.matrix_text),
+                        ("نصُّ رسالتك", args.chat_text)):
         p = Path(path)
         if p.is_file():
             t = p.read_text(encoding="utf-8").strip()
@@ -477,12 +494,13 @@ def build(args: argparse.Namespace) -> dict:
              "هل اشتعلت في runner؟ UNMEASURED"),
         ],
         "differ": [
-            ("عددُ الكلمات العربيّة", f"{sum(1 for r in rows if r['reached'])}"
-                                      f" من {len(tokens)} تبلغ المحور الرابع",
+            ("عددُ الكلمات", f"{sum(1 for r in rows if r['reached'])}"
+                              f" من {len(tokens)} تبلغ المحور الرابع",
              "10 توكناتٍ × 16 مرحلة = 160 سجلًّا",
-             "توكنتان مختلفتان — لا رقمان مختلفان"),
-            ("الترقيمُ اللاصق", "يُخرج التوكنَ ويُسمّي السبب",
-             "جُرِّد في §8 بلا إعلان", "تناقضٌ على البصمة نفسِها"),
+             "الأساسُ موحَّدٌ بعد حكمك — التوكنةُ واحدة"),
+            ("الترقيمُ اللاصق", "يُقطع بحكم المالك ويُسجَّل في عمودٍ خاصّ",
+             "جُرِّد في §8 بلا إعلان",
+             "النتيجةُ واحدة الآن، والفرقُ في أنّ أحدَهما أعلن"),
             ("الخطوطُ الممنوعة", "٨ خطوطٍ مُعلَنة",
              f"{m['forbidden_lines']} خطًّا، مصدرُها USER_PROVIDED",
              "جردان لم يُوفَّق بينهما"),
@@ -523,10 +541,9 @@ def build(args: argparse.Namespace) -> dict:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--matrix", default="inspection/TAAQOL_NAZILA_MATRIX.md")
-    p.add_argument("--run", default="inspection/runs/f5")
-    p.add_argument("--matrix-text", default="inspection/case_matrix.txt")
+    p.add_argument("--run", default="inspection/runs/f4")
+    p.add_argument("--matrix-text", default="inspection/case.txt")
     p.add_argument("--chat-text", default="inspection/case_chat.txt")
-    p.add_argument("--first-text", default="inspection/case.txt")
     p.add_argument("--out", default="inspection/comparison.html")
     args = p.parse_args(argv)
 
