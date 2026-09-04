@@ -1,0 +1,50 @@
+{
+  "module": "aslot.axes.axis2_registry",
+  "axis": 2,
+  "source_mode": "DERIVED_WITNESS_FROM_MASAQ",
+  "registry": {
+    "entries": 134,
+    "match_index": 99,
+    "evidence_index": 110,
+    "collisions": 2
+  },
+  "closed_form_proof": {
+    "NOT_MATCHED": 383,
+    "UNRESOLVED": 14,
+    "PROVEN": 45,
+    "NOT_A_CLOSED_FORM_VERBAL_OPERATOR": 4
+  },
+  "next_route": {
+    "CONTINUE": 375,
+    "DEFER_UNRESOLVED_CLOSURE": 22,
+    "STOP_CLOSED_FORM": 45,
+    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 4
+  },
+  "words_stopped_as_closed_form": 45,
+  "eligibility_tiers": {
+    "ACCEPT": 122,
+    "OWNER_DECISION_REQUIRED": 12
+  },
+  "self_checks": {
+    "T1_MAA_CONFLICTING_WITNESSES_ARE_NOT_ADJUDICATED": true,
+    "T2_HADHA_IS_A_PROVEN_CLOSED_FORM": true,
+    "T3_LAYSA_IS_VERBAL_OPERATOR_NOT_HARF": true,
+    "T4_VERBAL_OPERATOR_DOES_NOT_STOP_PEELING": true,
+    "T5_OPEN_CLASS_NOT_MATCHED": true,
+    "T6_PROOF_HAS_FOUR_VALUES": true,
+    "T7_NO_CHOOSING_AMONG_ALTERNATIVES": true,
+    "T8_ALL_MATCHED_IDS_PRESERVED": true,
+    "T9_MATCH_INDEX_SUBSET_OF_EVIDENCE_INDEX": true,
+    "T10_REGISTRY_IS_EVIDENCE_NOT_LICENSE": true,
+    "T11_ODR_SURFACE_IS_EVIDENCE_NOT_MATCH": true
+  },
+  "poisons": {
+    "P1_UNNORMALIZED_SURFACE_DOES_NOT_MATCH": true,
+    "P2_EMPTY_DOES_NOT_MATCH": true,
+    "P3_VERBAL_OPERATOR_NOT_TAGGED_HARF": true,
+    "P4_WHOLE_WORD_WITH_PREFIX_IS_NOT_ITSELF_CLOSED": true,
+    "P5_LOOKUP_NEVER_MUTATES_REGISTRY": true,
+    "P6_OPERATOR_PROVEN_IS_NOT_ATTACHABLE_PREFIX_PROVEN": true
+  },
+  "input_defects": {}
+}

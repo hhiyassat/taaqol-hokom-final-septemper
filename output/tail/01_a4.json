@@ -1,0 +1,263 @@
+{
+ "repo": "final-september",
+ "head": "02b3318266d07e1910f180b8b6438ca3f655c81b",
+ "git_tags": [],
+ "cut_marker": "SUBJECT_PREFIX — المستودعُ بلا أوسام، فالقَطعُ برسالته",
+ "cuts_total": 5,
+ "cuts_measured": 5,
+ "cuts_unmeasurable": [],
+ "named_witnesses": [
+  "بِسْمِ",
+  "كَفَرُوا",
+  "كَبَائِرَ",
+  "كَتَبَ",
+  "مَا",
+  "كِتَاْبُنْ",
+  "وَلِلْكَافِرِينَ"
+ ],
+ "verdict_moves": [
+  {
+   "witness": "كَفَرُوا",
+   "from_cut": "2.8.0",
+   "to_cut": "2.9.0",
+   "move": "ACCEPT->DEFER",
+   "termination_before": "STEM_NOT_FURTHER_PEELABLE",
+   "termination_after": "DEFER_REMAINDER_STANDING_UNPROVEN",
+   "is_promotion": false
+  },
+  {
+   "witness": "كَبَائِرَ",
+   "from_cut": "2.8.0",
+   "to_cut": "2.9.0",
+   "move": "ACCEPT->DEFER",
+   "termination_before": "STEM_NOT_FURTHER_PEELABLE",
+   "termination_after": "DEFER_REMAINDER_STANDING_UNPROVEN",
+   "is_promotion": false
+  },
+  {
+   "witness": "كَتَبَ",
+   "from_cut": "2.8.0",
+   "to_cut": "2.9.0",
+   "move": "ACCEPT->DEFER",
+   "termination_before": "STEM_NOT_FURTHER_PEELABLE",
+   "termination_after": "DEFER_REMAINDER_STANDING_UNPROVEN",
+   "is_promotion": false
+  }
+ ],
+ "promotions": [],
+ "NO_PROMOTION": true,
+ "series": [
+  {
+   "version": "2.8.0",
+   "sha": "dc87a8c935138da7ad2470bdc53bfae163030e70",
+   "short": "dc87a8c",
+   "subject": "وثيقة التسليم محدَّثةً إلى 2.8.0",
+   "form": "MENTIONED_ONLY",
+   "state": "MEASURED",
+   "verdicts": {
+    "بِسْمِ": {
+     "verdict": "BLOCK",
+     "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+    },
+    "كَفَرُوا": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "كَبَائِرَ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "كَتَبَ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "مَا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_UNRESOLVED_CLOSURE"
+    },
+    "كِتَاْبُنْ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "وَلِلْكَافِرِينَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+    }
+   }
+  },
+  {
+   "version": "2.9.0",
+   "sha": "0598a4bdac5433b4369a918f59096a460c94a549",
+   "short": "0598a4b",
+   "subject": "2.9.0 — القبولُ دعوى كالمنع سواء، ورفعُ بقايا المراجعة الأربع",
+   "form": "SUBJECT_PREFIX",
+   "state": "MEASURED",
+   "verdicts": {
+    "بِسْمِ": {
+     "verdict": "BLOCK",
+     "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+    },
+    "كَفَرُوا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَبَائِرَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَتَبَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "مَا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_UNRESOLVED_CLOSURE"
+    },
+    "كِتَاْبُنْ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "وَلِلْكَافِرِينَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+    }
+   }
+  },
+  {
+   "version": "2.10.0",
+   "sha": "0ee880c5f3396980ed5587f9d21fe17bb682699f",
+   "short": "0ee880c",
+   "subject": "2.10.0 — دعوى السجلّين مقيسةً، ودفتران يقفلان، وقاعدةُ الإثبات الموجَب",
+   "form": "SUBJECT_PREFIX",
+   "state": "MEASURED",
+   "verdicts": {
+    "بِسْمِ": {
+     "verdict": "BLOCK",
+     "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+    },
+    "كَفَرُوا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَبَائِرَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَتَبَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "مَا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_UNRESOLVED_CLOSURE"
+    },
+    "كِتَاْبُنْ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "وَلِلْكَافِرِينَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+    }
+   }
+  },
+  {
+   "version": "2.11.0",
+   "sha": "f0e43336e3ac5c0b5f7f80c5c13b515f1c593da5",
+   "short": "f0e4333",
+   "subject": "2.11.0 — تقريرُ الفحص الدستوريّ مقيسًا، واسمان كانا يخرجان بلا إعلان",
+   "form": "SUBJECT_PREFIX",
+   "state": "MEASURED",
+   "verdicts": {
+    "بِسْمِ": {
+     "verdict": "BLOCK",
+     "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+    },
+    "كَفَرُوا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَبَائِرَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَتَبَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "مَا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_UNRESOLVED_CLOSURE"
+    },
+    "كِتَاْبُنْ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "وَلِلْكَافِرِينَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+    }
+   }
+  },
+  {
+   "version": "2.12.0",
+   "sha": "02b3318266d07e1910f180b8b6438ca3f655c81b",
+   "short": "02b3318",
+   "subject": "2.12.0 — سحبُ دعوى «لا تمييز»، والرتبةُ باسمها، ومِسبارٌ يُعاد تشغيلُه",
+   "form": "SUBJECT_PREFIX",
+   "state": "MEASURED",
+   "verdicts": {
+    "بِسْمِ": {
+     "verdict": "BLOCK",
+     "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+    },
+    "كَفَرُوا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَبَائِرَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "كَتَبَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+    },
+    "مَا": {
+     "verdict": "DEFER",
+     "termination": "DEFER_UNRESOLVED_CLOSURE"
+    },
+    "كِتَاْبُنْ": {
+     "verdict": "ACCEPT",
+     "termination": "STEM_NOT_FURTHER_PEELABLE"
+    },
+    "وَلِلْكَافِرِينَ": {
+     "verdict": "DEFER",
+     "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+    }
+   }
+  }
+ ],
+ "boundary": {
+  "earliest_measured_cut": "2.8.0",
+  "latest_measured_cut": "2.12.0",
+  "accepted_already_at_earliest_cut": [
+   "كَبَائِرَ",
+   "كَتَبَ",
+   "كَفَرُوا",
+   "كِتَاْبُنْ"
+  ],
+  "of_those_no_longer_accepted_today": [
+   "كَبَائِرَ",
+   "كَتَبَ",
+   "كَفَرُوا"
+  ],
+  "reading": "ما كان مقبولًا عند أقدم قَطعٍ مقيسٍ لا يُعرف متى رُقّي: الترقيةُ وقعت قبل حدّ الفحص. فـNO_PROMOTION تعني «لا ترقيةَ فيما قِيس»، لا «لم تقع ترقيةٌ قطّ»."
+ },
+ "data_held_constant_at": "HEAD",
+ "scope_note": "NO_PROMOTION يقيس أثرَ الكود وحدَه · وتغيُّرُ حكمٍ سببُه بيانٌ خارج مداه",
+ "cuts_not_in_history": {
+  "2.7.0": "القَطعُ الذي وُضع له هذا البند غيرُ موجودٍ في هذا المستودع — فترقياتُه الإحدى عشرةَ لا تُعاد قياسًا هنا"
+ },
+ "command": "python3 scripts/check_no_promotion.py"
+}

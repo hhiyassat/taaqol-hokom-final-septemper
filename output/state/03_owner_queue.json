@@ -1,0 +1,369 @@
+{
+ "items": [
+  {
+   "ident": "A1",
+   "title": "استعادةُ تاريخ أسلوط",
+   "authority": "OWNED_BY_AGENT",
+   "status": "BLOCKED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A2",
+   "title": "نشرُ بصمات القوانين والحوامل",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A3",
+   "title": "وسمُ T-2 بحقيقته",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A4",
+   "title": "NO_PROMOTION على كلّ قَطعِ إصدار",
+   "authority": "OWNED_BY_AGENT",
+   "status": "BLOCKED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A5",
+   "title": "تثبيتُ أحكام الشواهد المسمّاة",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A6",
+   "title": "CAUSE_IS_A_CLAIM قاعدةً لا نصيحة",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A7",
+   "title": "قاعدةُ دفتر القشور 17,039 ← 17,252",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A8",
+   "title": "جردُ الرفض 27 ← 28",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A9",
+   "title": "توسيعُ جرد الأسطح المكتوبة باليد",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "A10",
+   "title": "declared.json للفصول ٨–١٣",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "R1",
+   "title": "سحبُ PEEL_LEDGER_CLOSES السابق صراحةً",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "R2",
+   "title": "مصفوفةُ انتقالٍ مغلقةٌ لأحكام B5",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "R3",
+   "title": "«--no-witness إنتاجيّ» — أمرٌ منشورٌ لا دعوى",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "R4",
+   "title": "إحالةُ 134 إلى شاهدٍ مشتقٍّ باسمه وبصمته",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B1",
+   "title": "أيُّ نصٍّ هو النازلة",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B2",
+   "title": "أصنافُ البقيّة السبعة (T-4)",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B3",
+   "title": "عيبُ التنوين",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B4",
+   "title": "سجلّا العوامل والمبنيّات — الاسمُ لا العدد",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B5",
+   "title": "كَتَبَ — تخفيضُ التقشير أم توسيعُ شرط البوّابة",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B6",
+   "title": "«آ» خارج «أل» · N2_2 · لكم",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B7",
+   "title": "المذهبُ والولايةُ القضائيّة",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B8",
+   "title": "حذفُ نسخة maqayis_v2 · index.lock · المحوّل",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B9",
+   "title": "قاعدةُ startswith(\"ال\")",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C1",
+   "title": "PRE_WEIGHT_CAPACITY_AUDIT غيرُ منفَّذة",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "DECLARED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C2",
+   "title": "مفاتيحُ classify_token_paths ١١ بلا مشكول",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "DECLARED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C3",
+   "title": "startswith(\"ال\") ⟶ JamidPath يعبر Grapheme→FunctionalLetter",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "DECLARED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C4",
+   "title": "ANSWER_AUDIT غيرُ منفَّذة",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "DECLARED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C5",
+   "title": "corpus_runner لا يستشير الحوامل ولا سجلَّ الخطوط",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "DECLARED",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "C_PATH",
+   "title": "المسلكُ المختار لبنود (ج)",
+   "authority": "OUT_OF_JURISDICTION",
+   "status": "NOT_CHOSEN",
+   "source": "output/remediation/01_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B8.3",
+   "title": "CL16_SOURCE_ROOT في المرحلتين",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B11",
+   "title": "المسارات المطلقة ⟶ متغيّرات بيئة",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B12",
+   "title": "توثيقُ السلسلة المقفلة",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B14",
+   "title": "جردُ المستودعات",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B15",
+   "title": "توزيعُ entry_type وأثرُه على CL-16",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "hokom/output/b83/02_ledger.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B16",
+   "title": "—",
+   "authority": "OWNED_BY_AGENT",
+   "status": "STRUCK",
+   "source": "NOT_IN_THIS_CONTAINER",
+   "effect_measured": true
+  },
+  {
+   "ident": "B17",
+   "title": "مؤشّرُ الوحدة الفرعيّة غيرُ الملتزَم",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "hokom/output/nazila_result/two_column_scores.json",
+   "effect_measured": true
+  },
+  {
+   "ident": "B10",
+   "title": "—",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "NOT_IN_THIS_CONTAINER",
+   "effect_measured": true
+  },
+  {
+   "ident": "B13",
+   "title": "—",
+   "authority": "OWNED_BY_AGENT",
+   "status": "DONE",
+   "source": "NOT_IN_THIS_CONTAINER",
+   "effect_measured": true
+  },
+  {
+   "ident": "P1",
+   "title": "همزةٌ بتنوين فتح",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/tanween/05_pending.json",
+   "rows": 82,
+   "executed": 0,
+   "effect_measured": true
+  },
+  {
+   "ident": "P2",
+   "title": "تاءٌ مربوطةٌ مع الضمّ والكسر",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/tanween/05_pending.json",
+   "rows": 735,
+   "executed": 0,
+   "effect_measured": true
+  },
+  {
+   "ident": "P3",
+   "title": "الكلمةُ الواحدة · ON_PENULT_FINAL_BARE",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/tanween/05_pending.json",
+   "rows": 1,
+   "executed": 0,
+   "effect_measured": true
+  },
+  {
+   "ident": "Q4",
+   "title": "أيُضيَّق U_TANWEEN إلى الموقوف وحدَه؟",
+   "authority": "OWNED_BY_OWNER",
+   "status": "RAISED",
+   "source": "output/max/01_b2_measures.json + output/tanween/02_after.json",
+   "effect_measured": true,
+   "effect": {
+    "raised_on_now": 8894,
+    "of_which_no_decision_needed": 8076,
+    "of_which_still_pending": 818,
+    "arithmetic": "8894 = 8076 + 818",
+    "narrowed_to": 818
+   },
+   "not_weighed": "ولا يُرجَّح — OWNER_PENDING"
+  }
+ ],
+ "count": 42,
+ "by_status": {
+  "BLOCKED": 2,
+  "DECLARED": 5,
+  "DONE": 18,
+  "NOT_CHOSEN": 1,
+  "RAISED": 15,
+  "STRUCK": 1
+ },
+ "closed": 24,
+ "pending": 17,
+ "out_of_jurisdiction": 1,
+ "sum": 42,
+ "closes": true,
+ "effect_unmeasured": []
+}

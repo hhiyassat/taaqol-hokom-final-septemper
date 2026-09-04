@@ -1,0 +1,58 @@
+{
+ "GROUNDED": 207,
+ "NAMED": 85,
+ "BROKEN": 0,
+ "CELLS_TOTAL": 292,
+ "CLOSURE_POTENTIAL": 71,
+ "CLOSURE_EFFECTIVE": 71,
+ "failed_gates": [],
+ "gates": {
+  "G1_REPRODUCIBLE": true,
+  "G2_LEDGER_CLOSES": true,
+  "G3_NO_BROKEN": true,
+  "G4_NO_OWNER_INFERENCE": true
+ },
+ "STAGES_OPENED": "1/16",
+ "not_available_by_reason": {
+  "HUMAN_DECLARED_ONLY": 25,
+  "NOT_CONSTRUCTED_IN_SOURCE": 7,
+  "NOT_EMITTED_BY_RUNNER": 35,
+  "NOT_OPENED:MANAT": 1,
+  "NOT_OPENED:MUFRAD_DALALAH": 3,
+  "NOT_OPENED:RELATION": 1,
+  "NOT_OPENED:RELATION_CLOSURE": 2,
+  "NOT_OPENED:VERBAL_MADLUL": 10,
+  "OWNER_DECISION": 1
+ },
+ "reason_family_moves_vs_previous_round": {},
+ "denominator_note": "المقامُ خاناتُ هذه الوثيقة وحدَها. وعلامةُ دفتر الإصلاح (output/remediation) مقامُها بنودُه، ولا تُجمع بهذه.",
+ "recount_from_written_files": {
+  "records_csv_rows": 160,
+  "records_csv_columns": 24,
+  "cells_csv_rows": 292,
+  "closes": true
+ },
+ "records": {
+  "rows": 160,
+  "columns": 24,
+  "columns_entirely_empty": [
+   "failure_code",
+   "residuals_before",
+   "span_id"
+  ],
+  "empty_cells_by_column": {
+   "failure_code": 160,
+   "next_admissible_stage_ids": 10,
+   "output_carrier_id": 150,
+   "remediation_hints": 20,
+   "residuals_after": 10,
+   "residuals_before": 160,
+   "span_id": 160
+  }
+ },
+ "cells": {
+  "rows": 292
+ },
+ "input_sha256": "1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2",
+ "vendor_head": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095"
+}

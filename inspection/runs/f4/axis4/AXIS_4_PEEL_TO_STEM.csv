@@ -1,0 +1,11 @@
+Sura_No,Verse_No,Word_No,Word,Normalized_Word,Verdict,Termination,Peel_Count,Peeled_Prefixes,Licenses,Stem_Surface,Stem_Pattern,Stem_Consonants,Closed_Form_Proof,Deferred_Candidate_Prefix,Root_Work,Root_Proven,Stem_Proof,Note,Trace_Anchor,Parent_Anchor
+0,1,1,مَاتَ,مَاْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَاْتَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:1,aslot/axis3/0:1:1
+0,1,2,مَلِكٌ,مَلِكُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلِكُنْ,CV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:2,aslot/axis3/0:1:2
+0,1,3,عَنْ,عَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:1:3,aslot/axis3/0:1:3
+0,1,4,أُخْتٍ,أُخْتِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أُخْتِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:4,aslot/axis3/0:1:4
+0,1,5,سَاكِنَةٍ,سَاْكِنَةِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَاْكِنَةِنْ,CVV·CV·CV·CVC,5,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:1:5,aslot/axis3/0:1:5
+0,1,6,مَعَهُ,مَعَهُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَعَهُ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:6,aslot/axis3/0:1:6
+0,1,7,فَأَرَادَ,فَأَرَاْدَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «أَرَاْدَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:1:7,aslot/axis3/0:1:7
+0,1,8,وَارِثُهُ,وَاْرِثُهُ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVV·CV·CV·CV),aslot/axis4/0:1:8,aslot/axis3/0:1:8
+0,1,9,طَرْدَهَا,طَرْدَهَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,طَرْدَهَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:9,aslot/axis3/0:1:9
+0,1,10,فَتَحَاكَمَا,فَتَحَاْكَمَاْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «تَحَاْكَمَاْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:1:10,aslot/axis3/0:1:10

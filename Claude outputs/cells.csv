@@ -1,0 +1,293 @@
+section,field,status,value,source,reason,reason_family
+رأس الوثيقة,INPUT_TEXT,FROM_CODE,مَاتَ مَلِكٌ عَنْ أُخْتٍ سَاكِنَةٍ مَعَهُ، فَأَرَادَ وَارِثُهُ طَرْدَهَا، فَتَحَاكَمَا.,الملفّ,,
+رأس الوثيقة,INPUT_SHA256,FROM_CODE,1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2,hashlib,,
+رأس الوثيقة,CORPUS_ID,FROM_CODE,nazila,الوسيط,,
+رأس الوثيقة,RUN_ID,FROM_CODE,native:nazila,run_native_corpus,,
+رأس الوثيقة,STAGE_COVERAGE,FROM_CODE,16/16,عدُّ المراحل,,
+رأس الوثيقة,RUNTIME_EXECUTION,FROM_CODE,1/16 EXECUTED,عدُّ الحالات,,
+رأس الوثيقة,MEASURED_RECORDS,FROM_CODE,160 = 10 × 16,عدُّ السجلّات,,
+رأس الوثيقة,FINAL_HUKM,FROM_CODE,NOT_OPENED,حالُ HUKM,,
+رأس الوثيقة,FINAL_TANZIL,FROM_CODE,NOT_OPENED,حالُ TANZIL,,
+رأس الوثيقة,VENDOR_HEAD,FROM_CODE,3cccdded7951ba71b3cb2a8b9b477f3fb3d91095,git rev-parse,,
+رأس الوثيقة,DOCUMENT_LABEL,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+رأس الوثيقة,LAYER_RULE,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+رأس الوثيقة,NO_LAYER_MIXING,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+رأس الوثيقة,REPRODUCES,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+0. حدّ الدخول المعلن,declared_entry_kind,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,representation_status,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,ontological_status,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,sound_status,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,meaning_status,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,prior_trace_status,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+0. حدّ الدخول المعلن,produces_only,NOT_AVAILABLE,,,NOT_CONSTRUCTED_IN_SOURCE,NOT_CONSTRUCTED_IN_SOURCE
+1. بطاقة النازلة,عدد التوكنات المقيسة,FROM_CODE,10,len(text.split()),,
+1. بطاقة النازلة,نوع المدخل,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+1. بطاقة النازلة,طبيعة النص,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+1. بطاقة النازلة,محل النزاع الظاهر,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+1. بطاقة النازلة,ما يجوز إنتاجه الآن,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+1. بطاقة النازلة,ما لا يجوز إنتاجه الآن,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+2. بصمة القياس,taaqol_commit,FROM_CODE,3cccdded7951ba71b3cb2a8b9b477f3fb3d91095,git rev-parse,,
+2. بصمة القياس,pin_matches,FROM_CODE,True,مقابلةُ التثبيت,,
+2. بصمة القياس,sha256(INPUT_TEXT),FROM_CODE,1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2,hashlib,,
+2. بصمة القياس,python,FROM_CODE,3.11.15,platform,,
+2. بصمة القياس,platform,FROM_CODE,Linux x86_64,platform,,
+2. بصمة القياس,utc_timestamp,FROM_CODE,2026-09-03T07:33:01+00:00,datetime,,
+2. بصمة القياس,corpus_id,FROM_CODE,nazila,الوسيط,,
+2. بصمة القياس,run_id,FROM_CODE,native:nazila,run_native_corpus,,
+2. بصمة القياس,runner,FROM_CODE,runtime.corpus_runner.run_native_corpus,الاستيراد,,
+2. بصمة القياس,MEASURED_BY,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+3. الجرد المغلق المستعمل,Rank,FROM_CODE,ZERO · TRACE · CANDIDATE · HYPOTHESIS · LICENSED · STRONG · CERTIFICATE,سردُ أعضاء التعداد,,
+3. الجرد المغلق المستعمل,ClosureState,FROM_CODE,OPEN · MINIMALLY_CLOSED · PERFORATED_CLOSED · BLOCKED · INVALID · FORBIDDEN_LEAP,سردُ أعضاء التعداد,,
+3. الجرد المغلق المستعمل,TransitionState,FROM_CODE,APPROVED · DEFERRED · BLOCKED · REJECTED · FORBIDDEN_LEAP,سردُ أعضاء التعداد,,
+3. الجرد المغلق المستعمل,StageTransitionState,FROM_CODE,EXECUTED · BLOCKED · DEFERRED · DECLARED_NOT_IMPLEMENTED · NOT_OPENED · NOT_APPLICABLE,سردُ أعضاء التعداد,,
+3. الجرد المغلق المستعمل,FailureCode (الجرد كلُّه),FROM_CODE,92,len(list(FailureCode)),,
+3. الجرد المغلق المستعمل,FailureCode المستعمل في الخطوط,FROM_CODE,FORBIDDEN_STRAIGHT_LINE,ForbiddenLine.failure_code,,
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · StageTransitionState,FROM_CODE,EXECUTED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · hint,FROM_CODE,—,السجلّ,,
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · residuals_after,FROM_CODE,—,السجلّ,,
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,1. PATH_CLASSIFICATION · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · StageTransitionState,FROM_CODE,DECLARED_NOT_IMPLEMENTED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · hint,FROM_CODE,runtime_implementation_missing,السجلّ,,
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,2. PRE_WEIGHT_CAPACITY_AUDIT · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,3. DAL_ONLY · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,4. VERBAL_MADLUL · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,5. DAL_MADLUL_BINDING · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,6. CONTRACTABLE_UNIT · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,7. RELATION · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,7. RELATION · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,7. RELATION · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,7. RELATION · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,7. RELATION · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,7. RELATION · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · StageTransitionState,FROM_CODE,DEFERRED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · hint,FROM_CODE,missing_context:FORMAL_ONLY,السجلّ,,
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,8. FORMAL_SHAPE · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,9. MUFRAD_DALALAH · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,10. RELATION_CLOSURE · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,11. IFADAH · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,11. IFADAH · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,11. IFADAH · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,11. IFADAH · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,11. IFADAH · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,11. IFADAH · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,12. HUKM · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,12. HUKM · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,12. HUKM · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,12. HUKM · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,12. HUKM · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,12. HUKM · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,13. MANAT · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,13. MANAT · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,13. MANAT · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,13. MANAT · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,13. MANAT · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,13. MANAT · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,14. TANZIL · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,14. TANZIL · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,14. TANZIL · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,14. TANZIL · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,14. TANZIL · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,14. TANZIL · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · StageTransitionState,FROM_CODE,NOT_OPENED,السجلّ,,
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · hint,FROM_CODE,previous_gate_not_proven,السجلّ,,
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,15. ANSWER_AUDIT · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · StageTransitionState,FROM_CODE,NOT_APPLICABLE,السجلّ,,
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · الرتبة,FROM_CODE,ZERO->ZERO,السجلّ,,
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · hint,FROM_CODE,—,السجلّ,,
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · residuals_after,FROM_CODE,RUNTIME_CONTEXT_PENDING,السجلّ,,
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · ClosureState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4. مصفوفة المراحل الست عشرة,16. NON_CONTENT_FORMAL_ROUTE · TransitionState,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+4.b شكل سجل التنفيذ وقواعده,حقولُ StageExecutionRecord,FROM_CODE,run_id · corpus_id · token_id · span_id · stage_id · path_id · input_carrier_id · output_carrier_id · applicability · transition_state · evidence_refs · rank_before · rank_after · residuals_before · residuals_after · identity_invariants_checked · trace_parent_ids · trace_entry_id · failure_code · remediation_hints · next_admissible_stage_ids · source_commit_sha · registry_version · registry_hash,__dataclass_fields__,,
+4.b شكل سجل التنفيذ وقواعده,Rule 1,FROM_CODE,no output carrier without preserved input carrier.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 3,FROM_CODE,no implicit rank upgrade.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 4,FROM_CODE,no residual deletion.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 6,FROM_CODE,no executed stage without traceability.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 7,FROM_CODE,deferred must declare missing condition.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 8,FROM_CODE,blocked must carry failure code.,تعليقاتُ execution_record.py,,
+4.b شكل سجل التنفيذ وقواعده,Rule 9,FROM_CODE,NOT_APPLICABLE requires NOT_APPLICABLE applicability.,تعليقاتُ execution_record.py,,
+5. سجل الأثر والأدلة,evidence_refs (عيّنة),FROM_CODE,token:t000,السجلّ,,
+5. سجل الأثر والأدلة,trace_entry_id (عيّنة),FROM_CODE,trace:t000:PATH_CLASSIFICATION,السجلّ,,
+5. سجل الأثر والأدلة,trace_parent_ids (عيّنة),FROM_CODE,trace:t000,السجلّ,,
+5. سجل الأثر والأدلة,سجلّاتٌ بمرجع أثر,FROM_CODE,160,عدٌّ,,
+5. سجل الأثر والأدلة,سقفُ الرتبة لكلّ دليل,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+6. البقايا المقيسة,hint · missing_context:FORMAL_ONLY,FROM_CODE,10,عدٌّ من remediation_hints,,
+6. البقايا المقيسة,hint · previous_gate_not_proven,FROM_CODE,120,عدٌّ من remediation_hints,,
+6. البقايا المقيسة,hint · runtime_implementation_missing,FROM_CODE,10,عدٌّ من remediation_hints,,
+6. البقايا المقيسة,residual · RUNTIME_CONTEXT_PENDING,FROM_CODE,150,عدٌّ من residuals_after,,
+6. البقايا المقيسة,TOTAL_STAGE_RECORDS,FROM_CODE,160,عدٌّ,,
+6. البقايا المقيسة,EMPTY_RESIDUAL_ROWS,FROM_CODE,10,عدٌّ,,
+6. البقايا المقيسة,HIDDEN_RESIDUALS,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+7. فجوة القانون والمشغّل,corpus_runner يستورد gamma,FROM_CODE,False,فحصُ مصدر المشغّل,,
+7. فجوة القانون والمشغّل,corpus_runner يستورد ClosureState,FROM_CODE,False,فحصُ مصدر المشغّل,,
+7. فجوة القانون والمشغّل,corpus_runner يستورد TransitionState,FROM_CODE,False,فحصُ مصدر المشغّل,,
+7. فجوة القانون والمشغّل,corpus_runner يستورد forbidden_lines,FROM_CODE,False,فحصُ مصدر المشغّل,,
+7. فجوة القانون والمشغّل,corpus_runner يستورد EntryBoundary,FROM_CODE,False,فحصُ مصدر المشغّل,,
+7. فجوة القانون والمشغّل,حكم الوثيقة,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t000 · اللفظ,FROM_CODE,مَاتَ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t000 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t000 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t000 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t000 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t001 · اللفظ,FROM_CODE,مَلِكٌ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t001 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t001 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t001 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t001 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t002 · اللفظ,FROM_CODE,عَنْ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t002 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t002 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t002 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t002 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t003 · اللفظ,FROM_CODE,أُخْتٍ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t003 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t003 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t003 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t003 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t004 · اللفظ,FROM_CODE,سَاكِنَةٍ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t004 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t004 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t004 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t004 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t005 · اللفظ,FROM_CODE,مَعَهُ،,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t005 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t005 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t005 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t005 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t006 · اللفظ,FROM_CODE,فَأَرَادَ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t006 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t006 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t006 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t006 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t007 · اللفظ,FROM_CODE,وَارِثُهُ,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t007 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t007 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t007 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t007 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t008 · اللفظ,FROM_CODE,طَرْدَهَا،,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t008 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t008 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t008 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t008 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t009 · اللفظ,FROM_CODE,فَتَحَاكَمَا.,التوكنات,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t009 · path_id,FROM_CODE,RootStemPath,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t009 · confidence,FROM_CODE,0.55,classify_token_paths,,
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t009 · إفادة لغوية محتملة,NOT_AVAILABLE,,,NOT_OPENED:VERBAL_MADLUL,NOT_OPENED
+8. مصفوفة الألفاظ: ما يجوز وما لا يجوز,t009 · ما لا يجوز أخذه منه وحده,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+9. العلاقات اللغوية والحدود,حالُ RELATION_CLOSURE,FROM_CODE,NOT_OPENED,السجلّ,,
+9. العلاقات اللغوية والحدود,RELATION_CLOSED_COUNT,NOT_AVAILABLE,,,NOT_OPENED:RELATION_CLOSURE,NOT_OPENED
+9. العلاقات اللغوية والحدود,NO_ADJACENT_PAIR_CLOSURE,NOT_AVAILABLE,,,NOT_OPENED:RELATION_CLOSURE,NOT_OPENED
+9. العلاقات اللغوية والحدود,صفوفُ العلاقات,NOT_AVAILABLE,,,NOT_OPENED:RELATION,NOT_OPENED
+10. المنطوق والمفهوم,المنطوق,NOT_AVAILABLE,,,NOT_OPENED:MUFRAD_DALALAH,NOT_OPENED
+10. المنطوق والمفهوم,مفهوم الموافقة,NOT_AVAILABLE,,,NOT_OPENED:MUFRAD_DALALAH,NOT_OPENED
+10. المنطوق والمفهوم,مفهوم المخالفة,NOT_AVAILABLE,,,NOT_OPENED:MUFRAD_DALALAH,NOT_OPENED
+11. الخطوط المستقيمة الممنوعة,عدد الخطوط في السجل,FROM_CODE,47,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,حقولُ كلّ خطّ,FROM_CODE,source · target · reason · required_bridge · origin_law · failure_code,__dataclass_fields__,,
+11. الخطوط المستقيمة الممنوعة,أزواجٌ (مصدر ⟶ هدف) متمايزة,FROM_CODE,44/47,عدٌّ,,
+11. الخطوط المستقيمة الممنوعة,Binary -> Text,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · EncodingIdentityGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Unicode -> ArabicLetter #1,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · LetterIdentityGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,CodePoint -> Phoneme #2,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · PhoneticRealisationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Grapheme -> FunctionalLetter #3,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · LetterFunctionGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,HarakaMark -> CaseFunction,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · HarakaFunctionGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Orthography -> Pronunciation,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · PhoneticRealisationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Pronunciation -> Syllable,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · SyllableStructureGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Syllable -> Word,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · LexicalIdentityGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Signifier -> WordForm,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · MorphologicalRealisationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,WordForm -> Meaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · SignificationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Root -> LexicalMeaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · DerivationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Weight -> Agency,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · RelationRoleGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Pattern -> SyntaxRole,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · RelationRoleGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,VerbalSignified -> PureConcept,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ConceptualAbstractionGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Wadʿ -> Dalālah,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · DomainBoundDalalahGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Dalālah -> ContextualMeaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ContextualResolutionGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,PureConcept -> IntendedMeaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · IntentAttributionGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Context -> Relation,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · RelationDeclarationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Relation -> Ifādah,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · IfadahGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Ifādah -> Judgment,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · JudgmentGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Judgment -> Application,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ApplicationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Evidence -> Certainty,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · RankLattice (no auto-promote),CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,LexiconEntry -> Candidate,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · LexiconEvidenceGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Candidate -> Certificate,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · CertificationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,ResidualHidden -> ApprovedOutput,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ResidualPolicy (visibility),CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,RankBelow -> RankAbove,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · TransitionGate + RankLattice,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Tool -> Knowledge,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Number -> Knowledge,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,LCNV -> Knowledge,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,HumanVoice -> ArabicText,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate + ASRGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,BinaryAudio -> Text,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,BinaryAudio -> UnicodeText,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate + ASRGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,BinaryAudio -> Meaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Full pre-text + interpretation chain,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,BinaryText -> Unicode,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · EncodingDecodeGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,BinaryText -> ArabicLetter,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · EncodingDecodeGate + LetterIdentityGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Unicode -> ArabicText,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · UnicodeTextNormalizationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Unicode -> ArabicLetter #36,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · ArabicLetterIdentityGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,CodePoint -> Phoneme #37,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · PhonemeEvidenceBridge,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Grapheme -> FunctionalLetter #38,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · FunctionalLetterGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,VocalizedText -> ValidAnalysis,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · TextEntryValidationGate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,DeclaredEntry -> OntologicalOrigin,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · none — refusal is constitutional,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Identity -> Truth,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Gamma + Gate + Evidence + Rank,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Matching -> Meaning,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Signification chain + Gate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Potentiality -> Actuality,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Opening control + Closure + Gate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Opening -> Closure,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Γ then Gate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Closure -> Certificate,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Rank lattice + Gate,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,Candidate -> Truth,FROM_CODE,FORBIDDEN_STRAIGHT_LINE · Certification gate + Evidence,CANONICAL_REGISTRY,,
+11. الخطوط المستقيمة الممنوعة,هل اشتعلت في runner؟,NOT_AVAILABLE,,,NOT_EMITTED_BY_RUNNER,NOT_EMITTED_BY_RUNNER
+12. مصفوفة المناط: أسئلة المالك,أسئلةُ المناط,NOT_AVAILABLE,,,NOT_OPENED:MANAT,NOT_OPENED
+12.b سجل الغموض اللغوي الموقوف على المالك,مواضعُ الغموض,NOT_AVAILABLE,,,OWNER_DECISION,OWNER_DECISION
+13. التنزيل وما سُحب,حالُ HUKM,FROM_CODE,NOT_OPENED,السجلّ,,
+13. التنزيل وما سُحب,حالُ TANZIL,FROM_CODE,NOT_OPENED,السجلّ,,
+13. التنزيل وما سُحب,الدعاوى وأسبابُها,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+14. الحكم النهائي على الوثيقة,STATE·DECLARED_NOT_IMPLEMENTED,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,STATE·DEFERRED,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,STATE·EXECUTED,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,STATE·NOT_APPLICABLE,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,STATE·NOT_OPENED,FROM_CODE,120/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,HINT·missing_context:FORMAL_ONLY,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,HINT·previous_gate_not_proven,FROM_CODE,120/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,HINT·runtime_implementation_missing,FROM_CODE,10/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,RESIDUAL·RUNTIME_CONTEXT_PENDING,FROM_CODE,150/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,RANK·ZERO->ZERO,FROM_CODE,160/160,عدٌّ,,
+14. الحكم النهائي على الوثيقة,CLAIM_PROJECT_FINISHED,FROM_CODE,NO,ثابتٌ في المولّد,,
+14. الحكم النهائي على الوثيقة,سبب,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+14. الحكم النهائي على الوثيقة,شروط,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY
+14. الحكم النهائي على الوثيقة,مانع,NOT_AVAILABLE,,,HUMAN_DECLARED_ONLY,HUMAN_DECLARED_ONLY

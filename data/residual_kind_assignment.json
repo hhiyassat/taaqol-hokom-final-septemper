@@ -1,0 +1,17 @@
+{
+  "_": "هيكلٌ ينتظر حكمَ المالك في B2. ولا تملؤه الأداة.",
+  "RULE_OWNER": "DR_HUSSEIN",
+  "status": "AWAITING_B2",
+  "assignable_kinds": ["BLOCKING", "DEFERRABLE", "NON_BLOCKING", "EXPLANATORY"],
+  "hidden_forbidden_is_not_assignable": true,
+  "hidden_forbidden_note": "تُكتشف ولا تُختار — واختيارُها ادّعاءٌ بأنّ الخفاءَ مقصود.",
+  "assignments": {
+    "U_TANWEEN": null,
+    "U_ALIF_FARIQA": null,
+    "U_ALIF_MAQSURA": null,
+    "U_N7_2_INTERNAL_AL": null,
+    "U_ALEF_MADDA": null,
+    "U_UNVOCALIZED_CARRIER": null,
+    "U_MULTIWORD_CELL": null
+  }
+}

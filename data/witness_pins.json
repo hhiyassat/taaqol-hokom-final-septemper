@@ -1,0 +1,92 @@
+{
+ "بِسْمِ": {
+  "with_declared_witness": {
+   "verdict": "BLOCK",
+   "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+  },
+  "without_witness": {
+   "verdict": "BLOCK",
+   "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+  }
+ },
+ "كَفَرُوا": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+  },
+  "without_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  }
+ },
+ "كَبَائِرَ": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+  },
+  "without_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  }
+ },
+ "كَتَبَ": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_REMAINDER_STANDING_UNPROVEN"
+  },
+  "without_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  }
+ },
+ "مَا": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_UNRESOLVED_CLOSURE"
+  },
+  "without_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_UNRESOLVED_CLOSURE"
+  }
+ },
+ "مَاْ": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_UNRESOLVED_CLOSURE"
+  },
+  "without_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_UNRESOLVED_CLOSURE"
+  }
+ },
+ "كِتَاْبُنْ": {
+  "with_declared_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  },
+  "without_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  }
+ },
+ "وَلِلْكَافِرِينَ": {
+  "with_declared_witness": {
+   "verdict": "DEFER",
+   "termination": "DEFER_INITIAL_LETTER_MAY_BE_RADICAL"
+  },
+  "without_witness": {
+   "verdict": "BLOCK",
+   "termination": "BLOCK_SYLLABLE_BOUNDARY_CROSSED"
+  }
+ },
+ "وَكِتَاْبُنْ": {
+  "with_declared_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  },
+  "without_witness": {
+   "verdict": "ACCEPT",
+   "termination": "STEM_NOT_FURTHER_PEELABLE"
+  }
+ }
+}

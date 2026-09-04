@@ -1,0 +1,1029 @@
+{
+ "gate": {
+  "vendor_head": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+  "porcelain_lines": 0,
+  "passes": true
+ },
+ "nazila": {
+  "utc": "2026-09-03T15:35:21+00:00",
+  "records": "160 × 24",
+  "record_cells": 3840,
+  "records_diff": "بلا فرق",
+  "score": 70.9,
+  "grounded": 207,
+  "total": 292,
+  "stages_opened": "1/16",
+  "sections": 14,
+  "data_attributes": 299,
+  "data_cells": 292,
+  "g5": true
+ },
+ "corrections": [
+  {
+   "ident": "A1",
+   "title": "stages_blocked_by_C1 يُشطر",
+   "was": "stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه)",
+   "now": {
+    "stages_not_opened_today": 12,
+    "stages_C1_would_open": 11,
+    "stages_still_closed_after_C1": [
+     "ANSWER_AUDIT"
+    ]
+   },
+   "why": "ANSWER_AUDIT محجوبةٌ بنفسها (runtime_implemented=False) لا بـC1، فلا يفتحها فتحُ سلفِها.",
+   "old_sites": [
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 24,
+     "text": "\"title\": \"stages_blocked_by_C1 يُشطر\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 25,
+     "text": "\"was\": \"stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه)\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 38,
+     "text": "\"text\": \"\\\"title\\\": \\\"stages_blocked_by_C1 يُشطر\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 43,
+     "text": "\"text\": \"\\\"was\\\": \\\"stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه)\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 48,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"title\\\\\\\": \\\\\\\"stages_blocked_by_C1 يُشطر\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 53,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"was\\\\\\\": \\\\\\\"stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه)\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 58,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"title\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"stages_blocked_by_C1 يُشطر\\\\\\\\\\\\\\\",\\\\\\\"\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 63,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"was\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"stages_blocked_by_C1 = 12  (يعدّ في C1 ما "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 68,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| `A1` | stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه) | {\\\\\\\\\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 73,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `A1` | stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه) | {\\\\\\\"stages_not_opened_tod"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 78,
+     "text": "\"text\": \"| `A1` | stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه) | {\\\"stages_not_opened_today\\\": 12, \\\"st"
+    },
+    {
+     "file": "output/exec_now/03_report.md",
+     "line": 20,
+     "text": "| `A1` | stages_blocked_by_C1 = 12  (يعدّ في C1 ما لا تفتحه) | {\"stages_not_opened_today\": 12, \"stages_C1_woul"
+    }
+   ],
+   "derived": true,
+   "command": "python3 scripts/build_upstream.py"
+  },
+  {
+   "ident": "A2",
+   "title": "14/16 يُذكر خصماها",
+   "was": "14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15",
+   "now": {
+    "value": "14/16",
+    "arithmetic": "16 − 1 − 1 = 14",
+    "deduction_1": [
+     "ANSWER_AUDIT"
+    ],
+    "deduction_2": [
+     "NON_CONTENT_FORMAL_ROUTE"
+    ],
+    "collision": {
+     "runtime_implemented_true_is_also": 14,
+     "but_a_different_set": true,
+     "only_in_reachable": [
+      "PRE_WEIGHT_CAPACITY_AUDIT"
+     ],
+     "only_in_runtime_implemented_true": [
+      "NON_CONTENT_FORMAL_ROUTE"
+     ],
+     "note": "رقمان متساويان بعضويّتين مختلفتين — يُسمّى كلٌّ بمقامه"
+    }
+   },
+   "why": "رقمان متساويان بعضويّتين مختلفتين: هذا يُسقط NON_CONTENT_FORMAL_ROUTE ويُبقي PRE_WEIGHT، وruntime_implemented=True يعكسهما. ولولا التسميةُ لقُرئا واحدًا.",
+   "old_sites": [
+    {
+     "file": "output/closure/01_doors.md",
+     "line": 21,
+     "text": "\"also\": \"الإقفالُ الدستوريّ 1/16 ⟶ 14/16 (ANSWER_AUDIT تبقى DECLARED_NOT_IMPLEMENTED)\","
+    },
+    {
+     "file": "output/closure/03_report.md",
+     "line": 73,
+     "text": "مرحلةٌ واحدةٌ عند sonaiso    ⟶  1/16 تصير 14/16"
+    },
+    {
+     "file": "output/doors/00_doors.json",
+     "line": 23,
+     "text": "\"after_C1\": \"14/16\","
+    },
+    {
+     "file": "output/doors/00_doors.json",
+     "line": 68,
+     "text": "\"ceiling\": \"1/16 ⟶ 14/16\","
+    },
+    {
+     "file": "output/doors/00_doors.json",
+     "line": 141,
+     "text": "\"ceiling\": \"14/16 ⟶ 16/16\","
+    },
+    {
+     "file": "output/doors/01_doors.md",
+     "line": 17,
+     "text": "| `C1` | SONAISO | `17/292` | stages_closed_per_token=12 | `1/16 ⟶ 14/16` | سطرٌ في مرحلةٍ واحدة يفتح اثنتَي ع"
+    },
+    {
+     "file": "output/doors/01_doors.md",
+     "line": 20,
+     "text": "| `C4` | SONAISO | `0/292` | seals_issued=0 | `14/16 ⟶ 16/16` | UNMEASURED |"
+    },
+    {
+     "file": "output/doors/01_doors.md",
+     "line": 61,
+     "text": "\"ceiling\": \"1/16 ⟶ 14/16\","
+    },
+    {
+     "file": "output/doors/01_doors.md",
+     "line": 124,
+     "text": "\"ceiling\": \"14/16 ⟶ 16/16\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 86,
+     "text": "\"title\": \"14/16 يُذكر خصماها\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 87,
+     "text": "\"was\": \"14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 89,
+     "text": "\"value\": \"14/16\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 114,
+     "text": "\"text\": \"\\\"also\\\": \\\"الإقفالُ الدستوريّ 1/16 ⟶ 14/16 (ANSWER_AUDIT تبقى DECLARED_NOT_IMPLEMENTED)\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 119,
+     "text": "\"text\": \"مرحلةٌ واحدةٌ عند sonaiso    ⟶  1/16 تصير 14/16\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 124,
+     "text": "\"text\": \"\\\"after_C1\\\": \\\"14/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 129,
+     "text": "\"text\": \"\\\"ceiling\\\": \\\"1/16 ⟶ 14/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 134,
+     "text": "\"text\": \"\\\"ceiling\\\": \\\"14/16 ⟶ 16/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 139,
+     "text": "\"text\": \"| `C1` | SONAISO | `17/292` | stages_closed_per_token=12 | `1/16 ⟶ 14/16` | سطرٌ في مرحلةٍ واحدة يفتح"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 144,
+     "text": "\"text\": \"| `C4` | SONAISO | `0/292` | seals_issued=0 | `14/16 ⟶ 16/16` | UNMEASURED |\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 149,
+     "text": "\"text\": \"\\\"ceiling\\\": \\\"1/16 ⟶ 14/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 154,
+     "text": "\"text\": \"\\\"ceiling\\\": \\\"14/16 ⟶ 16/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 159,
+     "text": "\"text\": \"\\\"title\\\": \\\"14/16 يُذكر خصماها\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 164,
+     "text": "\"text\": \"\\\"was\\\": \\\"14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 169,
+     "text": "\"text\": \"\\\"value\\\": \\\"14/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 174,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"also\\\\\\\": \\\\\\\"الإقفالُ الدستوريّ 1/16 ⟶ 14/16 (ANSWER_AUDIT تبقى DECLARED_NOT_IMPLEME"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 179,
+     "text": "\"text\": \"\\\"text\\\": \\\"مرحلةٌ واحدةٌ عند sonaiso    ⟶  1/16 تصير 14/16\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 184,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"after_C1\\\\\\\": \\\\\\\"14/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 189,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"ceiling\\\\\\\": \\\\\\\"1/16 ⟶ 14/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 194,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"ceiling\\\\\\\": \\\\\\\"14/16 ⟶ 16/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 199,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `C1` | SONAISO | `17/292` | stages_closed_per_token=12 | `1/16 ⟶ 14/16` | سطرٌ في مرحلة"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 204,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `C4` | SONAISO | `0/292` | seals_issued=0 | `14/16 ⟶ 16/16` | UNMEASURED |\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 209,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"ceiling\\\\\\\": \\\\\\\"1/16 ⟶ 14/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 214,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"ceiling\\\\\\\": \\\\\\\"14/16 ⟶ 16/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 219,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"title\\\\\\\": \\\\\\\"14/16 يُذكر خصماها\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 224,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"was\\\\\\\": \\\\\\\"14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 229,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"value\\\\\\\": \\\\\\\"14/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 234,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"also\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"الإقفالُ الدستوريّ 1/16 ⟶ 14/16 (ANSWER_A"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 239,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"مرحلةٌ واحدةٌ عند sonaiso    ⟶  1/16 تصير 14/16\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 244,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"after_C1\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 249,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"1/16 ⟶ 14/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 254,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16 ⟶ 16/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 259,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| `C1` | SONAISO | `17/292` | stages_closed_per_token=12 | `1/16 ⟶ 14/1"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 264,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| `C4` | SONAISO | `0/292` | seals_issued=0 | `14/16 ⟶ 16/16` | UNMEASU"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 269,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"1/16 ⟶ 14/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 274,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16 ⟶ 16/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 279,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"title\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16 يُذكر خصماها\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 284,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"was\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُ"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 289,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 294,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"also\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 299,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"مرحلةٌ واحدةٌ عند sonaiso    ⟶  1/16 تصير"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 304,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"after_C1\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 309,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 314,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 324,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"| `C4` | SONAISO | `0/292` | seals_issued"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 329,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 334,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"ceiling\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 339,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 344,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"runtime_implemented = True 14/16\\\\\\\\\\\\\\\"\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 349,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"reachable_on_a_content_token 14/16   (16 "
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 354,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| `A2` | 14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15 | {\\\\\\\\\\\\\\\"va"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 359,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"14/16\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 364,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"runtime_implemented = True 14/16\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 369,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"reachable_on_a_content_token 14/16   (16 − 1 − 1 = 14)\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 374,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `A2` | 14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15 | {\\\\\\\"value\\\\\\\": \\\\\\\"14/16\\\\\\\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 379,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"value\\\\\\\": \\\\\\\"14/16\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 384,
+     "text": "\"text\": \"\\\"text\\\": \\\"runtime_implemented = True 14/16\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 389,
+     "text": "\"text\": \"\\\"text\\\": \\\"reachable_on_a_content_token 14/16   (16 − 1 − 1 = 14)\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 394,
+     "text": "\"text\": \"| `A2` | 14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15 | {\\\"value\\\": \\\"14/16\\\", \\\"arithmetic\\\": \\\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 399,
+     "text": "\"text\": \"\\\"value\\\": \\\"14/16\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 404,
+     "text": "\"text\": \"runtime_implemented = True 14/16\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 409,
+     "text": "\"text\": \"reachable_on_a_content_token 14/16   (16 − 1 − 1 = 14)\""
+    },
+    {
+     "file": "output/exec_now/03_report.md",
+     "line": 21,
+     "text": "| `A2` | 14/16 معلَّلًا بـANSWER_AUDIT وحدَها — فيُحسب 15 | {\"value\": \"14/16\", \"arithmetic\": \"16 − 1 − 1 = 14\""
+    },
+    {
+     "file": "output/upstream/00_upstream.json",
+     "line": 35,
+     "text": "\"value\": \"14/16\","
+    },
+    {
+     "file": "output/upstream/03_upstream.md",
+     "line": 14,
+     "text": "runtime_implemented = True 14/16"
+    },
+    {
+     "file": "output/upstream/03_upstream.md",
+     "line": 19,
+     "text": "reachable_on_a_content_token 14/16   (16 − 1 − 1 = 14)"
+    }
+   ],
+   "derived": true,
+   "command": "python3 scripts/build_upstream.py"
+  },
+  {
+   "ident": "A3",
+   "title": "C5 برقمين — يُوحَّد من مصدرٍ واحد",
+   "was": "00_doors 42 · 00_upstream 35 (مكتوبٌ بيد)",
+   "now": {
+    "cells_C5_total": "42/292",
+    "runner_does_not_consult": "35/292",
+    "entry_boundary_not_constructed": "7/292",
+    "entry_boundary_placement": "INSIDE_C5_AS_A_NAMED_PART",
+    "entry_boundary_is_a_fifth_door": false,
+    "doors_column": "42/292"
+   },
+   "why": "الأعلى كان يحمل 35 مكتوبًا بيد، فلم يمرّ الاشتقاقُ بهذا الحقل. و EntryBoundary داخلَ C5 جزءًا مسمًّى، لا بابًا خامسًا.",
+   "old_sites": [
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 432,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"cells_not_emitted\\\\\\\\\\\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 437,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"cells_not_emitted\\\\\\\\\\\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 442,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"cells_not_emitted\\\\\\\\\\\\\\\": 35,\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 447,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"cells_not_emitted\\\\\\\\\\\\\\\": 35,\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 452,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"cells_not_emitted\\\\\\\": 35,\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 457,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"cells_not_emitted\\\\\\\": 35,\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 462,
+     "text": "\"text\": \"\\\"cells_not_emitted\\\": 35,\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 467,
+     "text": "\"text\": \"\\\"cells_not_emitted\\\": 35,\""
+    },
+    {
+     "file": "output/remediation/01_ledger.json",
+     "line": 440,
+     "text": "\"cells_not_emitted\": 35,"
+    },
+    {
+     "file": "output/remediation/03_upstream.md",
+     "line": 60,
+     "text": "\"cells_not_emitted\": 35,"
+    }
+   ],
+   "derived": true,
+   "guard": "G_CELLS_AGREE",
+   "command": "python3 scripts/build_upstream.py && python3 scripts/build_doors.py"
+  },
+  {
+   "ident": "B1",
+   "title": "12/6 في الملفّ · 14/4 في الرسالة",
+   "was": "الرسالةُ قالت «أربعةَ عشرَ .pyc وأربعةَ مصادرَ .py»",
+   "now": {
+    "BYTECODE_CACHE_and_SOURCE": {
+     "BYTECODE_CACHE": 12,
+     "SOURCE": 6
+    },
+    "files_in_phases": 20,
+    "files_compared": 2,
+    "source": "hokom/output/tail/02_denominator.json"
+   },
+   "why": "كلاهما يجمع 18 والقسمةُ مختلفة. والملفُّ هو الحاكم.",
+   "scope_of_the_dead_number_guard": {
+    "covers": [
+     "scripts/run_taaqol_nazila.py",
+     "scripts/probe_path_classifier.py"
+    ],
+    "does_not_cover": "الرسائلُ إلى المالك",
+    "declared_deliberately": true,
+    "why_not_extended": "الرسالةُ ليست ملفًّا في الشجرة، فلا يُشغَّل عليها فحص. والحدُّ يُعلَن ولا يُدَّعى شمولُه — وهو NO_TEXTUAL_GUARD نفسُه: ما لا يُشغَّل لا يُعدّ حارسًا."
+   },
+   "old_sites": [
+    {
+     "file": "رسالةُ جولة TAIL",
+     "line": null,
+     "text": "أربعةَ عشرَ .pyc … وأربعةَ مصادرَ .py"
+    }
+   ],
+   "derived": true,
+   "command": "cat ~/hokom/output/tail/02_denominator.json"
+  },
+  {
+   "ident": "B2",
+   "title": "data_held_constant_at حقلًا لا نثرًا",
+   "was": "نثرٌ في docstring: «البياناتُ تُنسخ من الحاضر»",
+   "now": {
+    "data_held_constant_at": "HEAD",
+    "scope_note": "NO_PROMOTION يقيس أثرَ الكود وحدَه · وتغيُّرُ حكمٍ سببُه بيانٌ خارج مداه"
+   },
+   "why": "NO_PROMOTION يقيس أثرَ الكود وحدَه. وتغيُّرُ حكمٍ سببُه بيانٌ خارج مداه — وإلا قُرئ أوسعَ ممّا يقيس.",
+   "old_sites": [
+    {
+     "file": "final-september/scripts/check_no_promotion.py",
+     "line": null,
+     "text": "PROBE docstring"
+    }
+   ],
+   "derived": true,
+   "command": "python3 scripts/check_no_promotion.py"
+  },
+  {
+   "ident": "B3",
+   "title": "A1 ⟶ DONE_WITH_LIMIT",
+   "was": "A1 = DONE",
+   "now": {
+    "status": "DONE_WITH_LIMIT",
+    "limit": "HISTORY_BEGINS_AFTER_DOCUMENTED_WORK",
+    "commits": 21,
+    "earliest_cut": "2.8.0",
+    "documented_work_before": [
+     "2.6.0",
+     "2.7.0"
+    ],
+    "consequence": "ما قبل 2.8.0 لا يُفحص — ومنه القَطعُ الذي وُضع له A4"
+   },
+   "why": "التاريخُ يبدأ بعد العمل الموصوف، فالإنجازُ محدودٌ لا مطلق.",
+   "old_sites": [
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 23,
+     "text": "\"ident\": \"A1\","
+    },
+    {
+     "file": "output/exec_now/02_ledger.json",
+     "line": 4,
+     "text": "\"ident\": \"A1\","
+    },
+    {
+     "file": "output/remediation/01_ledger.json",
+     "line": 4,
+     "text": "\"ident\": \"A1\","
+    }
+   ],
+   "derived": true,
+   "command": "git -C ~/final-september log --oneline | wc -l"
+  },
+  {
+   "ident": "B4",
+   "title": "«١١ ترقيةً عند 2.7.0» تُوسَم حيث وردت",
+   "was": "دعوى غيرُ موسومة",
+   "now": {
+    "second_half_measured": "ثلاثةُ شواهدَ ACCEPT⟶DEFER عند 2.9.0 — مقيسٌ ومؤكَّد",
+    "first_half": "UNVERIFIABLE_IN_THIS_REPOSITORY",
+    "reason": "2.7.0 ليس بين الالتزامات، فالترقيةُ قبل حدّ الفحص",
+    "not_deleted": "الدعوى تُقيَّد لا تُمحى"
+   },
+   "why": "نصفٌ مقيسٌ ونصفٌ غيرُ قابلٍ للفحص — ولا يُقرآن معًا تأكيدًا.",
+   "old_sites": [
+    {
+     "file": "HANDOFF.md",
+     "line": 160,
+     "text": "| ر-٢ عزلُ `2.7.0` | الأرقامُ الثلاثة تُعاد حرفًا — **و١١ ترقيةً ظهرت** |"
+    },
+    {
+     "file": "HANDOFF.md",
+     "line": 166,
+     "text": "**والأخطرُ ما كشفه عزلُ `2.7.0`**: رقّى **١١ صفًّا** من تأجيلٍ إلى قبولٍ بلا"
+    },
+    {
+     "file": "README.md",
+     "line": 441,
+     "text": "**وكشفت ما أخفته الفروق**: `2.7.0` رقّى **١١ صفًّا** من `D_GATE` إلى `STEM`"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 564,
+     "text": "\"title\": \"«١١ ترقيةً عند 2.7.0» تُوسَم حيث وردت\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 577,
+     "text": "\"text\": \"| ر-٢ عزلُ `2.7.0` | الأرقامُ الثلاثة تُعاد حرفًا — **و١١ ترقيةً ظهرت** |\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 582,
+     "text": "\"text\": \"**والأخطرُ ما كشفه عزلُ `2.7.0`**: رقّى **١١ صفًّا** من تأجيلٍ إلى قبولٍ بلا\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 587,
+     "text": "\"text\": \"**وكشفت ما أخفته الفروق**: `2.7.0` رقّى **١١ صفًّا** من `D_GATE` إلى `STEM`\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 592,
+     "text": "\"text\": \"\\\"title\\\": \\\"«١١ ترقيةً عند 2.7.0» تُوسَم حيث وردت\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 597,
+     "text": "\"text\": \"\\\"text\\\": \\\"| ر-٢ عزلُ `2.7.0` | الأرقامُ الثلاثة تُعاد حرفًا — **و١١ ترقيةً ظهرت** |\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 602,
+     "text": "\"text\": \"\\\"text\\\": \\\"**والأخطرُ ما كشفه عزلُ `2.7.0`**: رقّى **١١ صفًّا** من تأجيلٍ إلى قبولٍ بلا\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 607,
+     "text": "\"text\": \"\\\"text\\\": \\\"**وكشفت ما أخفته الفروق**: `2.7.0` رقّى **١١ صفًّا** من `D_GATE` إلى `STEM`\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 612,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"title\\\\\\\": \\\\\\\"«١١ ترقيةً عند 2.7.0» تُوسَم حيث وردت\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 617,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| ر-٢ عزلُ `2.7.0` | الأرقامُ الثلاثة تُعاد حرفًا — **و١١ ترقيةً ظهرت**"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 622,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"**والأخطرُ ما كشفه عزلُ `2.7.0`**: رقّى **١١ صفًّا** من تأجيلٍ إلى قبول"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 627,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"**وكشفت ما أخفته الفروق**: `2.7.0` رقّى **١١ صفًّا** من `D_GATE` إلى `S"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 632,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"title\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"«١١ ترقيةً عند 2.7.0» تُوسَم حيث وردت\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 637,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"| ر-٢ عزلُ `2.7.0` | الأرقامُ الثلاثة تُع"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 642,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"**والأخطرُ ما كشفه عزلُ `2.7.0`**: رقّى *"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 647,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"**وكشفت ما أخفته الفروق**: `2.7.0` رقّى *"
+    }
+   ],
+   "derived": true,
+   "command": "python3 scripts/check_no_promotion.py"
+  },
+  {
+   "ident": "C1",
+   "title": "I5 — إحالةٌ لا وصف",
+   "was": "«رقمٌ سادسٌ ليس في 107/160/153/102/565»",
+   "now": {
+    "quote": "الجردُ الحاليّ شاهدٌ مشتقّ (١٣٤ مدخلة) لا سجلُّ مالك، و LICENSE_GRANTED = NO",
+    "source": "HANDOFF.md:344",
+    "consequence": "فـ134 ليس مجهولًا سادسًا — والمجهولُ يبقى 107/160/153/102/565"
+   },
+   "why": "الوصفُ يجعل الرقمَ لغزًا، والإحالةُ تُغلقه.",
+   "old_sites": [
+    {
+     "file": "output/closure/02_items.json",
+     "line": 56,
+     "text": "\"note\": \"رقمٌ سادسٌ ليس في 107/160/153/102/565 — والفصلُ بالاسم والبصمة لا بالعدد\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 656,
+     "text": "\"was\": \"«رقمٌ سادسٌ ليس في 107/160/153/102/565»\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 667,
+     "text": "\"text\": \"\\\"note\\\": \\\"رقمٌ سادسٌ ليس في 107/160/153/102/565 — والفصلُ بالاسم والبصمة لا بالعدد\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 672,
+     "text": "\"text\": \"\\\"was\\\": \\\"«رقمٌ سادسٌ ليس في 107/160/153/102/565»\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 677,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"note\\\\\\\": \\\\\\\"رقمٌ سادسٌ ليس في 107/160/153/102/565 — والفصلُ بالاسم والبصمة لا بالعد"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 682,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"was\\\\\\\": \\\\\\\"«رقمٌ سادسٌ ليس في 107/160/153/102/565»\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 687,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"note\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"رقمٌ سادسٌ ليس في 107/160/153/102/565 — و"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 692,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"was\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"«رقمٌ سادسٌ ليس في 107/160/153/102/565»\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 697,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"note\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 702,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"note\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 707,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"| `C1` | «رقمٌ سادسٌ ليس في 107/160/153/102/565» | {\\\\\\\\\\\\\\\"quote\\\\\\\\\\\\"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 712,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"note\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"134 رقمٌ سادس — والفصلُ بالاسم والبصمة لا"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 717,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `C1` | «رقمٌ سادسٌ ليس في 107/160/153/102/565» | {\\\\\\\"quote\\\\\\\": \\\\\\\"الجردُ الحاليّ شاه"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 722,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"note\\\\\\\": \\\\\\\"134 رقمٌ سادس — والفصلُ بالاسم والبصمة لا بالعدد\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 727,
+     "text": "\"text\": \"| `C1` | «رقمٌ سادسٌ ليس في 107/160/153/102/565» | {\\\"quote\\\": \\\"الجردُ الحاليّ شاهدٌ مشتقّ (١٣٤ مدخل"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 732,
+     "text": "\"text\": \"\\\"note\\\": \\\"134 رقمٌ سادس — والفصلُ بالاسم والبصمة لا بالعدد\\\",\""
+    },
+    {
+     "file": "output/exec_now/03_report.md",
+     "line": 27,
+     "text": "| `C1` | «رقمٌ سادسٌ ليس في 107/160/153/102/565» | {\"quote\": \"الجردُ الحاليّ شاهدٌ مشتقّ (١٣٤ مدخلة) لا سجلُّ "
+    },
+    {
+     "file": "output/remediation/01_ledger.json",
+     "line": 213,
+     "text": "\"note\": \"134 رقمٌ سادس — والفصلُ بالاسم والبصمة لا بالعدد\","
+    }
+   ],
+   "derived": true,
+   "command": "grep -n '١٣٤ مدخلة' HANDOFF.md"
+  },
+  {
+   "ident": "C2",
+   "title": "بصمةُ سجلّ العوامل",
+   "now": {
+    "path": "hokom/data/operators_catalog_split_vocalized_corrected.csv",
+    "sha256": "043ed5f364bdc970a230461fc328c5edcf0130de957ea225f57cfcdb9cee641d",
+    "rows": 160,
+    "rows_denominator": "صفوفُ الملفّ بلا الترويسة",
+    "unique_operators": 153,
+    "unique_operators_denominator": "قيمٌ متمايزةٌ في عمود Operator",
+    "LICENSE_GRANTED": "NO",
+    "note": "تسميةُ الملفّ بحكم المالك ليست اعتمادَه."
+   },
+   "was": "الملفُّ مسمًّى بحكم المالك والبصمةُ لم تُنشر",
+   "why": "تسميةُ الملفّ ليست اعتمادَه — و LICENSE_GRANTED = NO.",
+   "old_sites": [
+    {
+     "file": "HANDOFF.md",
+     "line": 185,
+     "text": "hokom/data/operators_catalog_split_vocalized_corrected.csv"
+    },
+    {
+     "file": "HANDOFF.md",
+     "line": 343,
+     "text": "5. **سجلّا المحور الثاني**: `operators_catalog` (١٦٠ مدخلة) و`mabniyat_full`"
+    },
+    {
+     "file": "README.md",
+     "line": 423,
+     "text": "والثاني قِيس على `mabniyat_catalog` و`operators_catalog` في `hokom`، مطبَّعةً"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 742,
+     "text": "\"path\": \"hokom/data/operators_catalog_split_vocalized_corrected.csv\","
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 757,
+     "text": "\"text\": \"hokom/data/operators_catalog_split_vocalized_corrected.csv\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 762,
+     "text": "\"text\": \"5. **سجلّا المحور الثاني**: `operators_catalog` (١٦٠ مدخلة) و`mabniyat_full`\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 767,
+     "text": "\"text\": \"والثاني قِيس على `mabniyat_catalog` و`operators_catalog` في `hokom`، مطبَّعةً\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 772,
+     "text": "\"text\": \"\\\"path\\\": \\\"hokom/data/operators_catalog_split_vocalized_corrected.csv\\\",\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 777,
+     "text": "\"text\": \"\\\"text\\\": \\\"hokom/data/operators_catalog_split_vocalized_corrected.csv\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 782,
+     "text": "\"text\": \"\\\"text\\\": \\\"5. **سجلّا المحور الثاني**: `operators_catalog` (١٦٠ مدخلة) و`mabniyat_full`\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 787,
+     "text": "\"text\": \"\\\"text\\\": \\\"والثاني قِيس على `mabniyat_catalog` و`operators_catalog` في `hokom`، مطبَّعةً\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 792,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"path\\\\\\\": \\\\\\\"hokom/data/operators_catalog_split_vocalized_corrected.csv\\\\\\\",\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 797,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"hokom/data/operators_catalog_split_vocalized_corrected.csv\\\\\\\"\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 802,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"5. **سجلّا المحور الثاني**: `operators_catalog` (١٦٠ مدخلة) و`mabniyat_"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 807,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"والثاني قِيس على `mabniyat_catalog` و`operators_catalog` في `hokom`، مط"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 812,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"path\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"hokom/data/operators_catalog_split_vocali"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 817,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"hokom/data/operators_catalog_split_vocali"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 822,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"5. **سجلّا المحور الثاني**: `operators_ca"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 827,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"text\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"والثاني قِيس على `mabniyat_catalog` و`ope"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 832,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"text\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"command\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"shasum -a 256 ~/hokom/data/operators_c"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 842,
+     "text": "\"text\": \"\\\"text\\\": \\\"\\\\\\\"command\\\\\\\": \\\\\\\"shasum -a 256 ~/hokom/data/operators_catalog_split_vocalized_correct"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 847,
+     "text": "\"text\": \"\\\"text\\\": \\\"| `C2` | الملفُّ مسمًّى بحكم المالك والبصمةُ لم تُنشر | {\\\\\\\"path\\\\\\\": \\\\\\\"hokom/data/ope"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 852,
+     "text": "\"text\": \"\\\"command\\\": \\\"shasum -a 256 ~/hokom/data/operators_catalog_split_vocalized_corrected.csv\\\"\""
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 857,
+     "text": "\"text\": \"| `C2` | الملفُّ مسمًّى بحكم المالك والبصمةُ لم تُنشر | {\\\"path\\\": \\\"hokom/data/operators_catalog_spl"
+    },
+    {
+     "file": "output/exec_now/00_corrections.json",
+     "line": 861,
+     "text": "\"command\": \"shasum -a 256 ~/hokom/data/operators_catalog_split_vocalized_corrected.csv\""
+    },
+    {
+     "file": "output/exec_now/03_report.md",
+     "line": 28,
+     "text": "| `C2` | الملفُّ مسمًّى بحكم المالك والبصمةُ لم تُنشر | {\"path\": \"hokom/data/operators_catalog_split_vocalized"
+    }
+   ],
+   "derived": true,
+   "command": "shasum -a 256 ~/hokom/data/operators_catalog_split_vocalized_corrected.csv"
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "task": "PENDING_818",
+ "P1": {
+  "id": "P1",
+  "title": "همزةٌ بتنوين فتح",
+  "count": 82,
+  "owner_note": "مثالا المالك مَاءً · دُعَاءً كلتاهما FATHATAN؛ والحركةُ المكتوبةُ في البروميت ضمّةٌ والتنوينُ فتح — والفرقُ لم يُفسَّر.",
+  "measured_now": [
+   {
+    "position": "2:22:11",
+    "word": "مَاءً",
+    "rasm": "ماء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "مَاْءَنْ"
+   },
+   {
+    "position": "2:171:11",
+    "word": "دُعَاءً",
+    "rasm": "دعاء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "دُعَاْءَنْ"
+   }
+  ],
+  "first_five": [
+   {
+    "position": "2:22:7",
+    "word": "بِنَاءً",
+    "rasm": "بناء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "بِنَاْءَنْ"
+   },
+   {
+    "position": "2:22:11",
+    "word": "مَاءً",
+    "rasm": "ماء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "مَاْءَنْ"
+   },
+   {
+    "position": "2:171:11",
+    "word": "دُعَاءً",
+    "rasm": "دعاء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "دُعَاْءَنْ"
+   },
+   {
+    "position": "2:171:12",
+    "word": "وَنِدَاءً",
+    "rasm": "ونداء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "وَنِدَاْءَنْ"
+   },
+   {
+    "position": "3:103:13",
+    "word": "أَعْدَاءً",
+    "rasm": "أعداء",
+    "kind": "FATH",
+    "shape": "HAMZA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "أَعْدَاْءَنْ"
+   }
+  ],
+  "status": "OWNER_PENDING",
+  "executed_rows": 0
+ },
+ "P2": {
+  "id": "P2",
+  "title": "تاءٌ مربوطةٌ مع الضمّ والكسر",
+  "count": 735,
+  "owner_note": "الانقلابُ مصادَقٌ في الفتح وحدَه · ولا يُقاس عليه",
+  "first_five": [
+   {
+    "position": "2:7:9",
+    "word": "غِشَاوَةٌ",
+    "rasm": "غشاوة",
+    "kind": "DAMM",
+    "shape": "TAA_MARBUTA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "غِشَاْوَةُنْ"
+   },
+   {
+    "position": "2:23:10",
+    "word": "بِسُورَةٍ",
+    "rasm": "بسورة",
+    "kind": "KASR",
+    "shape": "TAA_MARBUTA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "بِسُوْرَةِنْ"
+   },
+   {
+    "position": "2:25:17",
+    "word": "ثَمَرَةٍ",
+    "rasm": "ثمرة",
+    "kind": "KASR",
+    "shape": "TAA_MARBUTA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "ثَمَرَةِنْ"
+   },
+   {
+    "position": "2:25:31",
+    "word": "مُطَهَّرَةٌ",
+    "rasm": "مطهرة",
+    "kind": "DAMM",
+    "shape": "TAA_MARBUTA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "مُطَهْهَرَةُنْ"
+   },
+   {
+    "position": "2:45:5",
+    "word": "لَكَبِيرَةٌ",
+    "rasm": "لكبيرة",
+    "kind": "DAMM",
+    "shape": "TAA_MARBUTA",
+    "tanween_position": "ON_FINAL",
+    "normalized_now": "لَكَبِيْرَةُنْ"
+   }
+  ],
+  "status": "OWNER_PENDING",
+  "executed_rows": 0
+ },
+ "P3": {
+  "id": "P3",
+  "title": "الكلمةُ الواحدة · ON_PENULT_FINAL_BARE",
+  "count": 1,
+  "owner_note": "آليّةٌ ثالثةٌ لا الحذفُ ولا الانقلاب: تنوينُها على ما قبلَ الأخير، والأخيرُ عارٍ.",
+  "the_word": [
+   {
+    "position": "19:43:13",
+    "word": "سَوِيًّا",
+    "rasm": "سويا",
+    "kind": "FATH",
+    "shape": "ALIF",
+    "tanween_position": "ON_PENULT_FINAL_BARE",
+    "normalized_now": "سَوِيْيَنْاْ",
+    "spelling": [
+     {
+      "i": 0,
+      "char": "س",
+      "codepoint": "U+0633",
+      "name": "ARABIC LETTER SEEN",
+      "is_mark": false
+     },
+     {
+      "i": 1,
+      "char": "َ",
+      "codepoint": "U+064E",
+      "name": "ARABIC FATHA",
+      "is_mark": true
+     },
+     {
+      "i": 2,
+      "char": "و",
+      "codepoint": "U+0648",
+      "name": "ARABIC LETTER WAW",
+      "is_mark": false
+     },
+     {
+      "i": 3,
+      "char": "ِ",
+      "codepoint": "U+0650",
+      "name": "ARABIC KASRA",
+      "is_mark": true
+     },
+     {
+      "i": 4,
+      "char": "ي",
+      "codepoint": "U+064A",
+      "name": "ARABIC LETTER YEH",
+      "is_mark": false
+     },
+     {
+      "i": 5,
+      "char": "ً",
+      "codepoint": "U+064B",
+      "name": "ARABIC FATHATAN",
+      "is_mark": true
+     },
+     {
+      "i": 6,
+      "char": "ّ",
+      "codepoint": "U+0651",
+      "name": "ARABIC SHADDA",
+      "is_mark": true
+     },
+     {
+      "i": 7,
+      "char": "ا",
+      "codepoint": "U+0627",
+      "name": "ARABIC LETTER ALEF",
+      "is_mark": false
+     }
+    ]
+   }
+  ],
+  "status": "OWNER_PENDING",
+  "executed_rows": 0,
+  "not_folded_by_count": "كلمةٌ واحدةٌ شكلٌ خامسٌ حتى يُحكم فيها"
+ },
+ "total": 818,
+ "executed_total": 0,
+ "rule": "لا يُنفَّذ منها صفٌّ واحد ولو بدا حكمُه بيّنًا"
+}

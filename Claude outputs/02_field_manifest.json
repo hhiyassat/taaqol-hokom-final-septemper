@@ -1,0 +1,2217 @@
+{
+ "input_sha256": "1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2",
+ "corpus_id": "nazila",
+ "cells_total": 292,
+ "cells_from_code": 207,
+ "cells_not_available": 85,
+ "recount_from_document": {
+  "rows": 292,
+  "not_available": 85,
+  "from_code": 207,
+  "closes": true
+ },
+ "ledger_closes": true,
+ "not_available_by_reason": {
+  "HUMAN_DECLARED_ONLY": 25,
+  "NOT_CONSTRUCTED_IN_SOURCE": 7,
+  "NOT_EMITTED_BY_RUNNER": 35,
+  "NOT_OPENED:MANAT": 1,
+  "NOT_OPENED:MUFRAD_DALALAH": 3,
+  "NOT_OPENED:RELATION": 1,
+  "NOT_OPENED:RELATION_CLOSURE": 2,
+  "NOT_OPENED:VERBAL_MADLUL": 10,
+  "OWNER_DECISION": 1
+ },
+ "guards": {
+  "COPIED_FROM_REFERENCE": [],
+  "NO_EMPTY_CELL": [],
+  "REASON_IN_INVENTORY": [],
+  "NOT_OPENED_NAMES_A_STAGE": [],
+  "SECTION_COUNT": {
+   "reference": 17,
+   "generated": 17,
+   "declared_in_prompt": 14,
+   "note": "المقيسُ هو الحاكم: عناوينُ المرجع تُعدّ ولا تُفترض"
+  },
+  "FIELD_NAMES_MATCH": {
+   "missing_here": [],
+   "extra_here": []
+  }
+ },
+ "cells": [
+  {
+   "section": "رأس الوثيقة",
+   "field": "INPUT_TEXT",
+   "value": "مَاتَ مَلِكٌ عَنْ أُخْتٍ سَاكِنَةٍ مَعَهُ، فَأَرَادَ وَارِثُهُ طَرْدَهَا، فَتَحَاكَمَا.",
+   "source": "الملفّ",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "INPUT_SHA256",
+   "value": "1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2",
+   "source": "hashlib",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "CORPUS_ID",
+   "value": "nazila",
+   "source": "الوسيط",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "RUN_ID",
+   "value": "native:nazila",
+   "source": "run_native_corpus",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "STAGE_COVERAGE",
+   "value": "16/16",
+   "source": "عدُّ المراحل",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "RUNTIME_EXECUTION",
+   "value": "1/16 EXECUTED",
+   "source": "عدُّ الحالات",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "MEASURED_RECORDS",
+   "value": "160 = 10 × 16",
+   "source": "عدُّ السجلّات",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "FINAL_HUKM",
+   "value": "NOT_OPENED",
+   "source": "حالُ HUKM",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "FINAL_TANZIL",
+   "value": "NOT_OPENED",
+   "source": "حالُ TANZIL",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "VENDOR_HEAD",
+   "value": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+   "source": "git rev-parse",
+   "reason": ""
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "DOCUMENT_LABEL",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "LAYER_RULE",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "NO_LAYER_MIXING",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "رأس الوثيقة",
+   "field": "REPRODUCES",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "declared_entry_kind",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "representation_status",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "ontological_status",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "sound_status",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "meaning_status",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "prior_trace_status",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "0. حدّ الدخول المعلن",
+   "field": "produces_only",
+   "value": null,
+   "source": "",
+   "reason": "NOT_CONSTRUCTED_IN_SOURCE"
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "عدد التوكنات المقيسة",
+   "value": 10,
+   "source": "len(text.split())",
+   "reason": ""
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "نوع المدخل",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "طبيعة النص",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "محل النزاع الظاهر",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "ما يجوز إنتاجه الآن",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "1. بطاقة النازلة",
+   "field": "ما لا يجوز إنتاجه الآن",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "taaqol_commit",
+   "value": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+   "source": "git rev-parse",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "pin_matches",
+   "value": true,
+   "source": "مقابلةُ التثبيت",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "sha256(INPUT_TEXT)",
+   "value": "1a7f8b76d719bc019fe200ea952cce211a7a4283814d9cee0d04a39251d8b3e2",
+   "source": "hashlib",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "python",
+   "value": "3.11.15",
+   "source": "platform",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "platform",
+   "value": "Linux x86_64",
+   "source": "platform",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "utc_timestamp",
+   "value": "2026-09-03T04:09:24+00:00",
+   "source": "datetime",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "corpus_id",
+   "value": "nazila",
+   "source": "الوسيط",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "run_id",
+   "value": "native:nazila",
+   "source": "run_native_corpus",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "runner",
+   "value": "runtime.corpus_runner.run_native_corpus",
+   "source": "الاستيراد",
+   "reason": ""
+  },
+  {
+   "section": "2. بصمة القياس",
+   "field": "MEASURED_BY",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "Rank",
+   "value": [
+    "ZERO",
+    "TRACE",
+    "CANDIDATE",
+    "HYPOTHESIS",
+    "LICENSED",
+    "STRONG",
+    "CERTIFICATE"
+   ],
+   "source": "سردُ أعضاء التعداد",
+   "reason": ""
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "ClosureState",
+   "value": [
+    "OPEN",
+    "MINIMALLY_CLOSED",
+    "PERFORATED_CLOSED",
+    "BLOCKED",
+    "INVALID",
+    "FORBIDDEN_LEAP"
+   ],
+   "source": "سردُ أعضاء التعداد",
+   "reason": ""
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "TransitionState",
+   "value": [
+    "APPROVED",
+    "DEFERRED",
+    "BLOCKED",
+    "REJECTED",
+    "FORBIDDEN_LEAP"
+   ],
+   "source": "سردُ أعضاء التعداد",
+   "reason": ""
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "StageTransitionState",
+   "value": [
+    "EXECUTED",
+    "BLOCKED",
+    "DEFERRED",
+    "DECLARED_NOT_IMPLEMENTED",
+    "NOT_OPENED",
+    "NOT_APPLICABLE"
+   ],
+   "source": "سردُ أعضاء التعداد",
+   "reason": ""
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "FailureCode (الجرد كلُّه)",
+   "value": 92,
+   "source": "len(list(FailureCode))",
+   "reason": ""
+  },
+  {
+   "section": "3. الجرد المغلق المستعمل",
+   "field": "FailureCode المستعمل في الخطوط",
+   "value": [
+    "FORBIDDEN_STRAIGHT_LINE"
+   ],
+   "source": "ForbiddenLine.failure_code",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · StageTransitionState",
+   "value": "EXECUTED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · hint",
+   "value": "—",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · residuals_after",
+   "value": "—",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "1. PATH_CLASSIFICATION · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · StageTransitionState",
+   "value": "DECLARED_NOT_IMPLEMENTED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · hint",
+   "value": [
+    "runtime_implementation_missing"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "2. PRE_WEIGHT_CAPACITY_AUDIT · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "3. DAL_ONLY · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "4. VERBAL_MADLUL · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "5. DAL_MADLUL_BINDING · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "6. CONTRACTABLE_UNIT · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "7. RELATION · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · StageTransitionState",
+   "value": "DEFERRED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · hint",
+   "value": [
+    "missing_context:FORMAL_ONLY"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "8. FORMAL_SHAPE · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "9. MUFRAD_DALALAH · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "10. RELATION_CLOSURE · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "11. IFADAH · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "12. HUKM · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "13. MANAT · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "14. TANZIL · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · StageTransitionState",
+   "value": "NOT_OPENED",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · hint",
+   "value": [
+    "previous_gate_not_proven"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "15. ANSWER_AUDIT · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · StageTransitionState",
+   "value": "NOT_APPLICABLE",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · الرتبة",
+   "value": "ZERO->ZERO",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · hint",
+   "value": "—",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · residuals_after",
+   "value": [
+    "RUNTIME_CONTEXT_PENDING"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · ClosureState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4. مصفوفة المراحل الست عشرة",
+   "field": "16. NON_CONTENT_FORMAL_ROUTE · TransitionState",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "حقولُ StageExecutionRecord",
+   "value": [
+    "run_id",
+    "corpus_id",
+    "token_id",
+    "span_id",
+    "stage_id",
+    "path_id",
+    "input_carrier_id",
+    "output_carrier_id",
+    "applicability",
+    "transition_state",
+    "evidence_refs",
+    "rank_before",
+    "rank_after",
+    "residuals_before",
+    "residuals_after",
+    "identity_invariants_checked",
+    "trace_parent_ids",
+    "trace_entry_id",
+    "failure_code",
+    "remediation_hints",
+    "next_admissible_stage_ids",
+    "source_commit_sha",
+    "registry_version",
+    "registry_hash"
+   ],
+   "source": "__dataclass_fields__",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 1",
+   "value": "no output carrier without preserved input carrier.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 3",
+   "value": "no implicit rank upgrade.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 4",
+   "value": "no residual deletion.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 6",
+   "value": "no executed stage without traceability.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 7",
+   "value": "deferred must declare missing condition.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 8",
+   "value": "blocked must carry failure code.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "4.b شكل سجل التنفيذ وقواعده",
+   "field": "Rule 9",
+   "value": "NOT_APPLICABLE requires NOT_APPLICABLE applicability.",
+   "source": "تعليقاتُ execution_record.py",
+   "reason": ""
+  },
+  {
+   "section": "5. سجل الأثر والأدلة",
+   "field": "evidence_refs (عيّنة)",
+   "value": [
+    "token:t000"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "5. سجل الأثر والأدلة",
+   "field": "trace_entry_id (عيّنة)",
+   "value": "trace:t000:PATH_CLASSIFICATION",
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "5. سجل الأثر والأدلة",
+   "field": "trace_parent_ids (عيّنة)",
+   "value": [
+    "trace:t000"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "5. سجل الأثر والأدلة",
+   "field": "سجلّاتٌ بمرجع أثر",
+   "value": 160,
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "5. سجل الأثر والأدلة",
+   "field": "سقفُ الرتبة لكلّ دليل",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "hint · missing_context:FORMAL_ONLY",
+   "value": 10,
+   "source": "عدٌّ من remediation_hints",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "hint · previous_gate_not_proven",
+   "value": 120,
+   "source": "عدٌّ من remediation_hints",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "hint · runtime_implementation_missing",
+   "value": 10,
+   "source": "عدٌّ من remediation_hints",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "residual · RUNTIME_CONTEXT_PENDING",
+   "value": 150,
+   "source": "عدٌّ من residuals_after",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "TOTAL_STAGE_RECORDS",
+   "value": 160,
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "EMPTY_RESIDUAL_ROWS",
+   "value": 10,
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "6. البقايا المقيسة",
+   "field": "HIDDEN_RESIDUALS",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "corpus_runner يستورد gamma",
+   "value": false,
+   "source": "فحصُ مصدر المشغّل",
+   "reason": ""
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "corpus_runner يستورد ClosureState",
+   "value": false,
+   "source": "فحصُ مصدر المشغّل",
+   "reason": ""
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "corpus_runner يستورد TransitionState",
+   "value": false,
+   "source": "فحصُ مصدر المشغّل",
+   "reason": ""
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "corpus_runner يستورد forbidden_lines",
+   "value": false,
+   "source": "فحصُ مصدر المشغّل",
+   "reason": ""
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "corpus_runner يستورد EntryBoundary",
+   "value": false,
+   "source": "فحصُ مصدر المشغّل",
+   "reason": ""
+  },
+  {
+   "section": "7. فجوة القانون والمشغّل",
+   "field": "حكم الوثيقة",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t000 · اللفظ",
+   "value": "مَاتَ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t000 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t000 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t000 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t000 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t001 · اللفظ",
+   "value": "مَلِكٌ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t001 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t001 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t001 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t001 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t002 · اللفظ",
+   "value": "عَنْ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t002 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t002 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t002 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t002 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t003 · اللفظ",
+   "value": "أُخْتٍ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t003 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t003 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t003 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t003 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t004 · اللفظ",
+   "value": "سَاكِنَةٍ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t004 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t004 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t004 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t004 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t005 · اللفظ",
+   "value": "مَعَهُ،",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t005 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t005 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t005 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t005 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t006 · اللفظ",
+   "value": "فَأَرَادَ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t006 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t006 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t006 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t006 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t007 · اللفظ",
+   "value": "وَارِثُهُ",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t007 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t007 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t007 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t007 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t008 · اللفظ",
+   "value": "طَرْدَهَا،",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t008 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t008 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t008 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t008 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t009 · اللفظ",
+   "value": "فَتَحَاكَمَا.",
+   "source": "التوكنات",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t009 · path_id",
+   "value": "RootStemPath",
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t009 · confidence",
+   "value": 0.55,
+   "source": "classify_token_paths",
+   "reason": ""
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t009 · إفادة لغوية محتملة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:VERBAL_MADLUL"
+  },
+  {
+   "section": "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+   "field": "t009 · ما لا يجوز أخذه منه وحده",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "9. العلاقات اللغوية والحدود",
+   "field": "حالُ RELATION_CLOSURE",
+   "value": [
+    "NOT_OPENED"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "9. العلاقات اللغوية والحدود",
+   "field": "RELATION_CLOSED_COUNT",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:RELATION_CLOSURE"
+  },
+  {
+   "section": "9. العلاقات اللغوية والحدود",
+   "field": "NO_ADJACENT_PAIR_CLOSURE",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:RELATION_CLOSURE"
+  },
+  {
+   "section": "9. العلاقات اللغوية والحدود",
+   "field": "صفوفُ العلاقات",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:RELATION"
+  },
+  {
+   "section": "10. المنطوق والمفهوم",
+   "field": "المنطوق",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:MUFRAD_DALALAH"
+  },
+  {
+   "section": "10. المنطوق والمفهوم",
+   "field": "مفهوم الموافقة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:MUFRAD_DALALAH"
+  },
+  {
+   "section": "10. المنطوق والمفهوم",
+   "field": "مفهوم المخالفة",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:MUFRAD_DALALAH"
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "عدد الخطوط في السجل",
+   "value": 47,
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "حقولُ كلّ خطّ",
+   "value": [
+    "source",
+    "target",
+    "reason",
+    "required_bridge",
+    "origin_law",
+    "failure_code"
+   ],
+   "source": "__dataclass_fields__",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "أزواجٌ (مصدر ⟶ هدف) متمايزة",
+   "value": "44/47",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Binary -> Text",
+   "value": "FORBIDDEN_STRAIGHT_LINE · EncodingIdentityGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Unicode -> ArabicLetter #1",
+   "value": "FORBIDDEN_STRAIGHT_LINE · LetterIdentityGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "CodePoint -> Phoneme #2",
+   "value": "FORBIDDEN_STRAIGHT_LINE · PhoneticRealisationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Grapheme -> FunctionalLetter #3",
+   "value": "FORBIDDEN_STRAIGHT_LINE · LetterFunctionGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "HarakaMark -> CaseFunction",
+   "value": "FORBIDDEN_STRAIGHT_LINE · HarakaFunctionGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Orthography -> Pronunciation",
+   "value": "FORBIDDEN_STRAIGHT_LINE · PhoneticRealisationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Pronunciation -> Syllable",
+   "value": "FORBIDDEN_STRAIGHT_LINE · SyllableStructureGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Syllable -> Word",
+   "value": "FORBIDDEN_STRAIGHT_LINE · LexicalIdentityGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Signifier -> WordForm",
+   "value": "FORBIDDEN_STRAIGHT_LINE · MorphologicalRealisationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "WordForm -> Meaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · SignificationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Root -> LexicalMeaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · DerivationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Weight -> Agency",
+   "value": "FORBIDDEN_STRAIGHT_LINE · RelationRoleGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Pattern -> SyntaxRole",
+   "value": "FORBIDDEN_STRAIGHT_LINE · RelationRoleGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "VerbalSignified -> PureConcept",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ConceptualAbstractionGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Wadʿ -> Dalālah",
+   "value": "FORBIDDEN_STRAIGHT_LINE · DomainBoundDalalahGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Dalālah -> ContextualMeaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ContextualResolutionGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "PureConcept -> IntendedMeaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · IntentAttributionGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Context -> Relation",
+   "value": "FORBIDDEN_STRAIGHT_LINE · RelationDeclarationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Relation -> Ifādah",
+   "value": "FORBIDDEN_STRAIGHT_LINE · IfadahGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Ifādah -> Judgment",
+   "value": "FORBIDDEN_STRAIGHT_LINE · JudgmentGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Judgment -> Application",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ApplicationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Evidence -> Certainty",
+   "value": "FORBIDDEN_STRAIGHT_LINE · RankLattice (no auto-promote)",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "LexiconEntry -> Candidate",
+   "value": "FORBIDDEN_STRAIGHT_LINE · LexiconEvidenceGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Candidate -> Certificate",
+   "value": "FORBIDDEN_STRAIGHT_LINE · CertificationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "ResidualHidden -> ApprovedOutput",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ResidualPolicy (visibility)",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "RankBelow -> RankAbove",
+   "value": "FORBIDDEN_STRAIGHT_LINE · TransitionGate + RankLattice",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Tool -> Knowledge",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Number -> Knowledge",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "LCNV -> Knowledge",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ToolBoundaryGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "HumanVoice -> ArabicText",
+   "value": "FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate + ASRGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "BinaryAudio -> Text",
+   "value": "FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "BinaryAudio -> UnicodeText",
+   "value": "FORBIDDEN_STRAIGHT_LINE · AudioDecodingGate + ASRGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "BinaryAudio -> Meaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Full pre-text + interpretation chain",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "BinaryText -> Unicode",
+   "value": "FORBIDDEN_STRAIGHT_LINE · EncodingDecodeGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "BinaryText -> ArabicLetter",
+   "value": "FORBIDDEN_STRAIGHT_LINE · EncodingDecodeGate + LetterIdentityGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Unicode -> ArabicText",
+   "value": "FORBIDDEN_STRAIGHT_LINE · UnicodeTextNormalizationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Unicode -> ArabicLetter #36",
+   "value": "FORBIDDEN_STRAIGHT_LINE · ArabicLetterIdentityGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "CodePoint -> Phoneme #37",
+   "value": "FORBIDDEN_STRAIGHT_LINE · PhonemeEvidenceBridge",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Grapheme -> FunctionalLetter #38",
+   "value": "FORBIDDEN_STRAIGHT_LINE · FunctionalLetterGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "VocalizedText -> ValidAnalysis",
+   "value": "FORBIDDEN_STRAIGHT_LINE · TextEntryValidationGate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "DeclaredEntry -> OntologicalOrigin",
+   "value": "FORBIDDEN_STRAIGHT_LINE · none — refusal is constitutional",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Identity -> Truth",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Gamma + Gate + Evidence + Rank",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Matching -> Meaning",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Signification chain + Gate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Potentiality -> Actuality",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Opening control + Closure + Gate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Opening -> Closure",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Γ then Gate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Closure -> Certificate",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Rank lattice + Gate",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "Candidate -> Truth",
+   "value": "FORBIDDEN_STRAIGHT_LINE · Certification gate + Evidence",
+   "source": "CANONICAL_REGISTRY",
+   "reason": ""
+  },
+  {
+   "section": "11. الخطوط المستقيمة الممنوعة",
+   "field": "هل اشتعلت في runner؟",
+   "value": null,
+   "source": "",
+   "reason": "NOT_EMITTED_BY_RUNNER"
+  },
+  {
+   "section": "12. مصفوفة المناط: أسئلة المالك",
+   "field": "أسئلةُ المناط",
+   "value": null,
+   "source": "",
+   "reason": "NOT_OPENED:MANAT"
+  },
+  {
+   "section": "12.b سجل الغموض اللغوي الموقوف على المالك",
+   "field": "مواضعُ الغموض",
+   "value": null,
+   "source": "",
+   "reason": "OWNER_DECISION"
+  },
+  {
+   "section": "13. التنزيل وما سُحب",
+   "field": "حالُ HUKM",
+   "value": [
+    "NOT_OPENED"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "13. التنزيل وما سُحب",
+   "field": "حالُ TANZIL",
+   "value": [
+    "NOT_OPENED"
+   ],
+   "source": "السجلّ",
+   "reason": ""
+  },
+  {
+   "section": "13. التنزيل وما سُحب",
+   "field": "الدعاوى وأسبابُها",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "STATE·DECLARED_NOT_IMPLEMENTED",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "STATE·DEFERRED",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "STATE·EXECUTED",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "STATE·NOT_APPLICABLE",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "STATE·NOT_OPENED",
+   "value": "120/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "HINT·missing_context:FORMAL_ONLY",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "HINT·previous_gate_not_proven",
+   "value": "120/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "HINT·runtime_implementation_missing",
+   "value": "10/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "RESIDUAL·RUNTIME_CONTEXT_PENDING",
+   "value": "150/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "RANK·ZERO->ZERO",
+   "value": "160/160",
+   "source": "عدٌّ",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "CLAIM_PROJECT_FINISHED",
+   "value": "NO",
+   "source": "ثابتٌ في المولّد",
+   "reason": ""
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "سبب",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "شروط",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  },
+  {
+   "section": "14. الحكم النهائي على الوثيقة",
+   "field": "مانع",
+   "value": null,
+   "source": "",
+   "reason": "HUMAN_DECLARED_ONLY"
+  }
+ ]
+}

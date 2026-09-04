@@ -1,0 +1,116 @@
+{
+ "task": "R5_R6_WITHDRAWN",
+ "reviewer_withdrawn": {
+  "REVIEWER_WITHDRAWN_1": {
+   "source": "REVIEWER",
+   "claim": "G_FORBIDDEN_LINES_QUERIED — الاستفتاءُ دليل",
+   "verdict": "باطل",
+   "why": "الاستفتاءُ عن صفوفِ السجلّ ترديد: الزوجُ مأخوذٌ من السجلّ ثمّ سُئل عنه السجلّ، فيردّ True بحكم الأخذ.",
+   "proposed_poison": "زوجٌ غيرُ ممنوعٍ يردّ False",
+   "proposed_poison_verdict": "يُثبت أنّ الدالّةَ تفرّق، لا أنّ الجوابَ شهادة — وهو وجهٌ واحد.",
+   "replaced_by": "G_EVIDENCE_IS_NOT_TAUTOLOGY — يقيس مصدرَ المدخل لا الجواب، وسمُّه ذو وجهَين.",
+   "attributed_to_tool": false
+  },
+  "REVIEWER_WITHDRAWN_2": {
+   "source": "REVIEWER",
+   "claim": "مميِّزُ M1: صوامتُ بعدُ > قبلُ",
+   "verdict": "لا يميّز",
+   "why": "يُطابق 8894/8894: الزيادةُ في التنوين كلِّه، لأنّ كلَّ تنوينٍ يُبسَط إلى نونٍ ساكنة فيزيد صامتًا حتمًا. والصامتُ الزائدُ المميِّزُ غيرُها.",
+   "replaced_by": "المميِّزُ المقيس: تنوينُ فتحٍ على ألفٍ صامتة — 3059/5835، يقفل.",
+   "attributed_to_tool": false
+  },
+  "REVIEWER_WITHDRAWN_3A": {
+   "source": "TOOL",
+   "split_from": "REVIEWER_WITHDRAWN_3",
+   "split_by": "DR_HUSSEIN — «دعويان لا واحدة، ولكلٍّ مصدر»",
+   "claim": "C1 = «PRE_WEIGHT_CAPACITY_AUDIT غيرُ منفَّذة» عنوانًا في 03_upstream",
+   "verdict": "ناقصٌ لا كاذب",
+   "field_is_true": true,
+   "why": "الحقلُ مشتقٌّ من `runtime_implemented=False` في السجلّ، ونُقل كما هو. وعلّتُه أنّ اللفظَ يُقرأ نفيًا للبناء كلِّه — والبناءُ مقيسٌ موجودًا. فالعيبُ في سَعة اللفظ، لا في صدق الحقل.",
+   "replaced_by": "«PRE_WEIGHT مبنيّةُ الحوامل، غيرُ موصولةٍ بالمشغّل» — والحقلُ نفسُه يبقى مقيسًا في C1.measure.pre_weight_state.stage_runtime_implemented",
+   "cost": "لم يكلّف تقديرًا — العنوانُ وصفٌ لا ثمن",
+   "attributed_to_tool": true
+  },
+  "REVIEWER_WITHDRAWN_3B": {
+   "source": "REVIEWER",
+   "split_from": "REVIEWER_WITHDRAWN_3",
+   "split_by": "DR_HUSSEIN — «دعويان لا واحدة، ولكلٍّ مصدر»",
+   "claim": "PRE_WEIGHT غيرُ مكتوبةٍ عند sonaiso · تحتاج كتابةَ منطق",
+   "verdict": "باطل",
+   "why": "تأويلٌ للحقل لا يلزم منه: `runtime_implemented=False` خبرٌ عن **الوصل** لا عن **البناء**. والمقيس: القوانينُ الثلاثةُ مصادَقة، و PR-10..PR-13 مشحونةٌ برموزها، واختباراتُ الحواملِ 107 تمرّ.",
+   "replaced_by": "الحالُ المقيسة في C1.measure.pre_weight_state — PRs 4/4 · اختباراتٌ تمرّ · corpus_runner لا يستورد من weight/ حرفًا. فالفجوةُ وصلةٌ لا بناء.",
+   "held_for": "ثلاثون جولة",
+   "cost": "بُني عليه تقديرُ كلفةِ ج-٣ — وهو الثمنُ الحقيقيّ للبند",
+   "withdrawn_by": "DR_HUSSEIN — «قابلتُه فطابق حرفًا · واعتراضُك في محلّه»",
+   "consequence": "عنوانُ C1 صُحِّح، وتقديرُ كلفةِ ج-٣ يسقط معه — ولا يُعاد تقديرُه من عندنا (C_PATH موقوف).",
+   "attributed_to_tool": false
+  }
+ },
+ "obsolete_claim": {
+  "claim": "تقشيرُ كَتَبَ ينزل عن ACCEPT بـT-6",
+  "status": "SUPERSEDED",
+  "superseded_by": "نزل بالفعل عند 2.9.0 بحكم المالك في T4B — لا بـT-6، ولا بأثرِ الأداة.",
+  "measured": {
+   "katab_rows": 8,
+   "katab_peels": 0,
+   "root_proven_yes": 0,
+   "axis4_rows": 74668,
+   "reading": "فلا واقعةَ تحت Signifier→WordForm — EXPECTED_EVENT_ABSENT"
+  },
+  "deleted": false,
+  "retained_because": "الدعوى تُقيَّد لا تُمحى.",
+  "occurrences_in_this_tree": [
+   {
+    "file": "HANDOFF.md",
+    "line": 319,
+    "text": "◻ T-6  الخطوطُ الممنوعة — تُنزل تقشيرَ «كَتَبَ» عن ACCEPT"
+   },
+   {
+    "file": "HANDOFF.md",
+    "line": 632,
+    "text": "forbidden_lines_enforced = 0    تقشيرُ «كَتَبَ» ما زال ACCEPT       (T-6)"
+   },
+   {
+    "file": "README.md",
+    "line": 299,
+    "text": "forbidden_lines_enforced = 0     تقشيرُ «كَتَبَ» ما زال ACCEPT        (T-6)"
+   }
+  ],
+  "untagged_sites": [],
+  "guard": {
+   "guard": "G_OBSOLETE_TAGGED_IN_PLACE",
+   "denominator": 3,
+   "untagged": [],
+   "passes": true,
+   "poison": "tests_taaqol/test_bound.py::test_poison_an_untagged_site_is_caught"
+  },
+  "scan_excludes": [
+   "vendor/",
+   ".venv",
+   "output/bound/ — سجلُّ القيد نفسُه، وعدُّه موضعًا يطلب وسمَ الوسم"
+  ],
+  "occurrences_note": "وُسم في 3/3 موضعًا عند موضعه، ولم يُحذف منها شيء."
+ },
+ "withdrawn_by_source": {
+  "REVIEWER": 3,
+  "TOOL": 1
+ },
+ "split_origins": {
+  "REVIEWER_WITHDRAWN_3": {
+   "was": "بندٌ واحدٌ مصدرُه TOOL",
+   "became": [
+    "REVIEWER_WITHDRAWN_3A",
+    "REVIEWER_WITHDRAWN_3B"
+   ],
+   "ruled_by": "DR_HUSSEIN",
+   "why": "دعويان تشتركان في اسمٍ واحد: حقلٌ صادقٌ نقلته الأداة، وتأويلٌ باطلٌ للمراجع. والاسمُ المشترك جمعهما، فقُرئا دعوى واحدةً ونُسبا إلى جهةٍ واحدة.",
+   "effect_on_attribution": "REVIEWER 2 · TOOL 1  ⟶  REVIEWER 3 · TOOL 1"
+  }
+ },
+ "attribution_rule": "كلُّ سحبٍ يُسجَّل بمصدره: REVIEWER 3 · TOOL 1. ولا يُنسب خطأُ المراجع إلى الأداة، ولا يُخفى خطأُ الأداة تحت اسم المراجع. والأداةُ سجّلتها ولم تمحُ منها شيئًا.",
+ "E5": {
+  "ledgers": 6,
+  "rendered": "6",
+  "derived": true
+ }
+}

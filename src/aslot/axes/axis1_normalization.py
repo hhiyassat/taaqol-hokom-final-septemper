@@ -39,6 +39,7 @@ from ..constants import (
     CONSONANT_LETTERS,
     DAGGER_ALIF,
     FATHA,
+    FATHATAN,
     HAMZA,
     HAMZA_SEATS,
     HARAKAT,
@@ -53,6 +54,8 @@ from ..constants import (
     SHADDA,
     SUKUN,
     SUN_LETTERS,
+    TAA_MAFTUHA,
+    TAA_MARBUTA,
     TANWEEN,
     TANWEEN_TO_HARAKA,
     TATWEEL,
@@ -119,11 +122,40 @@ def stop_reason_family(reason: str) -> str:
     """يقتطع الأسرةَ من سببٍ كامل: ``NON_LETTER@8:'،'`` ← ``NON_LETTER``."""
     return reason.split("@")[0].strip()
 
+
+#: جذرُ الشجرة — يُشتقّ من موضع هذا الملفّ، ولا يُكتب.
+_ROOT = Path(__file__).resolve().parents[3]
+
+
+def relative_to_root(p) -> str:
+    """مسارٌ نسبيٌّ إلى جذر الشجرة — وما خرج عنها يُكتب مطلقًا ويُعلَن.
+
+    مسارٌ مطلقٌ في ملفّ مقاييسَ يحمل اسمَ بيتِ الآلة، فيختلف الملفُّ بين
+    شجرتين محتواهما واحد. والمقابلةُ البايتيّة عبر الآلات تسقط حينئذٍ على
+    فرقٍ ليس من عمل المحرّك — وهو خبرٌ كاذبٌ في الجهتين: يُوهم اختلافًا
+    حيث لا اختلاف، ويُشغل الفحصَ عن اختلافٍ حقيقيّ.
+    """
+    p = Path(p)
+    try:
+        return str(p.resolve().relative_to(_ROOT))
+    except ValueError:
+        return f"OUTSIDE_TREE:{p}"
+
 PRESERVED = "PRESERVED"
 REPLACED = "REPLACED"
 EXPANDED = "EXPANDED"
 IGNORED_CELL = "IGNORED"
 DELETED = "DELETED_BY_OWNER_RULE"
+
+#: جدولُ `N-TANWEEN-UNFOLD` — **مغلق**، ثلاثةُ أسطرٍ لا رابع. مفتاحُه
+#: حرفُ آخِرِ الرسم حاملًا تنوينَ فتح، وقيمتُه الإجراء. ولا يُزاد فيه
+#: سطرٌ إلا بحكمِ مالكٍ جديد: زيادةٌ هنا **هي** توسيعُ القاعدة بعينه،
+#: ولذلك يُسمَّم الجدولُ لا الدالّة.
+TANWEEN_UNFOLD_TABLE: dict[str, str] = {
+    ALIF: "DELETE_CARRIER",
+    ALIF_MAQSURA: "DELETE_CARRIER",
+    TAA_MARBUTA: "TURN_TO_OPEN_TAA",
+}
 
 FATES = (PRESERVED, REPLACED, EXPANDED, IGNORED_CELL, DELETED)
 
@@ -799,11 +831,44 @@ class _Normalizer:
         """الحرف العام: كرسيّ الهمزة ثم التنوين ثم الشدّة ثم الحركة/السكون."""
         letter = self._seat(ctx)
         haraka, expand_tanween = self._tanween(ctx)
+        unfold = self._tanween_unfold(ctx) if expand_tanween else None
         self._shadda(ctx, letter)
-        self._vowel_or_sukun(ctx, letter, haraka)
+        if unfold == "DELETE_CARRIER":
+            # `N-TANWEEN-UNFOLD` أ — الحاملُ يُحذف ولا يُبدَّل. ولا يُمرَّر
+            # على `_vowel_or_sukun`: الحرفُ نفسُه يزول بحركته، فلا وحدةَ
+            # تُصدَر عنه. وحركةُ ما قبلَه قائمةٌ في وحدتها.
+            self._fate(ctx.index, ctx.letter, DELETED, "N-TANWEEN-UNFOLD")
+            self._use("N-TANWEEN-UNFOLD")
+        elif unfold == "TURN_TO_OPEN_TAA":
+            # `N-TANWEEN-UNFOLD` ب — انقلابٌ لا حذف: تُصدَر وحدةٌ بحرفٍ
+            # آخرَ وبالحركة نفسِها. إجراءٌ متمايزٌ عن الأوّل، ومن نفّذهما
+            # بإجراءٍ واحدٍ أخطأ في أحدهما (`G_TWO_MECHANISMS`).
+            self._vowel_or_sukun(ctx, TAA_MAFTUHA, haraka)
+            self._fate(ctx.index, ctx.letter, REPLACED, "N-TANWEEN-UNFOLD")
+            self._use("N-TANWEEN-UNFOLD")
+        else:
+            self._vowel_or_sukun(ctx, letter, haraka)
         if expand_tanween:
             self._emit(NOON, SUKUN, "U_TANWEEN", ctx.index)
             self._fate(ctx.index, ctx.tanween, EXPANDED, "U_TANWEEN")
+
+    def _tanween_unfold(self, ctx: _Letter) -> str | None:
+        """`N-TANWEEN-UNFOLD` (مصادَقة · `RULE_OWNER = DR_HUSSEIN`).
+
+        الجردُ **مغلق**: ثلاثةُ أشكالٍ لا رابع، وكلُّها في تنوين الفتح
+        وعلى **آخِر الرسم**. وما سواها لا يتغيّر (`NO_RULE_WIDENING`).
+
+        * `FATH × ا`  ⟶ `DELETE_CARRIER`     شَيْئًا ⟶ شَيْئَنْ
+        * `FATH × ى`  ⟶ `DELETE_CARRIER`     مُسَمًّى ⟶ مُسَمَّنْ
+        * `FATH × ة`  ⟶ `TURN_TO_OPEN_TAA`   تِجَارَةً ⟶ تِجَارَتَنْ
+
+        وشرطُ `ctx.is_last` هو ما يُجمِّد الحالةَ الرابعةَ الموقوفة
+        (`P3`, `ON_PENULT_FINAL_BARE`): هناك حاملُ التنوينِ ليس آخِرَ
+        الرسم، فلا ينطبق سطرٌ من الثلاثة.
+        """
+        if ctx.tanween != FATHATAN or not ctx.is_last:
+            return None
+        return TANWEEN_UNFOLD_TABLE.get(ctx.letter)
 
     def _seat(self, ctx: _Letter) -> str:
         if ctx.letter in HAMZA_SEATS:
@@ -1266,7 +1331,11 @@ class Axis1Normalization(Axis):
             "jalalah_words": statuses.get(JALALAH, 0),
             "jalalah_with_prefix": sum(1 for r in rows if r[9]),
             "jalalah_registry_size": len(default_registry()),
-            "policy_source": str(policy.source),
+            # **المسارُ نسبيٌّ إلى جذر الشجرة، لا مطلق.** كان يُكتب
+            # مطلقًا فيحمل اسمَ بيتِ الآلة، فيختلف ملفُّ المقاييس بين
+            # شجرتين متطابقتَي المحتوى — وتسقط المقابلةُ البايتيّة عبر
+            # الآلات على فرقٍ ليس من عمل المحرّك. وهو `B11` بعينه.
+            "policy_source": relative_to_root(policy.source),
             "unratified_classes": [e.name for e in policy.unratified],
         }
         if args.cross_check_masaq:

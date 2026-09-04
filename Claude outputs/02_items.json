@@ -1,0 +1,102 @@
+{
+ "items": [
+  {
+   "ident": "I1",
+   "title": "فصلُ حدّ الدخول في الصفحة، وG5 بنيويًّا",
+   "status": "DONE",
+   "effect_on_nazila_score": "صفر — ولا خانةَ واحدة",
+   "evidence": {
+    "measured_breach_before": 247,
+    "declared_in_prompt": 7,
+    "finding": "الخرقُ كان أكبرَ من التقدير: الصفحةُ كانت ملخّصًا، لا عرضًا للدفتر",
+    "after": 0,
+    "gate": true,
+    "method": "المقابلةُ بزوج (section, field) من data-* لا بورود الاسم في النصّ — فالسهمُ المختلف يُسقط خانةً موجودة"
+   }
+  },
+  {
+   "ident": "I2",
+   "title": "R1 · سحبُ PEEL_LEDGER_CLOSES السابق صراحةً",
+   "status": "DONE",
+   "effect_on_nazila_score": "صفر",
+   "evidence": {
+    "withdrawn": "PEEL_LEDGER_CLOSES = YES (74,668)",
+    "reason": "قُوبل مقامان: تشغيلٌ بشاهدٍ وتشغيلٌ بلا شاهد",
+    "replaced_by": "A7 · DIFFERENT_DENOMINATORS_NOT_STALENESS",
+    "see": "output/remediation/01_ledger.json"
+   }
+  },
+  {
+   "ident": "I3",
+   "title": "R2 · مصفوفةُ انتقالٍ مغلقةٌ لـB5",
+   "status": "DONE",
+   "effect_on_nazila_score": "صفر",
+   "evidence": "output/closure/transition_b5.json"
+  },
+  {
+   "ident": "I4",
+   "title": "R3 · «--no-witness إنتاجيّ» — أمرٌ أو HYPOTHESIS",
+   "status": "DONE",
+   "effect_on_nazila_score": "صفر",
+   "evidence": {
+    "command": "python3 -m aslot peel --no-witness",
+    "flag_defined_in": "src/aslot/axes/axis4_peeling.py",
+    "claim_status": "TESTED_BY_PUBLISHED_COMMAND"
+   }
+  },
+  {
+   "ident": "I5",
+   "title": "R4 · إحالةُ 134 إلى شاهدٍ مشتقّ",
+   "status": "DONE",
+   "effect_on_nazila_score": "صفر",
+   "evidence": {
+    "file": "reports/axis_2_mabniyat_operators/AXIS_2_REGISTRY.csv",
+    "rows": 134,
+    "unique_first_column": 134,
+    "note": "رقمٌ سادسٌ ليس في 107/160/153/102/565 — والفصلُ بالاسم والبصمة لا بالعدد"
+   }
+  },
+  {
+   "ident": "I_SCORE_NOTE",
+   "title": "أثرُ I1..I5 مجتمعةً على النازلة",
+   "status": "DECLARED",
+   "effect_on_nazila_score": "صفر — والعلامةُ لم ترتفع",
+   "evidence": {
+    "nazila_before": 71,
+    "nazila_after": 70.9,
+    "remediation_before": 58.6,
+    "remediation_total": 29
+   }
+  }
+ ],
+ "forbidden_paths": {
+  "X1": [
+   "نقلُ خانةٍ بين أسر الأسباب",
+   "reason_family_moves_vs_previous_round"
+  ],
+  "X2": [
+   "ملءُ خانةٍ من ثابتٍ نصّيٍّ يحمل تحليلًا بشريًّا",
+   "G9_NO_HUMAN_PROSE_IN_RUNTIME_CELLS"
+  ],
+  "X3": [
+   "حذفُ خانةٍ أو عمودٍ لأنّه فارغ",
+   "test_dropping_an_empty_column_would_be_caught"
+  ],
+  "X4": [
+   "اشتقاقُ صفرٍ من مرحلةٍ لم تُفتح",
+   "NOT_OPENED cells carry a reason, never a value"
+  ],
+  "X5": [
+   "لَفُّ المشغّل بغلافٍ يغيّر جوابَه",
+   "G1_REPRODUCIBLE"
+  ],
+  "X6": [
+   "جمعُ العلامات أو أخذُ متوسّطها",
+   "G7_NO_SCORE_ALONE"
+  ],
+  "X7": [
+   "عدُّ بندٍ من (ج) منفَّذًا لأنّه أُعلن",
+   "AUTHORITY_VIOLATION on OUT_OF_JURISDICTION + DONE"
+  ]
+ }
+}

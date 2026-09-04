@@ -1,0 +1,47 @@
+{
+ "items": [
+  {
+   "ident": "C1",
+   "status": "DECLARED"
+  },
+  {
+   "ident": "C2",
+   "status": "DECLARED"
+  },
+  {
+   "ident": "C3",
+   "status": "DECLARED"
+  },
+  {
+   "ident": "C4",
+   "status": "DECLARED"
+  },
+  {
+   "ident": "C5",
+   "status": "DECLARED"
+  },
+  {
+   "ident": "C_PATH",
+   "status": "NOT_CHOSEN"
+  }
+ ],
+ "by_status": {
+  "DECLARED": 5,
+  "NOT_CHOSEN": 1
+ },
+ "guards": {
+  "G_EVERY_NUMBER_HAS_A_COMMAND": [],
+  "G_LOCATION_RESOLVES": [],
+  "G_FORBIDDEN_LINES_QUERIED": [],
+  "G_EVIDENCE_IS_NOT_TAUTOLOGY": [],
+  "G_SHARED_CAUSE_NOT_MERGED": [],
+  "G_DENOMINATOR_NAMED": [],
+  "G_JOINT_FIELD_PRESENT": [],
+  "G_NO_DONE_IN_C": []
+ },
+ "recount_from_report": {
+  "rows": 6,
+  "items": 6,
+  "closes": true
+ }
+}

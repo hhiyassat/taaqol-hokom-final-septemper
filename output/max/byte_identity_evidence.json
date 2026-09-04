@@ -1,0 +1,80 @@
+{
+ "command": "PYTHONPATH=src .venv-taaqol/bin/python -m aslot all --quiet",
+ "runs": 2,
+ "runs_are_measured_not_declared": true,
+ "utc": "2026-09-04T19:43:32+00:00",
+ "exit_code": 0,
+ "denominator": 18,
+ "denominator_note": "كلُّ ملفٍّ تحت reports/axis_* — لا الجداولُ الخمسةُ وحدَها",
+ "differing_between_runs": [],
+ "baseline_superseded_by": {
+  "task": "PORTABILITY_ABSOLUTE_PATHS",
+  "reason": "B11 في موضعَين فاتاه: policy_source كان مسارًا مطلقًا يحمل اسمَ بيت الآلة، وBEFORE_DIR كان /home/claude/probe. ولا يمسّ ذلك حكمًا ولا عددًا — وحرَّك ملفَّ مقاييسَ واحدًا.",
+  "files_that_moved_vs_previous_baseline": [
+   "reports/axis_1_normalization/AXIS_1_MEASURES.json"
+  ],
+  "files_added": [],
+  "files_dropped": [],
+  "count": 1,
+  "of": 18,
+  "note": "سقوطُ G_BYTE_IDENTICAL على الأساس القديم هو **الدليلُ** على وقوع التغيير، لا خللٌ يُكتم. والخاصّةُ المحفوظةُ هي إعادةُ الإنتاج: تشغيلان بعد التغيير متطابقان بايتةً بايتة.",
+  "previous_utc": "2026-09-04T09:06:30+00:00",
+  "utc": "2026-09-04T19:09:11+00:00"
+ },
+ "supersessions": [
+  {
+   "reason": "N-TANWEEN-UNFOLD — تغييرُ سلوكٍ مصادَقٌ من المالك",
+   "task": "TANWEEN_UNFOLD_APPLY",
+   "files_that_moved_vs_previous_baseline": [
+    "reports/axis_1_normalization/AXIS_1_MEASURES.json",
+    "reports/axis_1_normalization/AXIS_1_NORMALIZATION.csv",
+    "reports/axis_1_normalization/AXIS_1_REPORT.txt",
+    "reports/axis_2_mabniyat_operators/AXIS_2_REGISTRY.csv",
+    "reports/axis_2_mabniyat_operators/AXIS_2_TOKENS.csv",
+    "reports/axis_3_syllables/AXIS_3_MEASURES.json",
+    "reports/axis_3_syllables/AXIS_3_REPORT.txt",
+    "reports/axis_3_syllables/AXIS_3_SYLLABLES.csv",
+    "reports/axis_4_peel_to_stem/AXIS_4_PEEL_TO_STEM.csv",
+    "reports/axis_4_peel_to_stem/MASAQ_LIKE_OUTPUT.csv"
+   ],
+   "count": 10,
+   "of": 18,
+   "note": "سقوطُ G_BYTE_IDENTICAL على الأساس القديم هو **الدليلُ** على وقوع التغيير، لا خللٌ يُكتم. والخاصّةُ المحفوظةُ هي إعادةُ الإنتاج: تشغيلان بعد التغيير متطابقان بايتةً بايتة.",
+   "previous_utc": "2026-09-04T02:06:38+00:00"
+  },
+  {
+   "task": "PORTABILITY_ABSOLUTE_PATHS",
+   "reason": "B11 في موضعَين فاتاه: policy_source كان مسارًا مطلقًا يحمل اسمَ بيت الآلة، وBEFORE_DIR كان /home/claude/probe. ولا يمسّ ذلك حكمًا ولا عددًا — وحرَّك ملفَّ مقاييسَ واحدًا.",
+   "files_that_moved_vs_previous_baseline": [
+    "reports/axis_1_normalization/AXIS_1_MEASURES.json"
+   ],
+   "files_added": [],
+   "files_dropped": [],
+   "count": 1,
+   "of": 18,
+   "note": "سقوطُ G_BYTE_IDENTICAL على الأساس القديم هو **الدليلُ** على وقوع التغيير، لا خللٌ يُكتم. والخاصّةُ المحفوظةُ هي إعادةُ الإنتاج: تشغيلان بعد التغيير متطابقان بايتةً بايتة.",
+   "previous_utc": "2026-09-04T09:06:30+00:00",
+   "utc": "2026-09-04T19:09:11+00:00"
+  }
+ ],
+ "sha256": {
+  "reports/axis_0_quran_build/AXIS_0_MEASURES.json": "2ad5666e79f23b9a40b2056798fc639ea0a550d3a2d644916a9ee99a76c8eac0",
+  "reports/axis_0_quran_build/AXIS_0_REPORT.txt": "a437214ebd6f2ce453ac98489194a2a53ab3d3e157cf61b16a4f2651eb46af42",
+  "reports/axis_0_quran_build/QURAN_FROM_MASAQ.txt": "548471e6128caa2e57d63505eee1b886c5dbe8858beb4f9f7eca8ef17a7f6834",
+  "reports/axis_0_quran_build/QURAN_WORDS.csv": "461a7e6dbd045d075688a476784754ee508a85f0437cf832557c1ff3c5de9d38",
+  "reports/axis_1_normalization/AXIS_1_MEASURES.json": "e9068a886d59f50520cb82275643b1b1bf972b95c312db436f24dcc5f157738e",
+  "reports/axis_1_normalization/AXIS_1_NORMALIZATION.csv": "969a3b9ff13cdd48ee356bce535788434ef73f86ef2d3c0cfd0afbbcff75cbe1",
+  "reports/axis_1_normalization/AXIS_1_REPORT.txt": "920a0e4bb24c903b1b4abd00881911b0beb481869c4624b92f0e400893fe32e6",
+  "reports/axis_2_mabniyat_operators/AXIS_2_MEASURES.json": "392e3c9a09b209866abae5263e0ac7933be606b1d70564ec576716d3e2d49c56",
+  "reports/axis_2_mabniyat_operators/AXIS_2_REGISTRY.csv": "c409b6c72126631b215dcc6e2ebf39e3c22d847075884be392b215d92c6ee9d3",
+  "reports/axis_2_mabniyat_operators/AXIS_2_REPORT.txt": "1cb6efdea0ff9ae1b9e276a19dd0a4d8ed341bb307760e0c990278e9d40d5101",
+  "reports/axis_2_mabniyat_operators/AXIS_2_TOKENS.csv": "7095e71ce99531d6939a7ebf5d974cceea3b7b41e8989bf03f3658241a1ec9ce",
+  "reports/axis_3_syllables/AXIS_3_MEASURES.json": "bc23708ac94561c703848222d6454afa9dd98afeeed73f9dafe5301fede5e8e6",
+  "reports/axis_3_syllables/AXIS_3_REPORT.txt": "d5a8c21a2e7d43b937f4f35f728830dd618710af37fa1efdeec4bb566a456d56",
+  "reports/axis_3_syllables/AXIS_3_SYLLABLES.csv": "baecf3f91c2304df3d2380800b54551c5fa9eb2a6f55c53642c7bdc796e16da7",
+  "reports/axis_4_peel_to_stem/AXIS_4_MEASURES.json": "30e3e6f8c2112a81939f2d0c3f5575fd8d4cc564b11bed087eaa653b88141ce0",
+  "reports/axis_4_peel_to_stem/AXIS_4_PEEL_TO_STEM.csv": "f098c00b2028eb3b300ca760a670f911acc3e27ca6cb0f27560c4addacebda81",
+  "reports/axis_4_peel_to_stem/AXIS_4_REPORT.txt": "d37f82db09a52661f6c40d85c758af3aab3c75638c0f525e87d85f32a1e4a915",
+  "reports/axis_4_peel_to_stem/MASAQ_LIKE_OUTPUT.csv": "1385a7a06991912d9866354a01672ef3fe8777844a6c643cf9e3c93c64a37c0e"
+ }
+}

@@ -1,0 +1,58 @@
+{
+  "_": "طبقةٌ مُعلَنة — لا تُقرأ من الكود ولا تُنسب إلى تعقُّل.",
+  "layer": "DECLARED_LAYER",
+  "written_from_code": false,
+  "attributed_to_taaqol": false,
+  "author": "DR_HUSSEIN",
+  "transcribed_by": "REVIEW_AGENT",
+  "transcription_note": "منقولٌ عن رسائل المالك في هذه الجلسة وما قبلها. وكلُّ سطرٍ هنا دعواه على كاتبه لا على المحرّك، ولا يُقابَل بمخرَجِ تشغيلٍ فيُقال «طابق» أو «خالف» — فالطبقتان لا تختلطان.",
+  "status_of_every_field_below": "AWAITING_OWNER_RATIFICATION",
+  "sections": {
+    "8": {
+      "title": "مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+      "declared_by_owner": null,
+      "reason": "لم يرد نصٌّ من المالك لهذا الفصل. ولا يُملأ من الكود لأنّ الفصلَ عن الجواز، والجوازُ حكم."
+    },
+    "9": {
+      "title": "العلاقات اللغوية والحدود",
+      "declared_by_owner": null,
+      "reason": "RELATION و RELATION_CLOSURE غيرُ مفتوحتين في المشغّل، والحكمُ على العلاقات موقوفٌ على المالك."
+    },
+    "10": {
+      "title": "المنطوق والمفهوم",
+      "declared_by_owner": null,
+      "reason": "مشروطٌ بـ B7 — المذهب والولاية القضائيّة. ولا يُفتح دونه."
+    },
+    "11": {
+      "title": "الخطوط المستقيمة الممنوعة",
+      "declared_by_owner": "الخطوطُ سجلٌّ في تعقُّل نفسِه، تُقرأ ولا تُعلَن هنا.",
+      "reason": "الفصلُ الوحيدُ في هذا المدى الذي مصدرُه الكود، فلا طبقةَ معلنةً له."
+    },
+    "12": {
+      "title": "مصفوفة المناط",
+      "declared_by_owner": null,
+      "reason": "مشروطٌ بـ B7. و MANAT غيرُ مفتوحةٍ في المشغّل."
+    },
+    "13": {
+      "title": "التنزيل وما سُحب",
+      "declared_by_owner": null,
+      "reason": "NO_IFADAH_NO_HUKM_NO_TANZIL — ولا تنزيلَ قبل حكم، ولا حكمَ قبل إفادة."
+    }
+  },
+  "owner_rules_verbatim": [
+    "OWNER_RULE_SOVEREIGNTY = ABSOLUTE",
+    "CREATE_NON_OWNER_RULE = NO",
+    "INFER_LINGUISTIC_RULE = NO",
+    "MEASURED_NOT_PRESET",
+    "NO_IFADAH_NO_HUKM_NO_TANZIL",
+    "NO_ROOT_FROM_SKELETON",
+    "NO_RANK_PROMOTION_OUTSIDE_GATE",
+    "NO_HIDDEN_RESIDUAL",
+    "NO_MODEL_ADAPTER",
+    "NO_INFERRED_LINGUISTIC_RULE",
+    "P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED",
+    "VENDOR_IS_FROZEN = TRUE",
+    "LICENSE_GRANTED = NO",
+    "CLAIM_PROJECT_FINISHED = NO"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "module": "aslot.axes.axis9_compliance",
+  "axis": 9,
+  "stages_implemented": [
+    "T-0",
+    "T-1",
+    "T-2",
+    "T-3"
+  ],
+  "stages_pending_owner": [
+    "T-4",
+    "T-5",
+    "T-6",
+    "T-7",
+    "T-8",
+    "T-9",
+    "T-10"
+  ],
+  "vendor": {
+    "commit": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+    "license": "Apache-2.0",
+    "carriers": {
+      "core/closure_state.py": "c21f3c97eed3",
+      "core/rank_lattice.py": "e11d470ddf2d",
+      "core/transition_state.py": "14b8c99cb2ff",
+      "core/residual_policy.py": "dbee4befbc3a",
+      "core/failure_taxonomy.py": "dec78566f331",
+      "core/trace_ledger.py": "ccc09d631c46"
+    }
+  },
+  "laws": {
+    "law_files": 7,
+    "all_hashes_hold": true
+  },
+  "anchors": {
+    "rows_total": 378826,
+    "rows_with_trace_anchor": 378826,
+    "rows_with_reconstructible_anchor": 378826,
+    "rows_without_anchor": 0,
+    "parent_anchors_resolved_in_previous_axis": 301415
+  },
+  "refusal_inventory": {
+    "declared": 30,
+    "declared_without_witness_in_this_run": [
+      "BLOCK_EMPTY_REMAINDER",
+      "IGNORED_NON_WORD_TOKEN",
+      "NON_LETTER"
+    ],
+    "observed_in_outputs": 27,
+    "mapped_to_taaqol": 7,
+    "unmapped_declared": 23,
+    "taaqol_failure_codes_total": 92
+  },
+  "residual_classes_unassigned": {
+    "U_N7_2_INTERNAL_AL": 1616,
+    "U_TANWEEN": 8894,
+    "U_ALEF_MADDA": 1505,
+    "U_ALIF_MAQSURA": 2498,
+    "U_ALIF_FARIQA": 3561,
+    "U_UNVOCALIZED_CARRIER": 60,
+    "U_MULTIWORD_CELL": 9
+  },
+  "hidden_residual_count": 3059,
+  "closure_states_available": 6,
+  "closure_states_in_use": 0,
+  "gates_between_axes": 0,
+  "forbidden_lines_enforced": 0,
+  "taaqol_modules_executed": [
+    "taaqqul_slot_geometry",
+    "taaqqul_slot_geometry.core",
+    "taaqqul_slot_geometry.core.closure_state",
+    "taaqqul_slot_geometry.core.failure_taxonomy",
+    "taaqqul_slot_geometry.core.rank_lattice",
+    "taaqqul_slot_geometry.core.residual_policy",
+    "taaqqul_slot_geometry.core.trace_ledger",
+    "taaqqul_slot_geometry.core.transition_state"
+  ],
+  "owner_decisions_pending": [
+    "T-4:RESIDUAL_KIND_FOR_SEVEN_UNRATIFIED_CLASSES",
+    "T-4:TANWEEN_DEFECT_BLOCK_OR_VISIBLE_DEFERRABLE",
+    "T-5:GAMMA_CLOSURE_CHANGES_VERDICTS",
+    "T-6:FORBIDDEN_LINES_DEMOTE_KATABA_PEEL",
+    "T-7:TRANSITION_GATES_BETWEEN_AXES",
+    "T-8:DELETE_DUPLICATED_FROZEN_SOURCE_IN_HOKOM",
+    "OPEN:QUESTION_SEMICOLON_COLON_SEPARATOR_OR_LETTER",
+    "OPEN:ALEF_MADDA_OUTSIDE_AL",
+    "OPEN:N2_2_SHADDA_AFTER_AL",
+    "OPEN:LAKUM_DEMOTION_IN_CL16"
+  ],
+  "self_checks": {
+    "C1_LAW_FILES_ARE_FROZEN_AND_HOLD": true,
+    "C2_EVERY_ROW_CARRIES_A_TRACE_ANCHOR": true,
+    "C3_EVERY_ANCHOR_IS_RECONSTRUCTIBLE": true,
+    "C4_THE_CHAIN_IS_LINKED_ZERO_TO_FOUR": true,
+    "C5_CARRIERS_ARE_TAAQOL_S_OWN": true,
+    "C6_RANK_LATTICE_MEET_NEVER_RAISES": true,
+    "C7_HIDDEN_RESIDUAL_IS_MEASURED_NOT_ASSUMED": true
+  },
+  "poisons": {
+    "P1_NO_INVENTED_REFUSAL_NAME": true,
+    "P2_NO_INVENTED_TAAQOL_FAILURE_CODE": true,
+    "P3_UNMAPPED_IS_DECLARED_NOT_FORCED": true,
+    "P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED": true,
+    "P5_EXECUTION_NEVER_EXCEEDS_THE_PINNING": true,
+    "P6_NO_JUDGEMENT_TOOL_IS_IMPORTED": true,
+    "P7_STAGES_ABOVE_T3_ARE_NOT_CLAIMED": true
+  },
+  "input_defects": {}
+}

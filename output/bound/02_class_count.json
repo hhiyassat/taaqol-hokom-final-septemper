@@ -1,0 +1,128 @@
+{
+ "task": "R3_CLASS_COUNT",
+ "by_class": {
+  "U_ALEF_MADDA": {
+   "events": 1505,
+   "words": 1505,
+   "agree": true
+  },
+  "U_ALIF_FARIQA": {
+   "events": 3561,
+   "words": 3561,
+   "agree": true
+  },
+  "U_ALIF_MAQSURA": {
+   "events": 2498,
+   "words": 2498,
+   "agree": true
+  },
+  "U_MULTIWORD_CELL": {
+   "events": 9,
+   "words": 9,
+   "agree": true
+  },
+  "U_N7_2_INTERNAL_AL": {
+   "events": 1616,
+   "words": 1616,
+   "agree": true
+  },
+  "U_TANWEEN": {
+   "events": 8894,
+   "words": 8894,
+   "agree": true
+  },
+  "U_UNVOCALIZED_CARRIER": {
+   "events": 60,
+   "words": 52,
+   "agree": false
+  }
+ },
+ "totals": {
+  "events": 18143,
+  "events_denominator": "مواضعُ حرفٍ يُرفع عندها صنف · AXIS_1_MEASURES.owner_decision_classes",
+  "events_source": "src/aslot/axes/axis1_normalization.py:1233",
+  "words": 18135,
+  "words_denominator": "كلماتٌ تحمل الصنف · عمود Owner_Decision_Classes",
+  "words_source": "src/aslot/axes/axis1_normalization.py:224 (decision_classes مجموعةٌ فتُسقط التكرار)",
+  "difference": 8
+ },
+ "correction": {
+  "18143_is_wrong": false,
+  "ruling": "لا تُصحَّح 18,143 — هي مجموعُ الأحداث بمقامه. و18,135 مجموعُ الكلمات. والخطأُ كان عرضَهما بلا مقام، لا أحدَهما.",
+  "where_18143_stands": "output/doors · output/remediation — وتُسمّى «أحداثًا» لا «كلماتٍ متأثّرة»",
+  "where_18135_stands": "reports/gamma_shadow/PROJECTED_IMPACT — وهو مقامُ الكلمات"
+ },
+ "detail": {
+  "class": "U_UNVOCALIZED_CARRIER",
+  "events": 60,
+  "events_denominator": "مواضعُ حرفٍ يُرفع عندها الصنف",
+  "words": 52,
+  "words_denominator": "كلماتٌ تحمل الصنف مرّةً فأكثر",
+  "words_raising_it_more_than_once": 5,
+  "extra_events": 8,
+  "the_extra": [
+   {
+    "position": "3:112:4",
+    "raised": 2,
+    "extra": 1,
+    "word": "أَيْنَما"
+   },
+   {
+    "position": "5:2:8",
+    "raised": 3,
+    "extra": 2,
+    "word": "ولا"
+   },
+   {
+    "position": "23:44:5",
+    "raised": 2,
+    "extra": 1,
+    "word": "كُلَّما"
+   },
+   {
+    "position": "28:38:14",
+    "raised": 2,
+    "extra": 1,
+    "word": "على"
+   },
+   {
+    "position": "40:38:8",
+    "raised": 4,
+    "extra": 3,
+    "word": "الرشاد"
+   }
+  ],
+  "nothing_left": "لم تخرج كلمةٌ واحدة — الفرقُ مواضعُ حرفٍ زائدة على كلماتٍ معدودةٍ أصلًا",
+  "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_class_count.py"
+ },
+ "guards": [
+  {
+   "guard": "G_BOTH_DENOMINATORS_NAMED",
+   "denominator": 7,
+   "classes_where_they_differ": [
+    "U_UNVOCALIZED_CARRIER"
+   ],
+   "passes": true,
+   "note": "الاختلافُ ليس خللًا — هو مقامان. والحارسُ يُثبت أنّ كليهما مقيسٌ ومسمًّى، لا أنّهما متساويان."
+  },
+  {
+   "guard": "G_DIFFERENCE_IS_ACCOUNTED",
+   "denominator": 18143,
+   "events_total": 18143,
+   "words_total": 18135,
+   "difference": 8,
+   "accounted_by": 8,
+   "passes": true,
+   "note": "الفرقُ كلُّه مشروحٌ بمواضعَ مسمّاة — وفرقٌ بلا موضعٍ دعوى لا قياس."
+  },
+  {
+   "guard": "G_DETAIL_AGREES_WITH_BOTH",
+   "denominator": 2,
+   "events_match": true,
+   "words_match": true,
+   "passes": true,
+   "note": "التشغيلُ المستقلُّ يردّ العددَين نفسَيهما — وإلا فأحدُهما من مصدرٍ ثالثٍ مجهول."
+  }
+ ],
+ "all_guards_pass": true
+}

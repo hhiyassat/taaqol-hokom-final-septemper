@@ -1,0 +1,56 @@
+========================================================================
+تقرير المحور ٠ — بناء ملف القرآن من MASAQ
+========================================================================
+
+```
+MODULE                = aslot.axes.axis0_corpus
+AXIS                  = 0
+INPUT                 = inspection/runs/f1/input.txt
+INPUT_SHA256          = 09b70217e526c9de1b1e33742523883fd3a9a63a79b8c23259f54d3709ea004d
+CONSUMED_FIELDS       = Sura_No, Verse_No, Word_No, Segment_No, Word
+REFERENCE_ONLY_FIELDS = 14  (لا تدخل المحرّك)
+ROWS_READ             = 129
+WORDS_BUILT           = 129
+VERSES_BUILT          = 1
+SURAS_BUILT           = 1
+SURFACE_CONFLICTS     = 0
+```
+
+## توزيع المقاطع على الكلمات
+```
+1_SEGMENTS = 129
+```
+
+## ما يثبته هذا المحور وما لا يثبته
+  يثبت    : أن الطيّ لم يفقد صفًّا ولم يخترع كلمة، وأن الترتيب مصحفيّ.
+  لا يثبت : صحّةَ رسم MASAQ — ينقله كما هو.
+  لا يثبت : تطبيعًا ولا تقطيعًا ولا تقشيرًا — تلك محاور تالية.
+  لا يثبت : شيئًا مبنيًّا على Segmented_Word أو Morph_Tag — هما مرجعٌ لا مدخل.
+  جبر     : ROW_COUNT ≠ WORD_COUNT
+
+## الفحوص الذاتية (التزام المحرّك): 6/6
+  [PASS] T1_INPUT_ORDER_IS_CANONICAL             ترتيب ورود الكلمات = الترتيب المصحفي
+  [PASS] T_OWNER_SEPARATORS_ARE_CUT              لا فاصلةَ ولا نقطةَ بقيت في سطحٍ (0 كلمةً قُطع منها)
+  [PASS] T_UNRULED_SEPARATORS_ARE_NOT_CUT        0 توكنًا يحمل علامةً لم يُحكم فيها — باقيةٌ كما هي
+  [PASS] T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS  تعارضات = 0
+  [PASS] T6_NO_EMPTY_SURFACE                     فارغة = 0
+  [PASS] T7_FOLD_IS_LOSSLESS                     129 مقطعًا = 129 صفًّا
+
+## السموم (مدخلاتٌ يجب أن تُرفض): 7/7
+  [PASS] P1_REJECT_NON_ASCII_DIGIT                    السبب = حقلٌ عدديّ غير قابل للقراءة
+  [PASS] P2_REJECT_EMPTY_NUMERIC                      السبب = حقلٌ عدديّ غير قابل للقراءة
+  [PASS] P6_REJECT_ARABIC_INDIC_DIGITS                السبب = حقلٌ عدديّ غير قابل للقراءة
+  [PASS] P7_REJECT_SPACED_NUMBER                      السبب = حقلٌ عدديّ غير قابل للقراءة
+  [PASS] P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED  التعارض يُسجَّل ولا يُختار أحد الطرفين
+  [PASS] P4_SEGMENTS_SORTED_NOT_TRUSTED               تُرتَّب المقاطع ولا يُعتمد ترتيب الورود
+  [PASS] P5_SEGMENT_GAP_DETECTED                      الفجوة تُكشف
+
+## عيوب المدخل المقيسة — حالة البيانات لا حالة المحرّك
+  الحكم في جميعها DEFER: تُسجَّل ولا تُعالَج، ولا يُخترع رقمٌ ولا تُدرَج كلمة.
+  [DEFER] D0A_SURA_COUNT_NOT_FULL_MUSHAF   =      1   سورٌ في المدخل = 1 من 114
+  [DEFER] D0B_NUMBERING_NOT_CONTIGUOUS     =      2   ترقيمٌ غير متّصل — متوقَّعٌ في مقطعٍ من النصّ
+          نماذج: [2]
+  [CLEAR] D1_WORD_NUMBER_GAPS_IN_VERSE     =      0   أرقام كلماتٍ مفقودة داخل آيات — لا تُردَم
+  [CLEAR] D2A_SEGMENT_NUMBER_DUPLICATED    =      0   تكرار Segment_No داخل الكلمة (أشهره «يا» الموصولة بما بعدها)
+  [CLEAR] D2B_SEGMENT_NUMBER_GAP           =      0   ثغرة في ترقيم المقاطع
+  [CLEAR] D3_MULTIWORD_SURFACE_IN_ONE_CELL =      0   خليّة Word فيها أكثر من كلمة

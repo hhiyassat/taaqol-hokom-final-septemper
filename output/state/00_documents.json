@@ -1,0 +1,296 @@
+{
+ "documents": [
+  {
+   "path": "laws/MANIFEST.json",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "e397d07fd2b96a1d7074cc9e4c0f38e9",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L01_JALALAH.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "8ecc4c5dfb87baa4965734ccc6764215",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L02_DAGGER_ALIF.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "e4fbd4c5f170f353203c387a77144526",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L03_SUN_MOON_LAM.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "1c158cc3d91f969c138b2069550d9dc5",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L04_ELIDED_ARTICLE.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "39c096805b7c2d49ae786338a077ad04",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L05_INTERROGATIVE_MADDA.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "39c6fef9d63b764483627e23b0de431b",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L06_CL16_RANK.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "b36b35b0f2102477a8d1ed4786ca61d8",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "laws/L07_CL16_SKELETON.md",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "26566ce5370de1d895628ad903eb39e0",
+   "mtime_utc": "2026-09-02T04:11:19+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T04:19:18+00:00"
+  },
+  {
+   "path": "data/axis_1_owner_policy.json",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "fa5ac781d4b68f73281438e911e295b0",
+   "mtime_utc": "2026-09-01T18:50:20+00:00",
+   "dated": true,
+   "date_note": "2026-09-01T18:55:47+00:00"
+  },
+  {
+   "path": "data/residual_kind_assignment.json",
+   "authority": "LAW",
+   "kind": "file",
+   "sha256": "298a5d3bdda00e78b906e27b7ad908fc",
+   "mtime_utc": "2026-09-04T01:47:22+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "vendor/Taaqol-GPT",
+   "authority": "LAW",
+   "kind": "dir",
+   "sha256": "14d5a6139a68c7237e6c2668abe9be8f",
+   "mtime_utc": "2026-09-04T19:43:40+00:00",
+   "dated": false,
+   "date_note": "UNTRACKED_OR_NEVER_COMMITTED"
+  },
+  {
+   "path": "src/aslot",
+   "authority": "RUNTIME",
+   "kind": "dir",
+   "sha256": "58adaff1186e88ad5774ce584a86f9ba",
+   "mtime_utc": "2026-09-04T19:05:32+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T14:45:55+00:00"
+  },
+  {
+   "path": "scripts",
+   "authority": "RUNTIME",
+   "kind": "dir",
+   "sha256": "cd5a78e95fcabb041edf8ce41d1d72d3",
+   "mtime_utc": "2026-09-04T19:42:35+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T20:35:29+00:00"
+  },
+  {
+   "path": "output/remediation/01_ledger.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "8c297c7c1dfe57c8db853c9d72889f60",
+   "mtime_utc": "2026-09-04T04:13:40+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/upstream/00_upstream.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "ba04dae9b2ea3406fd78286d495a0895",
+   "mtime_utc": "2026-09-04T19:43:40+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/doors/00_doors.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "33bfd3aaca2d32e0e736d6579834368b",
+   "mtime_utc": "2026-09-04T19:43:40+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/nazila_result/scores.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "40622b18e89756a934ffad0b71bc2d81",
+   "mtime_utc": "2026-09-04T19:11:08+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/tanween/02_after.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "376290910826592d7f605f4138bac172",
+   "mtime_utc": "2026-09-04T19:11:23+00:00",
+   "dated": false,
+   "date_note": "UNTRACKED_OR_NEVER_COMMITTED"
+  },
+  {
+   "path": "output/bound/00_c3_bounded.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "60c21d6b06cee887f01e49b0de36e742",
+   "mtime_utc": "2026-09-04T19:43:41+00:00",
+   "dated": false,
+   "date_note": "UNTRACKED_OR_NEVER_COMMITTED"
+  },
+  {
+   "path": "output/max/01_b2_measures.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "aaa76b0fce9828e1e57a874ff327a8d0",
+   "mtime_utc": "2026-09-04T01:47:12+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "reports/compliance/AXIS_9_MEASURES.json",
+   "authority": "EVIDENCE",
+   "kind": "file",
+   "sha256": "26d48d3aa3c81746815287346b4efe92",
+   "mtime_utc": "2026-09-04T19:43:32+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/INDEX.md",
+   "authority": "PROJECTION",
+   "kind": "file",
+   "sha256": "2a40a4e7b6459907ea87befec4912c09",
+   "mtime_utc": "2026-09-04T19:43:41+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "output/state/06_STATE.md",
+   "authority": "PROJECTION",
+   "kind": "file",
+   "sha256": "ca4d5dc61df10144d378226de56610c6",
+   "mtime_utc": "2026-09-04T19:11:30+00:00",
+   "dated": false,
+   "date_note": "ABSENT_ON_DEVICE"
+  },
+  {
+   "path": "HANDOFF.md",
+   "authority": "HISTORICAL",
+   "kind": "file",
+   "sha256": "79ed8da7c5f415d5b36d9c16db8f4f3b",
+   "mtime_utc": "2026-09-04T04:10:01+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T20:35:29+00:00"
+  },
+  {
+   "path": "README.md",
+   "authority": "HISTORICAL",
+   "kind": "file",
+   "sha256": "95490c6b8f2ddabec08114a3401ba226",
+   "mtime_utc": "2026-09-04T04:10:01+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T07:55:24+00:00"
+  },
+  {
+   "path": "docs/ARCHITECTURE.md",
+   "authority": "HISTORICAL",
+   "kind": "file",
+   "sha256": "d21ffb7384034f4fe10de4ce13f6b9f9",
+   "mtime_utc": "2026-09-02T03:57:47+00:00",
+   "dated": true,
+   "date_note": "2026-09-02T03:59:17+00:00"
+  }
+ ],
+ "by_authority": {
+  "EVIDENCE": 8,
+  "HISTORICAL": 3,
+  "LAW": 11,
+  "PROJECTION": 2,
+  "RUNTIME": 2
+ },
+ "authority_unclear": [],
+ "dated": 14,
+ "undated": [
+  "data/residual_kind_assignment.json",
+  "output/INDEX.md",
+  "output/bound/00_c3_bounded.json",
+  "output/doors/00_doors.json",
+  "output/max/01_b2_measures.json",
+  "output/nazila_result/scores.json",
+  "output/remediation/01_ledger.json",
+  "output/state/06_STATE.md",
+  "output/tanween/02_after.json",
+  "output/upstream/00_upstream.json",
+  "reports/compliance/AXIS_9_MEASURES.json",
+  "vendor/Taaqol-GPT"
+ ],
+ "undated_by_reason": {
+  "ABSENT_ON_DEVICE": 9,
+  "UNTRACKED_OR_NEVER_COMMITTED": 3
+ },
+ "undated_by_authority": {
+  "LAW": [
+   "data/residual_kind_assignment.json",
+   "vendor/Taaqol-GPT"
+  ],
+  "EVIDENCE": [
+   "output/bound/00_c3_bounded.json",
+   "output/doors/00_doors.json",
+   "output/max/01_b2_measures.json",
+   "output/nazila_result/scores.json",
+   "output/remediation/01_ledger.json",
+   "output/tanween/02_after.json",
+   "output/upstream/00_upstream.json",
+   "reports/compliance/AXIS_9_MEASURES.json"
+  ],
+  "PROJECTION": [
+   "output/INDEX.md",
+   "output/state/06_STATE.md"
+  ]
+ },
+ "dating_measured_on": "~/final-september",
+ "dating_command": "git -C ~/final-september log -1 --format=%cI -- <path>",
+ "finding": "سلطةُ EVIDENCE بلا بيتٍ مؤرَّخ: دفاترُ الإثبات كلُّها في حاويةٍ تُستردّ، وغائبةٌ عن المستودع الوحيد الذي يؤرّخها.",
+ "finding_2": "وأشدُّ منه: `data/residual_kind_assignment.json` سلطتُه `LAW` — وهو موضعُ حكمِ `B2` حين يقع — وغائبٌ عن المستودع كذلك. فحكمٌ يُودَع في حاويةٍ تُستردّ ليس مودَعًا.",
+ "authorities_closed_list": [
+  "LAW",
+  "RUNTIME",
+  "EVIDENCE",
+  "PROJECTION",
+  "HISTORICAL"
+ ]
+}

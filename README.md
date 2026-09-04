@@ -297,6 +297,10 @@ closure_states_in_use    = 0     Γ لم يُشغَّل، والأحكامُ ل�
 residual_kinds_assigned  = 0/7   البقايا بلا صنفٍ ولا سقف            (T-4)
 gates_between_axes       = 0     الانتقالُ استدعاءٌ مباشر            (T-7)
 forbidden_lines_enforced = 0     تقشيرُ «كَتَبَ» ما زال ACCEPT        (T-6)
+                                 ⟶ SUPERSEDED · نزل عن ACCEPT عند 2.9.0
+                                   بحكم المالك في T4B، لا بـT-6.
+                                   والمقيس: «كَتَبَ» قشرَ في 0 من 74,668.
+                                   والدعوى تُقيَّد لا تُمحى.
 ```
 
 وسمٌّ يمنع ادّعاءها: `P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED` يسقط إن أسندتُ

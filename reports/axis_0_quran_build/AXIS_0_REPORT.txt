@@ -37,8 +37,10 @@ SURFACE_CONFLICTS     = 0
   لا يثبت : شيئًا مبنيًّا على Segmented_Word أو Morph_Tag — هما مرجعٌ لا مدخل.
   جبر     : ROW_COUNT ≠ WORD_COUNT
 
-## الفحوص الذاتية (التزام المحرّك): 7/7
+## الفحوص الذاتية (التزام المحرّك): 9/9
   [PASS] T1_INPUT_ORDER_IS_CANONICAL             ترتيب ورود الكلمات = الترتيب المصحفي
+  [PASS] T_OWNER_SEPARATORS_ARE_CUT              لا فاصلةَ ولا نقطةَ بقيت في سطحٍ (0 كلمةً قُطع منها)
+  [PASS] T_UNRULED_SEPARATORS_ARE_NOT_CUT        0 توكنًا يحمل علامةً لم يُحكم فيها — باقيةٌ كما هي
   [PASS] T2_SURA_COUNT                           114/114
   [PASS] T3_SURA_NUMBERING_CONTIGUOUS            أرقام السور متّصلة من ١
   [PASS] T4_VERSE_NUMBERING_CONTIGUOUS           سور مخالفة = []

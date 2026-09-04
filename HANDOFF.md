@@ -317,6 +317,10 @@ hints 120/10/10 · RUNTIME_CONTEXT_PENDING 150 · ZERO->ZERO 160
 ◻      السجلّان (عوامل ١٦٠ · مبنيات ٥٦٥) ← يُغلقان بابَ «كَتَبَ» وحدَهما
 ◻ T-5  تشغيلُ الغلق Γ — يغيّر أحكامًا
 ◻ T-6  الخطوطُ الممنوعة — تُنزل تقشيرَ «كَتَبَ» عن ACCEPT
+       ⟶ SUPERSEDED · نزل عند 2.9.0 بحكم المالك في T4B، لا بـT-6.
+         والمقيس: «كَتَبَ» ورد 8 صفوفٍ وقشرَ في 0 من 74,668؛
+         و Root_Proven=YES في 0. فلا واقعةَ تحت Signifier→WordForm
+         — EXPECTED_EVENT_ABSENT. والدعوى تُقيَّد لا تُمحى.
 ◻ T-7  البوّابات بين المحاور
 ◻ T-8  حذفُ النسخة المكرّرة maqayis_v2 داخل hokom
 ◻      «آ» خارج «أل»  ·  OPEN_QUESTION_N2_2  ·  «لكم» في CL-16
@@ -626,6 +630,10 @@ closure_states_in_use    = 0    Γ لم يُشغَّل، والأحكامُ لم
 residual_kinds_assigned  = 0/7  البقايا بلا صنفٍ ولا سقف          (T-4)
 gates_between_axes       = 0    الانتقالُ استدعاءٌ مباشر           (T-7)
 forbidden_lines_enforced = 0    تقشيرُ «كَتَبَ» ما زال ACCEPT       (T-6)
+                                ⟶ SUPERSEDED · نزل عن ACCEPT عند 2.9.0
+                                  بحكم المالك في T4B، لا بـT-6.
+                                  والمقيس: «كَتَبَ» قشرَ في 0 من 74,668.
+                                  والدعوى تُقيَّد لا تُمحى.
 ```
 
 وسمٌّ يمنع ادّعاءها: `P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED` يسقط إن

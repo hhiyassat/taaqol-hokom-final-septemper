@@ -1,0 +1,14 @@
+{
+ "path": "~/final-september",
+ "branch": "main",
+ "head": "02b3318266d07e1910f180b8b6438ca3f655c81b",
+ "state": "DIRTY",
+ "entries": 11,
+ "lines": [" M .DS_Store", " M inspection/.DS_Store", " M inspection/nazila/02_path_classifier.json", " M scripts/probe_path_classifier.py", " M scripts/run_taaqol_nazila.py", "?? Claude outputs/", "?? inspection/three_layer/", "?? output/", "?? reports/gamma_shadow/", "?? scripts/check_no_promotion.py", "?? tests/test_no_dead_numbers.py"],
+ "dirty_under_src": 0,
+ "files_to_be_changed_are_clean": true,
+ "files_to_be_changed": ["src/aslot/axes/axis1_normalization.py", "src/aslot/constants.py"],
+ "device_sha256": {"src/aslot/axes/axis1_normalization.py": "e2221ca82eb5706ff1f2edd65f90acea6f5be656fd128990bf30c3c488f8056f", "src/aslot/constants.py": "81560a2fcad8929c49a493b34e16ca6666f16bb070ac6f87f2257f935549e561"},
+ "measured_utc": "2026-09-04",
+ "command": "git -C ~/final-september status --porcelain ; git status --porcelain -- src/"
+}

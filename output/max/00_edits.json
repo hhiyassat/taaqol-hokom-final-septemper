@@ -1,0 +1,38 @@
+{
+ "task": "MAX_EXECUTABLE",
+ "edits": {
+  "E1": {
+   "was": "حارسُ الفهرس `len(idx) >= 5` — عددٌ لا هُويّة.",
+   "now": "جردٌ مُثبَّتٌ بالمسار: ستّةُ دفاترَ مسمّاةٌ بمساراتها على آلتَين.",
+   "why": "العددُ يمرّ بعد حذفِ دفترٍ ما دام سادسٌ قد أُضيف. والمسارُ لا يمرّ.",
+   "site": "tests_taaqol/test_exec_now.py::PINNED_LEDGERS",
+   "poison": "tests_taaqol/test_exec_now.py::test_poison_a_deleted_ledger_falls_even_when_another_is_added"
+  },
+  "E2": {
+   "was": "`G_NO_LEDGER_MERGE` يُقرأ حارسًا بنيويًّا.",
+   "now": "`NO_MERGE_KIND = NUMERIC_COINCIDENCE_CHECK` — والوسمُ في اسم الحارس نفسِه في الدفتر.",
+   "why": "لا يقرأ نسبًا ولا مسارات: يبحث عن مصادفةٍ عدديّة. فيتّهم بريئًا صادف المجموعَ، ويُبرّئ مدموجًا لم يصادف.",
+   "site": "scripts/build_exec_now.py::NO_MERGE_KIND",
+   "poison": "tests_taaqol/test_exec_now.py::test_no_merge_is_labelled_a_numeric_coincidence_check"
+  },
+  "E3": {
+   "was": "٢٩٩ و٢٩٢ مكتوبتان في تعليق، والفرقُ مشروحٌ نثرًا.",
+   "now": "`repeat_is_entry_boundary(page)` — يُشتقّ الفرقُ ويُقابَل بحقول `EntryBoundary` مستفتاةً من الصنف حيًّا.",
+   "why": "رقمٌ مكتوبٌ في تعليقٍ لا يسقط حين يتغيّر المخرَج.",
+   "site": "scripts/build_exec_now.py::repeat_is_entry_boundary",
+   "poison": "tests_taaqol/test_exec_now.py::test_poison_e3_falls_when_a_foreign_pair_repeats"
+  },
+  "E4": {
+   "was": "القاعدةُ السابعةُ مذكورةٌ في الكلام، غيرُ موثَّقةٍ ولا مسمومة.",
+   "now": "`COUNT_IS_NOT_MEMBERSHIP` سابعةً في `RULES` — وُسِّعت بحكم المالك إلى الجهتين بعد أن كانت في جهةٍ واحدة.",
+   "why": "العددُ ظلُّ المجموعة لا هي. وأوّلُ صيغةٍ قالت «تساوٍ بلا اتّحاد» وحدَها، فمرّ الخطأُ المعاكس: «Example سقط» رُفع لاختلافِ 55/160 ولم يضع صفٌّ واحد. فصارت الجهتان معًا.",
+   "site": "scripts/build_exec_now.py::RULES",
+   "poison": "tests_taaqol/test_exec_now.py::test_count_is_not_membership_in_both_directions"
+  }
+ },
+ "vendor": {
+  "vendor_head": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+  "porcelain_lines": 0,
+  "untouched": true
+ }
+}

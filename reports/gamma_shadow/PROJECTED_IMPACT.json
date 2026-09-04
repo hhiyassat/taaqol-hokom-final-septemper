@@ -1,0 +1,602 @@
+{
+ "task": "T5_3_PROJECTED_IMPACT",
+ "ceilings": {
+  "BLOCKING": "ZERO",
+  "DEFERRABLE": "HYPOTHESIS",
+  "NON_BLOCKING": "CERTIFICATE",
+  "EXPLANATORY": "CERTIFICATE",
+  "HIDDEN_FORBIDDEN": "ZERO"
+ },
+ "scenarios": [
+  {
+   "class": "U_TANWEEN",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 8894,
+   "before": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 8894
+   },
+   "verdicts_that_move": 8600,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_TANWEEN",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 8894,
+   "before": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 8600,
+    "BLOCK": 294
+   },
+   "verdicts_that_move": 7829,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_TANWEEN",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 8894,
+   "before": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "after": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_TANWEEN",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 8894,
+   "before": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "after": {
+    "ACCEPT": 7829,
+    "DEFER": 771,
+    "BLOCK": 294
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_FARIQA",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 3561,
+   "before": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 3561
+   },
+   "verdicts_that_move": 2951,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_FARIQA",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 3561,
+   "before": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 2951,
+    "BLOCK": 610
+   },
+   "verdicts_that_move": 2401,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_FARIQA",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 3561,
+   "before": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "after": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_FARIQA",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 3561,
+   "before": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "after": {
+    "ACCEPT": 2401,
+    "DEFER": 550,
+    "BLOCK": 610
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_MAQSURA",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 2498,
+   "before": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 2498
+   },
+   "verdicts_that_move": 2483,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_MAQSURA",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 2498,
+   "before": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 2483,
+    "BLOCK": 15
+   },
+   "verdicts_that_move": 2353,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_MAQSURA",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 2498,
+   "before": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "after": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALIF_MAQSURA",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 2498,
+   "before": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "after": {
+    "ACCEPT": 2353,
+    "DEFER": 130,
+    "BLOCK": 15
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_N7_2_INTERNAL_AL",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 1616,
+   "before": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 1616
+   },
+   "verdicts_that_move": 1616,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_N7_2_INTERNAL_AL",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 1616,
+   "before": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 1616,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 14,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_N7_2_INTERNAL_AL",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 1616,
+   "before": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_N7_2_INTERNAL_AL",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 1616,
+   "before": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 14,
+    "DEFER": 1602,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALEF_MADDA",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 1505,
+   "before": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 1505
+   },
+   "verdicts_that_move": 1505,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALEF_MADDA",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 1505,
+   "before": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 1505,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 1389,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALEF_MADDA",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 1505,
+   "before": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_ALEF_MADDA",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 1505,
+   "before": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 1389,
+    "DEFER": 116,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_UNVOCALIZED_CARRIER",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 52,
+   "before": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 52
+   },
+   "verdicts_that_move": 40,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_UNVOCALIZED_CARRIER",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 52,
+   "before": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 40,
+    "BLOCK": 12
+   },
+   "verdicts_that_move": 31,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_UNVOCALIZED_CARRIER",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 52,
+   "before": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "after": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_UNVOCALIZED_CARRIER",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 52,
+   "before": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "after": {
+    "ACCEPT": 31,
+    "DEFER": 9,
+    "BLOCK": 12
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_MULTIWORD_CELL",
+   "kind": "BLOCKING",
+   "rank_cap": "ZERO",
+   "reading": "يُصفَّر",
+   "gloss": "لا حكمَ يخرج من كلمةٍ تحمل هذا الصنف",
+   "members": 9,
+   "before": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_MULTIWORD_CELL",
+   "kind": "DEFERRABLE",
+   "rank_cap": "HYPOTHESIS",
+   "reading": "يقف عند فرضيّة",
+   "gloss": "ACCEPT لا يبقى ACCEPT — يصير فرضيّة",
+   "members": 9,
+   "before": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_MULTIWORD_CELL",
+   "kind": "NON_BLOCKING",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 9,
+   "before": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  },
+  {
+   "class": "U_MULTIWORD_CELL",
+   "kind": "EXPLANATORY",
+   "rank_cap": "CERTIFICATE",
+   "reading": "لا يُخفَض",
+   "gloss": "الصنفُ لا يمسّ الرتبةَ ألبتّة",
+   "members": 9,
+   "before": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "after": {
+    "ACCEPT": 0,
+    "DEFER": 0,
+    "BLOCK": 0
+   },
+   "verdicts_that_move": 0,
+   "denominator": "أحكامُ المحور الرابع على كلمات هذا الصنف"
+  }
+ ],
+ "guards": [
+  {
+   "guard": "G_NO_ASSIGNMENT",
+   "denominator": 7,
+   "chosen": [],
+   "passes": true,
+   "note": "إسنادٌ واحدٌ مملوءٌ من عندي نقضٌ لـ P4."
+  },
+  {
+   "guard": "G_CEILING_IS_LIVE",
+   "denominator": 5,
+   "drifted": [],
+   "passes": true,
+   "note": "السقفُ يُستفتى في كلّ تشغيل، ولا يُخزَّن."
+  },
+  {
+   "guard": "G_TOTALS_PRESERVED",
+   "denominator": 28,
+   "broken": [],
+   "passes": true,
+   "note": "الانتقالُ ينقل ولا يخلق: مجموعُ قبلُ = مجموعُ بعدُ."
+  },
+  {
+   "guard": "G_EVERY_CLASS_PROJECTED",
+   "denominator": 7,
+   "missing": [],
+   "passes": true
+  }
+ ],
+ "all_guards_pass": true
+}

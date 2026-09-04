@@ -1,0 +1,641 @@
+{
+ "task": "M1_TANWEEN_DISTRIBUTION",
+ "corpus_words": 77411,
+ "corpus_words_denominator": "صفوفُ QURAN_WORDS.csv",
+ "tanweened_words": 8894,
+ "tanweened_denominator": "كلماتٌ تحمل علامةَ تنوينٍ واحدةً فأكثر",
+ "words_with_more_than_one_tanween_mark": 0,
+ "grid": {
+  "DAMM×HAMZA": 58,
+  "DAMM×SOUND_LETTER": 2107,
+  "DAMM×TAA_MARBUTA": 354,
+  "FATH×ALIF": 3060,
+  "FATH×ALIF_MAQSURA": 93,
+  "FATH×HAMZA": 82,
+  "FATH×TAA_MARBUTA": 507,
+  "KASR×HAMZA": 245,
+  "KASR×SOUND_LETTER": 2007,
+  "KASR×TAA_MARBUTA": 381
+ },
+ "grid_denominator": "نوعُ التنوين × شكلُ آخِر الرسم",
+ "grid_total": 8894,
+ "by_position": {
+  "DAMM×HAMZA×ON_FINAL": 58,
+  "DAMM×SOUND_LETTER×ON_FINAL": 2107,
+  "DAMM×TAA_MARBUTA×ON_FINAL": 354,
+  "FATH×ALIF×ON_FINAL": 3059,
+  "FATH×ALIF×ON_PENULT_FINAL_BARE": 1,
+  "FATH×ALIF_MAQSURA×ON_FINAL": 93,
+  "FATH×HAMZA×ON_FINAL": 82,
+  "FATH×TAA_MARBUTA×ON_FINAL": 507,
+  "KASR×HAMZA×ON_FINAL": 245,
+  "KASR×SOUND_LETTER×ON_FINAL": 2007,
+  "KASR×TAA_MARBUTA×ON_FINAL": 381
+ },
+ "unclassified_shape": [],
+ "closes": true,
+ "closes_arithmetic": "8894 + 0 = 8894",
+ "samples": {
+  "DAMM×HAMZA": [
+   {
+    "position": "2:6:4",
+    "word": "سَوَاءٌ",
+    "rasm": "سواء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:49:15",
+    "word": "بَلَاءٌ",
+    "rasm": "بلاء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:154:10",
+    "word": "أَحْيَاءٌ",
+    "rasm": "أحياء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:178:20",
+    "word": "شَيْءٌ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:178:23",
+    "word": "وَأَدَاءٌ",
+    "rasm": "وأداء",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "DAMM×SOUND_LETTER": [
+   {
+    "position": "2:7:11",
+    "word": "عَذَابٌ",
+    "rasm": "عذاب",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:7:12",
+    "word": "عَظِيمٌ",
+    "rasm": "عظيم",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:10:3",
+    "word": "مَرَضٌ",
+    "rasm": "مرض",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:10:8",
+    "word": "عَذَابٌ",
+    "rasm": "عذاب",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:10:9",
+    "word": "أَلِيمٌ",
+    "rasm": "أليم",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "DAMM×TAA_MARBUTA": [
+   {
+    "position": "2:7:9",
+    "word": "غِشَاوَةٌ",
+    "rasm": "غشاوة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:25:31",
+    "word": "مُطَهَّرَةٌ",
+    "rasm": "مطهرة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:45:5",
+    "word": "لَكَبِيرَةٌ",
+    "rasm": "لكبيرة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:48:12",
+    "word": "شَفَاعَةٌ",
+    "rasm": "شفاعة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:58:15",
+    "word": "حِطَّةٌ",
+    "rasm": "حطة",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "FATH×ALIF": [
+   {
+    "position": "2:10:6",
+    "word": "مَرَضَاً",
+    "rasm": "مرضا",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:17:5",
+    "word": "نَارَاً",
+    "rasm": "نارا",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:22:5",
+    "word": "فِرَاشَاً",
+    "rasm": "فراشا",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:22:16",
+    "word": "رِزْقَاً",
+    "rasm": "رزقا",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:22:21",
+    "word": "أَنْدَادَاً",
+    "rasm": "أندادا",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "FATH×ALIF_MAQSURA": [
+   {
+    "position": "2:2:6",
+    "word": "هُدَىً",
+    "rasm": "هدى",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:5:3",
+    "word": "هُدَىً",
+    "rasm": "هدى",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:38:8",
+    "word": "هُدَىً",
+    "rasm": "هدى",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:97:16",
+    "word": "وَهُدَىً",
+    "rasm": "وهدى",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:125:11",
+    "word": "مُصَلَّىً",
+    "rasm": "مصلى",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "FATH×HAMZA": [
+   {
+    "position": "2:22:7",
+    "word": "بِنَاءً",
+    "rasm": "بناء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:22:11",
+    "word": "مَاءً",
+    "rasm": "ماء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:171:11",
+    "word": "دُعَاءً",
+    "rasm": "دعاء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:171:12",
+    "word": "وَنِدَاءً",
+    "rasm": "ونداء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "3:103:13",
+    "word": "أَعْدَاءً",
+    "rasm": "أعداء",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "FATH×TAA_MARBUTA": [
+   {
+    "position": "2:26:9",
+    "word": "بَعُوضَةً",
+    "rasm": "بعوضة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:30:9",
+    "word": "خَلِيفَةً",
+    "rasm": "خليفة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:51:5",
+    "word": "لَيْلَةً",
+    "rasm": "ليلة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:55:10",
+    "word": "جَهْرَةً",
+    "rasm": "جهرة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:65:11",
+    "word": "قِرَدَةً",
+    "rasm": "قردة",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "KASR×HAMZA": [
+   {
+    "position": "2:20:24",
+    "word": "شَيْءٍ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:29:18",
+    "word": "شَيْءٍ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:106:18",
+    "word": "شَيْءٍ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:109:32",
+    "word": "شَيْءٍ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:113:6",
+    "word": "شَيْءٍ",
+    "rasm": "شيء",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "KASR×SOUND_LETTER": [
+   {
+    "position": "2:17:15",
+    "word": "ظُلُمَاتٍ",
+    "rasm": "ظلمات",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:19:2",
+    "word": "كَصَيِّبٍ",
+    "rasm": "كصيب",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:23:4",
+    "word": "رَيْبٍ",
+    "rasm": "ريب",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:25:8",
+    "word": "جَنَّاتٍ",
+    "rasm": "جنات",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:29:15",
+    "word": "سَمَاوَاتٍ",
+    "rasm": "سماوات",
+    "tanween_position": "ON_FINAL"
+   }
+  ],
+  "KASR×TAA_MARBUTA": [
+   {
+    "position": "2:23:10",
+    "word": "بِسُورَةٍ",
+    "rasm": "بسورة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:25:17",
+    "word": "ثَمَرَةٍ",
+    "rasm": "ثمرة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:63:10",
+    "word": "بِقُوَّةٍ",
+    "rasm": "بقوة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:93:10",
+    "word": "بِقُوَّةٍ",
+    "rasm": "بقوة",
+    "tanween_position": "ON_FINAL"
+   },
+   {
+    "position": "2:96:5",
+    "word": "حَيَاةٍ",
+    "rasm": "حياة",
+    "tanween_position": "ON_FINAL"
+   }
+  ]
+ },
+ "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_tanween.py",
+ "mechanism": {
+  "DAMM×HAMZA": {
+   "total": 58,
+   "tanween_on_final_letter": 58,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "NOT_RULED",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 58 · قبلَه 0",
+   "ratified": false
+  },
+  "DAMM×SOUND_LETTER": {
+   "total": 2107,
+   "tanween_on_final_letter": 2107,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "NOT_RULED",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 2107 · قبلَه 0",
+   "ratified": false
+  },
+  "DAMM×TAA_MARBUTA": {
+   "total": 354,
+   "tanween_on_final_letter": 354,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "TURN_TO_OPEN_TAA",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 354 · قبلَه 0",
+   "ratified": false
+  },
+  "FATH×ALIF": {
+   "total": 3060,
+   "tanween_on_final_letter": 3059,
+   "tanween_on_letter_before_final": 1,
+   "tanween_earlier": 0,
+   "action": "DELETE_CARRIER",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 3059 · قبلَه 1",
+   "ratified": true
+  },
+  "FATH×ALIF_MAQSURA": {
+   "total": 93,
+   "tanween_on_final_letter": 93,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "DELETE_CARRIER",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 93 · قبلَه 0",
+   "ratified": true
+  },
+  "FATH×HAMZA": {
+   "total": 82,
+   "tanween_on_final_letter": 82,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "NOT_RULED",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 82 · قبلَه 0",
+   "ratified": false
+  },
+  "FATH×TAA_MARBUTA": {
+   "total": 507,
+   "tanween_on_final_letter": 507,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "TURN_TO_OPEN_TAA",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 507 · قبلَه 0",
+   "ratified": true
+  },
+  "KASR×HAMZA": {
+   "total": 245,
+   "tanween_on_final_letter": 245,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "NOT_RULED",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 245 · قبلَه 0",
+   "ratified": false
+  },
+  "KASR×SOUND_LETTER": {
+   "total": 2007,
+   "tanween_on_final_letter": 2007,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "NOT_RULED",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 2007 · قبلَه 0",
+   "ratified": false
+  },
+  "KASR×TAA_MARBUTA": {
+   "total": 381,
+   "tanween_on_final_letter": 381,
+   "tanween_on_letter_before_final": 0,
+   "tanween_earlier": 0,
+   "action": "TURN_TO_OPEN_TAA",
+   "mark_order_measured": "TANWEEN_AFTER_CARRIER",
+   "mark_order_split": "بعدَ الحامل 381 · قبلَه 0",
+   "ratified": false
+  }
+ },
+ "ratified_pairs": {
+  "FATH×ALIF": {
+   "action": "DELETE_CARRIER",
+   "example": "شَيْئًا ⟶ شَيْئَنْ"
+  },
+  "FATH×ALIF_MAQSURA": {
+   "action": "DELETE_CARRIER",
+   "example": "مُسَمًّى ⟶ مُسَمَّنْ"
+  },
+  "FATH×TAA_MARBUTA": {
+   "action": "TURN_TO_OPEN_TAA",
+   "example": "تِجَارَةً ⟶ تِجَارَتَنْ"
+  }
+ },
+ "broad_reading_not_taken": {
+  "DAMM×TAA_MARBUTA": "تِجَارَةٌ ⟶ تِجَارَتُنْ",
+  "KASR×TAA_MARBUTA": "تِجَارَةٍ ⟶ تِجَارَتِنْ"
+ },
+ "textual_tension": {
+  "id": "T1_VS_4B",
+  "narrow": "الجدولُ المنقول ثلاثةُ أسطرٍ كلُّها فتح · و«ثلاثةُ أشكالٍ لا رابع» · و4ب معروضٌ صراحةً",
+  "broad": "صياغةُ T1 تقول «حركةُ التنوين» بلا تقييدٍ بنوعه، فظاهرُها شمولُ الضمّ والكسر على التاء",
+  "taken": "NARROW",
+  "why": "الأضيقُ يوافق البنيةَ كلَّها، والأوسعُ نثرَ سطرٍ واحد. وعند التعارض يؤخَذ ما لا يُوسِّع.",
+  "rows_at_stake": 735,
+  "status": "OWNER_PENDING",
+  "decided_by_tool": false
+ },
+ "rollback_point": {
+  "clean_tree_precondition": {
+   "required": "git status نظيفٌ في final-september",
+   "measured": "DIRTY",
+   "passes": false,
+   "dirty_under_src": 0,
+   "files_to_be_changed_are_clean": true,
+   "restore_command": "git -C ~/final-september checkout -- src/aslot/axes/axis1_normalization.py src/aslot/constants.py",
+   "waived_by_tool": false,
+   "authority_to_waive": "OWNER"
+  },
+  "axis_outputs": {
+   "reports/axis_0_quran_build/AXIS_0_MEASURES.json": "2ad5666e79f23b9a40b2056798fc639ea0a550d3a2d644916a9ee99a76c8eac0",
+   "reports/axis_0_quran_build/AXIS_0_REPORT.txt": "a437214ebd6f2ce453ac98489194a2a53ab3d3e157cf61b16a4f2651eb46af42",
+   "reports/axis_0_quran_build/QURAN_FROM_MASAQ.txt": "548471e6128caa2e57d63505eee1b886c5dbe8858beb4f9f7eca8ef17a7f6834",
+   "reports/axis_0_quran_build/QURAN_WORDS.csv": "461a7e6dbd045d075688a476784754ee508a85f0437cf832557c1ff3c5de9d38",
+   "reports/axis_1_normalization/AXIS_1_MEASURES.json": "e9068a886d59f50520cb82275643b1b1bf972b95c312db436f24dcc5f157738e",
+   "reports/axis_1_normalization/AXIS_1_NORMALIZATION.csv": "969a3b9ff13cdd48ee356bce535788434ef73f86ef2d3c0cfd0afbbcff75cbe1",
+   "reports/axis_1_normalization/AXIS_1_REPORT.txt": "920a0e4bb24c903b1b4abd00881911b0beb481869c4624b92f0e400893fe32e6",
+   "reports/axis_2_mabniyat_operators/AXIS_2_MEASURES.json": "392e3c9a09b209866abae5263e0ac7933be606b1d70564ec576716d3e2d49c56",
+   "reports/axis_2_mabniyat_operators/AXIS_2_REGISTRY.csv": "c409b6c72126631b215dcc6e2ebf39e3c22d847075884be392b215d92c6ee9d3",
+   "reports/axis_2_mabniyat_operators/AXIS_2_REPORT.txt": "1cb6efdea0ff9ae1b9e276a19dd0a4d8ed341bb307760e0c990278e9d40d5101",
+   "reports/axis_2_mabniyat_operators/AXIS_2_TOKENS.csv": "7095e71ce99531d6939a7ebf5d974cceea3b7b41e8989bf03f3658241a1ec9ce",
+   "reports/axis_3_syllables/AXIS_3_MEASURES.json": "bc23708ac94561c703848222d6454afa9dd98afeeed73f9dafe5301fede5e8e6",
+   "reports/axis_3_syllables/AXIS_3_REPORT.txt": "d5a8c21a2e7d43b937f4f35f728830dd618710af37fa1efdeec4bb566a456d56",
+   "reports/axis_3_syllables/AXIS_3_SYLLABLES.csv": "baecf3f91c2304df3d2380800b54551c5fa9eb2a6f55c53642c7bdc796e16da7",
+   "reports/axis_4_peel_to_stem/AXIS_4_MEASURES.json": "30e3e6f8c2112a81939f2d0c3f5575fd8d4cc564b11bed087eaa653b88141ce0",
+   "reports/axis_4_peel_to_stem/AXIS_4_PEEL_TO_STEM.csv": "f098c00b2028eb3b300ca760a670f911acc3e27ca6cb0f27560c4addacebda81",
+   "reports/axis_4_peel_to_stem/AXIS_4_REPORT.txt": "d37f82db09a52661f6c40d85c758af3aab3c75638c0f525e87d85f32a1e4a915",
+   "reports/axis_4_peel_to_stem/MASAQ_LIKE_OUTPUT.csv": "1385a7a06991912d9866354a01672ef3fe8777844a6c643cf9e3c93c64a37c0e"
+  },
+  "axis_outputs_denominator": "كلُّ ملفٍّ تحت reports/axis_*",
+  "source_files": {
+   "src/aslot/axes/axis1_normalization.py": "7944a55e83a1f04ebb067e5b20c1e934b7b446dfdd5791a09f57d443cf9c2710",
+   "src/aslot/constants.py": "4a7ea0d49a561573b49a1d6c7f7b259bf4427bcb60a6675aa973d9a732c47c61"
+  },
+  "container_git": "NO_REPOSITORY — النسخةُ في الحاوية بلا git، فنقطةُ الرجوع هي هذه البصمات",
+  "device_git": {
+   "path": "~/final-september",
+   "branch": "main",
+   "head": "02b3318266d07e1910f180b8b6438ca3f655c81b",
+   "state": "DIRTY",
+   "entries": 11,
+   "lines": [
+    " M .DS_Store",
+    " M inspection/.DS_Store",
+    " M inspection/nazila/02_path_classifier.json",
+    " M scripts/probe_path_classifier.py",
+    " M scripts/run_taaqol_nazila.py",
+    "?? Claude outputs/",
+    "?? inspection/three_layer/",
+    "?? output/",
+    "?? reports/gamma_shadow/",
+    "?? scripts/check_no_promotion.py",
+    "?? tests/test_no_dead_numbers.py"
+   ],
+   "dirty_under_src": 0,
+   "files_to_be_changed_are_clean": true,
+   "files_to_be_changed": [
+    "src/aslot/axes/axis1_normalization.py",
+    "src/aslot/constants.py"
+   ],
+   "device_sha256": {
+    "src/aslot/axes/axis1_normalization.py": "e2221ca82eb5706ff1f2edd65f90acea6f5be656fd128990bf30c3c488f8056f",
+    "src/aslot/constants.py": "81560a2fcad8929c49a493b34e16ca6666f16bb070ac6f87f2257f935549e561"
+   },
+   "measured_utc": "2026-09-04",
+   "command": "git -C ~/final-september status --porcelain ; git status --porcelain -- src/"
+  }
+ },
+ "guards": [
+  {
+   "guard": "G_LEDGER_CLOSES",
+   "denominator": 8894,
+   "arithmetic": "8894 + 0 = 8894",
+   "passes": true,
+   "note": "مصفوفةُ (نوع × شكل) + غيرُ المصنَّف = المنوَّنُ كلُّه، بلا بقيّة."
+  },
+  {
+   "guard": "G_NO_UNCLASSIFIED_SHAPE",
+   "denominator": 8894,
+   "count": 0,
+   "passes": true,
+   "note": "شكلٌ لا اسمَ له في الجرد يُسمّى ولا يُدسّ في «حرفٍ صحيح»."
+  },
+  {
+   "guard": "G_NO_RULE_WIDENING",
+   "denominator": 3,
+   "broad_reading_not_taken": [
+    "DAMM×TAA_MARBUTA",
+    "KASR×TAA_MARBUTA"
+   ],
+   "textual_tension": "T1_VS_4B",
+   "ratified_pairs": [
+    "FATH×ALIF",
+    "FATH×ALIF_MAQSURA",
+    "FATH×TAA_MARBUTA"
+   ],
+   "unruled_tags": [
+    "4A",
+    "4B",
+    "4C",
+    "4D"
+   ],
+   "overlap": [],
+   "passes": true,
+   "note": "لا زوجَ يكون مصادَقًا ومعلَّقًا معًا."
+  },
+  {
+   "guard": "G_SCOPE_IS_PARTITIONED",
+   "denominator": 10,
+   "denominator_note": "أزواجٌ متمايزةٌ حاضرةٌ في الجرد — لا مجاميعُ صفوف",
+   "ratified_pairs": [
+    "FATH×ALIF",
+    "FATH×ALIF_MAQSURA",
+    "FATH×TAA_MARBUTA"
+   ],
+   "pending_pairs": [
+    "DAMM×HAMZA",
+    "DAMM×TAA_MARBUTA",
+    "FATH×HAMZA",
+    "KASR×HAMZA",
+    "KASR×TAA_MARBUTA"
+   ],
+   "unchanged_by_rule_pairs": [
+    "DAMM×SOUND_LETTER",
+    "KASR×SOUND_LETTER"
+   ],
+   "unchanged_by_rule_clause": "«وما سوى ذلك: لا يتغيّر»",
+   "orphan_pairs": [],
+   "ratified_rows": 3660,
+   "pending_rows": 1120,
+   "unchanged_rows": 4114,
+   "rows_sum": 8894,
+   "rows_total": 8894,
+   "rows_close": true,
+   "passes": true,
+   "note": "ثلاثةُ أصناف: مصادَقٌ · معروضٌ · محكومٌ بالإبقاء. ومجموعُها كلُّ المنوَّن المصنَّف، بلا يتيم."
+  },
+  {
+   "guard": "G_UNRULED_SETS_MAY_OVERLAP",
+   "denominator": 4,
+   "overlaps": [
+    "4A∩4C"
+   ],
+   "passes": true,
+   "note": "الأربعةُ ليست متباينة — تُعلَن التقاطعاتُ ولا تُجمع أعدادُها. وحارسٌ يجمعها يعدّ صفوفًا مرّتين."
+  }
+ ],
+ "all_guards_pass": true
+}

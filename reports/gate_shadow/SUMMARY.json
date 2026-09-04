@@ -1,0 +1,83 @@
+{
+  "task": "T7_GATE_SHADOW",
+  "carrier_source": "vendor tests.test_transition_gate (read, never modified)",
+  "rows": 432,
+  "origins": [
+    "CANDIDATE",
+    "DECLARED_ENTRY",
+    "TRANSITION_VERDICT"
+  ],
+  "origins_declared": [
+    "CANDIDATE",
+    "DECLARED_ENTRY",
+    "TRANSITION_VERDICT"
+  ],
+  "states": {
+    "APPROVED": 180,
+    "BLOCKED": 72,
+    "DEFERRED": 36,
+    "FORBIDDEN_LEAP": 72,
+    "REJECTED": 72
+  },
+  "failure_codes": {
+    "BLOCKING_RESIDUAL_PRESENT": 72,
+    "FORBIDDEN_STRAIGHT_LINE": 72,
+    "GATE_REQUIRED": 36,
+    "HIDDEN_RESIDUAL": 72
+  },
+  "ranks_granted": [
+    "CANDIDATE",
+    "HYPOTHESIS",
+    "TRACE",
+    "ZERO"
+  ],
+  "guards": [
+    {
+      "guard": "G_SHADOW_ONLY",
+      "denominator": 5,
+      "changed": [],
+      "passes": true
+    },
+    {
+      "guard": "G_GATE_QUERIED",
+      "denominator": 432,
+      "measured": 432,
+      "not_available": [],
+      "empty_state": [],
+      "passes": true
+    },
+    {
+      "guard": "G_RANK_FROM_MEET",
+      "denominator_approved": 180,
+      "denominator_short_circuit": 180,
+      "of_rows": 432,
+      "disagreements_on_approved": [],
+      "short_circuit_raised_rank": [],
+      "passes": true
+    },
+    {
+      "guard": "G_NO_CERTIFICATE_FROM_GATE",
+      "denominator": 432,
+      "hits": [],
+      "passes": true
+    },
+    {
+      "guard": "G_ALL_ORIGINS",
+      "denominator": 3,
+      "declared": [
+        "CANDIDATE",
+        "DECLARED_ENTRY",
+        "TRANSITION_VERDICT"
+      ],
+      "measured": [
+        "CANDIDATE",
+        "DECLARED_ENTRY",
+        "TRANSITION_VERDICT"
+      ],
+      "missing": [],
+      "not_a_member": [],
+      "passes": true
+    }
+  ],
+  "all_guards_pass": true
+}

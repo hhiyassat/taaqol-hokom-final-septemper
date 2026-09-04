@@ -9,6 +9,24 @@
     "EXCLUDED_FAWATIH_AL_SUWAR": 30,
     "STOPPED_OWNER_DECISION_REQUIRED_NO_CARRIER_FOR_A_HARAKA": 9
   },
+  "stop_reason_families_declared": [
+    "ALEF_MADDA_OWNER_DECISION",
+    "ALIF_FARIQA_OWNER_DECISION",
+    "ALIF_MAQSURA_OWNER_DECISION",
+    "DAGGER_ALIF_ON_UNVOCALIZED_CARRIER",
+    "DAGGER_ALIF_OWNER_DECISION",
+    "HARAKA_WITHOUT_CARRIER",
+    "MULTIPLE_HARAKAT_ON_ONE_CARRIER",
+    "MULTIWORD_SURFACE_IN_ONE_CELL",
+    "N7_2_NO_APPROVED_REGISTRY",
+    "NON_LETTER",
+    "QURANIC_SIGN_OWNER_DECISION",
+    "TANWEEN_OWNER_DECISION",
+    "TATWEEL_CARRIES_MARKS_OWNER_DECISION",
+    "UNKNOWN_MARK",
+    "UNVOCALIZED_ALIF",
+    "UNVOCALIZED_CARRIER"
+  ],
   "rules": {
     "N12": 64380,
     "N0.J": 2704,
@@ -21,13 +39,14 @@
     "N2.2": 1135,
     "N7.2": 1616,
     "N0.F": 30,
+    "N-TANWEEN-UNFOLD": 3659,
     "N7.4": 325,
     "N10.2": 4
   },
   "fates": {
-    "PRESERVED": 335245,
-    "REPLACED": 11118,
-    "DELETED_BY_OWNER_RULE": 7885,
+    "PRESERVED": 332093,
+    "REPLACED": 11625,
+    "DELETED_BY_OWNER_RULE": 11037,
     "EXPANDED": 26602
   },
   "owner_decision_classes": {
@@ -45,7 +64,7 @@
   "jalalah_words": 2704,
   "jalalah_with_prefix": 544,
   "jalalah_registry_size": 16,
-  "policy_source": "/sessions/rcw-01t966hfgcenbyf88mfumasu/mnt/final-september/data/axis_1_owner_policy.json",
+  "policy_source": "data/axis_1_owner_policy.json",
   "unratified_classes": [
     "U_ALEF_MADDA",
     "U_ALIF_MAQSURA",
@@ -139,7 +158,7 @@
           14
         ],
         "عُمُرَاً",
-        "عُمُرَاَنْ"
+        "عُمُرَنْ"
       ],
       [
         [
@@ -211,7 +230,8 @@
     "T29_ELIDED_ARTICLE_THEN_MOON_LETTER": true,
     "T30_TWO_LAMS_WITH_SHADDA_IS_NOT_ELIDED_ARTICLE": true,
     "T31_INTERROGATIVE_MADDA_IS_A_HAMZA_THEN_THE_ARTICLE": true,
-    "T32_INTERROGATIVE_MADDA_THEN_MOON_LETTER": true
+    "T32_INTERROGATIVE_MADDA_THEN_MOON_LETTER": true,
+    "T_EVERY_STOP_REASON_FAMILY_IS_DECLARED": true
   },
   "poisons": {
     "P1_HARAKA_WITHOUT_CARRIER_STOPS": true,

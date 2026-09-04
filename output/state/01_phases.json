@@ -1,0 +1,149 @@
+{
+ "phases": {
+  "T-0": {
+   "title": "تجميدُ المرجع",
+   "state": "DONE",
+   "evidence": "7 ملفَّ قانونٍ ببصماتها · all_hashes_hold=True",
+   "command": "PYTHONPATH=src .venv-taaqol/bin/python -m aslot compliance",
+   "artifact": "laws/MANIFEST.json",
+   "phase": "T-0",
+   "opened_in_runtime": true
+  },
+  "T-1": {
+   "title": "تاكسونومية الرفض المغلقة",
+   "state": "PARTIAL",
+   "evidence": "مُعلَنٌ 30 · مشهودٌ 27 · بلا شاهدٍ في هذا التشغيل 3 (BLOCK_EMPTY_REMAINDER · IGNORED_NON_WORD_TOKEN · NON_LETTER)",
+   "why_partial": "الجردُ مغلقٌ ومعدود، لكن ثلاثةَ أسماءٍ بلا شاهدٍ في هذا التشغيل — والفرقُ مُعلَنٌ لا مطويّ",
+   "command": "PYTHONPATH=src .venv-taaqol/bin/python -m aslot compliance",
+   "artifact": "reports/compliance/AXIS_9_MEASURES.json",
+   "phase": "T-1",
+   "opened_in_runtime": true
+  },
+  "T-2": {
+   "title": "حواملُ النواة",
+   "state": "DONE_WITH_LIMIT",
+   "evidence": "6 حواملَ مثبَّتةَ البصمة · ولا سابعَ يُنفَّذ",
+   "limit": "DECLARED_NOT_EXECUTED — الحواملُ مستوردةٌ ومبصومة، ولا يُنفَّذ منها حكم",
+   "command": "PYTHONPATH=src .venv-taaqol/bin/python -m aslot compliance",
+   "artifact": "reports/compliance/AXIS_9_MEASURES.json",
+   "phase": "T-2",
+   "opened_in_runtime": true
+  },
+  "T-3": {
+   "title": "مرساةُ الأثر",
+   "state": "DONE",
+   "evidence": "378,826 صفًّا · بمرساةٍ 378,826 · قابلةٌ لإعادة البناء 378,826 · بلا مرساة 0",
+   "command": "PYTHONPATH=src .venv-taaqol/bin/python -m aslot compliance",
+   "artifact": "reports/compliance/AXIS_9_MEASURES.json",
+   "phase": "T-3",
+   "opened_in_runtime": true
+  },
+  "T-4": {
+   "title": "أصنافُ البقيّة",
+   "state": "BLOCKED",
+   "evidence": "7/7 بلا إسناد · P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED",
+   "blocked_on": "B2 · OWNER",
+   "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_b2.py",
+   "artifact": "data/residual_kind_assignment.json",
+   "phase": "T-4",
+   "opened_in_runtime": false
+  },
+  "T-5": {
+   "title": "Γ على كلّ صفّ",
+   "state": "BLOCKED",
+   "evidence": "مبنيٌّ فارغًا وفاشلًا مغلقًا · exit 3 · BLOCKED_AWAITING_B2 · ولا يُكتب ملفٌّ واحد",
+   "blocked_on": "B2 · OWNER",
+   "command": ".venv-taaqol/bin/python scripts/gamma_over_axes.py",
+   "artifact": "scripts/gamma_over_axes.py",
+   "phase": "T-5",
+   "opened_in_runtime": false
+  },
+  "T-6": {
+   "title": "سجلُّ الخطوط الممنوعة",
+   "state": "PARTIAL",
+   "evidence": "ظلٌّ: 104 صفًّا · دليلٌ 29 · يقع ['CANDIDATE->CERTIFICATE'] · ولا تنفيذ",
+   "why_partial": "السجلُّ يُستفتى في ظلٍّ لا في تشغيل · forbidden_lines_enforced = 0",
+   "command": ".venv-taaqol/bin/python scripts/forbidden_shadow.py",
+   "artifact": "reports/forbidden_shadow/WOULD_FIRE.csv",
+   "phase": "T-6",
+   "opened_in_runtime": false
+  },
+  "T-7": {
+   "title": "البوّابات",
+   "state": "PARTIAL",
+   "evidence": "ظلٌّ: 432 صفًّا · أصولٌ 3/3 · رتبٌ ['CANDIDATE', 'HYPOTHESIS', 'TRACE', 'ZERO']",
+   "why_partial": "بوّابةٌ في ظلٍّ لا بين المحاور · gates_between_axes = 0",
+   "command": ".venv-taaqol/bin/python scripts/gate_shadow.py",
+   "artifact": "reports/gate_shadow/TRANSITIONS.csv",
+   "phase": "T-7",
+   "opened_in_runtime": false
+  },
+  "T-8": {
+   "title": "حدُّ المصدر المجمَّد",
+   "state": "PARTIAL",
+   "evidence": "7 بنودٍ · B8.3=DONE · B11=DONE · B12=DONE · B14=DONE · B15=RAISED · FUSE=DONE · A1=DONE",
+   "why_partial": "B8.3 مُغلَقٌ بحكمٍ على الآلة · وB15 موقوف",
+   "command": "على آلة المالك: cat ~/hokom/output/b83/02_ledger.json",
+   "artifact": "hokom/output/b83/02_ledger.json",
+   "phase": "T-8",
+   "opened_in_runtime": false
+  },
+  "T-9": {
+   "title": "إسقاطُ الحالة",
+   "state": "NOT_STARTED",
+   "evidence": "مُعلَنةٌ في STAGES_PENDING_OWNER (axis9_compliance.py:48) · ولا أثرَ لها في الشجرة: صفرُ ذكرٍ في HANDOFF · README · docs/ARCHITECTURE",
+   "measured_not_assumed": true,
+   "command": "grep -rn 'T-9' HANDOFF.md README.md docs/",
+   "artifact": null,
+   "phase": "T-9",
+   "opened_in_runtime": false
+  },
+  "T-10": {
+   "title": "هندسةُ الاختبار الدستوريّ",
+   "state": "NOT_STARTED",
+   "evidence": "مُعلَنةٌ في STAGES_PENDING_OWNER (axis9_compliance.py:49) · ولا أثرَ لها في الشجرة: صفرُ ذكرٍ في الوثائق الثلاث",
+   "measured_not_assumed": true,
+   "command": "grep -rn 'T-10' HANDOFF.md README.md docs/",
+   "artifact": null,
+   "phase": "T-10",
+   "opened_in_runtime": false
+  }
+ },
+ "order": [
+  "T-0",
+  "T-1",
+  "T-2",
+  "T-3",
+  "T-4",
+  "T-5",
+  "T-6",
+  "T-7",
+  "T-8",
+  "T-9",
+  "T-10"
+ ],
+ "by_state": {
+  "BLOCKED": 2,
+  "DONE": 2,
+  "DONE_WITH_LIMIT": 1,
+  "NOT_STARTED": 2,
+  "PARTIAL": 4
+ },
+ "stages_opened": "1/16",
+ "runtime_implemented": [
+  "T-0",
+  "T-1",
+  "T-2",
+  "T-3"
+ ],
+ "runtime_pending": [
+  "T-4",
+  "T-5",
+  "T-6",
+  "T-7",
+  "T-8",
+  "T-9",
+  "T-10"
+ ],
+ "count": 11
+}

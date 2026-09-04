@@ -1,0 +1,97 @@
+{
+ "scores": {
+  "NAZILA": {
+   "value": 70.9,
+   "fraction": "207/292",
+   "denominator": "خاناتُ وثيقة النازلة"
+  },
+  "TWO_COLUMN": {
+   "effective": 0,
+   "potential": 85.9,
+   "fraction": "55/64",
+   "denominator": "صفوفُ ملفّ العمودَين وحدَه",
+   "denominator_moved": true,
+   "denominator_delta": {
+    "series": [
+     {
+      "round": 1,
+      "grounded": 44,
+      "named": 8,
+      "delta": 1,
+      "rows": 53,
+      "potential": 83.0,
+      "source": "OWNER_STATED",
+      "artifact": null
+     },
+     {
+      "round": 2,
+      "grounded": 49,
+      "named": 8,
+      "delta": 1,
+      "rows": 58,
+      "potential": 84.5,
+      "source": "OWNER_STATED",
+      "artifact": null
+     },
+     {
+      "round": 3,
+      "grounded": 55,
+      "named": 8,
+      "delta": 1,
+      "rows": 64,
+      "potential": 85.9,
+      "source": "MEASURED",
+      "artifact": "hokom/output/nazila_result/two_column_scores.json"
+     }
+    ],
+    "previous_denominator": 58,
+    "current_denominator": 64,
+    "delta_total": 6,
+    "delta_grounded": 6,
+    "delta_named_plus_delta": 0,
+    "named_plus_delta_by_round": {
+     "1": 9,
+     "2": 9,
+     "3": 9
+    },
+    "named_plus_delta_constant": true,
+    "growth_is_measured_not_drift": "نموُّ المقام مقيسٌ لا انحراف: الزيادةُ كلُّها في GROUNDED، و(named + delta) ثابتٌ عند 9 في الجولات الثلاث. فالملفُّ ينمو بأسطرٍ مقيسةٍ لا معلَنة.",
+    "so_the_percentages_are_not_comparable": "85.9٪ و84.5٪ نسبتان بمقامَين (64 و58) — ولا تُقرأ الثانيةُ تحسُّنًا على الأولى إلا بذكر المقام.",
+    "live_check": {
+     "matches_measured": true,
+     "measured": {
+      "rows": 64,
+      "grounded": 55,
+      "potential": 85.9,
+      "effective": 0,
+      "why_zero": "INTENTIONAL_DELTA — المؤشّرُ الملتزَم bc9d1ea5 والدليلُ من 3cccdde (B17)"
+     }
+    },
+    "sources": {
+     "1": "OWNER_STATED",
+     "2": "OWNER_STATED",
+     "3": "MEASURED"
+    },
+    "unverifiable_rounds": [
+     1,
+     2
+    ],
+    "unverifiable_note": "الجولتان الأولى والثانية من نصّ المالك، ولا ملفَّ باقيًا يشهد لهما — تُنقل بمصدرها ولا تُقرأ قياسًا.",
+    "command": "على آلة المالك: cat ~/hokom/output/nazila_result/two_column_scores.json"
+   },
+   "zero_because": "INTENTIONAL_DELTA — المؤشّرُ الملتزَم bc9d1ea5 والدليلُ من 3cccdde (B17)"
+  },
+  "REMEDIATION": {
+   "value": 58.6,
+   "fraction": "17/29",
+   "denominator": "بنودُ دفتر الإصلاح"
+  },
+  "STAGES": {
+   "value": "1/16",
+   "denominator": "مراحلُ تعقُّل المفتوحة",
+   "note": "السقفُ الحقيقيُّ لكلّ ما فوقه"
+  }
+ },
+ "do_not_merge": "أربعةُ مقاماتٍ لا مقام · ولا متوسّطَ ولا جمع",
+ "guard": "G_NO_LEDGER_MERGE"
+}

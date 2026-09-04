@@ -21,8 +21,13 @@
   },
   "fragment_mode": false,
   "surface_conflicts": 0,
+  "words_with_cut_separators": 0,
+  "cut_separators": {},
+  "unruled_separator_tokens": 0,
   "self_checks": {
     "T1_INPUT_ORDER_IS_CANONICAL": true,
+    "T_OWNER_SEPARATORS_ARE_CUT": true,
+    "T_UNRULED_SEPARATORS_ARE_NOT_CUT": true,
     "T2_SURA_COUNT": true,
     "T3_SURA_NUMBERING_CONTIGUOUS": true,
     "T4_VERSE_NUMBERING_CONTIGUOUS": true,

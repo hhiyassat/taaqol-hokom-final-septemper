@@ -1,0 +1,43 @@
+{
+  "task": "T6_FORBIDDEN_SHADOW",
+  "registry": {
+    "layer_leap_rows": 47,
+    "term_transfer_rows": 12
+  },
+  "rows": 104,
+  "evidence_rows": 29,
+  "would_fire_on_evidence": [
+    "CANDIDATE->CERTIFICATE"
+  ],
+  "reach": {
+    "gate_layers": 4,
+    "layer_pairs_that_are_registry_rows": 1,
+    "stage_edges_checked": 17,
+    "stage_edges_forbidden": 0
+  },
+  "guards": [
+    {
+      "guard": "G_SHADOW_ONLY",
+      "denominator": 5,
+      "changed": [],
+      "passes": true
+    },
+    {
+      "guard": "G_FORBIDDEN_QUERIED",
+      "denominator": 103,
+      "live_calls": 103,
+      "unbacked": [],
+      "mismatched": [],
+      "passes": true
+    },
+    {
+      "guard": "G_TAUTOLOGY_DECLARED",
+      "denominator": 104,
+      "evidence_rows": 29,
+      "tautology_rows": 59,
+      "mislabelled": [],
+      "passes": true
+    }
+  ],
+  "all_guards_pass": true
+}

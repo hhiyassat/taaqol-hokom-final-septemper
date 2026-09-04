@@ -1,0 +1,68 @@
+{
+  "module": "aslot.axes.axis4_peeling",
+  "axis": 4,
+  "words": 123,
+  "verdicts": {
+    "ACCEPT": 90,
+    "DEFER": 20,
+    "BLOCK": 13
+  },
+  "terminations": {
+    "STEM_NOT_FURTHER_PEELABLE": 65,
+    "CLOSED_REMAINDER": 25,
+    "DEFER_INITIAL_LETTER_MAY_BE_RADICAL": 0,
+    "DEFER_UNRESOLVED_CLOSURE": 4,
+    "DEFER_VERBAL_OPERATOR_REGISTRY_TAG": 0,
+    "DEFER_ELIDED_LETTER_NOT_RESTORABLE": 3,
+    "DEFER_REMAINDER_STANDING_UNPROVEN": 13,
+    "BLOCK_SYLLABLE_BOUNDARY_CROSSED": 13,
+    "BLOCK_AXIS_3_REJECTED": 0,
+    "BLOCK_EMPTY_REMAINDER": 0
+  },
+  "actual_peels": 10,
+  "peel_count_histogram": {
+    "0": 113,
+    "1": 10
+  },
+  "stems_emitted": 65,
+  "deferred_candidate_prefixes": {
+    "أَ": 6,
+    "تَ": 10,
+    "يَ": 6,
+    "سَ": 1
+  },
+  "masaq_like_rows": 0,
+  "jalalah_words_passed_through": 0,
+  "jalalah_rows_emitted": 0,
+  "witness_set_size": 69,
+  "root_proven": 0,
+  "wazn_execution": 0,
+  "suffix_output": 0,
+  "self_checks": {
+    "T1_BISMI_NOT_PEELED_BOUNDARY_CROSSED": true,
+    "T2_BIMAA_PEELED_THEN_STOPPED_BY_AXIS_2": true,
+    "T3_GENERAL_GATE_COVERS_THE_CLASS:كَفَرُوا": true,
+    "T3_GENERAL_GATE_COVERS_THE_CLASS:كَبَائِرَ": true,
+    "T3_GENERAL_GATE_COVERS_THE_CLASS:كَتَبَ": true,
+    "T4_A_WITNESSED_REMAINDER_IS_NOT_DEFERRED": true,
+    "T4B_IGNORANCE_LICENSES_NEITHER_BLOCK_NOR_ACCEPT": true,
+    "T5_MAA_IS_CLOSED_NOT_A_STEM": true,
+    "T6_NO_LICENSED_PREFIX_YIELDS_STEM": true,
+    "T7_ROOT_PATH_IS_CLOSED": true,
+    "T8_STEM_IS_NOT_A_PROOF": true,
+    "T9_LICENSE_SET_IS_CLOSED_AND_VOCALIZED": true,
+    "T10_INTERROGATIVE_HAMZA_IS_DEFERRED_NOT_LICENSED": true,
+    "T11_DEFERRED_CANDIDATE_DOES_NOT_BLOCK_THE_WORD": true
+  },
+  "poisons": {
+    "P1_UNVOCALIZED_PREFIX_IS_NOT_LICENSED": true,
+    "P2_FAMOUS_OPERATOR_OUTSIDE_THE_SET_IS_NOT_PEELED": true,
+    "P3_NO_ROOT_EVER": true,
+    "P4_NO_SUFFIX_OUTPUT": true,
+    "P5_THREE_CONSONANT_GATE_NOT_APPLIED": true,
+    "P6_GATE_EFFECT_IS_DEFER_NOT_BLOCK": true,
+    "P7_MISSING_WITNESS_IS_NOT_A_PREVENTER": true,
+    "P8_BOUNDARY_CROSSING_ALWAYS_BLOCKED": true
+  },
+  "input_defects": {}
+}

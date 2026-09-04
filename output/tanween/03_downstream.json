@@ -1,0 +1,143 @@
+{
+ "task": "A2_DOWNSTREAM",
+ "axis2": {
+  "column": "Eligibility",
+  "matrix": {
+   "ACCEPT⟶ACCEPT": 12795,
+   "BLOCK⟶BLOCK": 60565,
+   "OWNER_DECISION_REQUIRED⟶OWNER_DECISION_REQUIRED": 1308
+  },
+  "rows": 74668,
+  "rows_before": 74668,
+  "rows_after": 74668,
+  "moved": 0,
+  "closes": true,
+  "before": {
+   "BLOCK": 60565,
+   "ACCEPT": 12795,
+   "OWNER_DECISION_REQUIRED": 1308
+  },
+  "after": {
+   "BLOCK": 60565,
+   "ACCEPT": 12795,
+   "OWNER_DECISION_REQUIRED": 1308
+  },
+  "columns_moved": {
+   "moved_columns": {
+    "Normalized_Word": 3659,
+    "Matched_Entry_Ids": 664
+   },
+   "untouched_columns": [
+    "Sura_No",
+    "Verse_No",
+    "Word_No",
+    "Word",
+    "Closed_Form_Proof",
+    "Eligibility",
+    "Operator_Role",
+    "Word_Class",
+    "Next_Route",
+    "Note",
+    "Trace_Anchor",
+    "Parent_Anchor"
+   ],
+   "denominator": 74668,
+   "note": "عمودُ الحكم قد يسكن وتتحرّك البنيةُ تحته — و«تحرّك 0» على عمودٍ واحدٍ ليس خبرًا عن المحور."
+  }
+ },
+ "axis3": {
+  "column": "Verdict",
+  "matrix": {
+   "ACCEPT⟶ACCEPT": 74661,
+   "BLOCK⟶BLOCK": 7
+  },
+  "rows": 74668,
+  "rows_before": 74668,
+  "rows_after": 74668,
+  "moved": 0,
+  "closes": true,
+  "before": {
+   "ACCEPT": 74661,
+   "BLOCK": 7
+  },
+  "after": {
+   "ACCEPT": 74661,
+   "BLOCK": 7
+  },
+  "columns_moved": {
+   "moved_columns": {
+    "Normalized_Word": 3659,
+    "Syllable_Pattern": 3152,
+    "Consonant_Count": 3152,
+    "Boundaries": 3152
+   },
+   "untouched_columns": [
+    "Sura_No",
+    "Verse_No",
+    "Word_No",
+    "Word",
+    "Verdict",
+    "Madd_Status",
+    "Layn_Status",
+    "Reconstruction_Verified",
+    "Block_Reason",
+    "Trace_Anchor",
+    "Parent_Anchor"
+   ],
+   "denominator": 74668,
+   "note": "عمودُ الحكم قد يسكن وتتحرّك البنيةُ تحته — و«تحرّك 0» على عمودٍ واحدٍ ليس خبرًا عن المحور."
+  }
+ },
+ "axis4": {
+  "column": "Verdict",
+  "matrix": {
+   "ACCEPT⟶ACCEPT": 58479,
+   "BLOCK⟶BLOCK": 2397,
+   "DEFER⟶DEFER": 13792
+  },
+  "rows": 74668,
+  "rows_before": 74668,
+  "rows_after": 74668,
+  "moved": 0,
+  "closes": true,
+  "before": {
+   "BLOCK": 2397,
+   "ACCEPT": 58479,
+   "DEFER": 13792
+  },
+  "after": {
+   "BLOCK": 2397,
+   "ACCEPT": 58479,
+   "DEFER": 13792
+  },
+  "columns_moved": {
+   "moved_columns": {
+    "Normalized_Word": 3659,
+    "Stem_Surface": 3217,
+    "Stem_Pattern": 2792,
+    "Stem_Consonants": 2792,
+    "Note": 399
+   },
+   "untouched_columns": [
+    "Sura_No",
+    "Verse_No",
+    "Word_No",
+    "Word",
+    "Verdict",
+    "Termination",
+    "Peel_Count",
+    "Peeled_Prefixes",
+    "Licenses",
+    "Closed_Form_Proof",
+    "Deferred_Candidate_Prefix",
+    "Root_Work",
+    "Root_Proven",
+    "Stem_Proof",
+    "Trace_Anchor",
+    "Parent_Anchor"
+   ],
+   "denominator": 74668,
+   "note": "عمودُ الحكم قد يسكن وتتحرّك البنيةُ تحته — و«تحرّك 0» على عمودٍ واحدٍ ليس خبرًا عن المحور."
+  }
+ }
+}

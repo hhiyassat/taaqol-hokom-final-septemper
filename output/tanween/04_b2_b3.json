@@ -1,0 +1,42 @@
+{
+ "task": "A3_A4",
+ "B3": {
+  "scope": 3659,
+  "scope_denominator": "صفوفُ الأشكال الثلاثة المتغيّرة",
+  "scope_split": {
+   "FATH×ALIF": 3059,
+   "FATH×ALIF_MAQSURA": 93,
+   "FATH×TAA_MARBUTA": 507
+  },
+  "expected_drop_derived": 3152,
+  "expected_drop_arithmetic": "FATH×ALIF=3059 + FATH×ALIF_MAQSURA=93 = 3152",
+  "drop_matches_derivation": true,
+  "consonants_dropped_in": 3152,
+  "consonants_unchanged_in": 507,
+  "consonant_delta_total": -3152,
+  "delta_histogram": {
+   "-1": 3152,
+   "0": 507
+  },
+  "axis3_verdict_before": {
+   "ACCEPT": 3659
+  },
+  "axis3_verdict_after": {
+   "ACCEPT": 3659
+  },
+  "left_accept": 0,
+  "closed": null,
+  "closed_note": "لا يُقال «B3 أُغلق» — الحكمُ للمالك بعد قراءة هذه الأعداد. والأداةُ تقيس ولا تقفل.",
+  "what_moved": "الصامتُ الزائدُ زال · والحكمُ لم يتحرّك: صفرٌ خرج من ACCEPT. وهما خبران لا خبرٌ واحد."
+ },
+ "B2": {
+  "u_tanween_words_before": 8894,
+  "u_tanween_words_after": 8894,
+  "denominator": "كلماتٌ يرفع فيها الصنف — لا أحداث",
+  "still_raised": 8894,
+  "verdict": null,
+  "verdict_note": "لا يُحذف الصنفُ ولا يُبقى بحكم الأداة. OWNER_PENDING — وهو السؤالُ الرابع.",
+  "status": "OWNER_PENDING",
+  "decided_by_tool": false
+ }
+}

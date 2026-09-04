@@ -1,0 +1,55 @@
+{
+ "doors": [
+  {
+   "door": "C5",
+   "owner": "SONAISO"
+  },
+  {
+   "door": "C1",
+   "owner": "SONAISO"
+  },
+  {
+   "door": "C2",
+   "owner": "SONAISO"
+  },
+  {
+   "door": "C3",
+   "owner": "SONAISO"
+  },
+  {
+   "door": "C4",
+   "owner": "SONAISO"
+  },
+  {
+   "door": "B2",
+   "owner": "DR_HUSSEIN"
+  }
+ ],
+ "by_owner": {
+  "SONAISO": 5,
+  "DR_HUSSEIN": 1
+ },
+ "guards": {
+  "G_ALL_UPSTREAM_PRESENT": [],
+  "G_NO_AXIS_BLANK": [],
+  "G_NO_BIAS": [],
+  "G_B1_RETIRED": [],
+  "G_CELLS_AGREE": [],
+  "G_SHARED_CAUSE_NOT_MERGED": [],
+  "G_SHARED_CAUSE_MATCHES_UPSTREAM": [],
+  "G_DOORS_DERIVED": []
+ },
+ "recount_from_report": {
+  "rows": 6,
+  "doors": 6,
+  "closes": true
+ },
+ "retired": {
+  "B1": {
+   "decided": "(أ) 1a7f8b76",
+   "by": "DR_HUSSEIN",
+   "effect": "لم يعد بابًا — هويّةُ المدخل ثبتت"
+  }
+ },
+ "SENT": "NO"
+}

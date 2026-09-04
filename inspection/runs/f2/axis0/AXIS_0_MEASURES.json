@@ -1,0 +1,43 @@
+{
+  "module": "aslot.axes.axis0_corpus",
+  "axis": 0,
+  "input": "inspection/runs/f2/input.txt",
+  "input_sha256": "7e4701e0c4c23384fe0ffdb939bcf58737b3e8efa1a68147c1fc2502e475b913",
+  "rows_read": 457,
+  "words_built": 457,
+  "verses_built": 160,
+  "suras_built": 1,
+  "segments_per_word": {
+    "1": 457
+  },
+  "fragment_mode": true,
+  "surface_conflicts": 0,
+  "words_with_cut_separators": 0,
+  "cut_separators": {},
+  "unruled_separator_tokens": 4,
+  "self_checks": {
+    "T1_INPUT_ORDER_IS_CANONICAL": true,
+    "T_OWNER_SEPARATORS_ARE_CUT": true,
+    "T_UNRULED_SEPARATORS_ARE_NOT_CUT": true,
+    "T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS": true,
+    "T6_NO_EMPTY_SURFACE": true,
+    "T7_FOLD_IS_LOSSLESS": true
+  },
+  "poisons": {
+    "P1_REJECT_NON_ASCII_DIGIT": true,
+    "P2_REJECT_EMPTY_NUMERIC": true,
+    "P6_REJECT_ARABIC_INDIC_DIGITS": true,
+    "P7_REJECT_SPACED_NUMBER": true,
+    "P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED": true,
+    "P4_SEGMENTS_SORTED_NOT_TRUSTED": true,
+    "P5_SEGMENT_GAP_DETECTED": true
+  },
+  "input_defects": {
+    "D0A_SURA_COUNT_NOT_FULL_MUSHAF": 1,
+    "D0B_NUMBERING_NOT_CONTIGUOUS": 1,
+    "D1_WORD_NUMBER_GAPS_IN_VERSE": 0,
+    "D2A_SEGMENT_NUMBER_DUPLICATED": 0,
+    "D2B_SEGMENT_NUMBER_GAP": 0,
+    "D3_MULTIWORD_SURFACE_IN_ONE_CELL": 0
+  }
+}

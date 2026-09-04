@@ -1,0 +1,186 @@
+{
+ "repos": {
+  "measured": 6,
+  "with_git": 2,
+  "without_git": 4,
+  "names_with_git": [
+   "final-september",
+   "hokom"
+  ],
+  "names_without_git": [
+   "abo-fareed-8-2026",
+   "arabic-net",
+   "hokom-maqayis-v1",
+   "maqayis"
+  ],
+  "note": "المجلَّداتُ الموصولةُ اليوم — ومقامُ B14 كان خمسةً حين قيس، والفرقُ مقامٌ لا خطأ.",
+  "command": "for d in ~/mnt/*/; do [ -d \"$d/.git\" ] && echo GIT $d || echo NO_GIT $d; done"
+ },
+ "two_column": {
+  "rows": 64,
+  "grounded": 55,
+  "potential": 85.9,
+  "effective": 0,
+  "why_zero": "INTENTIONAL_DELTA — المؤشّرُ الملتزَم bc9d1ea5 والدليلُ من 3cccdde (B17)"
+ },
+ "b83": "7 بنودٍ · B8.3=DONE · B11=DONE · B12=DONE · B14=DONE · B15=RAISED · FUSE=DONE · A1=DONE",
+ "items": {
+  "B8.3": {
+   "title": "CL16_SOURCE_ROOT في المرحلتين",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json"
+  },
+  "B11": {
+   "title": "المسارات المطلقة ⟶ متغيّرات بيئة",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json"
+  },
+  "B12": {
+   "title": "توثيقُ السلسلة المقفلة",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json"
+  },
+  "B14": {
+   "title": "جردُ المستودعات",
+   "status": "DONE",
+   "source": "hokom/output/b83/02_ledger.json"
+  },
+  "B15": {
+   "title": "توزيعُ entry_type وأثرُه على CL-16",
+   "status": "RAISED",
+   "source": "hokom/output/b83/02_ledger.json"
+  },
+  "B17": {
+   "title": "مؤشّرُ الوحدة الفرعيّة غيرُ الملتزَم",
+   "status": "RAISED",
+   "source": "hokom/output/nazila_result/two_column_scores.json"
+  },
+  "B10": {
+   "title": "—",
+   "status": "DONE",
+   "source": "NOT_IN_THIS_CONTAINER"
+  },
+  "B13": {
+   "title": "—",
+   "status": "DONE",
+   "source": "NOT_IN_THIS_CONTAINER"
+  },
+  "B16": {
+   "title": "—",
+   "status": "STRUCK",
+   "source": "NOT_IN_THIS_CONTAINER"
+  }
+ },
+ "measured_utc": "2026-09-04",
+ "dating": {
+  "repo": "~/final-september",
+  "head": "02b3318266d07e1910f180b8b6438ca3f655c81b",
+  "command": "git -C ~/final-september log -1 --format=%cI -- <path>",
+  "paths": {
+   "laws/MANIFEST.json": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L01_JALALAH.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L02_DAGGER_ALIF.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L03_SUN_MOON_LAM.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L04_ELIDED_ARTICLE.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L05_INTERROGATIVE_MADDA.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L06_CL16_RANK.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "laws/L07_CL16_SKELETON.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T04:19:18+00:00"
+   },
+   "data/axis_1_owner_policy.json": {
+    "tracked": true,
+    "last_commit": "2026-09-01T18:55:47+00:00"
+   },
+   "data/residual_kind_assignment.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "vendor/Taaqol-GPT": {
+    "tracked": false,
+    "reason": "UNTRACKED_OR_NEVER_COMMITTED"
+   },
+   "src/aslot": {
+    "tracked": true,
+    "last_commit": "2026-09-02T14:45:55+00:00"
+   },
+   "scripts": {
+    "tracked": true,
+    "last_commit": "2026-09-02T20:35:29+00:00"
+   },
+   "output/remediation/01_ledger.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/upstream/00_upstream.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/doors/00_doors.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/nazila_result/scores.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/tanween/02_after.json": {
+    "tracked": false,
+    "reason": "UNTRACKED_OR_NEVER_COMMITTED"
+   },
+   "output/bound/00_c3_bounded.json": {
+    "tracked": false,
+    "reason": "UNTRACKED_OR_NEVER_COMMITTED"
+   },
+   "output/max/01_b2_measures.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "reports/compliance/AXIS_9_MEASURES.json": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/INDEX.md": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "output/state/06_STATE.md": {
+    "tracked": false,
+    "reason": "ABSENT_ON_DEVICE"
+   },
+   "HANDOFF.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T20:35:29+00:00"
+   },
+   "README.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T07:55:24+00:00"
+   },
+   "docs/ARCHITECTURE.md": {
+    "tracked": true,
+    "last_commit": "2026-09-02T03:59:17+00:00"
+   }
+  }
+ }
+}

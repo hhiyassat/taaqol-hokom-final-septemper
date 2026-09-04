@@ -1,0 +1,74 @@
+{
+ "task": "R1_C3_BOUNDED",
+ "count": {
+  "matched": 10013,
+  "denominator": 77411,
+  "percent": 12.9,
+  "verdict": "مقيسٌ وسليم — يبقى"
+ },
+ "what_remains_evidence": {
+  "claim": "قاعدةٌ تُصنّف بالرسم الإملائيّ، وتمسّ 12.9٪ من الجرد",
+  "matched": 10013,
+  "denominator": 77411,
+  "denominator_note": "كلماتُ جرد المحور صفر",
+  "input_drawn_from": "runtime/native_stage_registry.py",
+  "status": "EVIDENCE",
+  "raise_to_source": true
+ },
+ "crossing_claim": {
+  "was": "startswith(\"ال\") ⟶ JamidPath يعبر خطوطًا ممنوعة — crosses: True ×3",
+  "crosses_queried": {
+   "Grapheme→FunctionalLetter": true,
+   "Orthography→Pronunciation": true,
+   "Matching→Meaning": true
+  },
+  "all_three_forbidden": true,
+  "query_used": "CANONICAL_REGISTRY.is_forbidden_direct(a, b)",
+  "input_drawn_from": "CANONICAL_REGISTRY.lines",
+  "crosses": "TAUTOLOGY",
+  "crosses_why": "الأزواجُ الثلاثةُ من السجلّ، فتردّ True بحكم الأخذ لا بحكم الواقع.",
+  "mapping": "NOT_DERIVABLE",
+  "mapping_why": "أنّ startswith(\"ال\") هو Grapheme→FunctionalLetter ليس في الشيفرة ما يدلّ عليه: لا Grapheme ولا FunctionalLetter اسمُ طبقةٍ ولا مرحلة.",
+  "status": "OWNER_RULING_REQUIRED",
+  "withdrawn": false,
+  "retained_because": "الدعوى تُقيَّد لا تُمحى.",
+  "raise_to_source": false
+ },
+ "documents": {
+  "output/upstream/00_upstream.json": {
+   "count_retained": 10013,
+   "denominator": 77411,
+   "crosses": "TAUTOLOGY",
+   "mapping": "NOT_DERIVABLE",
+   "status": "OWNER_RULING_REQUIRED",
+   "withdrawn": false
+  },
+  "output/doors/00_doors.json": {
+   "count_retained": 10013,
+   "denominator": 77411,
+   "crosses": "TAUTOLOGY",
+   "mapping": "NOT_DERIVABLE",
+   "status": "OWNER_RULING_REQUIRED",
+   "withdrawn": false
+  },
+  "output/doors/upstream_report.md": {
+   "rendered_from": "output/doors/00_doors.json",
+   "note": "التقريرُ يُصاغ من الدفتر، فقيدُه قيدُه."
+  }
+ },
+ "guard": {
+  "guard": "G_EVIDENCE_IS_NOT_TAUTOLOGY",
+  "measures": "مصدرَ المدخل — لا الجواب",
+  "face_a_registry_pair": "TAUTOLOGY",
+  "face_b_stage_graph_pair": "EVIDENCE",
+  "two_faces_differ": true,
+  "poison": "tests_taaqol/test_bound.py::test_poison_evidence_is_not_tautology_has_two_faces",
+  "passes": true
+ },
+ "report_to_sonaiso": {
+  "raised": "قاعدةٌ تُصنّف بالرسم الإملائيّ، وتمسّ 12.9٪ من الجرد",
+  "not_raised": "دعوى العبور — ترديدٌ ونسبةٌ غيرُ مشتقّة",
+  "SENT": "NO",
+  "AUTHORITY_TO_SEND": "OWNER"
+ }
+}

@@ -1,0 +1,447 @@
+Sura_No,Verse_No,Word_No,Word,Normalized_Word,Verdict,Termination,Peel_Count,Peeled_Prefixes,Licenses,Stem_Surface,Stem_Pattern,Stem_Consonants,Closed_Form_Proof,Deferred_Candidate_Prefix,Root_Work,Root_Proven,Stem_Proof,Note,Trace_Anchor,Parent_Anchor
+0,1,1,مَرَرْتُ,مَرَرْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَرَرْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:1,aslot/axis3/0:1:1
+0,1,2,بِزَيْدٍ,بِزَيْدِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,1,بِ,LIC:3,زَيْدِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:1:2,aslot/axis3/0:1:2
+0,2,1,سِرْتُ,سِرْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سِرْتُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:2:1,aslot/axis3/0:2:1
+0,2,2,مِنَ,مِنَ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:2:2,aslot/axis3/0:2:2
+0,2,3,الْبَيْتِ,ءَلْبَيْتِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْبَيْتِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:2:3,aslot/axis3/0:2:3
+0,3,1,سِرْتُ,سِرْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سِرْتُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:3:1,aslot/axis3/0:3:1
+0,3,2,إِلَى,إِلَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِلَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:3:2,aslot/axis3/0:3:2
+0,3,3,الْبَيْتِ,ءَلْبَيْتِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْبَيْتِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:3:3,aslot/axis3/0:3:3
+0,4,1,الْمَاءُ,ءَلْمَاْءُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْمَاْءُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:4:1,aslot/axis3/0:4:1
+0,4,2,فِي,فِيْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:4:2,aslot/axis3/0:4:2
+0,4,3,الْكُوزِ,ءَلْكُوْزِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْكُوْزِ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:4:3,aslot/axis3/0:4:3
+0,5,1,رَمَيْتُ,رَمَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَمَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:5:1,aslot/axis3/0:5:1
+0,5,2,السَّهْمَ,ءَسْسَهْمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَسْسَهْمَ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:5:2,aslot/axis3/0:5:2
+0,5,3,عَنِ,عَنِ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:5:3,aslot/axis3/0:5:3
+0,5,4,الْقَوْسِ,ءَلْقَوْسِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَوْسِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:5:4,aslot/axis3/0:5:4
+0,6,2,لَأَشْرَبَنَّ,لَأَشْرَبَنْنَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «أَشْرَبَنْنَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:6:2,aslot/axis3/0:6:2
+0,7,2,لَأَفْعَلَنَّ,لَأَفْعَلَنْنَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «أَفْعَلَنْنَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:7:2,aslot/axis3/0:7:2
+0,8,2,لَأَضْرِبَنَّ,لَأَضْرِبَنْنَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «أَضْرِبَنْنَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:8:2,aslot/axis3/0:8:2
+0,8,3,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:8:3,aslot/axis3/0:8:3
+0,9,1,الْمَالُ,ءَلْمَاْلُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْمَاْلُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:9:1,aslot/axis3/0:9:1
+0,9,2,لِزَيْدٍ,لِزَيْدِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,1,لِ,LIC:5,زَيْدِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:9:2,aslot/axis3/0:9:2
+0,10,1,رُبَّ,رُبْبَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رُبْبَ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:10:1,aslot/axis3/0:10:1
+0,10,2,رَجُلٍ,رَجُلِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَجُلِنْ,CV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:10:2,aslot/axis3/0:10:2
+0,10,3,كَرِيمٍ,كَرِيْمِنْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «رِيْمِنْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة كَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:10:3,aslot/axis3/0:10:3
+0,10,4,لَقِيتُهُ,لَقِيْتُهُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «قِيْتُهُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:10:4,aslot/axis3/0:10:4
+0,11,1,وَلَيْلٍ,وَلَيْلِنْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «لَيْلِنْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:11:1,aslot/axis3/0:11:1
+0,11,2,كَمَوْجِ,كَمَوْجِ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «مَوْجِ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة كَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:11:2,aslot/axis3/0:11:2
+0,11,3,الْبَحْرِ,ءَلْبَحْرِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْبَحْرِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:11:3,aslot/axis3/0:11:3
+0,12,1,الْكِتَابُ,ءَلْكِتَاْبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْكِتَاْبُ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:12:1,aslot/axis3/0:12:1
+0,12,2,عَلَى,عَلَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَلَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:12:2,aslot/axis3/0:12:2
+0,12,3,الْمَكْتَبِ,ءَلْمَكْتَبِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْمَكْتَبِ,CVC·CVC·CV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:12:3,aslot/axis3/0:12:3
+0,13,1,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:13:1,aslot/axis3/0:13:1
+0,13,2,كَالْأَسَدِ,كَلْأَسَدِ,DEFER,DEFER_ELIDED_LETTER_NOT_RESTORABLE,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع مشروعٌ عند 2 بعقد الغياب، والبقية «لْأَسَدِ» لا تقوم بنفسها (SYLLABLE_WITHOUT_ONSET): الحرف الغائب بدءُ مقطعها، وردُّه إنشاءٌ لا كشف,aslot/axis4/0:13:2,aslot/axis3/0:13:2
+0,14,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:14:1,aslot/axis3/0:14:1
+0,14,2,رَأَيْتُ,رَأَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَأَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:14:2,aslot/axis3/0:14:2
+0,14,3,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:14:3,aslot/axis3/0:14:3
+0,14,4,مُذْ,مُذْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُذْ,CVC,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:14:4,aslot/axis3/0:14:4
+0,14,5,يَوْمِ,يَوْمِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَوْمِ,CVC·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:14:5,aslot/axis3/0:14:5
+0,14,6,الْجُمُعَةِ,ءَلْجُمُعَةِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْجُمُعَةِ,CVC·CV·CV·CV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:14:6,aslot/axis3/0:14:6
+0,15,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:15:1,aslot/axis3/0:15:1
+0,15,2,رَأَيْتُ,رَأَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَأَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:15:2,aslot/axis3/0:15:2
+0,15,3,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:15:3,aslot/axis3/0:15:3
+0,15,4,مُنْذُ,مُنْذُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُنْذُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:15:4,aslot/axis3/0:15:4
+0,15,5,يَوْمِ,يَوْمِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَوْمِ,CVC·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:15:5,aslot/axis3/0:15:5
+0,15,6,الْجُمُعَةِ,ءَلْجُمُعَةِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْجُمُعَةِ,CVC·CV·CV·CV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:15:6,aslot/axis3/0:15:6
+0,16,1,سَلَامٌ,سَلَاْمُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَلَاْمُنْ,CV·CVV·CVC,4,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:16:1,aslot/axis3/0:16:1
+0,16,2,هِيَ,هِيَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:16:2,aslot/axis3/0:16:2
+0,16,3,حَتَّى,حَتْتَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَتْتَاْ,CVC·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:16:3,aslot/axis3/0:16:3
+0,16,4,مَطْلَعِ,مَطْلَعِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَطْلَعِ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:16:4,aslot/axis3/0:16:4
+0,16,5,الْفَجْرِ,ءَلْفَجْرِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْفَجْرِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:16:5,aslot/axis3/0:16:5
+0,17,1,جَاءَنِي,جَاْءَنِيْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَنِيْ,CVV·CV·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:17:1,aslot/axis3/0:17:1
+0,17,2,الْقَوْمُ,ءَلْقَوْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَوْمُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:17:2,aslot/axis3/0:17:2
+0,17,3,حَاشَا,حَاْشَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَاْشَاْ,CVV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:17:3,aslot/axis3/0:17:3
+0,17,4,زَيْدٍ,زَيْدِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:17:4,aslot/axis3/0:17:4
+0,18,1,جَاءَنِي,جَاْءَنِيْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَنِيْ,CVV·CV·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:18:1,aslot/axis3/0:18:1
+0,18,2,الْقَوْمُ,ءَلْقَوْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَوْمُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:18:2,aslot/axis3/0:18:2
+0,18,3,عَدَا,عَدَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَدَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:18:3,aslot/axis3/0:18:3
+0,18,4,زَيْدٍ,زَيْدِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:18:4,aslot/axis3/0:18:4
+0,19,1,جَاءَنِي,جَاْءَنِيْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَنِيْ,CVV·CV·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:19:1,aslot/axis3/0:19:1
+0,19,2,الْقَوْمُ,ءَلْقَوْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَوْمُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:19:2,aslot/axis3/0:19:2
+0,19,3,خَلَا,خَلَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,خَلَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:19:3,aslot/axis3/0:19:3
+0,19,4,زَيْدٍ,زَيْدِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:19:4,aslot/axis3/0:19:4
+0,20,1,إِنَّ,إِنْنَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:20:1,aslot/axis3/0:20:1
+0,20,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:20:2,aslot/axis3/0:20:2
+0,20,3,قَائِمٌ,قَاْئِمُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,قَاْئِمُنْ,CVV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:20:3,aslot/axis3/0:20:3
+0,21,1,بَلَغَنِي,بَلَغَنِيْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَلَغَنِيْ,CV·CV·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:21:1,aslot/axis3/0:21:1
+0,21,2,أَنَّ,أَنْنَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:21:2,aslot/axis3/0:21:2
+0,21,3,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:21:3,aslot/axis3/0:21:3
+0,21,4,مُنْطَلِقٌ,مُنْطَلِقُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُنْطَلِقُنْ,CVC·CV·CV·CVC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:21:4,aslot/axis3/0:21:4
+0,22,1,كَأَنَّ,كَأَنْنَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:22:1,aslot/axis3/0:22:1
+0,22,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:22:2,aslot/axis3/0:22:2
+0,22,3,أَسَدٌ,أَسَدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَسَدُنْ,CV·CV·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:22:3,aslot/axis3/0:22:3
+0,23,1,غَابَ,غَاْبَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,غَاْبَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:23:1,aslot/axis3/0:23:1
+0,23,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:23:2,aslot/axis3/0:23:2
+0,23,3,لَكِنَّ,لَكِنْنَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كِنْنَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:23:3,aslot/axis3/0:23:3
+0,23,4,عَمْرًا,عَمْرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:23:4,aslot/axis3/0:23:4
+0,23,5,حَاضِرٌ,حَاْضِرُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَاْضِرُنْ,CVV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:23:5,aslot/axis3/0:23:5
+0,24,1,لَيْتَ,لَيْتَ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CV),aslot/axis4/0:24:1,aslot/axis3/0:24:1
+0,24,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:24:2,aslot/axis3/0:24:2
+0,24,3,طَائِرًا,طَاْئِرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,طَاْئِرَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:24:3,aslot/axis3/0:24:3
+0,25,1,لَعَلَّ,لَعَلْلَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:25:1,aslot/axis3/0:25:1
+0,25,2,السُّلْطَانَ,ءَسْسُلْطَاْنَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَسْسُلْطَاْنَ,CVC·CVC·CVV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:25:2,aslot/axis3/0:25:2
+0,25,3,عَادِلٌ,عَاْدِلُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَاْدِلُنْ,CVV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:25:3,aslot/axis3/0:25:3
+0,26,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:26:1,aslot/axis3/0:26:1
+0,26,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:26:2,aslot/axis3/0:26:2
+0,26,3,ذَاهِبًا,ذَاْهِبَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ذَاْهِبَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:26:3,aslot/axis3/0:26:3
+0,27,1,لَا,لَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:27:1,aslot/axis3/0:27:1
+0,27,2,رَجُلَ,رَجُلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَجُلَ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:27:2,aslot/axis3/0:27:2
+0,27,3,مُسَافِرًا,مُسَاْفِرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُسَاْفِرَنْاْ,CV·CVV·CV·CVCC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:27:3,aslot/axis3/0:27:3
+0,28,1,اسْتَوَى,ءَسْتَوَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَسْتَوَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:28:1,aslot/axis3/0:28:1
+0,28,2,الْمَاءُ,ءَلْمَاْءُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْمَاْءُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:28:2,aslot/axis3/0:28:2
+0,28,3,وَالْخَشَبَةَ,وَلْخَشَبَةَ,DEFER,DEFER_ELIDED_LETTER_NOT_RESTORABLE,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع مشروعٌ عند 2 بعقد الغياب، والبقية «لْخَشَبَةَ» لا تقوم بنفسها (SYLLABLE_WITHOUT_ONSET): الحرف الغائب بدءُ مقطعها، وردُّه إنشاءٌ لا كشف,aslot/axis4/0:28:3,aslot/axis3/0:28:3
+0,29,1,قَامَ,قَاْمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,قَاْمَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:29:1,aslot/axis3/0:29:1
+0,29,2,الْقَوْمُ,ءَلْقَوْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَوْمُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:29:2,aslot/axis3/0:29:2
+0,29,3,إِلَّا,إِلْلَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:29:3,aslot/axis3/0:29:3
+0,29,4,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:29:4,aslot/axis3/0:29:4
+0,30,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:30:1,aslot/axis3/0:30:1
+0,30,2,رَسُولَ,رَسُوْلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَسُوْلَ,CV·CVV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:30:2,aslot/axis3/0:30:2
+0,31,1,أَيَّا,أَيْيَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَيْيَاْ,CVC·CVV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:31:1,aslot/axis3/0:31:1
+0,31,2,جَمَّا,جَمْمَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَمْمَاْ,CVC·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:31:2,aslot/axis3/0:31:2
+0,31,3,ذَنْبَهُ,ذَنْبَهُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ذَنْبَهُ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:31:3,aslot/axis3/0:31:3
+0,32,1,هَيَّا,هَيْيَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هَيْيَاْ,CVC·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:32:1,aslot/axis3/0:32:1
+0,32,2,نَاسِيًا,نَاْسِيَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَاْسِيَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:32:2,aslot/axis3/0:32:2
+0,32,3,نِعْمَةَ,نِعْمَةَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نِعْمَةَ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:32:3,aslot/axis3/0:32:3
+0,33,1,أَيَّ,أَيْيَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:33:1,aslot/axis3/0:33:1
+0,33,2,تَائِبًا,تَاْئِبَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَاْئِبَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:33:2,aslot/axis3/0:33:2
+0,33,3,إِلَى,إِلَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِلَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:33:3,aslot/axis3/0:33:3
+0,33,4,رَبِّهِ,رَبْبِهِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَبْبِهِ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:33:4,aslot/axis3/0:33:4
+0,34,1,أَعْبُدِ,أَعْبُدِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَعْبُدِ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:34:1,aslot/axis3/0:34:1
+0,35,1,هَلْ,هَلْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:35:1,aslot/axis3/0:35:1
+0,36,1,يَجُوزُ,يَجُوْزُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَجُوْزُ,CV·CVV·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:36:1,aslot/axis3/0:36:1
+0,36,2,لَكَ,لَكَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:36:2,aslot/axis3/0:36:2
+0,36,3,أَنْ,أَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:36:3,aslot/axis3/0:36:3
+0,36,4,تَنْصَرِفَ,تَنْصَرِفَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَنْصَرِفَ,CVC·CV·CV·CV,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:36:4,aslot/axis3/0:36:4
+0,37,1,لَنْ,لَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:37:1,aslot/axis3/0:37:1
+0,37,2,يَنْجَحَ,يَنْجَحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَنْجَحَ,CVC·CV·CV,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:37:2,aslot/axis3/0:37:2
+0,37,3,الْكَسْلَانُ,ءَلْكَسْلَاْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْكَسْلَاْنُ,CVC·CVC·CVV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:37:3,aslot/axis3/0:37:3
+0,38,1,جِئْتُكَ,جِئْتُكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جِئْتُكَ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:38:1,aslot/axis3/0:38:1
+0,38,2,كَيْ,كَيْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:38:2,aslot/axis3/0:38:2
+0,38,3,أَتَعَلَّمَ,أَتَعَلْلَمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَتَعَلْلَمَ,CV·CV·CVC·CV·CV,6,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:38:3,aslot/axis3/0:38:3
+0,39,1,إِذًا,إِذَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِذَنْاْ,CV·CVCC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:39:1,aslot/axis3/0:39:1
+0,39,2,تُفْلِحَ,تُفْلِحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تُفْلِحَ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:39:2,aslot/axis3/0:39:2
+0,40,1,لَمْ,لَمْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:40:1,aslot/axis3/0:40:1
+0,40,2,يَكْتُبْ,يَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَكْتُبْ,CVC·CVC,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:40:2,aslot/axis3/0:40:2
+0,40,3,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:40:3,aslot/axis3/0:40:3
+0,41,1,لَمَّا,لَمْمَاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CVV),aslot/axis4/0:41:1,aslot/axis3/0:41:1
+0,41,2,أَكْتُبْ,أَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَكْتُبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:41:2,aslot/axis3/0:41:2
+0,42,1,لِيَنْصُرْ,لِيَنْصُرْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «يَنْصُرْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لِ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:42:1,aslot/axis3/0:42:1
+0,43,1,لَا,لَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:43:1,aslot/axis3/0:43:1
+0,43,2,تَضْرِبْ,تَضْرِبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَضْرِبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:43:2,aslot/axis3/0:43:2
+0,44,1,إِنْ,إِنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:44:1,aslot/axis3/0:44:1
+0,44,2,تَضْرِبْ,تَضْرِبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَضْرِبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:44:2,aslot/axis3/0:44:2
+0,44,3,أَضْرِبْ,أَضْرِبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَضْرِبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:44:3,aslot/axis3/0:44:3
+0,45,1,مَنْ,مَنْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:45:1,aslot/axis3/0:45:1
+0,45,2,يَرْحَمْ,يَرْحَمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَرْحَمْ,CVC·CVC,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:45:2,aslot/axis3/0:45:2
+0,45,3,يُرْحَمْ,يُرْحَمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يُرْحَمْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:45:3,aslot/axis3/0:45:3
+0,46,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:46:1,aslot/axis3/0:46:1
+0,46,2,تَفْعَلْ,تَفْعَلْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَفْعَلْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:46:2,aslot/axis3/0:46:2
+0,46,3,أَفْعَلْ,أَفْعَلْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَفْعَلْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:46:3,aslot/axis3/0:46:3
+0,47,1,أَيَّا,أَيْيَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَيْيَاْ,CVC·CVV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:47:1,aslot/axis3/0:47:1
+0,47,2,تَضْرِبْ,تَضْرِبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَضْرِبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:47:2,aslot/axis3/0:47:2
+0,47,3,أَضْرِبْهُ,أَضْرِبْهُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَضْرِبْهُ,CVC·CVC·CV,5,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:47:3,aslot/axis3/0:47:3
+0,48,1,مَتَى,مَتَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَتَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:48:1,aslot/axis3/0:48:1
+0,48,2,تَكْتُبْ,تَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَكْتُبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:48:2,aslot/axis3/0:48:2
+0,48,3,أَكْتُبْ,أَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَكْتُبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:48:3,aslot/axis3/0:48:3
+0,49,1,مَهْمَا,مَهْمَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:49:1,aslot/axis3/0:49:1
+0,49,2,تَكْتُبْ,تَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَكْتُبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:49:2,aslot/axis3/0:49:2
+0,49,3,أَكْتُبْ,أَكْتُبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَكْتُبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:49:3,aslot/axis3/0:49:3
+0,50,1,أَيْنَمَا,أَيْنَمَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:50:1,aslot/axis3/0:50:1
+0,50,2,تَنْزِلْ,تَنْزِلْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَنْزِلْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:50:2,aslot/axis3/0:50:2
+0,50,3,أَنْزِلْ,أَنْزِلْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَنْزِلْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:50:3,aslot/axis3/0:50:3
+0,51,1,أَنَّى,أَنْنَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَنْنَاْ,CVC·CVV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:51:1,aslot/axis3/0:51:1
+0,51,2,تَسْتَقِمْ,تَسْتَقِمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَسْتَقِمْ,CVC·CV·CVC,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:51:2,aslot/axis3/0:51:2
+0,51,3,تَرْبَحْ,تَرْبَحْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَرْبَحْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:51:3,aslot/axis3/0:51:3
+0,52,1,حَيْثُمَا,حَيْثُمَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَيْثُمَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:52:1,aslot/axis3/0:52:1
+0,52,2,تَسْتَقِمْ,تَسْتَقِمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَسْتَقِمْ,CVC·CV·CVC,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:52:2,aslot/axis3/0:52:2
+0,52,3,يَقْدَرْ,يَقْدَرْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَقْدَرْ,CVC·CVC,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:52:3,aslot/axis3/0:52:3
+0,52,4,لَكَ,لَكَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:52:4,aslot/axis3/0:52:4
+0,52,6,نَجَاحًا,نَجَاْحَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَجَاْحَنْاْ,CV·CVV·CVCC,5,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:52:6,aslot/axis3/0:52:6
+0,53,1,إِذْمَا,إِذْمَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِذْمَاْ,CVC·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:53:1,aslot/axis3/0:53:1
+0,53,2,تَذْهَبْ,تَذْهَبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَذْهَبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:53:2,aslot/axis3/0:53:2
+0,53,3,أَذْهَبْ,أَذْهَبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَذْهَبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:53:3,aslot/axis3/0:53:3
+0,54,1,لَوْ,لَوْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:54:1,aslot/axis3/0:54:1
+0,54,2,تَقَدَّمْ,تَقَدْدَمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَقَدْدَمْ,CV·CVC·CVC,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:54:2,aslot/axis3/0:54:2
+0,54,3,تَنْجَحْ,تَنْجَحْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَنْجَحْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:54:3,aslot/axis3/0:54:3
+0,55,1,إِذَا,إِذَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِذَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:55:1,aslot/axis3/0:55:1
+0,55,2,تَتَعَلَّمْ,تَتَعَلْلَمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَتَعَلْلَمْ,CV·CV·CVC·CVC,6,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:55:2,aslot/axis3/0:55:2
+0,55,3,تُفْلِحْ,تُفْلِحْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تُفْلِحْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:55:3,aslot/axis3/0:55:3
+0,56,1,رَأَيْتُ,رَأَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَأَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:56:1,aslot/axis3/0:56:1
+0,56,2,أَحَدَ,أَحَدَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَحَدَ,CV·CV·CV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:56:2,aslot/axis3/0:56:2
+0,56,3,عَشَرَ,عَشَرَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَشَرَ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:56:3,aslot/axis3/0:56:3
+0,56,4,كَوْكَبًا,كَوْكَبَنْاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CV·CVCC),aslot/axis4/0:56:4,aslot/axis3/0:56:4
+0,57,1,كَمْ,كَمْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:57:1,aslot/axis3/0:57:1
+0,57,2,دَارًا,دَاْرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دَاْرَنْاْ,CVV·CVCC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:57:2,aslot/axis3/0:57:2
+0,58,1,كَأَيْنَ,كَأَيْنَ,ACCEPT,CLOSED_REMAINDER,1,كَ,LIC:4,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:58:1,aslot/axis3/0:58:1
+0,58,2,عَبْدًا,عَبْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَبْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:58:2,aslot/axis3/0:58:2
+0,58,3,مَلَكْتَ,مَلَكْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلَكْتَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:58:3,aslot/axis3/0:58:3
+0,59,1,كَذَا,كَذَاْ,ACCEPT,CLOSED_REMAINDER,1,كَ,LIC:4,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:59:1,aslot/axis3/0:59:1
+0,59,2,وَكَذَا,وَكَذَاْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كَذَاْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:59:2,aslot/axis3/0:59:2
+0,59,3,دِرْهَمًا,دِرْهَمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دِرْهَمَنْاْ,CVC·CV·CVCC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:59:3,aslot/axis3/0:59:3
+0,59,4,مَلَكْتَ,مَلَكْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلَكْتَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:59:4,aslot/axis3/0:59:4
+0,60,1,جَاءَ,جَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:60:1,aslot/axis3/0:60:1
+0,60,2,بِكَذَا,بِكَذَاْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كَذَاْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة بِ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:60:2,aslot/axis3/0:60:2
+0,60,3,وَكَذَا,وَكَذَاْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كَذَاْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:60:3,aslot/axis3/0:60:3
+0,61,1,مَلَكْتَ,مَلَكْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلَكْتَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:61:1,aslot/axis3/0:61:1
+0,61,2,مِائَةَ,مِاْئَةَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مِاْئَةَ,CVC·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:61:2,aslot/axis3/0:61:2
+0,61,3,دِرْهَمٍ,دِرْهَمِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دِرْهَمِنْ,CVC·CV·CVC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:61:3,aslot/axis3/0:61:3
+0,62,1,رَأَيْتُ,رَأَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَأَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:62:1,aslot/axis3/0:62:1
+0,62,2,أَلْفَ,أَلْفَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَلْفَ,CVC·CV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:62:2,aslot/axis3/0:62:2
+0,62,3,رَجُلٍ,رَجُلِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَجُلِنْ,CV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:62:3,aslot/axis3/0:62:3
+0,63,1,مَلَكْتَ,مَلَكْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلَكْتَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:63:1,aslot/axis3/0:63:1
+0,63,2,أَلْوَفَ,أَلْوَفَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَلْوَفَ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:63:2,aslot/axis3/0:63:2
+0,63,3,دَرَاهِمَ,دَرَاْهِمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دَرَاْهِمَ,CV·CVV·CV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:63:3,aslot/axis3/0:63:3
+0,64,1,جَمَعْتُ,جَمَعْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَمَعْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:64:1,aslot/axis3/0:64:1
+0,64,2,مَلَايِينَ,مَلَاْيِيْنَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَلَاْيِيْنَ,CV·CVV·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:64:2,aslot/axis3/0:64:2
+0,64,3,دِرْهَمٍ,دِرْهَمِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دِرْهَمِنْ,CVC·CV·CVC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:64:3,aslot/axis3/0:64:3
+0,65,1,أَيَّةَ,أَيْيَةَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَيْيَةَ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:65:1,aslot/axis3/0:65:1
+0,65,2,كِتَابًا,كِتَاْبَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,كِتَاْبَنْاْ,CV·CVV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:65:2,aslot/axis3/0:65:2
+0,66,1,كَيْتَ,كَيْتَ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CV),aslot/axis4/0:66:1,aslot/axis3/0:66:1
+0,66,2,مَالًا,مَاْلَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَاْلَنْاْ,CVV·CVCC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:66:2,aslot/axis3/0:66:2
+0,67,1,جَاءَ,جَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:67:1,aslot/axis3/0:67:1
+0,67,2,ذُو,ذُوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ذُوْ,CVV,1,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:67:2,aslot/axis3/0:67:2
+0,67,3,مَالٍ,مَاْلِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَاْلِنْ,CVV·CVC,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:67:3,aslot/axis3/0:67:3
+0,67,4,كَثِيرٍ,كَثِيْرِنْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «ثِيْرِنْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة كَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:67:4,aslot/axis3/0:67:4
+0,68,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:68:1,aslot/axis3/0:68:1
+0,68,2,رَيْحَانُ,رَيْحَاْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَيْحَاْنُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:68:2,aslot/axis3/0:68:2
+0,68,3,رُوَيْدَ,رُوَيْدَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رُوَيْدَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:68:3,aslot/axis3/0:68:3
+0,68,4,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:68:4,aslot/axis3/0:68:4
+0,69,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:69:1,aslot/axis3/0:69:1
+0,69,2,وَلَدَانِ,وَلَدَاْنِ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «لَدَاْنِ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:69:2,aslot/axis3/0:69:2
+0,69,3,بَلْهَ,بَلْهَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَلْهَ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:69:3,aslot/axis3/0:69:3
+0,69,4,بَسِيطًا,بَسِيْطَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَسِيْطَنْاْ,CV·CVV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:69:4,aslot/axis3/0:69:4
+0,70,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:70:1,aslot/axis3/0:70:1
+0,70,2,بَسِيطُ,بَسِيْطُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَسِيْطُ,CV·CVV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:70:2,aslot/axis3/0:70:2
+0,70,3,دُونَكَ,دُوْنَكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دُوْنَكَ,CVV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:70:3,aslot/axis3/0:70:3
+0,70,4,الْكِتَابَ,ءَلْكِتَاْبَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْكِتَاْبَ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:70:4,aslot/axis3/0:70:4
+0,71,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:71:1,aslot/axis3/0:71:1
+0,71,2,رَيْحَانُ,رَيْحَاْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَيْحَاْنُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:71:2,aslot/axis3/0:71:2
+0,71,3,عَلَيْكَ,عَلَيْكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَلَيْكَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:71:3,aslot/axis3/0:71:3
+0,71,4,مُهْتَدِيًا,مُهْتَدِيَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُهْتَدِيَنْاْ,CVC·CV·CV·CVCC,7,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:71:4,aslot/axis3/0:71:4
+0,72,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:72:1,aslot/axis3/0:72:1
+0,72,2,سَرْمِينُ,سَرْمِيْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَرْمِيْنُ,CVC·CVV·CV,4,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:72:2,aslot/axis3/0:72:2
+0,72,3,هَاءَ,هَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:72:3,aslot/axis3/0:72:3
+0,72,4,دِرْهَمًا,دِرْهَمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دِرْهَمَنْاْ,CVC·CV·CVCC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:72:4,aslot/axis3/0:72:4
+0,73,1,يَا,يَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:73:1,aslot/axis3/0:73:1
+0,73,2,وَلَدَانِ,وَلَدَاْنِ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «لَدَاْنِ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:73:2,aslot/axis3/0:73:2
+0,73,3,حَيَّهَلِ,حَيْيَهَلِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَيْيَهَلِ,CVC·CV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:73:3,aslot/axis3/0:73:3
+0,73,4,الْقَهْوَةَ,ءَلْقَهْوَةَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَهْوَةَ,CVC·CVC·CV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:73:4,aslot/axis3/0:73:4
+0,74,1,هَيْهَاتَ,هَيْهَاْتَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:74:1,aslot/axis3/0:74:1
+0,74,2,الْعَقِيقُ,ءَلْعَقِيْقُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْعَقِيْقُ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:74:2,aslot/axis3/0:74:2
+0,75,1,شَتَّانَ,شَتْتَاْنَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,شَتْتَاْنَ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:75:1,aslot/axis3/0:75:1
+0,75,2,سَرْمِينُ,سَرْمِيْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَرْمِيْنُ,CVC·CVV·CV,4,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:75:2,aslot/axis3/0:75:2
+0,75,3,وَبَسِيطٌ,وَبَسِيْطُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,1,وَ,LIC:1,بَسِيْطُنْ,CV·CVV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:75:3,aslot/axis3/0:75:3
+0,76,1,سُرْعَانَ,سُرْعَاْنَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سُرْعَاْنَ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:76:1,aslot/axis3/0:76:1
+0,76,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:76:2,aslot/axis3/0:76:2
+0,76,3,خُرُوجًا,خُرُوْجَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,خُرُوْجَنْاْ,CV·CVV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:76:3,aslot/axis3/0:76:3
+0,77,1,كَانَ,كَاْنَ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVV·CV),aslot/axis4/0:77:1,aslot/axis3/0:77:1
+0,77,2,الْعَالِمُ,ءَلْعَاْلِمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْعَاْلِمُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:77:2,aslot/axis3/0:77:2
+0,77,3,طَالِبًا,طَاْلِبَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,طَاْلِبَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:77:3,aslot/axis3/0:77:3
+0,78,1,صَارَ,صَاْرَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,صَاْرَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:78:1,aslot/axis3/0:78:1
+0,78,2,الْحَدِيدُ,ءَلْحَدِيْدُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْحَدِيْدُ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:78:2,aslot/axis3/0:78:2
+0,78,3,سَيْفًا,سَيْفَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَيْفَنْاْ,CVC·CVCC,5,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:78:3,aslot/axis3/0:78:3
+0,79,1,أَصْبَحَ,أَصْبَحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَصْبَحَ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:79:1,aslot/axis3/0:79:1
+0,79,2,الْبَرْدُ,ءَلْبَرْدُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْبَرْدُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:79:2,aslot/axis3/0:79:2
+0,79,3,شَدِيدًا,شَدِيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,شَدِيْدَنْاْ,CV·CVV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:79:3,aslot/axis3/0:79:3
+0,80,1,أَمْسَى,أَمْسَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَمْسَاْ,CVC·CVV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:80:1,aslot/axis3/0:80:1
+0,80,2,الْفَلَّاحُ,ءَلْفَلْلَاْحُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْفَلْلَاْحُ,CVC·CVC·CVV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:80:2,aslot/axis3/0:80:2
+0,80,3,رَاجِعًا,رَاْجِعَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَاْجِعَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:80:3,aslot/axis3/0:80:3
+0,81,1,أَضْحَى,أَضْحَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَضْحَاْ,CVC·CVV,3,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:81:1,aslot/axis3/0:81:1
+0,81,2,الطَّالِبُ,ءَطْطَاْلِبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَطْطَاْلِبُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:81:2,aslot/axis3/0:81:2
+0,81,3,مُصَلِّيًا,مُصَلْلِيَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُصَلْلِيَنْاْ,CV·CVC·CV·CVCC,7,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:81:3,aslot/axis3/0:81:3
+0,82,1,ظَلَّ,ظَلْلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ظَلْلَ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:82:1,aslot/axis3/0:82:1
+0,82,2,بَسِيطٌ,بَسِيْطُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَسِيْطُنْ,CV·CVV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:82:2,aslot/axis3/0:82:2
+0,82,3,صَائِمًا,صَاْئِمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,صَاْئِمَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:82:3,aslot/axis3/0:82:3
+0,83,1,بَاتَ,بَاْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَاْتَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:83:1,aslot/axis3/0:83:1
+0,83,2,الطَّالِبُ,ءَطْطَاْلِبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَطْطَاْلِبُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:83:2,aslot/axis3/0:83:2
+0,83,3,مُتَدَرِّسًا,مُتَدَرْرِسَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُتَدَرْرِسَنْاْ,CV·CV·CVC·CV·CVCC,8,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:83:3,aslot/axis3/0:83:3
+0,84,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:84:1,aslot/axis3/0:84:1
+0,84,2,زَالَ,زَاْلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَاْلَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:84:2,aslot/axis3/0:84:2
+0,84,3,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:84:3,aslot/axis3/0:84:3
+0,84,4,مُنْفَرِدًا,مُنْفَرِدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُنْفَرِدَنْاْ,CVC·CV·CV·CVCC,7,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:84:4,aslot/axis3/0:84:4
+0,85,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:85:1,aslot/axis3/0:85:1
+0,85,2,بَرِحَ,بَرِحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,بَرِحَ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:85:2,aslot/axis3/0:85:2
+0,85,3,الْجَهْلُ,ءَلْجَهْلُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْجَهْلُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:85:3,aslot/axis3/0:85:3
+0,85,4,مُضِرًّا,مُضِرْرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُضِرْرَنْاْ,CV·CVC·CVCC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:85:4,aslot/axis3/0:85:4
+0,86,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:86:1,aslot/axis3/0:86:1
+0,86,2,فَتِئَ,فَتِئَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «تِئَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:86:2,aslot/axis3/0:86:2
+0,86,3,سَرْمِينُ,سَرْمِيْنُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَرْمِيْنُ,CVC·CVV·CV,4,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:86:3,aslot/axis3/0:86:3
+0,86,4,مُتَبَسِّمًا,مُتَبَسْسِمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُتَبَسْسِمَنْاْ,CV·CV·CVC·CV·CVCC,8,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:86:4,aslot/axis3/0:86:4
+0,87,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:87:1,aslot/axis3/0:87:1
+0,87,2,انْفَكَّ,ءَنْفَكْكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَنْفَكْكَ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:87:2,aslot/axis3/0:87:2
+0,87,3,هَاشِمٌ,هَاْشِمُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هَاْشِمُنْ,CVV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:87:3,aslot/axis3/0:87:3
+0,87,4,عَالِمًا,عَاْلِمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَاْلِمَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:87:4,aslot/axis3/0:87:4
+0,88,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:88:1,aslot/axis3/0:88:1
+0,88,2,دَامَ,دَاْمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دَاْمَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:88:2,aslot/axis3/0:88:2
+0,88,3,الْفَاسِقُ,ءَلْفَاْسِقُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْفَاْسِقُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:88:3,aslot/axis3/0:88:3
+0,88,4,مُتَرَدِّدًا,مُتَرَدْدِدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُتَرَدْدِدَنْاْ,CV·CV·CVC·CV·CVCC,8,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:88:4,aslot/axis3/0:88:4
+0,89,1,لَيْسَ,لَيْسَ,DEFER,DEFER_VERBAL_OPERATOR_REGISTRY_TAG,0,,,,,0,NOT_A_CLOSED_FORM_VERBAL_OPERATOR,,NONE,NO,NOT_CLAIMED,OWNER_RULING_1: WORD_CLASS=فعل ، OPERATOR_ROLE=TRUE ، TAG_حرف=NO,aslot/axis4/0:89:1,aslot/axis3/0:89:1
+0,89,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:89:2,aslot/axis3/0:89:2
+0,89,3,حَاضِرًا,حَاْضِرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَاْضِرَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:89:3,aslot/axis3/0:89:3
+0,90,1,عَسَى,عَسَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَسَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:90:1,aslot/axis3/0:90:1
+0,90,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:90:2,aslot/axis3/0:90:2
+0,90,3,أَنْ,أَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:90:3,aslot/axis3/0:90:3
+0,90,4,يَحْضُرَ,يَحْضُرَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَحْضُرَ,CVC·CV·CV,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:90:4,aslot/axis3/0:90:4
+0,91,1,كَادَ,كَاْدَ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVV·CV),aslot/axis4/0:91:1,aslot/axis3/0:91:1
+0,91,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:91:2,aslot/axis3/0:91:2
+0,91,3,يَقُومُ,يَقُوْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَقُوْمُ,CV·CVV·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:91:3,aslot/axis3/0:91:3
+0,92,1,كَرُبَ,كَرُبَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «رُبَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة كَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:92:1,aslot/axis3/0:92:1
+0,92,2,الْقَلْبُ,ءَلْقَلْبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْقَلْبُ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:92:2,aslot/axis3/0:92:2
+0,92,3,يَذُوبُ,يَذُوْبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَذُوْبُ,CV·CVV·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:92:3,aslot/axis3/0:92:3
+0,93,1,أَوْشَكَ,أَوْشَكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَوْشَكَ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:93:1,aslot/axis3/0:93:1
+0,93,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:93:2,aslot/axis3/0:93:2
+0,93,3,أَنْ,أَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:93:3,aslot/axis3/0:93:3
+0,93,4,يَقُومَ,يَقُوْمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَقُوْمَ,CV·CVV·CV,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:93:4,aslot/axis3/0:93:4
+0,94,1,نِعْمَ,نِعْمَ,DEFER,DEFER_VERBAL_OPERATOR_REGISTRY_TAG,0,,,,,0,NOT_A_CLOSED_FORM_VERBAL_OPERATOR,,NONE,NO,NOT_CLAIMED,OWNER_RULING_1: WORD_CLASS=فعل ، OPERATOR_ROLE=TRUE ، TAG_حرف=NO,aslot/axis4/0:94:1,aslot/axis3/0:94:1
+0,94,2,الرَّجُلُ,ءَرْرَجُلُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَرْرَجُلُ,CVC·CV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:94:2,aslot/axis3/0:94:2
+0,94,3,مُحَمَّدٌ,مُحَمْمَدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مُحَمْمَدُنْ,CV·CVC·CV·CVC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:94:3,aslot/axis3/0:94:3
+0,95,1,بِئْسَ,بِئْسَ,DEFER,DEFER_VERBAL_OPERATOR_REGISTRY_TAG,0,,,,,0,NOT_A_CLOSED_FORM_VERBAL_OPERATOR,,NONE,NO,NOT_CLAIMED,OWNER_RULING_1: WORD_CLASS=فعل ، OPERATOR_ROLE=TRUE ، TAG_حرف=NO,aslot/axis4/0:95:1,aslot/axis3/0:95:1
+0,95,2,الطَّالِبُ,ءَطْطَاْلِبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَطْطَاْلِبُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:95:2,aslot/axis3/0:95:2
+0,95,3,النَّوَّامُ,ءَنْنَوْوَاْمُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَنْنَوْوَاْمُ,CVC·CVC·CVV·CV,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:95:3,aslot/axis3/0:95:3
+0,96,1,سَاءَ,سَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَاْءَ,CVV·CV,2,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:96:1,aslot/axis3/0:96:1
+0,96,2,الطَّالِبُ,ءَطْطَاْلِبُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَطْطَاْلِبُ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:96:2,aslot/axis3/0:96:2
+0,96,3,الْكَسُولُ,ءَلْكَسُوْلُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْكَسُوْلُ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:96:3,aslot/axis3/0:96:3
+0,97,1,حَبَّذَا,حَبْبَذَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَبْبَذَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:97:1,aslot/axis3/0:97:1
+0,97,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:97:2,aslot/axis3/0:97:2
+0,98,1,حَسِبْتُ,حَسِبْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَسِبْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:98:1,aslot/axis3/0:98:1
+0,98,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:98:2,aslot/axis3/0:98:2
+0,98,3,حَاضِرًا,حَاْضِرَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,حَاْضِرَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:98:3,aslot/axis3/0:98:3
+0,99,1,خِلْتُ,خِلْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,خِلْتُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:99:1,aslot/axis3/0:99:1
+0,99,2,الْهِلَالَ,ءَلْهِلَاْلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْهِلَاْلَ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:99:2,aslot/axis3/0:99:2
+0,99,3,لَائِحًا,لَاْئِحَنْاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVV·CV·CVCC),aslot/axis4/0:99:3,aslot/axis3/0:99:3
+0,100,1,ظَنَنْتُ,ظَنَنْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ظَنَنْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:100:1,aslot/axis3/0:100:1
+0,100,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:100:2,aslot/axis3/0:100:2
+0,100,3,قَائِمًا,قَاْئِمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,قَاْئِمَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:100:3,aslot/axis3/0:100:3
+0,101,1,رَأَيْتُ,رَأَيْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَأَيْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:101:1,aslot/axis3/0:101:1
+0,101,2,الطَّالِبَ,ءَطْطَاْلِبَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَطْطَاْلِبَ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:101:2,aslot/axis3/0:101:2
+0,101,3,نَاجِحًا,نَاْجِحَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَاْجِحَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:101:3,aslot/axis3/0:101:3
+0,102,1,عَلِمْتُ,عَلِمْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَلِمْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:102:1,aslot/axis3/0:102:1
+0,102,2,الزَّاهِدَ,ءَزْزَاْهِدَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَزْزَاْهِدَ,CVC·CVV·CV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:102:2,aslot/axis3/0:102:2
+0,102,3,مَرْزُوقًا,مَرْزُوْقَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,مَرْزُوْقَنْاْ,CVC·CVV·CVCC,6,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:102:3,aslot/axis3/0:102:3
+0,103,1,وَجَدْتُ,وَجَدْتُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «جَدْتُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة وَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:103:1,aslot/axis3/0:103:1
+0,103,2,الْعِلْمَ,ءَلْعِلْمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْعِلْمَ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:103:2,aslot/axis3/0:103:2
+0,103,3,نَافِعًا,نَاْفِعَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَاْفِعَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:103:3,aslot/axis3/0:103:3
+0,104,1,زَعَمْتُ,زَعَمْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَعَمْتُ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:104:1,aslot/axis3/0:104:1
+0,104,2,زَيْدًا,زَيْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:104:2,aslot/axis3/0:104:2
+0,104,3,عَالِمًا,عَاْلِمَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَاْلِمَنْاْ,CVV·CV·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:104:3,aslot/axis3/0:104:3
+0,105,1,لَوْلَا,لَوْلَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:105:1,aslot/axis3/0:105:1
+0,105,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:105:2,aslot/axis3/0:105:2
+0,105,3,لَهَلَكْتُ,لَهَلَكْتُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «هَلَكْتُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:105:3,aslot/axis3/0:105:3
+0,106,1,لَوْمَا,لَوْمَاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CVV),aslot/axis4/0:106:1,aslot/axis3/0:106:1
+0,106,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:106:2,aslot/axis3/0:106:2
+0,106,3,لَهَلَكْتُ,لَهَلَكْتُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «هَلَكْتُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:106:3,aslot/axis3/0:106:3
+0,107,1,لَومَا,لَوْمَاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CVV),aslot/axis4/0:107:1,aslot/axis3/0:107:1
+0,107,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:107:2,aslot/axis3/0:107:2
+0,108,1,أَمَّا,أَمْمَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:108:1,aslot/axis3/0:108:1
+0,108,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:108:2,aslot/axis3/0:108:2
+0,108,3,فَمُجْتَهِدٌ,فَمُجْتَهِدُنْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «مُجْتَهِدُنْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:108:3,aslot/axis3/0:108:3
+0,109,1,أَيْنَ,أَيْنَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:109:1,aslot/axis3/0:109:1
+0,109,2,تَذْهَبْ,تَذْهَبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَذْهَبْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:109:2,aslot/axis3/0:109:2
+0,109,3,أَذْهَبْ,أَذْهَبْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَذْهَبْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:109:3,aslot/axis3/0:109:3
+0,110,1,كَيْفَمَا,كَيْفَمَاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVC·CV·CVV),aslot/axis4/0:110:1,aslot/axis3/0:110:1
+0,110,2,تَكُونُوا,تَكُوْنُوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَكُوْنُوْ,CV·CVV·CVV,3,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:110:2,aslot/axis3/0:110:2
+0,110,3,يُوَلَّ,يُوَلْلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يُوَلْلَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:110:3,aslot/axis3/0:110:3
+0,110,4,عَلَيْكُمْ,عَلَيْكُمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَلَيْكُمْ,CV·CVC·CVC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:110:4,aslot/axis3/0:110:4
+0,111,1,كُلَّمَا,كُلْلَمَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,كُلْلَمَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:111:1,aslot/axis3/0:111:1
+0,111,2,دَخَلَ,دَخَلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دَخَلَ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:111:2,aslot/axis3/0:111:2
+0,111,3,نَبِيٌّ,نَبِيْيُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَبِيْيُنْ,CV·CVV·CVC,4,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:111:3,aslot/axis3/0:111:3
+0,111,4,نَصَرُوهُ,نَصَرُوْهُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,نَصَرُوْهُ,CV·CV·CVV·CV,4,NOT_MATCHED,نَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: نَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:111:4,aslot/axis3/0:111:4
+0,112,1,أَيَّ,أَيْيَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:112:1,aslot/axis3/0:112:1
+0,112,2,طَرِيقٍ,طَرِيْقِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,طَرِيْقِنْ,CV·CVV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:112:2,aslot/axis3/0:112:2
+0,112,3,تَسْلُكْ,تَسْلُكْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَسْلُكْ,CVC·CVC,4,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:112:3,aslot/axis3/0:112:3
+0,112,4,أَسْلُكْ,أَسْلُكْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَسْلُكْ,CVC·CVC,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:112:4,aslot/axis3/0:112:4
+0,113,1,أَيُّ,أَيْيُ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:113:1,aslot/axis3/0:113:1
+0,113,2,رَجُلٍ,رَجُلِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,رَجُلِنْ,CV·CV·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:113:2,aslot/axis3/0:113:2
+0,113,3,يَجِئْ,يَجِئْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَجِئْ,CV·CVC,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:113:3,aslot/axis3/0:113:3
+0,113,4,يُكْرَمْ,يُكْرَمْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يُكْرَمْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:113:4,aslot/axis3/0:113:4
+0,114,1,دَخَلَ,دَخَلَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,دَخَلَ,CV·CV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:114:1,aslot/axis3/0:114:1
+0,114,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:114:2,aslot/axis3/0:114:2
+0,114,3,فَعَمْرٌو,فَعَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,1,فَ,LIC:2,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:114:3,aslot/axis3/0:114:3
+0,115,1,سَافَرَ,سَاْفَرَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,سَاْفَرَ,CVV·CV·CV,3,NOT_MATCHED,سَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: سَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:115:1,aslot/axis3/0:115:1
+0,115,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:115:2,aslot/axis3/0:115:2
+0,115,3,ثُمَّ,ثُمْمَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:115:3,aslot/axis3/0:115:3
+0,115,4,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:115:4,aslot/axis3/0:115:4
+0,116,1,تَزَوَّجْ,تَزَوْوَجْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَزَوْوَجْ,CV·CVC·CVC,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:116:1,aslot/axis3/0:116:1
+0,116,2,هِنْدًا,هِنْدَنْاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هِنْدَنْاْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:116:2,aslot/axis3/0:116:2
+0,116,3,أَوْ,أَوْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:116:3,aslot/axis3/0:116:3
+0,116,4,أُخْتَهَا,أُخْتَهَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أُخْتَهَاْ,CVC·CV·CVV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:116:4,aslot/axis3/0:116:4
+0,117,1,جَاءَ,جَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:117:1,aslot/axis3/0:117:1
+0,117,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:117:2,aslot/axis3/0:117:2
+0,117,3,أَو,أَوْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:117:3,aslot/axis3/0:117:3
+0,117,4,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:117:4,aslot/axis3/0:117:4
+0,118,1,أَزَيْدٌ,أَزَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَزَيْدُنْ,CV·CVC·CVC,5,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:118:1,aslot/axis3/0:118:1
+0,118,2,أَمْ,أَمْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:118:2,aslot/axis3/0:118:2
+0,118,3,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:118:3,aslot/axis3/0:118:3
+0,119,1,جَاءَ,جَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:119:1,aslot/axis3/0:119:1
+0,119,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:119:2,aslot/axis3/0:119:2
+0,119,3,بَلْ,بَلْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:119:3,aslot/axis3/0:119:3
+0,119,4,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:119:4,aslot/axis3/0:119:4
+0,120,1,إِمَّا,إِمْمَاْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:120:1,aslot/axis3/0:120:1
+0,120,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:120:2,aslot/axis3/0:120:2
+0,120,3,وَإِمَّا,وَإِمْمَاْ,ACCEPT,CLOSED_REMAINDER,1,وَ,LIC:1,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:120:3,aslot/axis3/0:120:3
+0,120,4,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:120:4,aslot/axis3/0:120:4
+0,121,1,مِنَ,مِنَ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:121:1,aslot/axis3/0:121:1
+0,121,2,الْبَيْتِ,ءَلْبَيْتِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَلْبَيْتِ,CVC·CVC·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:121:2,aslot/axis3/0:121:2
+0,122,1,أَيُّهَا,أَيْيُهَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَيْيُهَاْ,CVC·CV·CVV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:122:1,aslot/axis3/0:122:1
+0,122,2,النَّاسُ,ءَنْنَاْسُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَنْنَاْسُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:122:2,aslot/axis3/0:122:2
+0,123,1,وَا,وَاْ,BLOCK,BLOCK_SYLLABLE_BOUNDARY_CROSSED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,القطع عند 2 يعبر حدًّا مقطعيًّا (CVV),aslot/axis4/0:123:1,aslot/axis3/0:123:1
+0,123,2,زَيْدَاهُ,زَيْدَاْهُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدَاْهُ,CVC·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:123:2,aslot/axis3/0:123:2
+0,124,1,آ,ءَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَاْ,CVV,1,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:124:1,aslot/axis3/0:124:1
+0,124,2,زَيْدُ,زَيْدُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:124:2,aslot/axis3/0:124:2
+0,125,1,إِذَنْ,إِذَنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِذَنْ,CV·CVC,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:125:1,aslot/axis3/0:125:1
+0,125,2,أَنْجَحَ,أَنْجَحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَنْجَحَ,CVC·CV·CV,4,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:125:2,aslot/axis3/0:125:2
+0,126,1,يُرِيدُ,يُرِيْدُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يُرِيْدُ,CV·CVV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:126:1,aslot/axis3/0:126:1
+0,126,2,أَنْ,أَنْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:126:2,aslot/axis3/0:126:2
+0,126,3,يَنْجَحَ,يَنْجَحَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَنْجَحَ,CVC·CV·CV,4,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:126:3,aslot/axis3/0:126:3
+0,127,1,نَعَمْ,نَعَمْ,DEFER,DEFER_VERBAL_OPERATOR_REGISTRY_TAG,0,,,,,0,NOT_A_CLOSED_FORM_VERBAL_OPERATOR,,NONE,NO,NOT_CLAIMED,OWNER_RULING_1: WORD_CLASS=فعل ، OPERATOR_ROLE=TRUE ، TAG_حرف=NO,aslot/axis4/0:127:1,aslot/axis3/0:127:1
+0,127,2,فَعَلْتُ,فَعَلْتُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «عَلْتُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:127:2,aslot/axis3/0:127:2
+0,128,1,هَيَّا,هَيْيَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هَيْيَاْ,CVC·CVV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:128:1,aslot/axis3/0:128:1
+0,128,2,إِلَى,إِلَاْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,إِلَاْ,CV·CVV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:128:2,aslot/axis3/0:128:2
+0,128,3,الصَّلَاةِ,ءَصْصَلَاْةِ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ءَصْصَلَاْةِ,CVC·CV·CVV·CV,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:128:3,aslot/axis3/0:128:3
+0,129,1,هِيهَاتَ,هِيْهَاْتَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,هِيْهَاْتَ,CVV·CVV·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:129:1,aslot/axis3/0:129:1
+0,129,2,لِمَا,لِمَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,1,لِ,LIC:5,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:129:2,aslot/axis3/0:129:2
+0,129,3,تُوعَدُونَ,تُوْعَدُوْنَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تُوْعَدُوْنَ,CVV·CV·CVV·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:129:3,aslot/axis3/0:129:3
+0,130,1,ذَو,ذَوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,ذَوْ,CVC,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:130:1,aslot/axis3/0:130:1
+0,130,2,عِلْمٍ,عِلْمِنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عِلْمِنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:130:2,aslot/axis3/0:130:2
+0,131,1,مَاْ,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:131:1,aslot/axis3/0:131:1
+0,131,2,فَعَلْتَهُ,فَعَلْتَهُ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «عَلْتَهُ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:131:2,aslot/axis3/0:131:2
+0,132,1,مَا,مَاْ,DEFER,DEFER_UNRESOLVED_CLOSURE,0,,,,,0,UNRESOLVED,,NONE,NO,NOT_CLAIMED,"شهاداتٌ متعارضة: ['حرف', 'مبنيّ']",aslot/axis4/0:132:1,aslot/axis3/0:132:1
+0,132,2,فَعَلْتَ,فَعَلْتَ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «عَلْتَ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة فَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:132:2,aslot/axis3/0:132:2
+0,133,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:133:1,aslot/axis3/0:133:1
+0,134,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:134:1,aslot/axis3/0:134:1
+0,135,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:135:1,aslot/axis3/0:135:1
+0,136,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:136:1,aslot/axis3/0:136:1
+0,137,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:137:1,aslot/axis3/0:137:1
+0,138,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:138:1,aslot/axis3/0:138:1
+0,139,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:139:1,aslot/axis3/0:139:1
+0,140,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:140:1,aslot/axis3/0:140:1
+0,141,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:141:1,aslot/axis3/0:141:1
+0,142,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:142:1,aslot/axis3/0:142:1
+0,143,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:143:1,aslot/axis3/0:143:1
+0,144,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:144:1,aslot/axis3/0:144:1
+0,145,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:145:1,aslot/axis3/0:145:1
+0,146,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:146:1,aslot/axis3/0:146:1
+0,147,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:147:1,aslot/axis3/0:147:1
+0,148,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:148:1,aslot/axis3/0:148:1
+0,149,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:149:1,aslot/axis3/0:149:1
+0,150,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:150:1,aslot/axis3/0:150:1
+0,151,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:151:1,aslot/axis3/0:151:1
+0,152,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:152:1,aslot/axis3/0:152:1
+0,153,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:153:1,aslot/axis3/0:153:1
+0,154,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:154:1,aslot/axis3/0:154:1
+0,155,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:155:1,aslot/axis3/0:155:1
+0,156,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:156:1,aslot/axis3/0:156:1
+0,157,1,مثال,مْثْلْ,BLOCK,BLOCK_AXIS_3_REJECTED,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,SYLLABLE_WITHOUT_ONSET,aslot/axis4/0:157:1,aslot/axis3/0:157:1
+0,158,1,جَاءَ,جَاْءَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جَاْءَ,CVV·CV,2,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:158:1,aslot/axis3/0:158:1
+0,158,2,زَيْدٌ,زَيْدُنْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,زَيْدُنْ,CVC·CVC,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:158:2,aslot/axis3/0:158:2
+0,158,3,لَكِنْ,لَكِنْ,DEFER,DEFER_REMAINDER_STANDING_UNPROVEN,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,قيامُ البقيّة «كِنْ» بنفسها غيرُ معلوم: لا شاهدَ مستقلّ، والجردُ مشتقٌّ فلا يُسأل عن الإغلاق. والسابقة لَ جائزةٌ لا واقعة — والقبولُ دعوى كالمنع سواء.,aslot/axis4/0:158:3,aslot/axis3/0:158:3
+0,158,4,عَمْرٌو,عَمْرُنْوْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,عَمْرُنْوْ,CVC·CVCC,5,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:158:4,aslot/axis3/0:158:4
+0,158,5,لَمْ,لَمْ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:158:5,aslot/axis3/0:158:5
+0,158,6,يَجِئْ,يَجِئْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,يَجِئْ,CV·CVC,3,NOT_MATCHED,يَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: يَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:158:6,aslot/axis3/0:158:6
+0,159,1,جِئْتُ,جِئْتُ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,جِئْتُ,CVC·CV,3,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:159:1,aslot/axis3/0:159:1
+0,159,2,لَ,لَ,BLOCK,BLOCK_EMPTY_REMAINDER,0,,,,,0,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:159:2,aslot/axis3/0:159:2
+0,159,3,أَتَعَلَّمَ,أَتَعَلْلَمَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أَتَعَلْلَمَ,CV·CV·CVC·CV·CV,6,NOT_MATCHED,أَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: أَ — INTERROGATIVE_HAMZA_PREFIX = DEFER,aslot/axis4/0:159:3,aslot/axis3/0:159:3
+0,160,1,أَيَّانَ,أَيْيَاْنَ,ACCEPT,CLOSED_REMAINDER,0,,,,,0,PROVEN,,NONE,NO,NOT_CLAIMED,صورةٌ مغلقة مبرهنة — كلمةٌ تامّة لا جذع,aslot/axis4/0:160:1,aslot/axis3/0:160:1
+0,160,2,تَسْأَلْنِي,تَسْأَلْنِيْ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,تَسْأَلْنِيْ,CVC·CVC·CVV,5,NOT_MATCHED,تَ,NONE,NO,NOT_CLAIMED,مرشّحٌ مؤجَّل: تَ — سابقةُ مضارعٍ/سين: مرشّحٌ لا ترخيص,aslot/axis4/0:160:2,aslot/axis3/0:160:2
+0,160,3,أُجِبْكَ,أُجِبْكَ,ACCEPT,STEM_NOT_FURTHER_PEELABLE,0,,,أُجِبْكَ,CV·CVC·CV,4,NOT_MATCHED,,NONE,NO,NOT_CLAIMED,,aslot/axis4/0:160:3,aslot/axis3/0:160:3

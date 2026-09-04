@@ -33,7 +33,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from aslot.constants import canonical_mark_order
 
 #: المجلداتُ التي تُجرَد — الكودُ والاختباراتُ والبياناتُ المكتوبةُ بيدٍ.
-SCANNED = ("src", "tests", "scripts", "data", "laws")
+#: `tests_taaqol` أُنشئ بعد كتابة هذا الجرد فبقي خارج نطاقه — ومجلَّدٌ
+#: جديدٌ خارج النطاق يجعل المقامَ يبدو كاملًا وهو ناقص. فالنطاقُ يُوسَّع
+#: صراحةً، والبصمةُ في المخرج تُظهر أنّ الشجرةَ المفحوصة تغيّرت.
+SCANNED = ("src", "tests", "tests_taaqol", "scripts", "data", "laws")
 SKIP_PARTS = {"__pycache__", "vendor", "reports", ".git"}
 
 #: **يُستثنى النصُّ المصدر.** أوّلُ تشغيلٍ لهذا الجرد أعطى ٣٩٬٩٣٧ سطحًا

@@ -1,51 +1,342 @@
 {
  "registry_keys": 11,
  "registry_keys_vocalized": 0,
- "distinct_paths_on_bare_keys": [
-  "BuiltNounPath",
-  "ConditionalOperatorPath",
-  "NegationOperatorPath",
-  "ParticleOperatorPath",
-  "PronounPath",
-  "RelativeReferencePath"
- ],
- "confidence_range_on_bare_keys": [
-  0.74,
-  0.96
- ],
- "distinct_paths_on_nazila": [
-  "RootStemPath"
- ],
- "nazila_tokens_vocalized": 10,
- "same_word_two_answers": [
-  {
-   "bare": "الذين",
-   "vocalized": "الَّذِينَ",
-   "path_bare": "RelativeReferencePath",
-   "path_vocalized": "JamidPath"
+ "denominator_top_evidence_only": {
+  "distinct_paths": [
+   "BuiltNounPath",
+   "ConditionalOperatorPath",
+   "NegationOperatorPath",
+   "ParticleOperatorPath",
+   "PronounPath",
+   "RelativeReferencePath"
+  ],
+  "confidence_min": 0.74,
+  "confidence_max": 0.96
+ },
+ "denominator_all_evidence": {
+  "distinct_paths": [
+   "BuiltNounPath",
+   "ConditionalOperatorPath",
+   "CoordinationOperatorPath",
+   "DeicticReferencePath",
+   "DemonstrativePath",
+   "NegationOperatorPath",
+   "ParticleOperatorPath",
+   "PronounPath",
+   "RelativeReferencePath"
+  ],
+  "confidence_min": 0.51,
+  "confidence_max": 0.96
+ },
+ "classified_by_the_closed_inventory": {
+  "measured_by": "evidence string of the top PathEvidence",
+  "fallback_evidence_in_source": [
+   "default lexical-content fallback",
+   "definite lexical surface"
+  ],
+  "unmarked_keys_total": 11,
+  "unmarked_keys_classified_by_inventory": 11,
+  "marked_corpus_forms_total": 17,
+  "marked_corpus_forms_classified_by_inventory": 0
+ },
+ "homograph_policy": {
+  "rule": "FIRST_MATCH_ON_STRIPPED_SURFACE = HOMOGRAPH_UNSAFE",
+  "applied": "كلُّ صورةٍ مشكولةٍ تُقاس، ولا تُختار واحدة",
+  "keys_with_more_than_one_form": [
+   {
+    "key": "إذا",
+    "corpus_forms": {
+     "إِذَاً": {
+      "count": 26,
+      "has_marks": true
+     },
+     "إِذَا": {
+      "count": 195,
+      "has_marks": true
+     }
+    }
+   },
+   {
+    "key": "أن",
+    "corpus_forms": {
+     "أَنَّ": {
+      "count": 99,
+      "has_marks": true
+     },
+     "أَنْ": {
+      "count": 519,
+      "has_marks": true
+     },
+     "أَنِ": {
+      "count": 20,
+      "has_marks": true
+     }
+    }
+   },
+   {
+    "key": "ولا",
+    "corpus_forms": {
+     "وَلَا": {
+      "count": 656,
+      "has_marks": true
+     },
+     "ولا": {
+      "count": 1,
+      "has_marks": false
+     }
+    }
+   },
+   {
+    "key": "عليه",
+    "corpus_forms": {
+     "عَلَيْهِ": {
+      "count": 145,
+      "has_marks": true
+     },
+     "عَلَيْهُ": {
+      "count": 1,
+      "has_marks": true
+     }
+    }
+   },
+   {
+    "key": "بينكم",
+    "corpus_forms": {
+     "بَيْنَكُمْ": {
+      "count": 23,
+      "has_marks": true
+     },
+     "بَيْنَكُمُ": {
+      "count": 3,
+      "has_marks": true
+     },
+     "بَيْنِكُمْ": {
+      "count": 3,
+      "has_marks": true
+     }
+    }
+   }
+  ]
+ },
+ "inside_registry_split": {
+  "note": "مفتاحُ الجرد لا يُعطي الافتراضيَّ مجرَّدًا، فالقسمةُ بما يقع عليه الجوابُ الثاني لا بوجوده",
+  "answers_with_another_named_path": [
+   {
+    "bare": "الذين",
+    "path_bare": "RelativeReferencePath",
+    "confidence_bare": 0.95,
+    "corpus_forms": {
+     "الَّذِينَ": {
+      "count": 810,
+      "has_marks": true,
+      "path": "JamidPath",
+      "confidence": 0.62
+     }
+    }
+   },
+   {
+    "bare": "الذي",
+    "path_bare": "RelativeReferencePath",
+    "confidence_bare": 0.95,
+    "corpus_forms": {
+     "الَّذِي": {
+      "count": 268,
+      "has_marks": true,
+      "path": "JamidPath",
+      "confidence": 0.62
+     }
+    }
+   }
+  ],
+  "falls_to_default_path": [
+   {
+    "bare": "يا",
+    "path_bare": "ParticleOperatorPath",
+    "confidence_bare": 0.96,
+    "corpus_forms": {
+     "يَا": {
+      "count": 3,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "أيها",
+    "path_bare": "BuiltNounPath",
+    "confidence_bare": 0.85,
+    "corpus_forms": {
+     "أَيُّهَا": {
+      "count": 8,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "إذا",
+    "path_bare": "ConditionalOperatorPath",
+    "confidence_bare": 0.94,
+    "corpus_forms": {
+     "إِذَا": {
+      "count": 195,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "إِذَاً": {
+      "count": 26,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "إلى",
+    "path_bare": "ParticleOperatorPath",
+    "confidence_bare": 0.91,
+    "corpus_forms": {
+     "إِلَى": {
+      "count": 405,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "أن",
+    "path_bare": "ParticleOperatorPath",
+    "confidence_bare": 0.92,
+    "corpus_forms": {
+     "أَنَّ": {
+      "count": 99,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "أَنِ": {
+      "count": 20,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "أَنْ": {
+      "count": 519,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "كما",
+    "path_bare": "ParticleOperatorPath",
+    "confidence_bare": 0.87,
+    "corpus_forms": {
+     "كَمَا": {
+      "count": 59,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "عليه",
+    "path_bare": "PronounPath",
+    "confidence_bare": 0.86,
+    "corpus_forms": {
+     "عَلَيْهُ": {
+      "count": 1,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "عَلَيْهِ": {
+      "count": 145,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   },
+   {
+    "bare": "بينكم",
+    "path_bare": "PronounPath",
+    "confidence_bare": 0.74,
+    "corpus_forms": {
+     "بَيْنَكُمُ": {
+      "count": 3,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "بَيْنَكُمْ": {
+      "count": 23,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     },
+     "بَيْنِكُمْ": {
+      "count": 3,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   }
+  ],
+  "paths_diverge_across_corpus_forms": [
+   {
+    "bare": "ولا",
+    "path_bare": "NegationOperatorPath",
+    "confidence_bare": 0.9,
+    "corpus_forms": {
+     "ولا": {
+      "count": 1,
+      "has_marks": false,
+      "path": "NegationOperatorPath",
+      "confidence": 0.9
+     },
+     "وَلَا": {
+      "count": 656,
+      "has_marks": true,
+      "path": "RootStemPath",
+      "confidence": 0.55
+     }
+    }
+   }
+  ],
+  "aslot_axis1_class_of_divergent_forms": {
+   "وَلَا": "NORMALIZED",
+   "ولا": "U_UNVOCALIZED_CARRIER"
   },
-  {
-   "bare": "الذي",
-   "vocalized": "الَّذِي",
-   "path_bare": "RelativeReferencePath",
-   "path_vocalized": "JamidPath"
-  },
-  {
-   "bare": "يا",
-   "vocalized": "يَا",
-   "path_bare": "ParticleOperatorPath",
-   "path_vocalized": "RootStemPath"
-  },
-  {
-   "bare": "إذا",
-   "vocalized": "إِذَا",
-   "path_bare": "ConditionalOperatorPath",
-   "path_vocalized": "RootStemPath"
+  "not_witnessed_in_corpus": []
+ },
+ "on_the_nazila": {
+  "tokens": 10,
+  "distinct_paths": [
+   "RootStemPath"
+  ],
+  "all_vocalized": true
+ },
+ "definite_article_fallback": {
+  "rule": "startswith(\"ال\") -> JamidPath",
+  "corpus_words": 77411,
+  "corpus_words_matching": 10013,
+  "crosses_forbidden_lines_in_CANONICAL_REGISTRY": {
+   "Grapheme->FunctionalLetter": true,
+   "Orthography->Pronunciation": true,
+   "Matching->Meaning": true
   }
- ],
+ },
  "fallback_rules_in_source": [
-  "exact match on the bare surface — 11 keys",
-  "startswith('ال') → JamidPath 0.62",
-  "otherwise → RootStemPath 0.55"
+  "exact match on the bare surface",
+  "startswith(\"ال\") -> JamidPath",
+  "otherwise -> RootStemPath"
  ]
 }

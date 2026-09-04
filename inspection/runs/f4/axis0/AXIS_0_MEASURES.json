@@ -1,0 +1,46 @@
+{
+  "module": "aslot.axes.axis0_corpus",
+  "axis": 0,
+  "input": "inspection/runs/f4/input.txt",
+  "input_sha256": "16c74e57fca9b4cb1fdf8afb3a1d2f51cbc714d086cf7a5574a1990c1db6006f",
+  "rows_read": 10,
+  "words_built": 10,
+  "verses_built": 1,
+  "suras_built": 1,
+  "segments_per_word": {
+    "1": 10
+  },
+  "fragment_mode": true,
+  "surface_conflicts": 0,
+  "words_with_cut_separators": 3,
+  "cut_separators": {
+    ".": 1,
+    "،": 2
+  },
+  "unruled_separator_tokens": 0,
+  "self_checks": {
+    "T1_INPUT_ORDER_IS_CANONICAL": true,
+    "T_OWNER_SEPARATORS_ARE_CUT": true,
+    "T_UNRULED_SEPARATORS_ARE_NOT_CUT": true,
+    "T5_WORD_SURFACE_AGREES_ACROSS_SEGMENTS": true,
+    "T6_NO_EMPTY_SURFACE": true,
+    "T7_FOLD_IS_LOSSLESS": true
+  },
+  "poisons": {
+    "P1_REJECT_NON_ASCII_DIGIT": true,
+    "P2_REJECT_EMPTY_NUMERIC": true,
+    "P6_REJECT_ARABIC_INDIC_DIGITS": true,
+    "P7_REJECT_SPACED_NUMBER": true,
+    "P3_SURFACE_CONFLICT_IS_FLAGGED_NOT_RESOLVED": true,
+    "P4_SEGMENTS_SORTED_NOT_TRUSTED": true,
+    "P5_SEGMENT_GAP_DETECTED": true
+  },
+  "input_defects": {
+    "D0A_SURA_COUNT_NOT_FULL_MUSHAF": 1,
+    "D0B_NUMBERING_NOT_CONTIGUOUS": 1,
+    "D1_WORD_NUMBER_GAPS_IN_VERSE": 0,
+    "D2A_SEGMENT_NUMBER_DUPLICATED": 0,
+    "D2B_SEGMENT_NUMBER_GAP": 0,
+    "D3_MULTIWORD_SURFACE_IN_ONE_CELL": 0
+  }
+}

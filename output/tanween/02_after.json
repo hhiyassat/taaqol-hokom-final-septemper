@@ -1,0 +1,494 @@
+{
+ "task": "A1_BOUNDED_CHANGE",
+ "buckets": {
+  "CHANGES": 3659,
+  "NOT_TANWEENED": 68517,
+  "PENDING_P1": 82,
+  "PENDING_P2": 735,
+  "PENDING_P3": 1,
+  "RATIFIED_UNCHANGED": 4417
+ },
+ "changes_expected": 3659,
+ "ratified_unchanged": 4417,
+ "pending_total": 818,
+ "pending_split": {
+  "PENDING_P1": 82,
+  "PENDING_P2": 735,
+  "PENDING_P3": 1
+ },
+ "three_way_sum": 8894,
+ "tanweened_total": 8894,
+ "orphans": 0,
+ "rows_changed_measured": 3659,
+ "rows_changed_denominator": "صفوفُ AXIS_1 المختلفةُ عن نقطة الرجوع",
+ "changed_by_bucket": {
+  "CHANGES": 3659
+ },
+ "out_of_scope_changes": [],
+ "in_scope_not_changed": [],
+ "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_tanween_after.py",
+ "across_axes": {
+  "axis1": {
+   "rows_moved": 3659,
+   "by_bucket": {
+    "CHANGES": 3659
+   },
+   "out_of_scope": 0,
+   "out_of_scope_columns": {},
+   "out_of_scope_judging_columns": [],
+   "label_only": false,
+   "named": [],
+   "denominator": 77411
+  },
+  "axis2": {
+   "rows_moved": 4321,
+   "by_bucket": {
+    "CHANGES": 3659,
+    "NOT_TANWEENED": 662
+   },
+   "out_of_scope": 662,
+   "out_of_scope_columns": {
+    "Matched_Entry_Ids": 662
+   },
+   "out_of_scope_judging_columns": [],
+   "label_only": true,
+   "named": [
+    {
+     "position": "10:100:6",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:102:3",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:107:8",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:15:28",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:19:4",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:3:20",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:32:8",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:35:23",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:36:4",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:45:6",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    }
+   ],
+   "denominator": 74668
+  },
+  "axis3": {
+   "rows_moved": 3659,
+   "by_bucket": {
+    "CHANGES": 3659
+   },
+   "out_of_scope": 0,
+   "out_of_scope_columns": {},
+   "out_of_scope_judging_columns": [],
+   "label_only": false,
+   "named": [],
+   "denominator": 74668
+  },
+  "axis4": {
+   "rows_moved": 3659,
+   "by_bucket": {
+    "CHANGES": 3659
+   },
+   "out_of_scope": 0,
+   "out_of_scope_columns": {},
+   "out_of_scope_judging_columns": [],
+   "label_only": false,
+   "named": [],
+   "denominator": 74668
+  }
+ },
+ "source_sha256": {
+  "src/aslot/axes/axis1_normalization.py": "7944a55e83a1f04ebb067e5b20c1e934b7b446dfdd5791a09f57d443cf9c2710",
+  "src/aslot/constants.py": "4a7ea0d49a561573b49a1d6c7f7b259bf4427bcb60a6675aa973d9a732c47c61"
+ },
+ "guards": [
+  {
+   "guard": "G_CHANGE_IS_BOUNDED",
+   "denominator": 8894,
+   "expected": 3659,
+   "measured": 3659,
+   "out_of_scope_changes": 0,
+   "named": [],
+   "passes": true,
+   "note": "المقارنةُ صفًّا صفًّا لا بالعدد: تغييران متعادلان يمرّان على العدّ ولا يمرّان على المقابلة."
+  },
+  {
+   "guard": "G_CHANGE_IS_BOUNDED_ALL_AXES",
+   "denominator": 301415,
+   "per_axis": {
+    "axis1": {
+     "moved": 3659,
+     "out_of_scope": 0
+    },
+    "axis2": {
+     "moved": 4321,
+     "out_of_scope": 662
+    },
+    "axis3": {
+     "moved": 3659,
+     "out_of_scope": 0
+    },
+    "axis4": {
+     "moved": 3659,
+     "out_of_scope": 0
+    }
+   },
+   "named": [
+    {
+     "position": "10:100:6",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:102:3",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:107:8",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:15:28",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:19:4",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:3:20",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:32:8",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:35:23",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:36:4",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    },
+    {
+     "position": "10:45:6",
+     "word": "إِلَّا",
+     "bucket": "NOT_TANWEENED",
+     "columns": [
+      "Matched_Entry_Ids"
+     ],
+     "was": {
+      "Matched_Entry_Ids": "DW:37"
+     },
+     "now": {
+      "Matched_Entry_Ids": "DW:36"
+     }
+    }
+   ],
+   "out_of_scope_columns": {
+    "axis2": {
+     "Matched_Entry_Ids": 662
+    }
+   },
+   "judging_columns_moved": {},
+   "passes": true,
+   "note": "حدُّ التغيير يُثبَت في المحاور الأربعة — لا في الأوّل وحدَه. ولا يُعدّ خرقًا إلا تحرُّكُ عمودٍ **يحكم**؛ والوسمُ الموضعيُّ يُسمّى ويُرفع بندًا مستقلًّا."
+  },
+  {
+   "guard": "G_RATIFIED_UNCHANGED",
+   "denominator": 4417,
+   "changed": 0,
+   "label": "RATIFIED_UNCHANGED — لا MODIFIED",
+   "passes": true,
+   "note": "مصادقةٌ على سلوكٍ قائم — لا تُعدّ عملًا، ولا تُجمع مع المتغيّر في رقمٍ واحد."
+  },
+  {
+   "guard": "G_PENDING_UNTOUCHED",
+   "denominator": 818,
+   "split": {
+    "PENDING_P1": 82,
+    "PENDING_P2": 735,
+    "PENDING_P3": 1
+   },
+   "changed": 0,
+   "passes": true,
+   "note": "لا يُنفَّذ منها صفٌّ واحد ولو بدا حكمُه بيّنًا."
+  },
+  {
+   "guard": "G_THREE_WAY_CLOSES",
+   "denominator": 8894,
+   "arithmetic": "3659 + 4417 + 818 = 8894",
+   "orphans": 0,
+   "passes": true
+  },
+  {
+   "guard": "G_NO_RULE_WIDENING",
+   "denominator": 3,
+   "table": [
+    "ا⟶DELETE_CARRIER",
+    "ة⟶TURN_TO_OPEN_TAA",
+    "ى⟶DELETE_CARRIER"
+   ],
+   "passes": true,
+   "note": "الجدولُ مغلقٌ بثلاثة أسطر — وزيادةٌ فيه هي التوسيعُ بعينه."
+  },
+  {
+   "guard": "G_TWO_MECHANISMS",
+   "denominator": 2,
+   "mechanisms": [
+    "DELETE_CARRIER",
+    "TURN_TO_OPEN_TAA"
+   ],
+   "passes": true,
+   "note": "الحذفُ والانقلابُ إجراءان متمايزان في الشيفرة."
+  },
+  {
+   "guard": "G_DROP_IS_DERIVED",
+   "denominator": 3659,
+   "measured": 3152,
+   "derived": 3152,
+   "arithmetic": "FATH×ALIF=3059 + FATH×ALIF_MAQSURA=93 = 3152",
+   "passes": true,
+   "note": "الصوامتُ الناقصةُ = صفوفُ الحذف بعينها. والتاءُ تنقلب ولا تُحذف، فلا تُعدّ فيها — وهو الفرقُ بين الإجراءَين ظاهرًا في العدد."
+  },
+  {
+   "guard": "G_MATRIX_CLOSES[axis2]",
+   "denominator": 74668,
+   "rows_before": 74668,
+   "rows_after": 74668,
+   "moved": 0,
+   "passes": true
+  },
+  {
+   "guard": "G_MATRIX_CLOSES[axis3]",
+   "denominator": 74668,
+   "rows_before": 74668,
+   "rows_after": 74668,
+   "moved": 0,
+   "passes": true
+  },
+  {
+   "guard": "G_MATRIX_CLOSES[axis4]",
+   "denominator": 74668,
+   "rows_before": 74668,
+   "rows_after": 74668,
+   "moved": 0,
+   "passes": true
+  }
+ ],
+ "all_guards_pass": true
+}

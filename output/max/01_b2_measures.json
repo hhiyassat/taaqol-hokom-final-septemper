@@ -1,0 +1,403 @@
+{
+ "ceilings": {
+  "ceilings": {
+   "BLOCKING": "ZERO",
+   "DEFERRABLE": "HYPOTHESIS",
+   "NON_BLOCKING": "CERTIFICATE",
+   "EXPLANATORY": "CERTIFICATE",
+   "HIDDEN_FORBIDDEN": "ZERO"
+  },
+  "queried_by": "ResidualPolicy.rank_cap(ResidualKind.X).name",
+  "assignable_kinds": [
+   "BLOCKING",
+   "DEFERRABLE",
+   "NON_BLOCKING",
+   "EXPLANATORY"
+  ],
+  "hidden_forbidden_is_not_assignable": true,
+  "hidden_forbidden_note": "تُكتشف ولا تُختار — واختيارُها ادّعاءٌ بأنّ الخفاءَ مقصود.",
+  "distinct_rank_outcomes": [
+   "CERTIFICATE",
+   "HYPOTHESIS",
+   "ZERO"
+  ],
+  "distinct_rank_outcomes_count": 3,
+  "kinds_count": 5,
+  "non_blocking_and_explanatory_share_a_ceiling": true,
+  "note": "NON_BLOCKING و EXPLANATORY سقفُهما واحد — فالفرقُ وصفيٌّ لا رتبيّ، والمخرَجاتُ الرتبيّةُ 3 لا 5.",
+  "command": "python3 scripts/measure_b2.py"
+ },
+ "M1_tanween_split": {
+  "U_TANWEEN_total": 8894,
+  "proposed_discriminator": {
+   "rule": "consonants(normalized) > consonants(raw)",
+   "matches": 8894,
+   "of": 8894,
+   "discriminates": false,
+   "finding": "لا يشطر: كلُّ تنوينٍ يُبسَط إلى نونٍ ساكنة فيزيد صامتًا حتمًا. فهو خاصّةُ الصنف لا مميِّزَ داخلَه."
+  },
+  "measured_discriminator": {
+   "rule": "fathatan adjacent to a silent alif",
+   "on_silent_alif": 3059,
+   "on_silent_alif_denominator": "كلماتُ الصنف",
+   "rest": 5835,
+   "rest_denominator": "كلماتُ الصنف",
+   "closes": true,
+   "of_those_accepted_at_axis3": 3059,
+   "of_those_accepted_at_axis3_denominator": "الكلماتُ التي عليها تنوينُ فتحٍ على ألفٍ صامتة",
+   "why_this_one": "هو الذي يولّد صامتًا زائدًا يقبله المحورُ الثالث بلا شكوى — وهو HIDDEN_FORBIDDEN حرفيًّا."
+  },
+  "closes": true,
+  "raised_not_decided": true,
+  "question": "أهما صنفان أم واحد — والحكمُ للمالك",
+  "command": "python3 scripts/measure_b2.py"
+ },
+ "M2_reach": {
+  "per_class": {
+   "U_TANWEEN": {
+    "members": 8894,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 8894,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 8894,
+    "reaches_axis3": 8894,
+    "reaches_axis4": 8894,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 8894
+    },
+    "axis4_verdicts": {
+     "ACCEPT": 7829,
+     "DEFER": 771,
+     "BLOCK": 294
+    },
+    "axis3_block_reasons": {},
+    "carries_into_a_later_axis": true
+   },
+   "U_ALIF_FARIQA": {
+    "members": 3561,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 3561,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 3561,
+    "reaches_axis3": 3561,
+    "reaches_axis4": 3561,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 3560,
+     "BLOCK": 1
+    },
+    "axis4_verdicts": {
+     "ACCEPT": 2401,
+     "BLOCK": 610,
+     "DEFER": 550
+    },
+    "axis3_block_reasons": {
+     "SYLLABLE_WITHOUT_ONSET": 1
+    },
+    "carries_into_a_later_axis": true
+   },
+   "U_ALIF_MAQSURA": {
+    "members": 2498,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 2498,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 2498,
+    "reaches_axis3": 2498,
+    "reaches_axis4": 2498,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 2497,
+     "BLOCK": 1
+    },
+    "axis4_verdicts": {
+     "ACCEPT": 2353,
+     "DEFER": 130,
+     "BLOCK": 15
+    },
+    "axis3_block_reasons": {
+     "SYLLABLE_WITHOUT_ONSET": 1
+    },
+    "carries_into_a_later_axis": true
+   },
+   "U_N7_2_INTERNAL_AL": {
+    "members": 1616,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 1616,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 1616,
+    "reaches_axis3": 1616,
+    "reaches_axis4": 1616,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 1616
+    },
+    "axis4_verdicts": {
+     "DEFER": 1602,
+     "ACCEPT": 14
+    },
+    "axis3_block_reasons": {},
+    "carries_into_a_later_axis": true
+   },
+   "U_ALEF_MADDA": {
+    "members": 1505,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 1505,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 1505,
+    "reaches_axis3": 1505,
+    "reaches_axis4": 1505,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 1505
+    },
+    "axis4_verdicts": {
+     "ACCEPT": 1389,
+     "DEFER": 116
+    },
+    "axis3_block_reasons": {},
+    "carries_into_a_later_axis": true
+   },
+   "U_UNVOCALIZED_CARRIER": {
+    "members": 52,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 60,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": false,
+    "reaches_axis2": 52,
+    "reaches_axis3": 52,
+    "reaches_axis4": 52,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {
+     "ACCEPT": 47,
+     "BLOCK": 5
+    },
+    "axis4_verdicts": {
+     "ACCEPT": 31,
+     "BLOCK": 12,
+     "DEFER": 9
+    },
+    "axis3_block_reasons": {
+     "SYLLABLE_WITHOUT_ONSET": 3,
+     "PATTERN_OUTSIDE_CLOSED_SIX:CVVVC": 1,
+     "PATTERN_OUTSIDE_CLOSED_SIX:CVCCCCC": 1
+    },
+    "carries_into_a_later_axis": true
+   },
+   "U_MULTIWORD_CELL": {
+    "members": 9,
+    "members_denominator": "كلماتٌ تحمل الصنف",
+    "events": 9,
+    "events_denominator": "مرّاتُ إصدار الصنف — وكلمةٌ قد تحمله مرّتين",
+    "words_and_events_agree": true,
+    "reaches_axis2": 0,
+    "reaches_axis3": 0,
+    "reaches_axis4": 0,
+    "reach_denominator": "كلماتُ الصنف",
+    "axis3_verdicts": {},
+    "axis4_verdicts": {},
+    "axis3_block_reasons": {},
+    "carries_into_a_later_axis": false
+   }
+  },
+  "classes_total": 7,
+  "classes_where_events_differ_from_words": {
+   "U_UNVOCALIZED_CARRIER": {
+    "events": 60,
+    "words": 52
+   }
+  },
+  "denominator_note": "عدُّ الأحداث وعدُّ الكلمات مقامان. ويفترقان حيث تحمل كلمةٌ الصنفَ مرّتين — فلا يُعرض أحدُهما بلا اسمه.",
+  "words_affected": 18135,
+  "words_affected_denominator": "مجموعُ أعضاء الأصناف السبعة",
+  "command": "python3 scripts/measure_b2.py"
+ },
+ "M3_rank_impact": {
+  "table": {
+   "U_TANWEEN": {
+    "members": 8894,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 8894,
+     "rows_leaving_ACCEPT_at_axis3": 8894,
+     "rows_leaving_ACCEPT_at_axis4": 7829
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 8894,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 8894
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 8894,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_ALIF_FARIQA": {
+    "members": 3561,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 3561,
+     "rows_leaving_ACCEPT_at_axis3": 3560,
+     "rows_leaving_ACCEPT_at_axis4": 2401
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 3561,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 3561
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 3561,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_ALIF_MAQSURA": {
+    "members": 2498,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 2498,
+     "rows_leaving_ACCEPT_at_axis3": 2497,
+     "rows_leaving_ACCEPT_at_axis4": 2353
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 2498,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 2498
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 2498,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_N7_2_INTERNAL_AL": {
+    "members": 1616,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 1616,
+     "rows_leaving_ACCEPT_at_axis3": 1616,
+     "rows_leaving_ACCEPT_at_axis4": 14
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 1616,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 1616
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 1616,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_ALEF_MADDA": {
+    "members": 1505,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 1505,
+     "rows_leaving_ACCEPT_at_axis3": 1505,
+     "rows_leaving_ACCEPT_at_axis4": 1389
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 1505,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 1505
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 1505,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_UNVOCALIZED_CARRIER": {
+    "members": 52,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 52,
+     "rows_leaving_ACCEPT_at_axis3": 47,
+     "rows_leaving_ACCEPT_at_axis4": 31
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 52,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 52
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 52,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   },
+   "U_MULTIWORD_CELL": {
+    "members": 9,
+    "if_BLOCKING": {
+     "rank_ceiling": "ZERO",
+     "rows_that_would_stop": 9,
+     "rows_leaving_ACCEPT_at_axis3": 0,
+     "rows_leaving_ACCEPT_at_axis4": 0
+    },
+    "if_DEFERRABLE": {
+     "rank_ceiling": "HYPOTHESIS",
+     "rows_that_would_proceed_under_a_ceiling": 9,
+     "rows_leaving_ACCEPT": 0
+    },
+    "if_NON_BLOCKING": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 9
+    },
+    "if_EXPLANATORY": {
+     "rank_ceiling": "CERTIFICATE",
+     "rows_that_would_proceed_unconstrained": 9,
+     "same_ceiling_as_NON_BLOCKING": true
+    },
+    "CHOSEN": null
+   }
+  },
+  "chosen_count": 0,
+  "P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED": true,
+  "why_empty": "الجدولُ يُملأ بالأثر، وخانةُ الاختيار تبقى فارغةً — والإسنادُ حكمُ مالك.",
+  "command": "python3 scripts/measure_b2.py"
+ },
+ "guards": {
+  "G_NO_ASSIGNMENT": [],
+  "G_EVERY_CLASS_MEASURED": [],
+  "G_M1_CLOSES": [],
+  "G_CEILINGS_QUERIED": [],
+  "G_HIDDEN_FORBIDDEN_NOT_ASSIGNABLE": []
+ }
+}

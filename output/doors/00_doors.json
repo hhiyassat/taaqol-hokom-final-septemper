@@ -1,0 +1,283 @@
+{
+ "gate": {
+  "vendor_head": "3cccdded7951ba71b3cb2a8b9b477f3fb3d91095",
+  "porcelain_lines": 0,
+  "passes": true
+ },
+ "cells": {
+  "per_door": {
+   "C5": 42,
+   "C1": 17
+  },
+  "cells_total": 292,
+  "grounded": 207
+ },
+ "ceiling": {
+  "stages_total": 16,
+  "implemented": 14,
+  "not_implemented": [
+   "PRE_WEIGHT_CAPACITY_AUDIT",
+   "ANSWER_AUDIT"
+  ],
+  "today": "1/16",
+  "after_C1": "14/16",
+  "after_C4": "16/16",
+  "note": "C4 لا تُفتح بفتح C1: هي `runtime_implemented=False` مثلها. فسقفُ فتح C1 هو أربعَ عشرةَ لا ستَّ عشرة."
+ },
+ "doors": [
+  {
+   "door": "C5",
+   "owner": "SONAISO",
+   "title": "corpus_runner لا يستشير الحوامل ولا سجلَّ الخطوط",
+   "cells": "42/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "imports": {
+     "gamma": false,
+     "ClosureState": false,
+     "TransitionState": false,
+     "forbidden_lines": false,
+     "EntryBoundary": false
+    },
+    "cells_runner_does_not_consult": "35/292",
+    "cells_entry_boundary_not_constructed": "7/292"
+   },
+   "entry_boundary_placement": "INSIDE_C5_AS_A_NAMED_PART",
+   "correctness_command": "grep -nE '^(import|from) ' vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/corpus_runner.py",
+   "ceiling": "NO_EFFECT_MEASURED",
+   "ceiling_note": "الاستشارةُ لا تفتح مرحلةً — تملأ حقولًا",
+   "cost": "تغييرٌ في بنية المشغّل — UNMEASURED كلفةً",
+   "shared_cause": {
+    "id": "SHARED_CAUSE_RUNNER_NOT_WIRED",
+    "doors": [
+     "C1",
+     "C5"
+    ],
+    "cause": "المشغّلُ لا يصل إلى ما بُني — لا يستورد الحوامل، ولا يفتح المرحلةَ التي تستدعيها.",
+    "cause_is_one": true,
+    "effect_C1_cells": 17,
+    "effect_C5_cells": 42,
+    "effect_intersection": 0,
+    "effect_union": 59,
+    "effect_sum_if_merged": 59,
+    "merged": false,
+    "not_merged_because": "SHARED_CAUSE_IS_NOT_SHARED_EFFECT — اتّحادُ العلّة لا يُثبت اتّحادَ الأثر.",
+    "disjointness_basis": "BY_DESIGN",
+    "disjointness_basis_why": "reason_family حقلٌ واحدٌ لكلّ خانة، فلا خانةَ تحمل أسرتين. والحقلُ لا يحتمل العضويّةَ المزدوجة أصلًا.",
+    "key_is_unique": true,
+    "duplicated_keys": [],
+    "membership_check_intersection": 0,
+    "membership_check_is_the_basis": false,
+    "membership_check_note": "تعضيدٌ لا أساس: ∩ = 0 خبرٌ عن هذا التشغيل، والتصميمُ خبرٌ عن البنية. ولو تعارضا لكان التصميمُ هو المتَّهَم.",
+    "sections_C1": [
+     "10. المنطوق والمفهوم",
+     "12. مصفوفة المناط: أسئلة المالك",
+     "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+     "9. العلاقات اللغوية والحدود"
+    ],
+    "sections_C5": [
+     "0. حدّ الدخول المعلن",
+     "11. الخطوط المستقيمة الممنوعة",
+     "4. مصفوفة المراحل الست عشرة",
+     "5. سجل الأثر والأدلة",
+     "6. البقايا المقيسة"
+    ],
+    "sections_shared": [],
+    "ruled_by": "DR_HUSSEIN",
+    "command": ".venv-taaqol/bin/python scripts/build_upstream.py"
+   },
+   "location": {
+    "file": "vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/corpus_runner.py",
+    "line": 7,
+    "symbol": "from taaqqul_slot_geometry",
+    "occurrences": 3,
+    "text": "from taaqqul_slot_geometry.core.rank_lattice import Rank"
+   }
+  },
+  {
+   "door": "C1",
+   "owner": "SONAISO",
+   "title": "PRE_WEIGHT مبنيّةُ الحوامل، غيرُ موصولةٍ بالمشغّل",
+   "superseded_title": "PRE_WEIGHT_CAPACITY_AUDIT غيرُ منفَّذة",
+   "cells": "17/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "stages_closed_per_token": 12,
+    "pre_weight_prs_shipped": "4/4",
+    "pre_weight_carrier_tests_passed": 107,
+    "runner_is_wired_to_carriers": false
+   },
+   "shared_cause": {
+    "id": "SHARED_CAUSE_RUNNER_NOT_WIRED",
+    "doors": [
+     "C1",
+     "C5"
+    ],
+    "cause": "المشغّلُ لا يصل إلى ما بُني — لا يستورد الحوامل، ولا يفتح المرحلةَ التي تستدعيها.",
+    "cause_is_one": true,
+    "effect_C1_cells": 17,
+    "effect_C5_cells": 42,
+    "effect_intersection": 0,
+    "effect_union": 59,
+    "effect_sum_if_merged": 59,
+    "merged": false,
+    "not_merged_because": "SHARED_CAUSE_IS_NOT_SHARED_EFFECT — اتّحادُ العلّة لا يُثبت اتّحادَ الأثر.",
+    "disjointness_basis": "BY_DESIGN",
+    "disjointness_basis_why": "reason_family حقلٌ واحدٌ لكلّ خانة، فلا خانةَ تحمل أسرتين. والحقلُ لا يحتمل العضويّةَ المزدوجة أصلًا.",
+    "key_is_unique": true,
+    "duplicated_keys": [],
+    "membership_check_intersection": 0,
+    "membership_check_is_the_basis": false,
+    "membership_check_note": "تعضيدٌ لا أساس: ∩ = 0 خبرٌ عن هذا التشغيل، والتصميمُ خبرٌ عن البنية. ولو تعارضا لكان التصميمُ هو المتَّهَم.",
+    "sections_C1": [
+     "10. المنطوق والمفهوم",
+     "12. مصفوفة المناط: أسئلة المالك",
+     "8. مصفوفة الألفاظ: ما يجوز وما لا يجوز",
+     "9. العلاقات اللغوية والحدود"
+    ],
+    "sections_C5": [
+     "0. حدّ الدخول المعلن",
+     "11. الخطوط المستقيمة الممنوعة",
+     "4. مصفوفة المراحل الست عشرة",
+     "5. سجل الأثر والأدلة",
+     "6. البقايا المقيسة"
+    ],
+    "sections_shared": [],
+    "ruled_by": "DR_HUSSEIN",
+    "command": ".venv-taaqol/bin/python scripts/build_upstream.py"
+   },
+   "correctness_command": "python -c \"from taaqqul_slot_geometry.runtime.corpus_runner import run_native_corpus as R; r=R('probe',('مَاتَ',)); print(sum(1 for t in r.token_results for x in t.records if x.transition_state.value=='NOT_OPENED'))\"",
+   "ceiling": "1/16 ⟶ 14/16",
+   "ceiling_note": "C4 لا تُفتح بفتح C1: هي `runtime_implemented=False` مثلها. فسقفُ فتح C1 هو أربعَ عشرةَ لا ستَّ عشرة.",
+   "cost": "سطرٌ في مرحلةٍ واحدة يفتح اثنتَي عشرة — تقديرٌ من قراءة المصدر، لا قياس",
+   "location": {
+    "file": "vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/native_stage_registry.py",
+    "line": 300,
+    "symbol": "runtime_implemented",
+    "occurrences": 1,
+    "text": "runtime_implemented=False"
+   }
+  },
+  {
+   "door": "C2",
+   "owner": "SONAISO",
+   "title": "مفاتيحُ classify_token_paths غيرُ مشكولة",
+   "cells": "0/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "inventory_hit_unmarked": "11/11",
+    "inventory_hit_marked": "0/17"
+   },
+   "correctness_command": "python3 scripts/probe_path_classifier.py",
+   "ceiling": "NO_EFFECT_MEASURED",
+   "ceiling_note": "التصنيفُ لا يفتح مرحلةً",
+   "cost": "UNMEASURED",
+   "location": {
+    "file": "vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/native_stage_registry.py",
+    "line": 105,
+    "symbol": "def classify_token_paths",
+    "occurrences": 1,
+    "text": "def classify_token_paths(surface: str) -> tuple[PathEvidence, ...]:"
+   },
+   "why_it_was_dropped": "cells = 0 — وأثرُه في الصحّة لا في العدد: يصيب على المعيب ويخطئ على السليم"
+  },
+  {
+   "door": "C3",
+   "owner": "SONAISO",
+   "title": "startswith(\"ال\") ⟶ JamidPath يعبر خطوطًا ممنوعة",
+   "cells": "0/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "corpus_words_matching": 10013,
+    "corpus_words": 77411,
+    "percent": 12.9,
+    "what_remains_evidence": "قاعدةٌ تُصنّف بالرسم الإملائيّ، وتمسّ 12.9٪ من الجرد",
+    "crosses": "TAUTOLOGY",
+    "mapping": "NOT_DERIVABLE",
+    "claim_status": "OWNER_RULING_REQUIRED",
+    "claim_withdrawn": false
+   },
+   "correctness_command": "python3 scripts/build_upstream.py  (يستفتي السجلَّ حيًّا)",
+   "raise_to_source": "قاعدةٌ تُصنّف بالرسم الإملائيّ، وتمسّ 12.9٪ من الجرد",
+   "ceiling": "NO_EFFECT_MEASURED",
+   "ceiling_note": "القاعدةُ لا تفتح مرحلةً",
+   "cost": "UNMEASURED",
+   "location": {
+    "file": "vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/native_stage_registry.py",
+    "line": 206,
+    "symbol": "token.startswith(\"ال\")",
+    "occurrences": 1,
+    "text": "if token.startswith(\"ال\"):"
+   },
+   "also": "تنفيذُه في (ج) وحكمُه في (ب) — وهو B9"
+  },
+  {
+   "door": "C4",
+   "owner": "SONAISO",
+   "title": "ANSWER_AUDIT غيرُ منفَّذة",
+   "cells": "0/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "seals_issued": 0
+   },
+   "correctness_command": "python -c \"from taaqqul_slot_geometry.runtime.corpus_runner import run_native_corpus as R; r=R('probe',('مَاتَ',)); print(sum(1 for t in r.token_results for x in t.records if x.transition_state.value=='NOT_OPENED'))\"",
+   "ceiling": "14/16 ⟶ 16/16",
+   "ceiling_note": "لا تُفتح بفتح C1 — فهي runtime_implemented=False",
+   "cost": "UNMEASURED",
+   "location": {
+    "file": "vendor/Taaqol-GPT/src/taaqqul_slot_geometry/runtime/native_stage_registry.py",
+    "line": 520,
+    "symbol": "runtime_implemented",
+    "occurrences": 1,
+    "text": "runtime_implemented=False"
+   },
+   "not_a_request": true
+  },
+  {
+   "door": "B2",
+   "owner": "DR_HUSSEIN",
+   "title": "أصنافُ البقيّة السبعة (T-4)",
+   "cells": "0/292",
+   "cells_denominator": "خاناتُ وثيقة النازلة",
+   "correctness": {
+    "classes": 7,
+    "events_affected": 18143,
+    "events_affected_denominator": "مواضعُ حرفٍ يُرفع عندها صنف — AXIS_1_MEASURES.owner_decision_classes",
+    "words_affected": 18135,
+    "words_affected_denominator": "كلماتٌ تحمل صنفًا — عمود Owner_Decision_Classes",
+    "two_denominators_note": "الرقمان مقيسان وليس أحدُهما خطأ. والفرقُ مشروحٌ بمواضعَ مسمّاة في output/bound/02_class_count.json.",
+    "by_class_events": {
+     "U_N7_2_INTERNAL_AL": 1616,
+     "U_TANWEEN": 8894,
+     "U_ALEF_MADDA": 1505,
+     "U_ALIF_MAQSURA": 2498,
+     "U_ALIF_FARIQA": 3561,
+     "U_UNVOCALIZED_CARRIER": 60,
+     "U_MULTIWORD_CELL": 9
+    },
+    "by_class_words": {
+     "U_N7_2_INTERNAL_AL": 1616,
+     "U_TANWEEN": 8894,
+     "U_ALEF_MADDA": 1505,
+     "U_ALIF_MAQSURA": 2498,
+     "U_ALIF_FARIQA": 3561,
+     "U_UNVOCALIZED_CARRIER": 52,
+     "U_MULTIWORD_CELL": 9
+    },
+    "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_class_count.py"
+   },
+   "correctness_command": "python3 -m aslot compliance",
+   "ceiling": "NO_EFFECT_MEASURED",
+   "ceiling_note": "لا يمسّ مراحلَ تعقُّل — يفتح T-5 في أسلوط",
+   "cost": "سبعةُ قراراتٍ صغيرة — تقديرٌ من عدد الأصناف، لا قياس",
+   "location": null
+  }
+ ],
+ "retired": {
+  "B1": {
+   "decided": "(أ) 1a7f8b76",
+   "by": "DR_HUSSEIN",
+   "effect": "لم يعد بابًا — هويّةُ المدخل ثبتت"
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "question": "B5 — كَتَبَ: تخفيضُ التقشير أم توسيعُ شرط البوّابة",
+ "with_declared_witness": {
+  "BLOCK": 2397,
+  "ACCEPT": 58479,
+  "DEFER": 13792
+ },
+ "without_witness": {
+  "BLOCK": 3127,
+  "ACCEPT": 64097,
+  "DEFER": 7444
+ },
+ "delta": {
+  "ACCEPT": 5618,
+  "BLOCK": 730,
+  "DEFER": -6348
+ },
+ "net": 0,
+ "closes": true,
+ "denominator": 74668,
+ "commands": {
+  "with": "python3 -m aslot peel",
+  "without": "python3 -m aslot peel --no-witness"
+ },
+ "note": "المجموعُ ثابتٌ في الحالين، فالانتقالُ مغلقٌ بلا بقيّة. والمقدارُ المنتقلُ إلى ACCEPT هو محلُّ الحكم، لا ترجيحَ فيه.",
+ "raised_not_decided": true
+}

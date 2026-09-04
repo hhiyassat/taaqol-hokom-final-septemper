@@ -1,0 +1,136 @@
+{
+ "task": "Q1_Q2_AND_WITNESS",
+ "Q1": {
+  "question": "ما مصدرُ Word_Class و Operator_Role؟",
+  "answer": "MATCHED_ENTRIES — لا من غيرها",
+  "code_evidence": {
+   "entries_are_fetched_by_ids": true,
+   "entries_line": "entries = [self.entries[i] for i in ids]",
+   "word_class_from_entries": true,
+   "operator_role_from_entries": true,
+   "sites": {
+    "word_class": [
+     {
+      "line": 293,
+      "text": "verdict.word_class = entries[0].word_class",
+      "rhs": "Attribute(value=Subscript(value=Name(id='entries', ctx=Load()), slice=Constant(v"
+     },
+     {
+      "line": 276,
+      "text": "verdict.word_class = \"فعل\"",
+      "rhs": "Constant(value='فعل')"
+     }
+    ],
+    "operator_role": [
+     {
+      "line": 292,
+      "text": "verdict.operator_role = any(e.operator_role for e in entries)",
+      "rhs": "Call(func=Name(id='any', ctx=Load()), args=[GeneratorExp(elt=Attribute(value=Nam"
+     },
+     {
+      "line": 275,
+      "text": "verdict.operator_role = True",
+      "rhs": "Constant(value=True)"
+     }
+    ]
+   },
+   "file": "src/aslot/axes/axis2_registry.py"
+  },
+  "row_evidence": {
+   "rows_where_ids_moved": 664,
+   "of_which_word_class_moved": 0,
+   "of_which_operator_role_moved": 0,
+   "denominator": 74668
+  },
+  "resolution": "العمودُ **يُستعمل** لا يُسجَّل فقط: `ids` تُجلَب بها `entries`، ومنها يُقرأ الصنفُ والدور. وأمّا سكونُ الصنف مع تحرُّك العمود فليس تناقضًا: المطبوعُ `DW:n` **وسمٌ موضعيّ** يُعاد ترقيمُه، والصنفُ يُقرأ من الكائن لا من الوسم. فالوسمُ تحرّك والمُشار إليه لم يتغيّر.",
+  "so_the_earlier_reading_is_corrected": "«Matched_Entry_Ids عمودٌ يُسجَّل ولا يُستعمل» — **باطل**. يُستعمل، والمعيبُ فيه أنّ قيمتَه المطبوعةَ موضعيّةٌ لا ثابتة: POSITIONAL_ENTRY_ID.",
+  "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_q1_q2.py"
+ },
+ "Q2": {
+  "question": "ما مصدرُ Madd_Status و Layn_Status؟",
+  "answer": "NORMALIZED_WORD — لا الأصلُ",
+  "code_evidence": {
+   "call_sites": [
+    "a = analyze_normalized_surface(\"مَاْ\")",
+    "a = analyze_normalized_surface(\"بِمَاْ\")",
+    "a = analyze_normalized_surface(\"بِسْمِ\")",
+    "a = analyze_normalized_surface(\"قَاْلَ\")",
+    "a = analyze_normalized_surface(\"ءَلْحَمْدُ\")",
+    "a = analyze_normalized_surface(\"بَيْتُ\")",
+    "a = analyze_normalized_surface(\"ع\" + _F + \"ل\" + _F + ALIF + _S)",
+    "a = analyze_normalized_surface(\"ْبَ\")",
+    "a = analyze_normalized_surface(\"بَتْثْجْحْ\")",
+    "a = analyze_normalized_surface(\"بم\")",
+    "a = analyze_normalized_surface(\"\")",
+    "a = analyze_normalized_surface(\"بِمَاْ\")",
+    "a = analyze_normalized_surface(\"بِسْمِ\")",
+    "a = analyze_normalized_surface(row[\"Normalized_Word\"])"
+   ],
+   "argument_is_normalized": true,
+   "docstring": "التقطيعُ المقطعيّ لسطحٍ **مطبَّع**. لا يطبّع ولا يصحّح.",
+   "file": "src/aslot/axes/axis3_syllabification.py",
+   "assignment_sites": {
+    "madd_status": "analysis.madd_status = \"PROVEN\" — عند is_madd وحدَه (`_phones`)",
+    "layn_status": "analysis.layn_status = \"PROVEN\" — عند حرف لينٍ بعد فتحة"
+   }
+  },
+  "row_evidence": {
+   "scope": 3659,
+   "before": {
+    "madd=EMPTY·layn=EMPTY": 1411,
+    "madd=PROVEN·layn=EMPTY": 1904,
+    "madd=EMPTY·layn=PROVEN": 321,
+    "madd=PROVEN·layn=PROVEN": 23
+   },
+   "after": {
+    "madd=EMPTY·layn=EMPTY": 1411,
+    "madd=PROVEN·layn=EMPTY": 1904,
+    "madd=EMPTY·layn=PROVEN": 321,
+    "madd=PROVEN·layn=PROVEN": 23
+   },
+   "rows_moved": 0
+  },
+  "resolution": "المصدرُ هو `Normalized_Word` — وهو الذي تغيّر. فالسكونُ **خبرٌ صحيح**: الألفاتُ المحذوفةُ كانت حواملَ صامتةً لا مدًّا ولا لينًا، فحذفُها لا يُنقص مدًّا ولا يُنشئه. ولو كان المصدرُ الأصلَ لكان السكونُ بنيويًّا لا يقول شيئًا.",
+  "command": "PYTHONPATH=src .venv-taaqol/bin/python scripts/measure_q1_q2.py"
+ },
+ "reconstruction_witness": {
+  "column": "Reconstruction_Verified",
+  "rows_moved": 0,
+  "denominator": 74668,
+  "values_after": {
+   "YES": 74661,
+   "NO": 7
+  },
+  "in_scope": 3659,
+  "structure_moved": 3152,
+  "reading": "البنيةُ تغيّرت في 3152 صفًّا، وReconstruction_Verified لم يتحرّك في صفٍّ واحدٍ من 74668. فالسطحُ الجديدُ يُعاد بناؤه كما كان القديم — وهو أقوى شاهدٍ على أنّ الحذفَ لم يكسر شيئًا.",
+  "why_it_is_positive_evidence": "السكونُ هنا ليس غيابَ قياس: العمودُ يُحسَب في كلّ صفّ، ويقول إنّ إعادةَ البناء نجحت. وسكونُ عمودٍ **يُحسَب** شهادةٌ، وسكونُ عمودٍ **لا يُحسَب** لا شيء."
+ },
+ "guards": [
+  {
+   "guard": "G_SOURCE_IS_READ_FROM_CODE",
+   "denominator": 2,
+   "q1_from_entries": true,
+   "q2_from_normalized": true,
+   "passes": true,
+   "note": "المصدرُ يُقرأ من موضع الإسناد بالتحليل النحويّ، لا يُرجَّح ولا يُبحث عنه نصًّا."
+  },
+  {
+   "guard": "G_SILENCE_IS_EXPLAINED",
+   "denominator": 664,
+   "class_moved": 0,
+   "role_moved": 0,
+   "passes": true,
+   "note": "سكونُ الصنف مع تحرُّك الوسم مفسَّرٌ لا مسكوتٌ عنه."
+  },
+  {
+   "guard": "G_RECONSTRUCTION_HELD",
+   "denominator": 74668,
+   "moved": 0,
+   "structure_moved": 3152,
+   "passes": true,
+   "note": "شهادةٌ لا سكوت: العمودُ يُحسَب، وقال إنّ البناءَ يُعاد."
+  }
+ ],
+ "all_guards_pass": true
+}

@@ -1,0 +1,73 @@
+========================================================================
+قياسُ الامتثال لتعقُّل — T-0 · T-1 · T-2 · T-3
+========================================================================
+
+```
+STAGES_IMPLEMENTED   = T-0 · T-1 · T-2 · T-3
+STAGES_PENDING_OWNER = T-4 · T-5 · T-6 · T-7 · T-8 · T-9 · T-10
+TAAQOL_COMMIT        = 3cccdded7951
+TAAQOL_LICENSE       = Apache-2.0
+```
+```
+rows_with_trace_anchor           = 378,826
+rows_without_anchor              =       0
+rows_with_reconstructible_anchor = 378,826
+law_files_frozen                 =       7
+failure_codes_declared           =      30
+failure_codes_mapped_to_taaqol   =       7
+failure_codes_unmapped           =      23
+taaqol_failure_codes_total       =      92
+residual_kinds_assigned          =       0
+hidden_residual_count            =   3,059
+closure_states_in_use            =       0
+gates_between_axes               =       0
+forbidden_lines_enforced         =       0
+```
+```
+U_TANWEEN             = 8,894  → ResidualKind = ؟  (T-4، حكمُك)
+U_ALIF_FARIQA         = 3,561  → ResidualKind = ؟  (T-4، حكمُك)
+U_ALIF_MAQSURA        = 2,498  → ResidualKind = ؟  (T-4، حكمُك)
+U_N7_2_INTERNAL_AL    = 1,616  → ResidualKind = ؟  (T-4، حكمُك)
+U_ALEF_MADDA          = 1,505  → ResidualKind = ؟  (T-4، حكمُك)
+U_UNVOCALIZED_CARRIER = 60  → ResidualKind = ؟  (T-4، حكمُك)
+U_MULTIWORD_CELL      = 9  → ResidualKind = ؟  (T-4، حكمُك)
+```
+
+## ما يثبته هذا المحور وما لا يثبته
+  يثبت    : أنّ كلَّ صفٍّ يحمل مرساةَ أثرٍ تُعاد بناؤها من موضعها
+  يثبت    : أنّ جردَ الرفض مستخرَجٌ من مخرجاتٍ فعليّة لا من اليد
+  يثبت    : أنّ الحواملَ حواملُ تعقُّل نفسِه، مثبَّتةً بالبصمة
+  لا يثبت : غلقًا Γ — لم يُشغَّل، والأحكامُ لم تتغيّر (T-5)
+  لا يثبت : سقفَ رتبةٍ نافذًا — البقايا بلا صنفٍ بعد (T-4)
+  لا يثبت : بوّابةَ انتقالٍ بين المحاور — الاستدعاءُ مباشرٌ كما كان (T-7)
+  لا يثبت : خطًّا ممنوعًا مُنفَّذًا — تقشيرُ «كَتَبَ» ما زال ACCEPT (T-6)
+```
+◻ T-4:RESIDUAL_KIND_FOR_SEVEN_UNRATIFIED_CLASSES    = موقوفٌ على حكمك
+◻ T-4:TANWEEN_DEFECT_BLOCK_OR_VISIBLE_DEFERRABLE    = موقوفٌ على حكمك
+◻ T-5:GAMMA_CLOSURE_CHANGES_VERDICTS                = موقوفٌ على حكمك
+◻ T-6:FORBIDDEN_LINES_DEMOTE_KATABA_PEEL            = موقوفٌ على حكمك
+◻ T-7:TRANSITION_GATES_BETWEEN_AXES                 = موقوفٌ على حكمك
+◻ T-8:DELETE_DUPLICATED_FROZEN_SOURCE_IN_HOKOM      = موقوفٌ على حكمك
+◻ OPEN:QUESTION_SEMICOLON_COLON_SEPARATOR_OR_LETTER = موقوفٌ على حكمك
+◻ OPEN:ALEF_MADDA_OUTSIDE_AL                        = موقوفٌ على حكمك
+◻ OPEN:N2_2_SHADDA_AFTER_AL                         = موقوفٌ على حكمك
+◻ OPEN:LAKUM_DEMOTION_IN_CL16                       = موقوفٌ على حكمك
+```
+
+## الفحوص الذاتية (التزام المحرّك): 7/7
+  [PASS] C1_LAW_FILES_ARE_FROZEN_AND_HOLD            LAW_FILES = 7 · البصماتُ ثابتة
+  [PASS] C2_EVERY_ROW_CARRIES_A_TRACE_ANCHOR         378,826 صفًّا بلا استثناء
+  [PASS] C3_EVERY_ANCHOR_IS_RECONSTRUCTIBLE          المرساةُ تُشتقّ من الموضع، فتُعاد بناءً على أيّ جهاز
+  [PASS] C4_THE_CHAIN_IS_LINKED_ZERO_TO_FOUR         كلُّ أبٍ يُحلّ في المحور السابق
+  [PASS] C5_CARRIERS_ARE_TAAQOL_S_OWN                6 حواملَ مثبَّتةً بالبصمة من 3cccdded7951
+  [PASS] C6_RANK_LATTICE_MEET_NEVER_RAISES           meet يُبقي أو يخفض، ولا يرفع
+  [PASS] C7_HIDDEN_RESIDUAL_IS_MEASURED_NOT_ASSUMED  3,059 كلمة — تنوينُ فتحٍ على ألفٍ صامتة يمرّ بلا شكوى
+
+## السموم (مدخلاتٌ يجب أن تُرفض): 7/7
+  [PASS] P1_NO_INVENTED_REFUSAL_NAME              [] — كلُّ اسمٍ تعرفه المحاور
+  [PASS] P2_NO_INVENTED_TAAQOL_FAILURE_CODE       كلُّ مقابلٍ مُدَّعًى موجودٌ في جرد تعقُّل المغلق
+  [PASS] P3_UNMAPPED_IS_DECLARED_NOT_FORCED       23 اسمًا بلا مقابل — معلنةٌ لا ملويّة
+  [PASS] P4_RESIDUAL_KINDS_ARE_NOT_SELF_ASSIGNED  تصنيفُ البقايا حكمُ المالك (T-4) — لم يُسنَد صنفٌ واحد
+  [PASS] P5_EXECUTION_NEVER_EXCEEDS_THE_PINNING   نُفِّذ 6 وثُبِّت 6 — والاستيرادُ من أعلى ينفّذ 81
+  [PASS] P6_NO_JUDGEMENT_TOOL_IS_IMPORTED         Γ والبوّابةُ والخطوطُ الممنوعة أدواتُ حكمٍ — موقوفة
+  [PASS] P7_STAGES_ABOVE_T3_ARE_NOT_CLAIMED       T-4 · T-5 · T-6 · T-7 · T-8 · T-9 · T-10 غيرُ منفَّذة

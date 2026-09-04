@@ -1,0 +1,137 @@
+{
+ "task": "M2_UNRULED_SHAPES",
+ "shapes": {
+  "4A": {
+   "title": "تنوينُ فتحٍ بلا ألفٍ ولا مقصورةٍ ولا تاء",
+   "example_in_prompt": "مَاءً · دُعَاءً",
+   "count": 82,
+   "denominator": "كلماتٌ منوَّنة",
+   "first_five": [
+    {
+     "position": "2:22:7",
+     "word": "بِنَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:22:11",
+     "word": "مَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:171:11",
+     "word": "دُعَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:171:12",
+     "word": "وَنِدَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "3:103:13",
+     "word": "أَعْدَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    }
+   ],
+   "status": "OWNER_PENDING",
+   "ruled": false
+  },
+  "4B": {
+   "title": "تاءٌ مربوطةٌ مع تنوين الضمّ والكسر",
+   "example_in_prompt": "رَحْمَةٌ · رَحْمَةٍ",
+   "count": 735,
+   "denominator": "كلماتٌ منوَّنة",
+   "first_five": [
+    {
+     "position": "2:7:9",
+     "word": "غِشَاوَةٌ",
+     "kind": "DAMM",
+     "shape": "TAA_MARBUTA"
+    },
+    {
+     "position": "2:23:10",
+     "word": "بِسُورَةٍ",
+     "kind": "KASR",
+     "shape": "TAA_MARBUTA"
+    },
+    {
+     "position": "2:25:17",
+     "word": "ثَمَرَةٍ",
+     "kind": "KASR",
+     "shape": "TAA_MARBUTA"
+    },
+    {
+     "position": "2:25:31",
+     "word": "مُطَهَّرَةٌ",
+     "kind": "DAMM",
+     "shape": "TAA_MARBUTA"
+    },
+    {
+     "position": "2:45:5",
+     "word": "لَكَبِيرَةٌ",
+     "kind": "DAMM",
+     "shape": "TAA_MARBUTA"
+    }
+   ],
+   "status": "OWNER_PENDING",
+   "ruled": false
+  },
+  "4C": {
+   "title": "همزةٌ آخِرَ الرسم",
+   "example_in_prompt": "شَيْءٍ · جُزْءٌ",
+   "count": 385,
+   "denominator": "كلماتٌ منوَّنة",
+   "first_five": [
+    {
+     "position": "2:6:4",
+     "word": "سَوَاءٌ",
+     "kind": "DAMM",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:20:24",
+     "word": "شَيْءٍ",
+     "kind": "KASR",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:22:7",
+     "word": "بِنَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:22:11",
+     "word": "مَاءً",
+     "kind": "FATH",
+     "shape": "HAMZA"
+    },
+    {
+     "position": "2:29:18",
+     "word": "شَيْءٍ",
+     "kind": "KASR",
+     "shape": "HAMZA"
+    }
+   ],
+   "status": "OWNER_PENDING",
+   "ruled": false
+  },
+  "4D": {
+   "title": "ألفٌ مقصورةٌ مع تنوين الضمّ والكسر",
+   "example_in_prompt": "إن وُجد",
+   "count": 0,
+   "denominator": "كلماتٌ منوَّنة",
+   "first_five": [],
+   "status": "OWNER_PENDING",
+   "ruled": false
+  }
+ },
+ "total_pending": 1202,
+ "status": "OWNER_PENDING",
+ "rule": "لا يُحكم فيها ولو بدا الحكمُ بيّنًا — NO_RULE_WIDENING"
+}

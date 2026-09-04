@@ -1,0 +1,53 @@
+{
+ "task": "R2_ALL_ORIGINS",
+ "was": {
+  "rows": 288,
+  "arithmetic": "288 = 2 × 4 × 6 × 6",
+  "origins_measured": 2,
+  "origins_declared": 3,
+  "claim_read_as": "ولا CERTIFICATE بحال",
+  "claim_actually_measured_on": "2/3 origins"
+ },
+ "now": {
+  "rows": 432,
+  "arithmetic": "432 = 3 × 4 × 6 × 6",
+  "origins_measured": 3,
+  "origins": [
+   "CANDIDATE",
+   "DECLARED_ENTRY",
+   "TRANSITION_VERDICT"
+  ],
+  "origins_declared": [
+   "CANDIDATE",
+   "DECLARED_ENTRY",
+   "TRANSITION_VERDICT"
+  ]
+ },
+ "resolution": "قِيس CANDIDATE — فالمقامُ تامٌّ ولا يحتاج التقييدُ النصّيّ. والدعوى تُعمَّم أو تُنقض بالقياس لا بالكلام.",
+ "certificate_granted_anywhere": [],
+ "ranks_granted": [
+  "CANDIDATE",
+  "HYPOTHESIS",
+  "TRACE",
+  "ZERO"
+ ],
+ "verdict": "الدعوى تصمد على المقام التامّ: لا رتبةَ CERTIFICATE تُمنح من هذه البوّابة في أيٍّ من الأصول الثلاثة.",
+ "guard": {
+  "guard": "G_ALL_ORIGINS",
+  "denominator": 3,
+  "declared": [
+   "CANDIDATE",
+   "DECLARED_ENTRY",
+   "TRANSITION_VERDICT"
+  ],
+  "measured": [
+   "CANDIDATE",
+   "DECLARED_ENTRY",
+   "TRANSITION_VERDICT"
+  ],
+  "missing": [],
+  "not_a_member": [],
+  "passes": true
+ },
+ "poison": "tests_taaqol/test_bound.py::test_poison_all_origins_falls_when_one_is_dropped"
+}
