@@ -1,0 +1,146 @@
+{
+  "REPORT": "TAAQOL_MAT_MALIK_RUNTIME_MANAGER_REPORT",
+  "report_kind": "RUNTIME_INPUT_BOUND",
+  "source_sentence": "مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ، فَأَرَادَ وِلَدَهُ طَرْدَهُ، فَتَحَاكَمَا",
+  "source_sentence_sha256": "9c18efaf613d8970e0b7a13363aabb801a41260a77679d499251e16f6cfae798",
+  "generated_at_runtime": "YES",
+  "reused_prior_artifact": "NO",
+  "reused_prior_final_answer": "NO",
+  "loads_final_answer_only_if_sha_matches": "YES",
+  "parent_artifact_hashes": {},
+  "input_token_table": [
+    {
+      "token_id": "r000",
+      "surface": "مَاتَ"
+    },
+    {
+      "token_id": "r001",
+      "surface": "مَلِكٌ"
+    },
+    {
+      "token_id": "r002",
+      "surface": "عَنْ"
+    },
+    {
+      "token_id": "r003",
+      "surface": "أُخٍ"
+    },
+    {
+      "token_id": "r004",
+      "surface": "سَاكِنٍَ"
+    },
+    {
+      "token_id": "r005",
+      "surface": "مَعَهُ،"
+    },
+    {
+      "token_id": "r006",
+      "surface": "فَأَرَادَ"
+    },
+    {
+      "token_id": "r007",
+      "surface": "وِلَدَهُ"
+    },
+    {
+      "token_id": "r008",
+      "surface": "طَرْدَهُ،"
+    },
+    {
+      "token_id": "r009",
+      "surface": "فَتَحَاكَمَا"
+    }
+  ],
+  "input_fact_candidates": [
+    {
+      "candidate_id": "fc000",
+      "segment": "مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ،",
+      "kind": "TEXT_CANDIDATE_ONLY",
+      "FACT_ACCEPTED": "NO"
+    },
+    {
+      "candidate_id": "fc001",
+      "segment": "فَأَرَادَ وِلَدَهُ طَرْدَهُ،",
+      "kind": "TEXT_CANDIDATE_ONLY",
+      "FACT_ACCEPTED": "NO"
+    },
+    {
+      "candidate_id": "fc002",
+      "segment": "فَتَحَاكَمَا",
+      "kind": "TEXT_CANDIDATE_ONLY",
+      "FACT_ACCEPTED": "NO"
+    }
+  ],
+  "layers": {
+    "FINAL_MANAT": {
+      "status": "DEFER",
+      "reason": "SENTENCE_SHA_MISMATCH",
+      "artifact": "TAAQOL_MAT_MALIK_FINAL_MANAT_BIRTH_48.json",
+      "artifact_sentence_sha256": "ada6cfcc770ac452111bcf9cca0e7eda69de672c9dc7b1c1f676c46bbf3901a2"
+    },
+    "NORMATIVE_SOURCE": {
+      "status": "DEFER",
+      "reason": "SENTENCE_SHA_MISMATCH",
+      "artifact": "TAAQOL_MAT_MALIK_NORMATIVE_SOURCE_ACCEPTANCE_50.json",
+      "artifact_sentence_sha256": "ada6cfcc770ac452111bcf9cca0e7eda69de672c9dc7b1c1f676c46bbf3901a2"
+    },
+    "TANZIL": {
+      "status": "DEFER",
+      "reason": "SENTENCE_SHA_MISMATCH",
+      "artifact": "TAAQOL_MAT_MALIK_TANZIL_APPLICATION_51.json",
+      "artifact_sentence_sha256": "ada6cfcc770ac452111bcf9cca0e7eda69de672c9dc7b1c1f676c46bbf3901a2"
+    },
+    "FINAL_HUKM": {
+      "status": "DEFER",
+      "reason": "SENTENCE_SHA_MISMATCH",
+      "artifact": "TAAQOL_MAT_MALIK_FINAL_HUKM_BIRTH_52.json",
+      "artifact_sentence_sha256": "ada6cfcc770ac452111bcf9cca0e7eda69de672c9dc7b1c1f676c46bbf3901a2"
+    },
+    "FINAL_ANSWER": {
+      "status": "DEFER",
+      "reason": "SENTENCE_SHA_MISMATCH",
+      "artifact": "TAAQOL_MAT_MALIK_FINAL_ANSWER_53.json",
+      "artifact_sentence_sha256": "ada6cfcc770ac452111bcf9cca0e7eda69de672c9dc7b1c1f676c46bbf3901a2"
+    }
+  },
+  "all_layers_matched": "NO",
+  "FINAL_ANSWER": "NO",
+  "FINAL_ANSWER_TEXT": "",
+  "SCOPE": "N/A",
+  "JUDICIAL_OUTCOME_PRODUCED": "NO",
+  "FULL_TAAQOL_PROJECT_CLOSED": "NO",
+  "verdict": "DEFER_RUNTIME_DERIVATION_INCOMPLETE",
+  "cause": "INPUT_SENTENCE_DOES_NOT_HASH_MATCH_RATIFIED_LAYERS",
+  "conditions": [
+    "INPUT_SHA256_EQUALS_EACH_LAYER_ARTIFACT_SENTENCE_SHA256"
+  ],
+  "preventers": [
+    "SENTENCE_SHA_MISMATCH_ON_ONE_OR_MORE_LAYERS"
+  ],
+  "residuals": [
+    "NO_RATIFIED_DERIVATION_FOR_THIS_INPUT",
+    "RUNTIME_DERIVATION_INCOMPLETE_FOR_THIS_SENTENCE"
+  ],
+  "boundary_flags": {
+    "IS_GENERAL_FATWA": "NO",
+    "IS_JUDICIAL_ORDER": "NO",
+    "DECIDES_OWNERSHIP": "NO",
+    "DECIDES_ESTATE_DIVISION": "NO",
+    "DECIDES_SISTER_FINAL_RIGHT": "NO",
+    "GENERALIZES_BEYOND_FNM1": "NO"
+  },
+  "guards": {
+    "INPUT_BOUND_CHAIN": "YES",
+    "GENERATED_AT_RUNTIME": "YES",
+    "REUSED_PRIOR_ARTIFACT": "NO",
+    "REUSED_PRIOR_FINAL_ANSWER": "NO",
+    "LOADS_FINAL_ANSWER_ONLY_IF_SHA_MATCHES": "YES",
+    "LATEST_ARTIFACT_SHORTCUT": "NO",
+    "USES_NEUTRAL_GENERATOR": "NO",
+    "SHOWS_NEUTRAL_BASELINE": "NO",
+    "OUTPUT_PATH_REPO_ROOT_RELATIVE": "YES",
+    "REPORT_NAME_HAS_FIXED_ROUND_NUMBER": "NO",
+    "NO_FRAMENET": "YES",
+    "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_runtime_manager_report.py"
+  },
+  "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_runtime_manager_report.py"
+}

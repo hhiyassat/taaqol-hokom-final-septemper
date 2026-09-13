@@ -1,0 +1,62 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- taaqol-style-manager-report RENDERER=TAAQOL_STYLE -->
+<title>TAAQOL_MAT_MALIK_RUNTIME_MANAGER_REPORT — تشغيل فعلي مربوط بالإدخال</title>
+<style>body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:1.2rem;color:#1b1b1b;background:#fafafa}h1{font-size:1.32rem}h2{font-size:1.05rem;margin-top:1.3rem;border-bottom:2px solid #ddd;padding-bottom:.25rem}table{border-collapse:collapse;width:100%;margin:.5rem 0;background:#fff;font-size:.76rem}th,td{border:1px solid #ccc;padding:.3rem .45rem;text-align:right;vertical-align:top}th{background:#f0f0f0}td.y{background:#e6f4ea}td.n{background:#fdecec;color:#7a1f1f}td.d{background:#fff7e0}.sentbox{border:2px solid #6aa0e0;border-radius:.6rem;padding:.5rem .8rem;margin:.6rem 0;background:#fff}.sent{background:#eef6ff;border:1px solid #9cc3ef;border-radius:.4rem;padding:.5rem .8rem;font-weight:700;font-size:1rem}.note{background:#fff7e0;border:1px solid #e0c877;padding:.4rem .7rem;border-radius:.4rem;margin:.4rem 0;font-size:.82rem}pre{background:#f4f4f4;border:1px solid #ccc;border-radius:.4rem;padding:.5rem;white-space:pre-wrap;font-size:.78rem}.foot{color:#444;font-size:.8rem;border-top:1px solid #ccc;margin-top:1rem;padding-top:.5rem}.wrap{overflow-x:auto}ul,ol{margin:.3rem 1.2rem}</style>
+</head><body>
+<h1>TAAQOL_MAT_MALIK_RUNTIME_MANAGER_REPORT — تشغيل فعلي مربوط بالإدخال</h1>
+<div class="foot" style="border:0;margin:0;padding:0">RENDERER=TAAQOL_STYLE</div>
+<div class="note n" style="background:#fdecec"><b>تشغيل فعلي مربوط بالإدخال</b> — يبني السلسلة من هذا الإدخال، ولا يحمّل جوابًا نهائيًّا إلا إذا طابق sha الجملة كل طبقة مصدَّقة. بلا تقرير محايد وبلا اختصار latest-artifact.</div>
+<h2>1. ملخص للمدير</h2>
+<div class="note">تشغيل مربوط بالإدخال. INPUT_SHA256 = 9c18efaf613d8970… · all_layers_matched = NO · FINAL_ANSWER = NO.</div>
+<div class="wrap"><table><thead><tr><th>flag</th><th>value</th></tr></thead><tbody><tr><th>INPUT_SHA256</th><td class="d">9c18efaf613d8970e0b7a13363aabb801a41260a77679d499251e16f6cfae798</td></tr><tr><th>all_layers_matched</th><td class="n">NO</td></tr><tr><th>FINAL_ANSWER</th><td class="n">NO</td></tr><tr><th>VERDICT</th><td class="d">DEFER_RUNTIME_DERIVATION_INCOMPLETE</td></tr><tr><th>SCOPE</th><td class="d">N/A</td></tr><tr><th>JUDICIAL_OUTCOME_PRODUCED</th><td class="n">NO</td></tr><tr><th>FULL_TAAQOL_PROJECT_CLOSED</th><td class="n">NO</td></tr><tr><th>reused_prior_artifact</th><td class="n">NO</td></tr><tr><th>reused_prior_final_answer</th><td class="n">NO</td></tr><tr><th>generated_at_runtime</th><td class="y">YES</td></tr></tbody></table></div>
+<h2>2. الجملة محل التشغيل</h2>
+<div class="sentbox"><div class="sent" id="nazila-sentence">مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ، فَأَرَادَ وِلَدَهُ طَرْدَهُ، فَتَحَاكَمَا</div></div>
+<h2>3. جدول الكلمات (من هذا الإدخال)</h2>
+<div class="wrap"><table><thead><tr><th>token_id</th><th>surface</th></tr></thead><tbody><tr><th>r000</th><td>مَاتَ</td></tr><tr><th>r001</th><td>مَلِكٌ</td></tr><tr><th>r002</th><td>عَنْ</td></tr><tr><th>r003</th><td>أُخٍ</td></tr><tr><th>r004</th><td>سَاكِنٍَ</td></tr><tr><th>r005</th><td>مَعَهُ،</td></tr><tr><th>r006</th><td>فَأَرَادَ</td></tr><tr><th>r007</th><td>وِلَدَهُ</td></tr><tr><th>r008</th><td>طَرْدَهُ،</td></tr><tr><th>r009</th><td>فَتَحَاكَمَا</td></tr></tbody></table></div>
+<h2>4. المرشحات البنيوية (من هذا الإدخال)</h2>
+<div class="wrap"><table><thead><tr><th>id</th><th>segment</th><th>kind</th></tr></thead><tbody><tr><th>fc000</th><td>مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ،</td><td>TEXT_CANDIDATE_ONLY</td></tr><tr><th>fc001</th><td>فَأَرَادَ وِلَدَهُ طَرْدَهُ،</td><td>TEXT_CANDIDATE_ONLY</td></tr><tr><th>fc002</th><td>فَتَحَاكَمَا</td><td>TEXT_CANDIDATE_ONLY</td></tr></tbody></table></div>
+<h2>5. ربط الطبقات العمودية بالـ sha</h2>
+<div class="note">كل طبقة تُقبل فقط إذا طابق sha جملتها المسجّلة INPUT_SHA256 لهذا الإدخال:</div>
+<div class="wrap"><table><thead><tr><th>layer</th><th>value</th><th>binding</th></tr></thead><tbody><tr><th>FINAL_MANAT</th><td class="n">DEFER</td><td class="d">SENTENCE_SHA_MISMATCH</td></tr><tr><th>NORMATIVE_SOURCE</th><td class="n">DEFER</td><td class="d">SENTENCE_SHA_MISMATCH</td></tr><tr><th>TANZIL</th><td class="n">DEFER</td><td class="d">SENTENCE_SHA_MISMATCH</td></tr><tr><th>FINAL_HUKM</th><td class="n">DEFER</td><td class="d">SENTENCE_SHA_MISMATCH</td></tr><tr><th>FINAL_ANSWER</th><td class="n">DEFER</td><td class="d">SENTENCE_SHA_MISMATCH</td></tr></tbody></table></div>
+<h2>6. المناط النهائي</h2>
+<div class="note n" style="background:#fdecec">FINAL_MANAT = DEFER (لا يطابق sha الإدخال).</div>
+<div class="note">—</div>
+<h2>7. المصدر المعياري</h2>
+<div class="note n" style="background:#fdecec">NORMATIVE_SOURCE = DEFER.</div>
+<div class="note">—</div>
+<h2>8. التنزيل</h2>
+<div class="note">TANZIL = None (DEFER)</div>
+<h2>9. الحكم الداخلي</h2>
+<div class="note n" style="background:#fdecec">FINAL_HUKM = DEFER.</div>
+<div class="note">—</div>
+<h2>10. الجواب النهائي</h2>
+<div class="note n" style="background:#fdecec">لا جواب نهائي لهذا الإدخال — لا طبقة مصدَّقة تطابق sha الجملة. VERDICT = DEFER_RUNTIME_DERIVATION_INCOMPLETE.</div>
+<h2>11. أعلام الحدود</h2>
+<div class="note n" style="background:#fdecec">ليس فتوى عامة · ليس أمرًا قضائيًّا · لا فصل في الملكية/التركة/الحق النهائي · لا تعميم خارج FNM1.</div>
+<div class="wrap"><table><thead><tr><th>boundary_flag</th><th>value</th></tr></thead><tbody><tr><th>IS_GENERAL_FATWA</th><td class="n">NO</td></tr><tr><th>IS_JUDICIAL_ORDER</th><td class="n">NO</td></tr><tr><th>DECIDES_OWNERSHIP</th><td class="n">NO</td></tr><tr><th>DECIDES_ESTATE_DIVISION</th><td class="n">NO</td></tr><tr><th>DECIDES_SISTER_FINAL_RIGHT</th><td class="n">NO</td></tr><tr><th>GENERALIZES_BEYOND_FNM1</th><td class="n">NO</td></tr></tbody></table></div>
+<h2>12. الاختبارات</h2>
+<div class="note">tests/test_taaqol_mat_malik_runtime_manager_report.py — RUNTIME_MANAGER_REPORT_TESTS = passed.</div>
+<div class="note"><b>جدول التتبّع (parent_artifact_hashes)</b></div>
+<div class="wrap"><table><thead><tr><th>artifact</th><th>sha256(file)</th></tr></thead><tbody><tr><th>(none)</th><td>لا طبقة مربوطة بهذا الإدخال</td></tr></tbody></table></div>
+<h2>13. إثبات سلسلة التوليد</h2>
+<pre>RUNTIME_MANAGER_REPORT_CREATED = YES
+GENERATOR_FILE = scripts/taaqol_maqam_foundation/mat_malik_runtime_manager_report.py
+RENDERER = scripts/taaqol_report_style.py (RENDERER=TAAQOL_STYLE)
+INPUT_SHA256 = 9c18efaf613d8970e0b7a13363aabb801a41260a77679d499251e16f6cfae798
+ALL_LAYERS_MATCHED = NO
+USES_NEUTRAL_GENERATOR = NO
+LATEST_ARTIFACT_SHORTCUT = NO
+REUSED_PRIOR_ARTIFACT = NO
+REUSED_PRIOR_FINAL_ANSWER = NO
+LOADS_FINAL_ANSWER_ONLY_IF_SHA_MATCHES = YES
+PARENT_ARTIFACT_HASHES = (none)
+OUTPUT_PATH_REPO_ROOT_RELATIVE = YES
+COMMIT = NO
+PUSH = NO</pre>
+<h2>14. الخلاصة التنفيذية</h2>
+<div class="note n" style="background:#fdecec">تشغيل مربوط بالإدخال. FINAL_ANSWER = NO · VERDICT = DEFER_RUNTIME_DERIVATION_INCOMPLETE. لا جواب: لا اشتقاق مصدَّق يطابق هذا الإدخال؛ ولم يُعَد استعمال أي جواب سابق.</div>
+<div class="note"><b>أعلام الإغلاق داخل التقرير:</b> INPUT_SHA256 = 9c18efaf613d8970… · all_layers_matched = NO · FINAL_ANSWER = NO · VERDICT = DEFER_RUNTIME_DERIVATION_INCOMPLETE · SCOPE = N/A · JUDICIAL_OUTCOME_PRODUCED = NO · reused_prior_final_answer = NO · USES_NEUTRAL_GENERATOR = NO.</div>
+<div class="note"><b>نتيجة الاختبارات:</b> RUNTIME_MANAGER_REPORT_TESTS = passed</div>
+<div class="foot">تقرير المدير الفعلي (input-bound) — RENDERER=TAAQOL_STYLE.</div>
+</body></html>
