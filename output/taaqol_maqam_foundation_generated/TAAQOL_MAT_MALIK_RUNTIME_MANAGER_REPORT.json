@@ -1,0 +1,76 @@
+{
+  "REPORT": "TAAQOL_MAT_MALIK_RUNTIME_MANAGER_REPORT",
+  "report_kind": "RUNTIME_MANAGER_EXECUTIVE",
+  "nazila": "مَاتَ مَلِكٌ عَنْ أُخْتٍ سَاكِنَةٍ مَعَهُ، فَأَرَادَ وَارِثُهُ طَرْدَهَا، فَتَحَاكَمَا",
+  "state": {
+    "FINAL_MANAT": "YES",
+    "FINAL_MANAT_ID": "FNM1_MAT_MALIK_SISTER_RESIDENCE_ESTATE_EXPULSION_DISPUTE",
+    "FINAL_MANAT_TEXT": "وفاة مالكٍ عن أختٍ ساكنةٍ معه، مع ثبوت عدم الولد وعدم الورثة الآخرين المؤثرين، وثبوت صفة الوارث طالب الطرد، وثبوت كون البيت ملكًا للميت وداخلًا في التركة، وثبوت أن سكن الأخت كان بإذن سابق معتبر، وأن يدها على السكن قائمة ظاهرًا إلى حين نظر القضاء، وعدم وجود بينة فورية كافية لطالب الطرد توجب إخراجها قبل نظر القضاء، وأن محل التحاكم هو طلب إخراجها من السكن.",
+    "NORMATIVE_SOURCE_ACCEPTED": "YES",
+    "NORMATIVE_SOURCE_ID": "NS1_OWNER_RATIFIED_NO_EXPULSION_BEFORE_ADJUDICATION_RULE",
+    "NORMATIVE_SOURCE_TEXT": "لا يُخرج ساكنٌ من عينٍ متنازعٍ عليها أو داخلةٍ في تركة، إذا كانت يده على السكن قائمةً بإذنٍ سابقٍ معتبر، ولم توجد بينةٌ فوريةٌ كافية لطالب الإخراج، حتى يُنظر النزاع في مجلس الحكم المختص.",
+    "TANZIL": "YES",
+    "TANZIL_STATUS": "ACCEPTED",
+    "FINAL_HUKM": "YES",
+    "FINAL_HUKM_ID": "FHK1_MAT_MALIK_NO_EXPULSION_BEFORE_ADJUDICATION_UNDER_NS1",
+    "FINAL_HUKM_TEXT": "في حدود المناط النهائي FNM1، وبعد قبول NS1 وتطبيقه في الجولة 51، يثبت حكمٌ معياري داخلي مؤداه: عدم إنتاج أثر الإخراج قبل نظر النزاع في مجلس الحكم المختص.",
+    "FINAL_ANSWER": "YES",
+    "FINAL_ANSWER_STATUS": "ACCEPTED",
+    "FINAL_ANSWER_TEXT": "بناءً على المناط النهائي المصدّق، وعلى المصدر المعياري NS1 بعد تطبيقه، وعلى الحكم الداخلي FHK1: لا يُنتَج أثر إخراج الأخت الساكنة من العين قبل نظر النزاع في مجلس الحكم المختص، ضمن حدود هذه الحالة فقط.",
+    "SCOPE": "FNM1_ONLY",
+    "JUDICIAL_OUTCOME_PRODUCED": "NO",
+    "FULL_TAAQOL_PROJECT_CLOSED": "NO",
+    "boundary": {
+      "IS_GENERAL_FATWA": "NO",
+      "IS_JUDICIAL_ORDER": "NO",
+      "DECIDES_OWNERSHIP": "NO",
+      "DECIDES_ESTATE_DIVISION": "NO",
+      "DECIDES_SISTER_FINAL_RIGHT": "NO",
+      "GENERALIZES_BEYOND_FNM1": "NO"
+    },
+    "source_artifacts": {
+      "final_manat": "TAAQOL_MAT_MALIK_FINAL_MANAT_BIRTH_48.json",
+      "normative_source": "TAAQOL_MAT_MALIK_NORMATIVE_SOURCE_ACCEPTANCE_50.json",
+      "tanzil": "TAAQOL_MAT_MALIK_TANZIL_APPLICATION_51.json",
+      "final_hukm": "TAAQOL_MAT_MALIK_FINAL_HUKM_BIRTH_52.json",
+      "final_answer": "TAAQOL_MAT_MALIK_FINAL_ANSWER_53.json"
+    }
+  },
+  "cause": "FINAL_HUKM_ACCEPTED_AND_TANZIL_ACCEPTED_WITHIN_FNM1",
+  "conditions": [
+    "FINAL_MANAT_ACCEPTED",
+    "NORMATIVE_SOURCE_ACCEPTED_AND_BOUND_TO_FNM1",
+    "TANZIL_ACCEPTED",
+    "FINAL_HUKM_ACCEPTED"
+  ],
+  "preventers": [
+    "NONE_WITHIN_FNM1"
+  ],
+  "residuals": [
+    "SCOPE_LIMITED_TO_FNM1",
+    "NO_GENERALIZATION",
+    "NO_JUDICIAL_EXECUTION",
+    "FULL_TAAQOL_PROJECT_NOT_CLOSED"
+  ],
+  "boundary_flags": {
+    "IS_GENERAL_FATWA": "NO",
+    "IS_JUDICIAL_ORDER": "NO",
+    "DECIDES_OWNERSHIP": "NO",
+    "DECIDES_ESTATE_DIVISION": "NO",
+    "DECIDES_SISTER_FINAL_RIGHT": "NO",
+    "GENERALIZES_BEYOND_FNM1": "NO"
+  },
+  "guards": {
+    "RUNTIME_MANAGER_REPORT": "YES",
+    "USES_NEUTRAL_GENERATOR": "NO",
+    "SHOWS_NEUTRAL_BASELINE": "NO",
+    "REPORT_NAME_HAS_FIXED_ROUND_NUMBER": "NO",
+    "LATEST_STATE_DISCOVERED_AT_RUNTIME": "YES",
+    "NO_NEW_SOURCE_ADDED": "YES",
+    "NO_NEW_HUKM_OPENED": "YES",
+    "PRIOR_ARTIFACTS_UNCHANGED": "YES",
+    "NO_FRAMENET": "YES",
+    "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_runtime_manager_report.py"
+  },
+  "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_runtime_manager_report.py"
+}

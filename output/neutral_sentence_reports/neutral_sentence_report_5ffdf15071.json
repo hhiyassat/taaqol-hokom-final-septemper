@@ -1,0 +1,111 @@
+{
+  "DOCUMENT_TYPE": "NEUTRAL_SENTENCE_STRUCTURAL_REPORT",
+  "GENERATOR_NAME": "HUSSEIN_SCRIPT",
+  "producer_file": "scripts/neutral_sentence_report_generator.py",
+  "report_hash": "5ffdf15071",
+  "INPUT_SENTENCE": "مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ، فَأَرَادَ وِلَدَهُ طَرْدَهُ، فَتَحَاكَمَا",
+  "CONTENT_NEUTRAL": "YES",
+  "DOMAIN_DECISION": "NO",
+  "HUKM": "NO",
+  "FINAL_ANSWER": "NO",
+  "tokens": [
+    {
+      "token_id": "n000",
+      "surface": "مَاتَ"
+    },
+    {
+      "token_id": "n001",
+      "surface": "مَلِكٌ"
+    },
+    {
+      "token_id": "n002",
+      "surface": "عَنْ"
+    },
+    {
+      "token_id": "n003",
+      "surface": "أُخٍ"
+    },
+    {
+      "token_id": "n004",
+      "surface": "سَاكِنٍَ"
+    },
+    {
+      "token_id": "n005",
+      "surface": "مَعَهُ،"
+    },
+    {
+      "token_id": "n006",
+      "surface": "فَأَرَادَ"
+    },
+    {
+      "token_id": "n007",
+      "surface": "وِلَدَهُ"
+    },
+    {
+      "token_id": "n008",
+      "surface": "طَرْدَهُ،"
+    },
+    {
+      "token_id": "n009",
+      "surface": "فَتَحَاكَمَا"
+    }
+  ],
+  "token_count": 10,
+  "textual_claim_candidates": [
+    {
+      "candidate_id": "c000",
+      "raw_segment": "مَاتَ مَلِكٌ عَنْ أُخٍ سَاكِنٍَ مَعَهُ،",
+      "structural_kind": "TEXT_CANDIDATE_ONLY",
+      "detected_by": "DECLARATIVE_SEGMENT_NO_QUESTION_FORM",
+      "FACT_ACCEPTED": "NO"
+    },
+    {
+      "candidate_id": "c001",
+      "raw_segment": "فَأَرَادَ وِلَدَهُ طَرْدَهُ،",
+      "structural_kind": "TEXT_CANDIDATE_ONLY",
+      "detected_by": "DECLARATIVE_SEGMENT_NO_QUESTION_FORM",
+      "FACT_ACCEPTED": "NO"
+    },
+    {
+      "candidate_id": "c002",
+      "raw_segment": "فَتَحَاكَمَا",
+      "structural_kind": "TEXT_CANDIDATE_ONLY",
+      "detected_by": "DECLARATIVE_SEGMENT_NO_QUESTION_FORM",
+      "FACT_ACCEPTED": "NO"
+    }
+  ],
+  "request_or_question_candidates": [],
+  "candidate_count": 3,
+  "known_facts": [],
+  "FACT_ACCEPTED_COUNT": 0,
+  "required_ratification": "OWNER_RATIFICATION_REQUIRED_FOR_ANY_FACT — this first tool provides no ratification path; no candidate becomes a fact here.",
+  "cause": "OWNER_SUPPLIED_INPUT_SENTENCE",
+  "conditions": [
+    "STRUCTURAL_SEGMENTATION_ONLY",
+    "NO_DOMAIN_DECISION",
+    "NO_FACT_ACCEPTANCE"
+  ],
+  "preventers": [
+    "DOMAIN_UNDECIDED",
+    "NO_OWNER_RATIFICATION_IN_THIS_TOOL",
+    "NO_HUKM_LICENSE"
+  ],
+  "verdict": "DEFER_STRUCTURAL_ONLY",
+  "residuals": [
+    "DOMAIN_NOT_DECIDED",
+    "FACTS_NOT_ACCEPTED",
+    "HUKM_NOT_PRODUCED",
+    "FINAL_ANSWER_NOT_PRODUCED",
+    "OWNER_RATIFICATION_REQUIRED_FOR_ANY_FACT"
+  ],
+  "guards": {
+    "NO_DOMAIN_KNOWLEDGE": "YES",
+    "NO_EXTERNAL_SOURCE": "YES",
+    "NO_MEDICAL_ADVICE": "YES",
+    "NO_FIQH_HUKM": "YES",
+    "NO_LEGAL_HUKM": "YES",
+    "NO_FACT_ACCEPTANCE": "YES",
+    "NO_FINAL_ANSWER": "YES",
+    "REPORT_IS_STRUCTURE_ONLY": "YES"
+  }
+}

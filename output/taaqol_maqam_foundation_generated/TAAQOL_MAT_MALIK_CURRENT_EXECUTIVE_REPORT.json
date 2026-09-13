@@ -1,0 +1,52 @@
+{
+  "REPORT": "TAAQOL_MAT_MALIK_CURRENT_EXECUTIVE_REPORT",
+  "report_kind": "CURRENT_LATEST_EXECUTIVE",
+  "nazila": "مَاتَ مَلِكٌ عَنْ أُخْتٍ سَاكِنَةٍ مَعَهُ، فَأَرَادَ وَارِثُهُ طَرْدَهَا، فَتَحَاكَمَا",
+  "SOURCE_OF_FINAL_ANSWER": "TAAQOL_VERTICAL_CHAIN_NOT_NEUTRAL_GENERATOR",
+  "NEUTRAL_BASELINE_OUTPUT": {
+    "generator": "scripts/neutral_sentence_report_generator.py",
+    "report_hash": "a6d9d4bc56",
+    "DOMAIN_DECISION": "NO",
+    "HUKM": "NO",
+    "FINAL_ANSWER": "NO",
+    "FACT_ACCEPTED_COUNT": 0,
+    "VERDICT": "DEFER_STRUCTURAL_ONLY",
+    "role": "STRUCTURAL_ONLY",
+    "produces_final_answer": "NO"
+  },
+  "TAAQOL_VERTICAL_DERIVATION": {
+    "FINAL_MANAT": "YES",
+    "FINAL_MANAT_ID": "FNM1_MAT_MALIK_SISTER_RESIDENCE_ESTATE_EXPULSION_DISPUTE",
+    "NS1_ACCEPTED": "YES",
+    "NS1_ID": "NS1_OWNER_RATIFIED_NO_EXPULSION_BEFORE_ADJUDICATION_RULE",
+    "TANZIL": "YES",
+    "TANZIL_STATUS": "ACCEPTED",
+    "FINAL_HUKM": "YES",
+    "FINAL_HUKM_ID": "FHK1_MAT_MALIK_NO_EXPULSION_BEFORE_ADJUDICATION_UNDER_NS1",
+    "FINAL_ANSWER": "YES",
+    "SCOPE": "FNM1_ONLY",
+    "JUDICIAL_OUTCOME_PRODUCED": "NO",
+    "FULL_TAAQOL_PROJECT_CLOSED": "NO",
+    "source_artifacts": {
+      "final_manat": "TAAQOL_MAT_MALIK_FINAL_MANAT_BIRTH_48.json",
+      "normative_source_acceptance": "TAAQOL_MAT_MALIK_NORMATIVE_SOURCE_ACCEPTANCE_50.json",
+      "tanzil": "TAAQOL_MAT_MALIK_TANZIL_APPLICATION_51.json",
+      "final_hukm": "TAAQOL_MAT_MALIK_FINAL_HUKM_BIRTH_52.json",
+      "final_answer": "TAAQOL_MAT_MALIK_FINAL_ANSWER_53.json"
+    },
+    "FINAL_ANSWER_TEXT": "بناءً على المناط النهائي المصدّق، وعلى المصدر المعياري NS1 بعد تطبيقه، وعلى الحكم الداخلي FHK1: لا يُنتَج أثر إخراج الأخت الساكنة من العين قبل نظر النزاع في مجلس الحكم المختص، ضمن حدود هذه الحالة فقط."
+  },
+  "guards": {
+    "NEUTRAL_GENERATOR_PRODUCES_FINAL_ANSWER": "NO",
+    "FINAL_ANSWER_SOURCE_IS_VERTICAL_CHAIN": "YES",
+    "NEUTRAL_BASELINE_IS_STRUCTURAL_ONLY": "YES",
+    "REPORT_NAME_HAS_FIXED_ROUND_NUMBER": "NO",
+    "VERTICAL_STATE_DISCOVERED_AT_RUNTIME": "YES",
+    "NO_NEW_SOURCE_ADDED": "YES",
+    "NO_NEW_HUKM_OPENED": "YES",
+    "PRIOR_ARTIFACTS_UNCHANGED": "YES",
+    "NO_FRAMENET": "YES",
+    "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_current_executive_report.py"
+  },
+  "producer_file": "scripts/taaqol_maqam_foundation/mat_malik_current_executive_report.py"
+}
